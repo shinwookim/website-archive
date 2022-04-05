@@ -17,7 +17,7 @@ Apart from programming, I am also interested in research, espcially in the field
     <a class="social-icon" href="https://instagram.com/{{ site.instagram_username }}"><i class="fab fa-instagram"></i></a>
 </div>
 <div class="text-center">
-    <a href="Resume.pdf" type="button" class="mt-3 btn btn-dark btn-lg btn-block">Résumé</a>
+    <a href="{{ site.baseurl }}/Resume.pdf" type="button" class="mt-3 btn btn-dark btn-lg btn-block">Résumé</a>
     <a href="{{ site.baseurl }}/contact/" type="button" class="mt-3 btn btn-dark btn-lg btn-block">Contact Me</a>
 </div>
 
