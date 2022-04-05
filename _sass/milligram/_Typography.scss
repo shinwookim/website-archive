@@ -1,15 +1,10 @@
-/*!
- * Milligram-scss v1.3.0
- * https://milligram.github.io
- *
- * Copyright (c) 2017 CJ Patoilo
- * Licensed under the MIT license
- */
-
-
-// Typography
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
-
+@font-face {
+	font-family: 'Autography';
+	src: url('../assets/font/Autography/Autography.woff2') format('woff2'), url('../assets/font/Autography/Autography.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
 b,
 strong {
 	font-weight: bold;
@@ -19,21 +14,35 @@ p {
 	margin-top: 0;
 }
 
+
+.dropcap{
+	font-size: 1.3em;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	font-weight: 300;
 	letter-spacing: -.1rem;
-	margin-bottom: 2.0rem;
 	margin-top: 0;
+	margin-bottom: 0.5rem;
+	font-family: neue-haas-grotesk-display, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	line-height: 1.2;
 }
 
 h1 {
 	font-size: 4.6rem;
 	line-height: 1.2;
+}
+h1.custom-font {
+	font-family: 'Autography';
+	font-size: 80px;
+	font-weight: normal;
+	font-style: bold;
 }
 
 h2 {

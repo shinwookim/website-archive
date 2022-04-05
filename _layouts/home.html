@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    <main class="wrapper" style="z-index: 1;" id="hero">
+      
+      {% include header.html %}
+
+      <div class="container">
+        {{ content }}
+
+    
+      </div>
+    
+    </main>
+
+    {% include scripts.html %}
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        invertNav();
+      });
+      function invertNav() {
+        var element = document.getElementById("mainNav");
+        element.classList.remove("bg-dark");
+        element.classList.add("bg-transparent");
+      }
+    </script>
+  </body>
+
+</html>
