@@ -11,7 +11,7 @@
 
       <div class="container">
         {{ content }}
-
+        {% include banner.html %}
     
       </div>
     
@@ -26,6 +26,14 @@
         var element = document.getElementById("mainNav");
         element.classList.remove("bg-dark");
         element.classList.add("bg-transparent");
+        var element = document.getElementById("banner");
+        //element.classList.add("bg-transparent");
+        element.classList.remove("alert");
+        element.classList.remove("alert-info");
+        element.style.color = "#fff";
+        element.style.fontWeight = "bold";
+
+
       }
     </script>
   </body>

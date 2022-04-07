@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+        <title>My Personal Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+      <header>
+        <h3>Shinwoo Kim</h3>
+        <button class="nav-toggle" aria-label="toggle navigation">
+          <span class="hamburger"></span>
+        </button>
+     <nav class="nav">
+         <ul class="nav__list">
+             <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+             <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+             <li class="nav__item"><a href="Resume.pdf" class="nav__link">Résumé</a></li>
+             <li class="nav__item"><a href="#activities" class="nav__link">Activities</a></li>
+             <li class="nav__item"><a href="#projects" class="nav__link">My Projects</a></li>
+         </ul>
+     </nav>
+ </header>
+        <section class="intro">
+            <h1 class="section__title section__title--intro">
+                My <strong>Personal Website</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">A place for all my work</p>
+            <img src="img/portfolio-01.jpg" alt="" class="intro__img">
+        </section>
+
+        <div class="portfolio-item-individual">
+            <p>I Created own personal website using HTML, CSS, and Javascript to show my resume and projects for showing resume and projects</p>
+            <img src="img/portfolio-details.jpg" alt="">
+            <a href="index.html" class="btn"> Back to Home </a>
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- replace with your own email address -->
+            <!-- Contacts -->
+            <a href="mailto:shinwookim@pitt.edu" class="footer__link">shinwookim@pitt.edu</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://linkedin.com/in/kimshinwoo">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="tel:2152372888">
+                      <i class="fas fa-phone"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://instagram.com/_shinwookim">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/shinwookim">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+
+
+        <script src="js/index.js"></script>
+
+    </body>
+</html>
