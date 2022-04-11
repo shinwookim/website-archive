@@ -1,6 +1,6 @@
 ---
 layout: page
-title: contact me
+title: Contact Me
 permalink: /contact/
 ---
 <div class="w-100">

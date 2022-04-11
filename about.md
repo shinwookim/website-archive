@@ -1,6 +1,6 @@
 ---
 layout: page
-title: about me
+title: About Me
 permalink: /about/
 ---
  <h1 class="text-center custom-font">Shinwoo Kim</h1>

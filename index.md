@@ -8,6 +8,9 @@ layout: home
     </div>
     <a href="{{ site.baseurl }}/about/" style="text-decoration: none;"><p class="hoverable">About Me</p></a>
     <style>
+        .hoverable{
+            transition: transform .5s ease;
+        }
         .hoverable:hover{
             transform: scale(1.5);
         }
