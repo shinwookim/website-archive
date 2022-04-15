@@ -1,6 +1,6 @@
 ---
 layout: page
-title: My Experience
+title: Experience
 permalink: /experience/
 ---
 <style>
@@ -11,6 +11,20 @@ permalink: /experience/
 <div class="w-100">
     <div class="mb-3">
         <p class="lead"> Please visit my <a href="https://linkedin.com/in/kimshinwoo">LinkedIn</a> for the most up-to-date information </p>
+    </div>
+     <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+        <div class="flex-grow-1">
+            <h3 class="mb-0">Webmaster</h3>
+            <p class="subheading mb-1">University of Pittsburgh — <a href="https://touchtheinvisible.com">Touch the Invisible</a> — Research Project</p>
+            <p class="mb-0">
+            Worked with Dr. Zuzana Swigonova(Univ. of Pittsburgh, Dept. of Biology) and her team in creating an free-open educational library of macromolecular complexes which can be 3d-printed for classroom educational purposes:</p>
+            <ul>
+                <li>I created a <a href="https://touchtheinvisible.com">website</a> for Pitt's Touch the Invisible research project.</li>
+                <li>Using open source APIs, I created an a viewer for displaying 3D bio-molecular models which is embedded into the site.</li>
+                <li>Using open source APIs, Jekyll, and Javascript, I created a content-management-system(CMS) for non-technical staff members to edit the website without learning to code.</li>
+            </ul>
+        </div>
+        <div class="flex-shrink-0"><span class="text-primary">October 2021 — January 2022</span></div>
     </div>
     <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
         <div class="flex-grow-1">
@@ -23,7 +37,7 @@ permalink: /experience/
                 <li>Serving as mentors to local Pittsburgh Public School students through the PAC program and assist with facilitating PAC sessions.</li>
             </ul>
         </div>
-        <div class="flex-shrink-0"><span class="text-primary">October 2021 — Current</span></div>
+        <div class="flex-shrink-0"><span class="text-primary">October 2021 — January 2022</span></div>
     </div>
     <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
         <div class="flex-grow-1">
@@ -48,7 +62,7 @@ permalink: /experience/
             </ul>
             </p>
         </div>
-        <div class="flex-shrink-0"><span class="text-primary">October 2021 — Current</span></div>
+        <div class="flex-shrink-0"><span class="text-primary">October 2021 — January 2022</span></div>
     </div>
     <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
         <div class="flex-grow-1">
@@ -56,7 +70,7 @@ permalink: /experience/
             <div class="subheading mb-1">University of Pittsburgh — SCI Community Engagement</div>
             <p>I Developed the curriculum and course materials for CompTIA A+ certification class; and Taught CompTIA A+ certification class to Hills district high school students.</p>
         </div>
-        <div class="flex-shrink-0"><span class="text-primary">August 2021 — Current</span></div>
+        <div class="flex-shrink-0"><span class="text-primary">August 2021 — January 2022</span></div>
     </div>
     <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
         <div class="flex-grow-1">

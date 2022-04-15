@@ -6,8 +6,13 @@ permalink: /about/
  <h1 class="text-center custom-font">Shinwoo Kim</h1>
  <p class="text-center" style="font-family:'Times New Roman', Times, serif; font-size: 1.5em; color:black;"><span class="dropcap">H</span>ONORS <span class="dropcap">U</span>NDERGRADUATE, <span class="dropcap">C</span>OMPUTER <span class="dropcap">S</span>CIENCE, <span class="dropcap">U</span>NIVERSITY OF <span class="dropcap">P</span>ITTSBURGH</p>
 
-I am an undergraduate student at the <a href="https://pitt.edu"> University of Pittsburgh</a>, majoring in computer science and minoring in mathematics. I am currently enrolled in Pitt’s <a href="https://sci.pitt.edu">School of Computing and Information</a> and the <a href="https://www.honorscollege.pitt.edu/">Honors College</a>. I'm originally from Seoul, South Korea, and have lived in many amazing places including Pacific Grove (California), Philadelphia, and Pittsburgh. I have a passion for teaching; I was the President of the ADAPT Tutoring Program, at North Penn Senior High School, and I was the Co-Founder and Instructor of the ADAPT SAT Class. Currently, I’m involved with teaching the CompTIA A+ Certificate course to high school students in Pittsburgh’s Hill District.
-Apart from programming, I am also interested in research, espcially in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing. Outside of academia, I enjoy most of my time being outdoors. I spend most of my time in the woods. In the winter, I am an avid skier. During the warmer months, I enjoy mountain biking and hiking. When forced indoors, I spend my time watching movies and television shows.
+I am an undergraduate student at the [University of Pittsburgh's](https://pitt.edu) [School of Computing and Information](https://sci.pitt.edu) and the [University Honors College](https://www.honorscollege.pitt.edu/) studying __computer science__ and __mathematics__. I'm originally from Seoul, South Korea, and have lived in many amazing places including Pacific Grove (California), Philadelphia, and Pittsburgh. 
+
+I have a passion for teaching. I was the President of the Tutoring Program at North Penn Senior High School, and I was the Co-Founder/Instructor of the school's free SAT&reg; prep class. Recently, I taught the [CompTIA A+ Certificate](https://www.comptia.org/certifications/a) course to high school students in Pittsburgh’s Hill District. 
+
+My research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing although there are very few things in computer science that I'm _not_ interested in.
+
+Outside of school, I enjoy spending most of my time outdoors. In the winter, I am an avid skier. And during the warmer months, I enjoy hiking. When forced indoors, I spend my time watching movies and television shows.
                 
 <div class="text-center social-icons">
     <a class="social-icon" href="mailto:{{ site.email }}"><i class="fas fa-envelope"></i></a>
