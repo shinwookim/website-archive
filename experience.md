@@ -3,26 +3,17 @@ layout: page
 title: Experience
 permalink: /experience/
 ---
-<style>
-    li{
-        margin-bottom: 0;
-    }
-</style>
 <div class="w-100">
     <div class="mb-3">
         <p class="lead"> Please visit my <a href="https://linkedin.com/in/kimshinwoo">LinkedIn</a> for the most up-to-date information </p>
     </div>
      <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
         <div class="flex-grow-1">
-            <h3 class="mb-0">Webmaster</h3>
-            <p class="subheading mb-1">University of Pittsburgh — <a href="https://touchtheinvisible.com">Touch the Invisible</a> — Research Project</p>
+            <h3 class="mb-0">Webmaster, Web Developer</h3>
+            <p class="subheading mb-1"><a href="https://touchtheinvisible.com">Touch the Invisible</a> — University of Pittsburgh Research Project</p>
             <p class="mb-0">
-            I worked with Dr. Zuzana Swigonova(Univ. of Pittsburgh, Dept. of Biology) and her team in creating an free-open educational library of macromolecular complexes which can be 3d-printed for classroom educational purposes:</p>
-            <ul>
-                <li>I created a <a href="https://touchtheinvisible.com">website</a> for Pitt's Touch the Invisible research project.</li>
-                <li>Using open source APIs, I created an a viewer for displaying 3D bio-molecular models which is embedded into the site.</li>
-                <li>Using open source APIs, Jekyll, and Javascript, I created a content-management-system(CMS) for non-technical staff members to edit the website without learning to code.</li>
-            </ul>
+            I worked with Dr. Zuzana Swigonova(University of Pittsburgh, Department of Biology) and her team in creating a free, open-source library of macromolecular complexes which can be 3d-printed, or viewed online for classroom educational purposes. I created a <a href="https://touchtheinvisible.com">website</a> which displays the 3D macromoleculear models and the accompanying information sheet using open source APIs. In addition, I created a content-management-system(CMS) to manage all the assets and to allow for non-technical staff members to edit the website without learning to code.    
+            </p>
         </div>
         <div class="flex-shrink-0"><span class="text-primary">March 2022 — Present</span></div>
     </div>
@@ -30,12 +21,9 @@ permalink: /experience/
         <div class="flex-grow-1">
             <h3 class="mb-0">Diversity Recruitment Education and Mentoring (DREAM) Team</h3>
             <p class="subheading mb-1">University of Pittsburgh — Office of Admissions and Financial Aid</p>
-            <p class="mb-0">I assisted the Office of Admissions and Financial Aid with college access and diversity efforts. My duties involved:
+            <p class="mb-0">
+                I assisted the Office of Admissions and Financial Aid with college access and diversity efforts. My duties involved assisting with managing the Pittsburgh Admissions Collaboration, which hosts college preparation workshops. I served as a mentor to local Pittsburgh Public School students through the PAC program and assist with facilitating PAC sessions.
             </p>
-            <ul>
-                <li>Assisting with managing the Pittsburgh Admissions Collaboration, which hosts college preparation workshops.</li>
-                <li>Serving as mentors to local Pittsburgh Public School students through the PAC program and assist with facilitating PAC sessions.</li>
-            </ul>
         </div>
         <div class="flex-shrink-0"><span class="text-primary">October 2021 — January 2022</span></div>
     </div>
@@ -45,22 +33,24 @@ permalink: /experience/
             <div class="subheading mb-1">University of Pittsburgh Honors College (w/ Office of Engagement and Community Affairs)</div>
             <p class="mb-0">
                 Working in concert with the Hill CEC’s director and outreach coordinator, I supported existing programming through:
-            <ul>
-                <li>creating marketing and recruitment materials</li>
-                <li>supporting planning meetings with university and community partners</li>
-                <li>monitoring program implementation - updating website</li>
-                <li>development and tracking of pre/post surveys</li>
-            </ul>
             </p>
-            <p class="mb-0">
+                <blockquote class="mb-0">
+                    <ul class="mb-0">
+                        <li>creating marketing and recruitment materials</li>
+                        <li>supporting planning meetings with university and community partners</li>
+                        <li>monitoring program implementation - updating website</li>
+                        <li>development and tracking of pre/post surveys</li>
+                    </ul>
+                </blockquote>
                 I supported new programming by:
-            <ul>
-                <li>liaising with collaborative student groups at the University</li>
-                <li>helping to facilitate conversations with collaborative faculty and staff at the University</li>
-                <li>helping to facilitate, and participating in, co-creation activities with university and community partners</li>
-                <li>Identifying potential S.T.E.A.M. resources at the University for involvement with the CECs Digital Equity and Inclusion efforts through the S.T.E.A.M. Studio.</li>
-            </ul>
-            </p>
+                <blockquote class="mb-0">
+                    <ul class="mb-0">
+                        <li>liaising with collaborative student groups at the University</li>
+                        <li>helping to facilitate conversations with collaborative faculty and staff at the University</li>
+                        <li>helping to facilitate, and participating in, co-creation activities with university and community partners</li>
+                        <li>identifying potential S.T.E.A.M. resources at the University for involvement with the CECs Digital Equity and Inclusion efforts through the S.T.E.A.M. Studio.</li>
+                    </ul>
+                </blockquote>
         </div>
         <div class="flex-shrink-0"><span class="text-primary">October 2021 — January 2022</span></div>
     </div>
@@ -76,7 +66,7 @@ permalink: /experience/
         <div class="flex-grow-1">
             <h3 class="mb-0">President & Academic Tutor</h3>
             <div class="subheading mb-1">Academic Discussion and Peer Tutoring at North Penn High School</div>
-            <p> I created and implemented a virtual tutoring program; I utilized GSuite to manage over 50 volunteer academic tutors. I tutored 15 students in math and science, resulting in their improved grades. <br>I also created the groundwork
+            <p> I created and implemented a virtual tutoring program; I utilized GSuite to manage over 50 volunteer academic tutors. I tutored 15 students in math and science, resulting in their improved grades. I also created the groundwork
                 for a tutoring center partnership between the North Penn High School and its surrounding middle and elementary schools
             </p>
         </div>
