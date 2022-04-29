@@ -1,10 +1,11 @@
 ---
 layout: page
 title: test
+usemathjax: true
 permalink: /test/
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat gravida porttitor. Sed quis porta mauris. Vivamus semper turpis vestibulum dapibus faucibus. Ut pellentesque venenatis pellentesque. Proin sagittis pellentesque purus, vel egestas nisi pharetra eget. Cras sit amet vehicula mi. Duis sed vestibulum tellus. Proin libero elit, porta et ex non, convallis mollis nulla.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat gravida porttitor. Sed quis porta mauris. Vivamus semper turpis vestibulum dapibus faucibus. Ut pellentesque venenatis pellentesque. Proin sagittis pellentesque purus, vel egestas nisi pharetra eget. Cras sit amet vehicula mi. Duis sed vestibulum tellus. Proin libero elit, porta et ex non, convallis mollis nulla. $$f(x)=2$$
 
 Etiam rhoncus, massa vitae ultrices laoreet, massa ipsum sollicitudin ligula, in posuere ante mi ultrices elit. Praesent rutrum leo ut semper porta. Pellentesque et risus consectetur, rutrum est ac, tincidunt nibh. Etiam congue urna libero, vel lacinia nulla fringilla sed. Mauris efficitur congue eros sed volutpat. Ut tristique ipsum sed sollicitudin efficitur. Nulla commodo pulvinar sem, iaculis sodales justo sollicitudin id. Vivamus est arcu, ullamcorper sit amet nunc vel, consequat fermentum eros. Fusce accumsan suscipit pulvinar. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis condimentum nulla, nec dignissim nisi.
 
