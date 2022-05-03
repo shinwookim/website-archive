@@ -37,7 +37,10 @@
 }
 .post-title {
     display: block;
-	text-transform: lowercase;
+}
+
+.bg-dark {
+    transition: 0.75s ease;
 }
 
 /**
@@ -95,6 +98,11 @@ footer {
 	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #fff;
 	padding: 35px 0;
+}
+
+
+section{
+	border-bottom: 0.5px solid;
 }
 /**
  * Misc

@@ -1,7 +1,7 @@
 ---
-layout: page
-title: About Me
-permalink: /about/
+# layout: page
+# title: About Me
+# permalink: /about/
 ---
  <h1 class="text-center custom-font">Shinwoo Kim</h1>
  <p class="text-center" style="font-family:'Times New Roman', Times, serif; font-size: 1.5em; color:black;"><span class="dropcap">H</span>ONORS <span class="dropcap">U</span>NDERGRADUATE, <span class="dropcap">C</span>OMPUTER <span class="dropcap">S</span>CIENCE, <span class="dropcap">U</span>NIVERSITY OF <span class="dropcap">P</span>ITTSBURGH</p>

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Shinwoo Kim's Website - Legacy Versions
+title: Website History
 permalink: /legacy/
 ---
 Here is a history of my website.

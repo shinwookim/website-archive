@@ -1,7 +1,7 @@
 ---
-layout: page
-title: Contact Me
-permalink: /contact/
+# layout: page
+# title: Contact Me
+# permalink: /contact/
 ---
 <div class="w-100">
     <div class="text-center social-icons">

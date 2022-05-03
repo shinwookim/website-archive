@@ -10,15 +10,48 @@
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="{{ '/assets/js/scripts.js' | prepend: site.baseurl }}"></script>
-
+<script>
+    const date = new Date(document.lastModified);
+    document.getElementById("modDate").innerHTML = date;
+</script>
+{% if page.homescripts %}
     
-<!-- for mathjax support -->
-{% if page.usemathjax %}
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-    TeX: { equationNumbers: { autoNumber: "AMS" } }
-    });
+    <script>
+        $(window).scroll(function() {
+            $('nav').toggleClass('bg-dark', $(this).scrollTop() > 100);
+        });
     </script>
-    <script type="text/javascript" async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script>
+        const sections = document.querySelectorAll("section");
+        const navLi = document.querySelectorAll("nav a");
+
+        window.onscroll = () => {
+            var current = "";
+            sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset + 150 >= sectionTop ) {
+                current = section.getAttribute("id"); }
+                
+            });
+            navLi.forEach((a) => {
+                a.classList.remove("active");
+                if (a.classList.contains(current)) {
+                    console.log(navLi)
+                    a.classList.add("active");
+                }
+            });
+        };
+    </script>
+
 {% endif %}
+
+
+
+<!-- for mathjax support -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<script type="text/javascript" async src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     

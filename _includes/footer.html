@@ -1,44 +1,49 @@
 <footer class="site-footer">
   <div class="container">
-  <h2 class="footer-heading">{{ site.title }}</h2>
-    <div class="column">
-      <ul class="social-media-list">
-        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        {% if site.linkedin_username %}
-        <li>
-          <a href="https://linkedin.com/in/{{ site.linkedin_username }}" style="text-decoration:none;"> 
-            <i class="fab fa-linkedin-in"></i>
-            <span class="username">{{ site.linkedin_username }}</span>
-          </a>
-        </li>
-        {% endif %}
-        {% if site.github_username %}
-        <li>
-          <a href="https://github.com/{{ site.github_username }}" style="text-decoration:none;"> 
-            <i class="fab fa-github"></i>
-            <span class="username">{{ site.github_username }}</span>
-          </a>
-        </li>
-        {% endif %}
-       
-        {% if site.twitter_username %}
-        <li>
-          <a href="https://twitter.com/{{ site.twitter_username }}" style="text-decoration:none;"> 
-            <i class="fa-brands fa-twitter"></i>
-            <span class="username">{{ site.twitter_username }}</span>
-          </a>
-        </li>
-        {% endif %}
-        {% if site.instagram_username %}
-        <li>
-          <a href="https://instagram.com/{{ site.instagram_username }}" style="text-decoration:none;"> 
-            <i class="fa-brands fa-instagram"></i>
-            <span class="username">{{ site.instagram_username }}</span>
-          </a>
-        </li>
-        {% endif %}
-      </ul>
-    </div>
+     <h2 class="footer-heading">{{ site.title }}</h2>
+     <div class="column">
+        <ul class="social-media-list">
+           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+           {% if site.linkedin_username %}
+           <li>
+              <a href="https://linkedin.com/in/{{ site.linkedin_username }}" style="text-decoration:none;"> 
+              <i class="fab fa-linkedin-in"></i>
+              <span class="username">{{ site.linkedin_username }}</span>
+              </a>
+           </li>
+           {% endif %}
+           {% if site.github_username %}
+           <li>
+              <a href="https://github.com/{{ site.github_username }}" style="text-decoration:none;"> 
+              <i class="fab fa-github"></i>
+              <span class="username">{{ site.github_username }}</span>
+              </a>
+           </li>
+           {% endif %}
+           {% if site.twitter_username %}
+           <li>
+              <a href="https://twitter.com/{{ site.twitter_username }}" style="text-decoration:none;"> 
+              <i class="fa-brands fa-twitter"></i>
+              <span class="username">{{ site.twitter_username }}</span>
+              </a>
+           </li>
+           {% endif %}
+           {% if site.instagram_username %}
+           <li>
+              <a href="https://instagram.com/{{ site.instagram_username }}" style="text-decoration:none;"> 
+              <i class="fa-brands fa-instagram"></i>
+              <span class="username">{{ site.instagram_username }}</span>
+              </a>
+           </li>
+           {% endif %}
+        </ul>
+     </div>
+     <div class="column">
+      <span style="font-size: 0.7em">This web page is created and maintained solely by me. The content in the page is mine and does not reflect the position of the University of Pittsburgh, or any other organization I have been affilliated with.<br>
+        Last Modified: <span id="modDate"></span><br>
+        <a href={{site.baseurl}}/legacy> Legacy Version </a>
+     </span>
+     </div>
   </div>
-</div>
+  </div>
 </footer>

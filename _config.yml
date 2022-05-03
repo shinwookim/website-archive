@@ -3,7 +3,7 @@ title: Shinwoo Kim
 email: shinwookim@pitt.edu
 description: > # this means to ignore newlines until "baseurl:"
   A student at the University of Pittsburgh studying computer science and mathematics
-#baseurl: "https://sites.pitt.edu/~shk148" # the subpath of your site, e.g. /blog
+# baseurl: "https://sites.pitt.edu/~shk148" # the subpath of your site, e.g. /blog
 url: "https://sites.pitt.edu/~shk148" # the base hostname & protocol for your site
 # Social Profiles
 twitter_username:   _shinwookim
