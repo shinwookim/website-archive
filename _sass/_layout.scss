@@ -4,9 +4,14 @@
  .wrapper .container {
     max-width: 100rem;
 }
+
+
+
+
+
 .nav-link {
 	font-family: neue-haas-grotesk-display, sans-serif;
-	font-weight: 300;
+	font-weight: 600;
     display: inline-block;
     padding: 1rem;
 }
@@ -26,15 +31,19 @@
 	background-color: rgba(100, 100, 100, 0.5);
 	border-bottom: thick solid white;
 }
+
 .navbar-brand {
-	font-family: 'Autography'; 
+	font-family: 'Autography';
 	font-size: 35px !important;
 	margin-left: 1rem;
 }
+
+
 .post-nav {
     text-align: center;
     padding: 1rem;
 }
+
 .post-title {
     display: block;
 }
@@ -52,6 +61,7 @@
         max-width: 100%;
     }
 }
+
 /**
  * Site footer
  */
@@ -100,17 +110,25 @@ footer {
 	padding: 35px 0;
 }
 
+<<<<<<< HEAD
 
 section{
 	border-bottom: 0.5px solid;
 }
+=======
+>>>>>>> parent of 4f1a4e4 (Updated)
 /**
  * Misc
  */
 .preview-panel {
     padding: 1rem;
     box-sizing: border-box;
+<<<<<<< HEAD
     border: 1px solid #fff;    
+=======
+    border: 1px solid $color-initial;
+    
+>>>>>>> parent of 4f1a4e4 (Updated)
     &:hover {
         border: 1px solid $grey-color-light;
     }
