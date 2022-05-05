@@ -1,7 +1,7 @@
 ---
-# layout: page
-# title: Experience
-# permalink: /experience/
+layout: page
+title: Experience
+permalink: /experience/
 ---
 <style>
     li{
