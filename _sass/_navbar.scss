@@ -1,0 +1,21 @@
+.navbar-brand{
+    padding:0rem 1.5rem; margin:0;
+    font-size: 2rem;
+}
+
+.bg-black{
+    background-color: #000;
+}
+
+.nav-link{
+	font-family: neue-haas-grotesk-display, sans-serif;
+	font-size: 1.2rem;
+}
+.nav-link:hover{
+    border-bottom: thick solid #fff;
+    color: white;
+}
+.active{
+    border-bottom: thick solid #fff;
+    color: white;
+}

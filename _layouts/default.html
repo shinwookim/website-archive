@@ -1,25 +1,16 @@
 <!DOCTYPE html>
 <html>
+   {% include head.html %}
+   <body>
+      <main class="wrapper">
 
-  {% include head.html %}
-
-  <body>
-
-    <main class="wrapper">
+         {% include navbar.html %}
       
-      {% include header.html %}
-
-      <div class="container">
-        {% include banner.html %}
-        {{ content }}
-        
-        
-      </div>
-      {% include footer.html %}
-    </main>
-
-    {% include scripts.html %}
-    
-  </body>
-
+         <div class="main-container container" style="padding-top: 75px; ">
+            {{ content }}
+         </div>
+         {% include footer.html %}
+      </main>
+      {% include scripts.html %}
+   </body>
 </html>
