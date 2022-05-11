@@ -5,9 +5,9 @@
    </button>
    <div class="collapse navbar-collapse" id="navbarResponsive">
       <div class="navbar-nav ms-auto">
-         <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/index.html' | prepend: site.baseurl }}">about</a>
+         <a class="nav-link {% if page.url == '/about' %}active{% endif %}" href="{{ '/about' | prepend: site.baseurl }}">about</a>
          <a class="nav-link {% if page.url == '/experience/' %}active{% endif %}" href="{{ '/experience' | prepend: site.baseurl }}">experience</a>
-         <a class="nav-link" href="{{ '/Resume.pdf' | prepend: site.baseurl }}">résumé</a>
+         <a class="nav-link" href="{{ '/assets/Resume.pdf' | prepend: site.baseurl }}">résumé</a>
          <a class="nav-link {% if page.url == '/contacts/' %}active{% endif %}"  href="{{ '/contacts' | prepend: site.baseurl }}">contacts</a>
       </div>
    </div>
