@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: default
 title: Website History
-permalink: /legacy/
 ---
 Here is a history of my website.
 

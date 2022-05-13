@@ -4,7 +4,6 @@
 
 layout: default
 title: About
-permalink: /guide/
 ---
 # test
 

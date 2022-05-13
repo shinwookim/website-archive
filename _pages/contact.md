@@ -1,9 +1,8 @@
 ---
 layout: default
+title: Connect with Me
 permalink: /contacts/
 ---
-
-# connect with me
 <section id="contact">
    <div class="w-100">
       <div class="social-icons text-center">

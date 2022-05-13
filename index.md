@@ -2,34 +2,27 @@
 title: Home
 layout: default
 ---
-<section class="hero">
-   <div class="container">
-      <div class="jumbotron">
-         <div class="row">
-            <div class="hero_col col-8">
-               <h1 class="custom-font display-1">Shinwoo Kim</h1>
-               <h2>&ensp;<span class="typed" data-typed-items="Software Developer,Pitt Student, Educator"></span></h2>
-               <p>
-                  &emsp;Connect With Me | <a class="social-icon" href="mailto:{{ site.email }}"><i class="fas fa-envelope"></i></a>
-                  <a class="social-icon" href="https://linkedin.com/in/{{ site.linkedin_username }}"> <i class="fab fa-linkedin-in"></i></a>
-                  <a class="social-icon" href="https://github.com/{{ site.github_username }}"><i class="fab fa-github"></i></a>
-                  <a class="social-icon" href="https://twitter.com/{{ site.twitter_username }}"><i class="fab fa-twitter"></i></a>
-                  <a class="social-icon" href="https://instagram.com/{{ site.instagram_username }}"><i class="fab fa-instagram"></i></a>
-               </p>
-            </div>
-            <div class="hero_col col-4">
-               <img class="profile img-thumbnail" src="{{site.baseurl}}/assets/img/profile.jpg">
-            </div>
+<!-- hero area -->
+<div class="container col-xxl-8 px-4 py-5">
+   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+         <img src="{{site.baseurl}}/assets/img/profile.jpg" class="d-block mx-lg-auto img-fluid img-thumbnail" alt="Shinwoo Kim" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+         <h1 class="autography display-2 lh-1">Shinwoo Kim</h1>
+         <code class="h4 mb-3"><span class="typed" data-typed-items="Software Developer,Pitt Student, Educator"></span></code>
+         <p>Connect with Me | 
+            <a class="social-icon" href="mailto:{{ site.email }}"><i class="fas fa-envelope"></i></a>
+            <a class="social-icon" href="https://linkedin.com/in/{{ site.linkedin_username }}"> <i class="fab fa-linkedin-in"></i></a>
+            <a class="social-icon" href="https://github.com/{{ site.github_username }}"><i class="fab fa-github"></i></a>
+            <a class="social-icon" href="https://twitter.com/{{ site.twitter_username }}"><i class="fab fa-twitter"></i></a>
+            <a class="social-icon" href="https://instagram.com/{{ site.instagram_username }}"><i class="fab fa-instagram"></i></a>
+         </p>
+         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a class="btn btn-dark btn-lg px-4 me-md-2" href="{{ '/about' | prepend: site.baseurl }}">About Me</a>
+            <a class="btn btn-dark btn-lg px-4 me-md-2" href="{{ '/assets/Resume.pdf' | prepend: site.baseurl }}">Résumé</a>
          </div>
       </div>
    </div>
-</section>
-
-<div class="mx-auto w-75 text-center border border-secondary rounded">
-<h2 class="mt-3 text-center">Get in Touch</h2>
-      <p class="font-bold text-2xl pb-16 sm:pb-8">
-      Want to work together or have any questions?
-		</p>
-      <a href="{{ '/contacts' | prepend: site.baseurl }}" class="mb-3 btn btn-large btn-secondary">Say Hello 👋</a>
-      <a href="{{ '/assets/Resume.pdf' | prepend: site.baseurl }}" class="mb-3 btn btn-large btn-secondary">Get My Résumé</a>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

@@ -1,0 +1,62 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+<div class="text-center">
+  <span class="badge badge-custom selected viewAll">View all</span>
+  {% for tag in site.data.tags %}
+    <span class="badge badge-custom" data-tag="{{tag}}">{{ site.data.tags_format[tag] }}</span>
+  {% endfor %}
+</div>
+<div class="container p-5 pt-0">
+  <hr/>
+  {% for post in site.posts %}
+    <div class="post-wrapper"
+      {% if post.tags %}
+        {% for tag in post.tags %}
+          data-{{ tag }}
+        {% endfor %}
+      {% endif %}
+    >
+      <article class="post-preview">
+        <a class="text-decoration-none" href="{{ post.url| prepend: site.baseurl }}">
+          <h2 class="mb-0">{{ post.title }}</h2>
+        </a>
+        <p class="mb-0">
+          <time class="mb-5" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y-%m-%d'}}</time>
+        </p>
+        {% if post.tags %}
+          {% for tag in post.tags %}
+            {% if site.data.tags contains tag %}
+              <span class="badge badge-custom" data-tag="{{tag}}">{{ site.data.tags_format[tag] }}</span>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        <p>{{post.description}}</p>
+      </article>
+    <hr/>
+    </div>
+  {% endfor %}
+</div>
+<script>
+  $("[data-tag]").click((e) => {
+    currentTag = e.target.dataset.tag;
+    filterByTagName(currentTag);
+  })
+  function filterByTagName(tagName) {
+    $('.hidden').removeClass('hidden');
+    $('.post-wrapper').each((index, elem) => {
+      if (!elem.hasAttribute(`data-${tagName}`)) {
+        $(elem).addClass('hidden');
+      }
+    });
+    $(`.badge`).removeClass('selected');
+    $(`.badge[data-tag=${tagName}]`).addClass('selected');
+  }
+  $(".viewAll").click((e) => {
+    $(`.badge`).removeClass('selected');
+    $(`.viewAll`).addClass('selected');
+    $('.hidden').removeClass('hidden');
+  })
+</script>

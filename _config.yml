@@ -21,7 +21,8 @@
 title: Shinwoo Kim
 email: shinwookim@pitt.edu
 description: A student at the University of Pittsburgh studying computer science and mathematics
-#baseurl: "https://sites.pitt.edu/~shk148" # the subpath of your site, e.g. /blog
+baseurl: "https://sites.pitt.edu/~shk148" # the subpath of your site, e.g. /blog
+# baseurl: ""
 url: "https://sites.pitt.edu/~shk148" # the base hostname & protocol for your site
 # Social Profiles
 twitter_username:   _shinwookim
@@ -29,7 +30,20 @@ github_username:    shinwookim
 instagram_username: _shinwookim 
 linkedin_username: kimshinwoo
 
+
+
+
 # Build settings
+# Pages Path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
+include:
+  - _pages
+
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
