@@ -3,11 +3,19 @@
    {% include headET.html %}
    <body>
       <h1><a class="text-center autography text-decoration-none" href="{{ '/' | prepend: site.baseurl }}">Shinwoo Kim</a></h1>
-
+      <div class="post-nav" style="padding-left: 5em">
+         {% if page.next.url %}
+           <a class="nav-item" href="{{ page.next.url | prepend: site.baseurl }}">&laquo; Prev</a>
+         {% endif %}
+         {% if page.previous.url %}
+           <a class="nav-item" href="{{ page.previous.url | prepend: site.baseurl }}">Next &raquo;</a>
+         {% endif %}
+       </div>
       <main class="wrapper mt-5">
          <div class="main-container container">
-            <h1 style="margin-top: 0"><a style="text-decoration: none;" href="{{ '/blog/' | prepend: site.baseurl }}">⬅</a> {{page.title}}</h1>
-            
+            <a style="text-decoration: none;" href="{{ '/blog/' | prepend: site.baseurl }}">⬅</a>
+            <h1 style="margin-top: 0">{{page.title}}</h1>
+            <p class="subtitle">{{page.subtitle}}</p>
             {{ content }}
          </div>
          <footer class="site-footer">

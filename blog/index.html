@@ -1,0 +1,80 @@
+---
+layout: default
+title: Blog
+---
+<div class="text-center">
+  <span class="badge badge-custom selected viewAll">View all</span>
+  {% for tag in site.data.tags %}
+    <span class="badge badge-custom" data-tag="{{tag}}">{{ site.data.tags_format[tag] }}</span>
+  {% endfor %}
+</div>
+<div class="container p-5 pt-0">
+  <hr/>
+  {% for post in paginator.posts %}
+  <div class="post-wrapper"
+  {% if post.tags %}
+    {% for tag in post.tags %}
+      data-{{ tag }}
+    {% endfor %}
+  {% endif %}
+  >
+  <article class="post-preview">
+     <a class="text-decoration-none" href="{{ post.url| prepend: site.baseurl }}">
+        <h2 class="mb-0">{{ post.title }}</h2>
+     </a>
+     <p class="mb-0">
+        <time class="mb-5" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y-%m-%d'}}</time>
+     </p>
+     {% if post.tags %}
+      {% for tag in post.tags %}
+        {% if site.data.tags contains tag %}
+          <span class="badge badge-custom" data-tag="{{tag}}">{{ site.data.tags_format[tag] }}</span>
+        {% endif %}
+      {% endfor %}
+     {% endif %}
+     <p>{{post.description}}</p>
+  </article>
+  <hr/>
+</div>
+{% endfor %}
+</div>
+{% if paginator.total_pages > 1 %}
+<div class="pagination justify-content-center">
+  {% if paginator.previous_page %}
+  <a class="btn bg-secondary text-white pager" href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+  {% endif %}
+  {% for page in (1..paginator.total_pages) %}
+  {% if page == paginator.page %}
+  <em class="pager">&nbsp{{ page }}&nbsp</em>
+  {% elsif page == 1 %}
+  <a class="pager" href="{{ '/blog' | relative_url }}">{{ page }}</a>
+  {% else %}
+  <a class="pager" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+  {% endif %}
+  {% endfor %}
+  {% if paginator.next_page %}
+  <a class="btn bg-secondary text-white pager" href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+  {% endif %}
+</div>
+{% endif %}
+<script>
+  $("[data-tag]").click((e) => {
+    currentTag = e.target.dataset.tag;
+    filterByTagName(currentTag);
+  })
+  function filterByTagName(tagName) {
+    $('.hidden').removeClass('hidden');
+    $('.post-wrapper').each((index, elem) => {
+      if (!elem.hasAttribute(`data-${tagName}`)) {
+        $(elem).addClass('hidden');
+      }
+    });
+    $(`.badge`).removeClass('selected');
+    $(`.badge[data-tag=${tagName}]`).addClass('selected');
+  }
+  $(".viewAll").click((e) => {
+    $(`.badge`).removeClass('selected');
+    $(`.viewAll`).addClass('selected');
+    $('.hidden').removeClass('hidden');
+  })
+</script>
