@@ -2,12 +2,14 @@
 layout: default
 title: Blog
 ---
-<div class="text-center">
+{% include search.html %}
+<div class="text-center mb-1">
   <span class="badge badge-custom selected viewAll">View all</span>
   {% for tag in site.data.tags %}
     <span class="badge badge-custom" data-tag="{{tag}}">{{ site.data.tags_format[tag] }}</span>
   {% endfor %}
 </div>
+
 <div class="container p-5 pt-0">
   <hr/>
   {% for post in paginator.posts %}
@@ -32,30 +34,30 @@ title: Blog
         {% endif %}
       {% endfor %}
      {% endif %}
-     <p>{{post.description}}</p>
+     <p>{{post.content | strip_html | truncatewords: 25 }}</p>
   </article>
   <hr/>
 </div>
 {% endfor %}
 </div>
+
 {% if paginator.total_pages > 1 %}
-<div class="pagination justify-content-center">
-  {% if paginator.previous_page %}
-  <a class="btn bg-secondary text-white pager" href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
-  {% endif %}
-  {% for page in (1..paginator.total_pages) %}
-  {% if page == paginator.page %}
-  <em class="pager">&nbsp{{ page }}&nbsp</em>
-  {% elsif page == 1 %}
-  <a class="pager" href="{{ '/blog' | relative_url }}">{{ page }}</a>
-  {% else %}
-  <a class="pager" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
-  {% endif %}
-  {% endfor %}
-  {% if paginator.next_page %}
-  <a class="btn bg-secondary text-white pager" href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
-  {% endif %}
+
+<div class="d-flex flex-row justify-content-between">
+  
+  <a class="btn btn-primary {% unless paginator.previous_page %}disabled{% endunless %}" href="{{ paginator.previous_page_path | prepend: site.baseurl}}">&larr;
+    Newer Posts
+  </a>
+  
+  
+  <p>Page {{paginator.page}} of {{paginator.total_pages}}</p>
+
+  
+  <a class="btn btn-primary {% unless paginator.next_page %}disabled{% endunless %}" href="{{ paginator.next_page_path | prepend: site.baseurl}}">Older Posts&rarr;</a>
+  
+
 </div>
+
 {% endif %}
 <script>
   $("[data-tag]").click((e) => {

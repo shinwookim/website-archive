@@ -7,6 +7,7 @@
 }
 .hidden{
     display: none;
+    transition: display 2s ease;
 }
 .selected{
     background-color: #6c757d;
@@ -20,6 +21,8 @@
 .page_number {
 	flex: 1;
 }
+
+
 next, a.next {
 	flex: 1;
 }
