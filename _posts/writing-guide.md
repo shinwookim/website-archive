@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Placeholder
+title: Writing Guide
 description: A visual breakdown of how to use the ET jekyll theme
 tags: [blog, jekyll]
 date: 2022-05-13
+draft: true
 ---
 
 ET-Jekyll theme is based off of <a href="http://www.daveliepmann.com">Dave Liepmann's</a> awesome <a href="https://edwardtufte.github.io/tufte-css/">Tufte CSS</a> - which takes its style and inspiration from the wonderful book and handout designs of <a href="https://www.edwardtufte.com/tufte/">Edward Tufte</a>.
@@ -151,7 +152,7 @@ You're welcome to simply use an <code>img</code> element when pasting in static 
 Also remember to add the <code>loading="lazy"</code> attribute to all image elements to help improve initial loading performance.
 
 <figure>
-    <img loading="lazy" src="{{ site.baseurl }}/images/flat-design-toggles_qfre51_c_scale,w_1400.jpg" alt="Flat UI Toggles">
+    <img loading="lazy" src="https://i.stack.imgur.com/FLHaI.png" alt="Flat UI Toggles">
     <span class="marginnote">User interface toggle comparison between flat and skeuomorphic design by <a href="https://bradleytaunt.com">Bradley Taunt</a>.</span>
 </figure>
 

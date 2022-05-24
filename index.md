@@ -3,15 +3,22 @@ title: Home
 layout: default
 ---
 <!-- hero area -->
+<style>
+   @media only screen and (min-width: 1000px) {
+	/* For large screens: */
+	.main-container {max-width: none}
+  }
+</style>
 <div class="container col-xxl-8 px-4 py-5">
-   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+   <div class="row flex-lg-row align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
          <img src="{{site.baseurl}}/assets/img/profile.jpg" class="d-block mx-lg-auto img-fluid img-thumbnail" alt="Shinwoo Kim" width="700" height="500" loading="lazy">
       </div>
       <div class="col-lg-6">
          <h1 class="autography display-2 lh-1">Shinwoo Kim</h1>
-         <code class="h4 mb-3"><span class="typed" data-typed-items="Software Developer,Pitt Student, Educator"></span></code>
+         <code class="h4 mb-3"><span class="typed" data-typed-items="Software Developer,Pitt Student, Educator, Computer Scientist"></span></code>
          <p>Connect with Me | 
+           <a class="social-icon" href="{{'/contacts' | prepend: site.baseurl}}"><i class="fa-solid fa-message"></i></a>
             <a class="social-icon" href="mailto:{{ site.email }}"><i class="fas fa-envelope"></i></a>
             <a class="social-icon" href="https://linkedin.com/in/{{ site.linkedin_username }}"> <i class="fab fa-linkedin-in"></i></a>
             <a class="social-icon" href="https://github.com/{{ site.github_username }}"><i class="fab fa-github"></i></a>

@@ -6,7 +6,7 @@ permalink: /experience/
 
 <div class="w-100">
    <div class="mb-3">
-      <p class="lead"> Please visit my <a href="https://linkedin.com/in/kimshinwoo">LinkedIn</a> for the most up-to-date information </p>
+      <p class="lead text-center"> Please visit my <a href="https://linkedin.com/in/kimshinwoo">LinkedIn</a> for the most up-to-date information </p>
    </div>
    <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
       <div class="flex-grow-1">

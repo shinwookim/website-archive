@@ -2,7 +2,8 @@
 # Main styling
 ---
 @import
-    "font";
+    "font",
+    "toc";
 .autography{
     font-size: 1.5em;
 
@@ -63,7 +64,7 @@ body {
     height: 100%;
     margin: 0 auto;
     max-width: 1440px;
-    padding-left: 12.5%;
+    //padding-left: 12.5%;
     
     width: 87.5%;
 }
@@ -81,10 +82,13 @@ h3 { font-size: 1.7rem; margin-top: 2.6rem; }
 
 p,table,blockquote,pre,img,hr,.mini-note,ul li,ol li {
     box-sizing: border-box;
-    max-width: 55%;
+    max-width: 65%;
+}
+pre {
+    background-color: whitesmoke;
 }
 .MathJax_SVG_Display {
-    max-width: 55% !important;
+    max-width: 65% !important;
 }
 li ul li, li ol li {
     max-width: 100%;
@@ -96,7 +100,7 @@ p {
 
 a,a:visited {
     color: #111;
-
+    transition: color 0.3s ease 0s;
     &:hover {
         color: rgb(220, 40, 40);
     }
