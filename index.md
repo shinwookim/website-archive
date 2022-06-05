@@ -5,9 +5,8 @@ layout: default
 <!-- hero area -->
 <style>
    @media only screen and (min-width: 1000px) {
-	/* For large screens: */
-	.main-container {max-width: none}
-  }
+	   .main-container {max-width: none}
+   }
 </style>
 <div class="container col-xxl-8 px-4 py-5">
    <div class="row flex-lg-row align-items-center g-5 py-5">

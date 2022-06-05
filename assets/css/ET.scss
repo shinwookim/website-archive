@@ -2,11 +2,16 @@
 # Main styling
 ---
 @import
-    "font",
-    "toc";
+    "font";
 .autography{
     font-size: 1.5em;
-
+}
+.MathJax{
+    overflow-x: scroll;
+    margin:0;
+}
+mjx-container{
+    max-width: 65%;
 }
 /**************************************
     $ CUSTOM TYPEFACE
@@ -75,12 +80,13 @@ h1,h2,h3,h4,h5,h6 {
     line-height: 1;
     margin: 0;
     text-transform: capitalize;
+    max-width: 65%;
 }
 h1 { font-size: 3.2rem; font-style: normal; margin-top: 2.6rem; }
 h2 { font-size: 2.2rem; margin-top: 4.2rem; }
 h3 { font-size: 1.7rem; margin-top: 2.6rem; }
 
-p,table,blockquote,pre,img,hr,.mini-note,ul li,ol li {
+p,table,pre,img,hr,.mini-note,ul li,ol li {
     box-sizing: border-box;
     max-width: 65%;
 }
@@ -110,6 +116,10 @@ blockquote {
     font-style: italic;
     margin: 0;
     padding: 2rem 0 2rem 4rem;
+}
+blockquote p{
+    border-left: 3px solid #ccc;
+    padding: 0.5em;
 }
 
 blockquote footer {
