@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: page
 title: About Me
 permalink: /about/
 ---
-<img src="{{site.baseurl}}/assets/img/profile.jpg" class="d-bloc img-fluid rounded floater" alt="Shinwoo Kim" width="250" loading="lazy">
-I am currently an undergraduate student at the [University of Pittsburgh's](https://pitt.edu) [School of Computing and Information](https://sci.pitt.edu) & the [University Honors College](https://www.honorscollege.pitt.edu/) studying **computer science** and **mathematics**. I'm originally from Seoul, South Korea, and have lived in many amazing places including Pacific Grove (California), Philadelphia, and Pittsburgh. 
+<img src="{{site.baseurl}}/assets/img/profile.jpg" class="d-block img-fluid rounded floater" alt="Shinwoo Kim" width="250" loading="lazy"> I am currently an undergraduate student at the [University of Pittsburgh's](https://pitt.edu) [School of Computing and Information](https://sci.pitt.edu) & the [University Honors College](https://www.honorscollege.pitt.edu/) studying **computer science** and **mathematics**. I'm originally from Seoul, South Korea, and have lived in many amazing places including Pacific Grove (California), Philadelphia, and Pittsburgh. 
 
 I have a passion for teaching. I was the President of the Tutoring Program at North Penn Senior High School and the Co-Founder/Instructor of the school's free SAT® prep class. Most recently, I taught the [CompTIA A+ Certificate](https://www.comptia.org/certifications/a) course to high school students in Pittsburgh’s Hill District. 
 
