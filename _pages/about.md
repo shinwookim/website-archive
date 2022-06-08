@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Me
+title: About
 permalink: /about/
 ---
 <img src="{{site.baseurl}}/assets/img/profile.jpg" class="d-block img-fluid rounded floater" alt="Shinwoo Kim" width="250" loading="lazy"> I am currently an undergraduate student at the [University of Pittsburgh's](https://pitt.edu) [School of Computing and Information](https://sci.pitt.edu) & the [University Honors College](https://www.honorscollege.pitt.edu/) studying **computer science** and **mathematics**. I'm originally from Seoul, South Korea, and have lived in many amazing places including Pacific Grove (California), Philadelphia, and Pittsburgh. 

@@ -3,6 +3,16 @@
 # only Main files contain this front matter, not partials.
 nav_exclude: true
 ---
+/* Custom */
+mjx-assistive-mml {
+  right: 0px;
+  bottom: 0px;
+}
+
+.MathJax{
+  overflow-x: auto;
+}
+
 /*****************************************************************************/
 /*
 /* Tufte Jekyll blog theme
@@ -309,9 +319,8 @@ blockquote .sidenote, blockquote .marginnote { margin-right: -79% }
                    color: $contrast-color;
                    top: 0rem; } //removed superscripting for numerical reference in sidenote
 
-p, footer, div.table-wrapper,  .MJXc-display, .MathJax { width: 55%; }
-
-div.table-wrapper, table { overflow-x: auto; } //changed all overflow values to 'auto' so scroll bars appear only as needed
+p, footer, div.table-wrapper,  .MJXc-display .MathJax { width: 55%; }
+div.table-wrapper, table, .MathJax { overflow-x: auto; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
 @media screen and (max-width: 760px) { p, footer { width: 90%; }
                                        pre code { width: 87.5%; }

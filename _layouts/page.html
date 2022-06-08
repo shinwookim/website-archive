@@ -1,16 +1,23 @@
 ---
 layout: default
 ---
-
-<!-- Page Header -->
-
-  <div class="container" id="page-container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="page-heading">
-          <h1>{{ page.title }}</h1>
+<!DOCTYPE html>
+<html> {% include head.html %}
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+  <link rel="stylesheet" href="{{"/assets/main.css" | absolute_url }}">
+  <body>
+    <header> {% include navbar.html %} </header>
+    <article>
+      <div class="container" id="page-container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1>{{ page.title }}</h1>
+            </div>
+            {{ content }}
+          </div>
         </div>
-        {{ content }}
       </div>
-    </div>
-  </div>
+    </article> {% include footer.html %} {% include scripts.html %} {% include google-analytics.html %}
+  </body>
+</html>

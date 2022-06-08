@@ -1,13 +1,14 @@
 ---
-layout: default
+layout: home
+title: Home
 ---
-<div class="container col-xxl-8 px-4 py-5">
+<div class="container col-xxl-8 px-4 py-5" id="page-container">
   <div class="row flex-lg-row align-items-center g-5 py-5">
      <div class="col-10 col-sm-8 col-lg-6">
-        <img src="{{site.baseurl}}/assets/img/profile.jpg" class="d-block mx-lg-auto img-fluid img-thumbnail" alt="Shinwoo Kim" width="350" height="350" loading="lazy">
+        <img src="{{site.baseurl}}/assets/img/profile_350.jpeg" class="d-block mx-lg-auto img-fluid img-thumbnail" alt="Shinwoo Kim" width="350" height="350" loading="lazy">
      </div>
      <div class="col-lg-6">
-        <h1 class="autography display-2 lh-1">Shinwoo Kim</h1>
+        <h1 class="autography display-2 lh-1 text-primary">Shinwoo Kim</h1>
         <code class="mb-3 lead"><span class="typed" data-typed-items="Software Developer,Pitt Student, Educator, Computer Scientist"></span></code>
         <p>Connect with Me | 
           <a class="social-icon" href="{{'/contacts' | prepend: site.baseurl}}"><i class="fa-solid fa-message"></i></a>

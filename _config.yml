@@ -2,8 +2,9 @@ title:              Shinwoo Kim
 email:              shinwookim@pitt.edu
 description:        A student at the University of Pittsburgh studying computer science and mathematics
 author:             Shinwoo Kim
-baseurl:            ""
-url:                "https://shinwookim.github.io"
+baseurl:            "/~shk148"
+url:                "https://sites.pitt.edu"
+
 
 # Social Profiles
 twitter_username:   _shinwookim
@@ -11,9 +12,6 @@ github_username:    shinwookim
 facebook_username:  shinwoo.k73
 instagram_username: _shinwookim 
 linkedin_username: kimshinwoo
-
-# Add your google-analytics ID here to activate google analytics
-google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
 # Build settings
 markdown:           kramdown

@@ -1,17 +1,17 @@
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand autography" href="{{"/" | relative_url }}">{{ site.title | escape }}</a>
+    <a class="navbar-brand titillium-bold" href="{{"/" | relative_url }}">SHINWOO KIM</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fa fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <div class="navbar-nav ms-auto">
-         <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' |prepend: site.baseurl }}">Home</a>
-         <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" href="{{ '/about' | prepend: site.baseurl }}">About</a>
-         <a class="nav-link {% if page.url == '/experience/' %}active{% endif %}" href="{{ '/experience' | prepend: site.baseurl }}">Experience</a>
+         <a class="nav-link  {% if page.url == '/' %}active{% endif %}" href="{{ '/' |prepend: site.baseurl }}">Home</a>
+         <a class="nav-link  {% if page.url == '/about/' %}active{% endif %}" href="{{ '/about' | prepend: site.baseurl }}">About</a>
+         <a class="nav-link  {% if page.url == '/experience/' %}active{% endif %}" href="{{ '/experience' | prepend: site.baseurl }}">Experience</a>
          <!--a class="nav-link {% if page.url == '/blog/' %}active{% endif %}" href="{{ '/blog' | prepend: site.baseurl }}">Blog</a-->
-         <a class="nav-link {% if page.url == '/contacts/' %}active{% endif %}"  href="{{ '/contacts' | prepend: site.baseurl }}">Contact</a>
+         <a class="nav-link  {% if page.url == '/contacts/' %}active{% endif %}"  href="{{ '/contacts' | prepend: site.baseurl }}">Contact</a>
       </div>
    </div>
   </div>

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <link rel="stylesheet" href="{{"/assets/main.css" | relative_url }}">
-  <link rel="stylesheet" href="{{"/assets/custom.css" | relative_url }}">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+  <link rel="stylesheet" href="{{"/assets/main.css" | absolute_url }}">
 <body>
   <header>
     {% include navbar.html %}
   </header>
   <article>
-   
     {{ content }}
   </article>
     {% include footer.html %}

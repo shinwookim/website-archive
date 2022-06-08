@@ -1,10 +1,19 @@
-// Override Bootstrap typography variables
-/*
-$font-family-base: "Lora", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
-$headings-font-family: "Open Sans", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-*/
+@font-face {
+	font-family: 'Autography';
+	src: url("../assets/fonts/Autography/Autography.woff2") format('woff2'), url("../assets/fonts/Autography/Autography.woff") format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+.autography {
+	font-family: 'Autography';
+	font-weight: normal;
+}
+.titillium{
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 400;
+}
+.titillium-bold{
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 900;
+}
