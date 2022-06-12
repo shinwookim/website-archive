@@ -3,6 +3,7 @@
   {% include head.html %}
   <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
   <link rel="stylesheet" href="{{"/assets/main.css" | absolute_url }}">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
   <span id="forPrintStyle"></span>
   <body>
     <header>{% include navbar.html %}</header>
@@ -31,8 +32,11 @@
     </article> {% include footer.html %} {% include scripts.html %} {% include google-analytics.html %}
     {% if page.classStyle %}
     <style>
-      h1,h2,h3,h4,h5,h6{font-variant: small-caps;}
+      h1,h2,h3,h4,h5,h6,.navbar-brand{font-variant: small-caps;font-family: "Computer Modern Serif", serif;}
     </style>
+    <script>
+      window.onload = function() {newStyle()};
+    </script>    
     {% endif %}
   </body>
 </html>

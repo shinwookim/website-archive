@@ -66,8 +66,8 @@ const select = (el, all = false) => {
   }
   
   function newStyle() {
-    const classname = "CSXXXX";
-    const newNavName = classname + "";
+    //const classname = "CSXXXX";
+    const newNavName = "Shinwoo Kim";
     document.getElementById("nav-brand").innerHTML = newNavName;
     document.getElementById("nav-brand").classList.remove('titillium-bold');
     document.getElementById("nav-brand").classList.add('h1');
@@ -75,3 +75,20 @@ const select = (el, all = false) => {
     document.getElementById("main-withsidebar").style.backgroundColor = "#fffff8";
     document.getElementById("main-withsidebar").classList.add("mb-2");
   }
+
+  window.addEventListener("load", function() {
+    const form = document.getElementById('feedback-form');
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const action = e.target.action;
+      fetch(action, {
+        method: 'POST',
+        body: data,
+      })
+      .then(() => {
+        alert("Success!");
+      })
+    });
+  });
+  

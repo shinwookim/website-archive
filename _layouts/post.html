@@ -2,6 +2,7 @@
 <html>
   {% include head.html %}
   <link rel="stylesheet" href="{{"/assets/tufte.css" | absolute_url }}">
+  <link rel="stylesheet" href="{{"/assets/print.css" | absolute_url }}" media="print">
   <script>
     MathJax = {
 tex: {
@@ -35,10 +36,11 @@ options: {
   <article>
     {{ content }}
   </article>
+  <span class="print-footer">{% if page.date %}{{ page.title }} - {{ page.date | date: "%B %-d, %Y" }} - {{site.author}}{% else %}{{ page.title }} - {{site.author}}{% endif %}</span>
   <footer class="site-footer">
-    <h2 class="autography">Shinwoo Kim</h2>
+    <!--h2 class="autography">Shinwoo Kim</h2-->
     <p class="mb-0">&copy; 2021-2022 Shinwoo Kim. All Rights Reserved.</p>
-    <p class="mb-0"><a href="{{ '/blog/' | absolute_url }}">Return to Home</a></p>
+    <p class="mb-0"><a onclick="history.back()">Return to Previous Page</a></p>
   </footer>
     {% include scripts.html %}
     {% include google-analytics.html %}
