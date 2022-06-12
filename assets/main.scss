@@ -20,7 +20,7 @@ a{
     font-size: 2em;
     font-weight: 900 !important;
     padding:0;
-    
+    transition: color 1s ease 0s; 
 }
 .navbar-brand:hover{
   color: $primary !important;
@@ -144,3 +144,70 @@ input, textarea {
   padding: 0;
   width: 100%;
 }
+
+table {
+  @extend .table;
+}
+
+hr {
+  @extend .slender;
+}
+
+blockquote {
+  @extend .blockquote, .p-2, .mb-2, .bg-light, .border, .rounded-3;
+  font-size: 1em !important;
+}
+
+p, ul{
+  margin-bottom: 0;
+}
+
+.small-caps{
+  font-variant: small-caps;
+}
+
+@media(min-width: 768px){
+  .side-menu{
+    position: fixed;
+  }
+  .left-border-side{
+    border-left: 1px rgba(0, 0, 0, 0.05) solid;
+  }
+}
+@media(max-width: 768px){
+  .side-menu{
+    display: none;
+  
+  }
+  
+}
+@media print
+{    
+    .no-print,hr, .no-print, .print-button *
+    {
+        display: none !important;
+    }
+    #page-container{
+      margin-top: 0;
+    }
+    #main-withsidebar {
+      border:none !important;
+    }
+    h1,h2,h3,h4,h5,h6,table > *{
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+
+html {
+  scroll-padding-top: 4em;
+}
+
+.printmode *
+{
+    display: none !important;
+    margin: 0;
+    padding: 0;
+}
+
