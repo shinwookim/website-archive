@@ -1,42 +1,11 @@
-<!DOCTYPE html>
-<html>
-  {% include head.html %}
-  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
-  <link rel="stylesheet" href="{{"/assets/main.css" | absolute_url }}">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
-  <span id="forPrintStyle"></span>
-  <body>
-    <header>{% include navbar.html %}</header>
-    <article>
-      <div class="container" id="page-container">
-        <div class="row">
-          {% if page.classStyle %}
-          <div class="col-md-4 col-lg-3 d-md-block p-0 side-menu no-print" id="side-menu">
-            <div class="position-sticky">
-              <p>
-                <strong>Quick Links</strong>
-              </p>{% include toc.html html=content ordered=true %}
-            </div>
-          </div> 
-          {% endif %}
-          <div class="col-md-8 ms-sm-auto col-lg-9 {% if page.classStyle %}border left-border-side{% endif page.classStyle %}{% unless page.classStyle %} mx-auto {% endunless %}" {% if page.classStyle %}id="main-withsidebar" {% endif page.classStyle %}>
-            <div class="page-heading">
-              <h1>{{ page.title }}{% if page.classStyle %} <button type="button" class="btn btn-primary print-button text-light float-end mt-1" onclick="togglePrint()" data-bs-toggle="button" autocomplete="off">
-                  <i class="fas fa-print"></i>
-                </button> {% endif page.classStyle %} </h1>
-            </div>
-            {{ content }}
-          </div>
-        </div>
+---
+layout: default
+---
+<div class="container" id="page-container">
+    <div class="col-md-8 ms-sm-auto col-lg-9 mx-auto">
+      <div class="page-heading">
+        <p class="title">{{ page.title }}</p>
       </div>
-    </article> {% include footer.html %} {% include scripts.html %} {% include google-analytics.html %}
-    {% if page.classStyle %}
-    <style>
-      h1,h2,h3,h4,h5,h6,.navbar-brand{font-variant: small-caps;font-family: "Computer Modern Serif", serif;}
-    </style>
-    <script>
-      window.onload = function() {newStyle()};
-    </script>    
-    {% endif %}
-  </body>
-</html>
+      {{ content }}
+  </div>
+</div>

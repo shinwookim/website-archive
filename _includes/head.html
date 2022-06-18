@@ -1,23 +1,15 @@
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <title>
-    {% if page.title %}{{ page.title | escape }} | {{ site.title | escape }}
-    {% else %}{{ site.title | escape }}{% endif %}
-  </title>
-
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Playfair+Display:wght@800&family=Space+Mono&family=Spectral&family=Titillium+Web:wght@400;700;900&display=swap" rel="stylesheet" as="style">
-
-  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-
-  
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <title>{% if page.meta_title %}{{page.meta_title}}{% elsif page.title%}{{ page.title | escape }} | {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | absolute_url }}">
-
-  <link rel="icon" type="image/x-icon" href="{{"/assets/favicon.ico" | absolute_url }}">
+  <link rel="icon" type="image/x-icon" href="{{"/assets/favicon/favicon.png" | absolute_url }}">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="{{"/assets/favicon/favicon-32x32.png" | absolute_url }}">
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="{{"/assets/favicon/favicon-16x16.png" | absolute_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{"/assets/favicon/apple-touch-icon.png" | absolute_url }}">
+  <link rel="manifest" href="{{"/assets/favicon/site.webmanifest" | absolute_url }}">
+  <meta property="og:image" content="{{"/assets/img/hero-bg.webp" | absolute_url }}" />
+  <meta name="twitter:image" content="{{"/assets/img/hero-bg.webp" | absolute_url }}" />
+  <meta name="twitter:card" content="summary" />
+  {% seo title=false %}
 </head>

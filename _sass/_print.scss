@@ -1,0 +1,30 @@
+@media print {
+    .no-print,
+    hr,
+    .no-print,
+    .print-button * {
+      display: none !important;
+    }
+    #page-container {
+      margin-top: 0;
+    }
+    #main-withsidebar {
+      border: none !important;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    table > * {
+      margin: 0;
+      padding: 0;
+    }
+}
+.printmode * {
+    display: none !important;
+    margin: 0;
+    padding: 0;
+}
+  

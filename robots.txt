@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://sites.pitt.edu/~shk148/sitemap.xml

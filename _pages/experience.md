@@ -7,7 +7,7 @@ permalink: /experience/
   <div class="mb-3">
     <p class="lead text-center"> Please visit my <a href="https://linkedin.com/in/kimshinwoo">LinkedIn</a> for the most up-to-date information </p>
   </div>
-  <h3 class="mb-0">Webmaster, Web Developer</h3>
+  <h2 class="mb-0">Webmaster, Web Developer</h2>
   <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
     <div class="flex-grow-1">
       <p class="subheading mb-1">
@@ -19,7 +19,7 @@ permalink: /experience/
       <span class="text-primary">March 2022 — Present</span>
     </div>
   </div>
-  <h3 class="mb-0">Diversity Recruitment Education and Mentoring (DREAM) Team</h3>
+  <h2 class="mb-0">Diversity Recruitment Education and Mentoring (DREAM) Team</h2>
   <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
     <div class="flex-grow-1">
       <p class="subheading mb-1">University of Pittsburgh — Office of Admissions and Financial Aid</p>
@@ -29,7 +29,7 @@ permalink: /experience/
       <span class="text-primary">October 2021 — January 2022</span>
     </div>
   </div>
-  <h3 class="mb-0">S.T.E.A.M. Ambassador</h3>
+  <h2 class="mb-0">S.T.E.A.M. Ambassador</h2>
   <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
     <div class="flex-grow-1">
       <div class="subheading mb-1">University of Pittsburgh Honors College (w/ Office of Engagement and Community Affairs)</div>
@@ -50,7 +50,7 @@ permalink: /experience/
       <span class="text-primary">October 2021 — January 2022</span>
     </div>
   </div>
-  <h3 class="mb-0">COMPTIA A+ Instructor</h3>
+  <h2 class="mb-0">COMPTIA A+ Instructor</h2>
   <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
     <div class="flex-grow-1">
       <div class="subheading mb-1">University of Pittsburgh — SCI Community Engagement</div>
@@ -60,7 +60,7 @@ permalink: /experience/
       <span class="text-primary">August 2021 — January 2022</span>
     </div>
   </div>
-  <h3 class="mb-0">President & Academic Tutor</h3>
+  <h2 class="mb-0">President & Academic Tutor</h2>
   <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
     <div class="flex-grow-1">
       <div class="subheading mb-1">Academic Discussion and Peer Tutoring at North Penn High School</div>
@@ -70,7 +70,7 @@ permalink: /experience/
       <span class="text-primary">September 2019 - June 2021</span>
     </div>
   </div>
-  <h3 class="mb-0">SAT Instructor</h3>
+  <h2 class="mb-0">SAT Instructor</h2>
   <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
     <div class="flex-grow-1">
       <div class="subheading mb-1">ADAPT SAT Class at North Penn High School</div>

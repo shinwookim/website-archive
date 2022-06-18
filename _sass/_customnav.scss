@@ -1,0 +1,28 @@
+.navbar {
+    padding: 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+    font-size: 2em;
+    font-weight: 900 !important;
+    padding: 0;
+    transition: color 1s ease 0s;
+}
+.navbar-brand:hover {
+    color: $primary !important;
+}
+.nav-link {
+    font-family: "Cormorant Garamond", serif;
+    transition: all 0.5s;
+}
+.nav-link:hover {
+    border-bottom: 4px solid black;
+    color: black;
+}  
+.active {
+    border-bottom: 4px solid black;
+    color: black;
+}
+html {
+    scroll-padding-top: 4em;
+}
