@@ -3,13 +3,12 @@ layout: page
 title: About
 permalink: /about/
 ---
-<img src="{{site.baseurl}}/assets/img/profile.jpg" class="d-block img-fluid rounded float-start d-block" alt="Shinwoo Kim" width="250" loading="lazy" style="margin-right: 1em; margin-bottom: 5px;"> I am an undergraduate student at the [University of Pittsburgh](https://pitt.edu)'s [School of Computing and Information](https://sci.pitt.edu) & [University Honors College](https://www.honorscollege.pitt.edu) where I am studying **computer science** and **mathematics**. I'm originally from *Seoul*, South Korea, and have lived in many amazing places including *Pacific Grove* (California), *Philadelphia*, and (currently) *Pittsburgh*.  
-<br>
+![Shinwoo Kim]({{site.baseurl}}/assets/img/profile.jpg){: width="250" .d-block .img-fluid .rounded .float-start .me-1 .mb-1}
+I am an undergraduate student at the [University of Pittsburgh](https://pitt.edu)'s [School of Computing and Information](https://sci.pitt.edu) & [University Honors College](https://www.honorscollege.pitt.edu) where I am studying **computer science** and **mathematics**. I'm originally from *Seoul*, South Korea, and have lived in many amazing places including *Pacific Grove* (California), *Philadelphia*, and (currently) *Pittsburgh*.  
+<br />
 Upon completion of my undergraduate studies, I plan on applying to graduate school to further my knowledge in computer science. My research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing although there are very few things in computer science that I'm *not* interested in.  
-<br>
+<br />
 Besides my own education, I've spent the past few years helping others learn. Between 2019 and 2021, I served as the president of the Tutoring Program at North Penn Senior High School, and co-founded and instructed a free SAT® prep class to help more than 70 students. Most recently, I taught the [CompTIA A+ Certificate](https://www.comptia.org/certifications/a) course to high school students in Pittsburgh’s Hill District.  
-<br>
-
 
 <p class="text-center">Connect with Me:
   <a class="social-icon" href="{{'/contacts' | prepend: site.baseurl}}"><i class="fa-solid fa-message"></i></a>
@@ -25,17 +24,16 @@ Besides my own education, I've spent the past few years helping others learn. Be
 ---
 
 ## Education
-<div class="p-1 w-100">
-  <h3 class="mb-0"><i class="pitt-icon"></i>University of Pittsburgh</h3>
-  <h4 class="mb-0">School of Computing and Information + University Honors College</h4>
-  <p>August 2021 - (Expected) May 2026 <br> Bachelor of Science - Computer Science </p>
-</div>
-<div class="p-1 w-100">
-  <h3 class="mb-0"><i class="nphs-icon"></i>North Penn High School</h3>
-  <p>August 2018 - June 2021
-      <br>GPA: 4.18 <br>9 Advanced Placement(AP®) Credits
-  </p>
-</div>
+
+### <i class="pitt-icon"></i>University of Pittsburgh
+#### School of Computing and Information + University Honors College
+August 2021 - (Expected) May 2026  
+Bachelor of Science - Computer Science  
+
+### <i class="nphs-icon"></i>North Penn High School
+August 2018 - June 2021  
+GPA: 4.18  
+9 Advanced Placement(AP®) Credits  
 
 ---
 

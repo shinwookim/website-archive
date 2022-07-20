@@ -16,4 +16,4 @@ published: false
 - **Instructor:** Dr TBD
 - **Section:** XXXX (CRN: XXXXX)
 
-<hr />
+---
