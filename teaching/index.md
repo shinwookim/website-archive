@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Teaching
-published: false
+published: true
 ---
 
 <style>
@@ -9,11 +9,11 @@ published: false
 </style>
 <hr />
 
-## Fall 2022, Term 2221
+## Fall 2022, Term 2231
 
-###### [CSXXXX, Lorem Ipsum Dolar](https://pitt.edu/~shk148)
+###### [CS0441 Discrete Structures for Computer Science](CS0441-2231/)
 
-- **Instructor:** Dr TBD
-- **Section:** XXXX (CRN: XXXXX)
+- **Instructor: Donald Bonidie**
+- **Section: 1090/1095 (CRN: 17064)**
 
 ---

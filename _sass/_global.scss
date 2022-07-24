@@ -2,6 +2,7 @@
 body {
   color: $gray-900;
   margin-top: 74px;
+  height: 100%;
 }
 @media (max-width: 979px) {
   body {
@@ -87,7 +88,7 @@ img::-moz-selection {
 .title {
   @extend h1;
 }
-  
+
 #page-container {
   position: relative;
   min-height: 85vh;
@@ -147,7 +148,6 @@ blockquote {
   font-size: 1em !important;
 }
 
-p,
 ul {
   margin-bottom: 0;
 }

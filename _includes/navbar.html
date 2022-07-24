@@ -7,11 +7,30 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <div class="navbar-nav ms-auto">
-         <a class="nav-link  {% if page.url == '/' %}active{% endif %}" href="{{ '/' |prepend: site.baseurl }}">Home</a>
-         <a class="nav-link  {% if page.url == '/about/' %}active{% endif %}" href="{{ '/about' | prepend: site.baseurl }}">About</a>
-         <a class="nav-link  {% if page.url == '/experience/' %}active{% endif %}" href="{{ '/experience' | prepend: site.baseurl }}">Experience</a>
-         <!--a class="nav-link {% if page.url == '/blog/' %}active{% endif %}" href="{{ '/blog' | prepend: site.baseurl }}">Blog</a-->
-         <a class="nav-link  {% if page.url == '/contacts/' %}active{% endif %}"  href="{{ '/contacts' | prepend: site.baseurl }}">Contact</a>
+        {% for item in site.data.nav.links %}
+          {% if item.url=='#' %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{item.title}}
+              </a>
+              <ul class="dropdown-menu">
+                {% for entry in item.subfolderitems %}
+                {% if entry.url == '#' %}
+                <li><hr class="dropdown-divider"></li>
+                {% else %}
+                <li><a class="dropdown-item" href="{{site.baseurl}}{{entry.url}}">{{entry.page}}</a></li>
+                {% endif %}
+                {% endfor %}
+              </ul>
+            </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link {% if page.url == item.url %}active{% endif %}" href="{{site.baseurl}}{{item.url}}">{{item.title}}</a>
+          </li>
+          {% endif %}
+        {% endfor %}
+        
+       
       </div>
    </div>
   </div>

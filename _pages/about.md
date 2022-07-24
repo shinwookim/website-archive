@@ -3,11 +3,10 @@ layout: page
 title: About
 permalink: /about/
 ---
-![Shinwoo Kim]({{site.baseurl}}/assets/img/profile.jpg){: width="250" .d-block .img-fluid .rounded .float-start .me-1 .mb-1}
-I am an undergraduate student at the [University of Pittsburgh](https://pitt.edu)'s [School of Computing and Information](https://sci.pitt.edu) & [University Honors College](https://www.honorscollege.pitt.edu) where I am studying **computer science** and **mathematics**. I'm originally from *Seoul*, South Korea, and have lived in many amazing places including *Pacific Grove* (California), *Philadelphia*, and (currently) *Pittsburgh*.  
-<br />
+{% picture jpt-webp profile.jpg class="d-block img-fluid rounded float-start me-1 mb-0" width="250" %}I am an undergraduate student at the [University of Pittsburgh](https://pitt.edu)'s [School of Computing and Information](https://sci.pitt.edu) & [University Honors College](https://www.honorscollege.pitt.edu) where I am studying **computer science** and **mathematics**. I'm originally from *Seoul*, South Korea, and have lived in many amazing places including *Pacific Grove* (California), *Philadelphia*, and (currently) *Pittsburgh*.  
+
 Upon completion of my undergraduate studies, I plan on applying to graduate school to further my knowledge in computer science. My research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing although there are very few things in computer science that I'm *not* interested in.  
-<br />
+
 Besides my own education, I've spent the past few years helping others learn. Between 2019 and 2021, I served as the president of the Tutoring Program at North Penn Senior High School, and co-founded and instructed a free SAT® prep class to help more than 70 students. Most recently, I taught the [CompTIA A+ Certificate](https://www.comptia.org/certifications/a) course to high school students in Pittsburgh’s Hill District.  
 
 <p class="text-center">Connect with Me:

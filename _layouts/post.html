@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html lang="en"> {% include head.html %}
-  <link rel="stylesheet" href="{{"/assets/tufte.css" | absolute_url }}">
-  <link rel="stylesheet" href="{{"/assets/print.css" | absolute_url }}" media="print">
+<html lang="en">
+  {% include head.html %} <link rel="stylesheet" href="{{"/assets/tufte.css" |
+  absolute_url }}">
+  <!--link rel="stylesheet" href="{{"/assets/print.css" | absolute_url }}" media="print"-->
   <body>
     <header>
       <h1 class="mb-0">
-        <a onclick="history.back()">⬅</a>
-        <a class="autography mb-0" href="{{ '/' | absolute_url }}">Shinwoo Kim</a>
+        <a href="#" onclick="history.back()">⬅</a>
+        <a class="autography mb-0" href="{{ '/' | absolute_url }}"
+          >Shinwoo Kim</a
+        >
       </h1>
       <p class="title">{{page.title}}</p>
       <p class="subtitle">{{page.subtitle}}</p>
     </header>
-    <article>
-      {{ content }}
-    </article>
-    <span class="print-footer">{% if page.date %}{{ page.title }} - {{ page.date | date: "%B %-d, %Y" }} - {{site.author}}{% else %}{{ page.title }} - {{site.author}}{% endif %}</span>
-    <br>
-    <hr class="slender">
+    <article>{{ content }}</article>
+    <br />
+    <hr class="slender" />
     <footer class="site-footer">
-      <!--h2 class="autography">Shinwoo Kim</h2-->
-      <p class="mb-0">&copy; 2021-2022 Shinwoo Kim. All Rights Reserved.<br>
+      <p class="mb-0">
+        &copy; 2021-2022 Shinwoo Kim. All Rights Reserved.<br />
         <a onclick="history.back()">Return to Previous Page</a>
       </p>
     </footer>
-    {% include scripts.html %}
-    {% include google-analytics.html %}
-
+    {% include scripts.html %} {% include google-analytics.html %}
   </body>
 </html>

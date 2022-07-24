@@ -3,15 +3,6 @@
 # only Main files contain this front matter, not partials.
 nav_exclude: true
 ---
-/* Custom */
-mjx-assistive-mml {
-  right: 0px;
-  bottom: 0px;
-}
-
-.MathJax {
-  overflow-x: auto;
-}
 
 /*****************************************************************************/
 /*
@@ -20,8 +11,6 @@ mjx-assistive-mml {
 /*
 /* The README.md will show you how to set up your site along with other goodies
 /*****************************************************************************/
-
-// Imports to create final
 @font-face {
   font-family: "Autography";
   src: url("../assets/fonts/Autography/Autography.woff2") format("woff2"),
@@ -34,9 +23,11 @@ mjx-assistive-mml {
   font-family: "Autography";
   font-weight: normal;
 }
-@import "../_sass/tufte/fonts";
-@import "../_sass/tufte/settings";
-@import "../_sass/tufte/syntax-highlighting";
+// Imports to create final
+
+@import "tufte/fonts";
+@import "tufte/settings";
+@import "tufte/syntax-highlighting";
 
 // Global Resets
 //
@@ -183,7 +174,8 @@ h3 {
 
 // ET says a need for more than 3 levels of headings is the sign of a diseased mind
 .title {
-  margin-bottom: 0;
+  font-style: italic;
+  margin-top: 2.1777777777777778rem;
   font-size: 2.5rem;
   display: block;
   line-height: 1.08888888888889;
@@ -191,11 +183,9 @@ h3 {
 
 .subtitle {
   font-style: italic;
-  //margin-top: 2.1777777777777778rem;
+  margin-bottom: 2.1777777777777778rem;
   margin-top: 0;
-  //margin-bottom: 2.1777777777777778rem;
-  margin-bottom: 0;
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   display: block;
   line-height: 1.08888888888889;
 }
@@ -203,23 +193,13 @@ h3 {
 p,
 ol,
 ul {
-  font-size: 1.2rem;
-}
-ul ul{
-  width: 100%;
+  font-size: 1.4rem;
 }
 
-p {
-  line-height: 2rem;
-  //margin-top: 1.4rem;
-  margin-top: 1rem;
-  padding-right: 2rem; //removed because,  why?
-  vertical-align: baseline;
-}
+p,
 li {
   line-height: 2rem;
-  //margin-top: 1.4rem;
-  margin-top: 0.5rem;
+  margin-top: 1.4rem;
   padding-right: 2rem; //removed because,  why?
   vertical-align: baseline;
 }
@@ -393,10 +373,10 @@ section {
 
 ul,
 ol {
-  width: 55%;
+  width: 45%;
   -webkit-padding-start: 5%;
   -webkit-padding-end: 5%;
-  //list-style-type: none;
+  list-style-type: none;
 }
 
 //li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
@@ -438,7 +418,7 @@ img {
   float: right;
   clear: right;
   margin-right: -60%;
-  //width: 50%;
+  width: 50%;
   margin-top: 0;
   margin-bottom: 1.96rem;
   font-size: 1rem;
@@ -486,12 +466,13 @@ blockquote .marginnote {
 p,
 footer,
 div.table-wrapper,
-.MJXc-display .MathJax {
+.MJXc-display,
+.MathJax {
   width: 55%;
 }
+
 div.table-wrapper,
-table,
-.MathJax {
+table {
   overflow-x: auto;
 } //changed all overflow values to 'auto' so scroll bars appear only as needed
 

@@ -1,0 +1,20 @@
+links:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Experience
+    url: /experience/
+  #  - title: Blog
+  #    url: /blog/
+  - title: Teaching
+    url: "#"
+    subfolderitems:
+      - page: See All Courses
+        url: /teaching/
+      - page: divider
+        url: "#"
+      - page: CS0441
+        url: /teaching/CS0441-2231/
+  - title: Contact
+    url: /contacts/
