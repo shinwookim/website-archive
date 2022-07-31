@@ -4,6 +4,11 @@
 nav_exclude: true
 ---
 
+hr {
+  @extend .slender;
+  max-width: 55%;
+}
+
 /*****************************************************************************/
 /*
 /* Tufte Jekyll blog theme
@@ -283,6 +288,8 @@ table.booktabs {
   border-spacing: 0px;
   border-top: 2px solid $border-color;
   border-bottom: 2px solid $border-color;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .booktabs th,
@@ -420,9 +427,9 @@ img {
   margin-right: -60%;
   width: 50%;
   margin-top: 0;
-  margin-bottom: 1.96rem;
+  margin-bottom: 1rem; //originally 1.96
   font-size: 1rem;
-  line-height: 1.96; //changed to bring line heights into rational pattern
+  line-height: 1.2; //originally 1.96
   vertical-align: baseline;
   position: relative;
 }

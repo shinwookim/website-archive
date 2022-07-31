@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/jeffreytse/jekyll-spaceship.git
+  revision: 1e5e18743e91c9fc5e1aa92e4c588b1f09236368
+  specs:
+    jekyll-spaceship (0.10.2)
+      gemoji (~> 3.0)
+      jekyll (>= 3.6, < 5.0)
+      nokogiri (~> 1.6)
+      rainbow (~> 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -38,11 +48,6 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-spaceship (0.10.2)
-      gemoji (~> 3.0)
-      jekyll (>= 3.6, < 5.0)
-      nokogiri (~> 1.6)
-      rainbow (~> 3.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     jekyll_picture_tag (2.0.3)
@@ -64,7 +69,7 @@ GEM
     mime-types (3.4.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2022.0105)
-    nokogiri (1.13.6-arm64-darwin)
+    nokogiri (1.13.8-arm64-darwin)
       racc (~> 1.4)
     objective_elements (1.1.2)
     pathutil (0.16.2)
@@ -95,7 +100,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-seo-tag
   jekyll-sitemap
-  jekyll-spaceship
+  jekyll-spaceship!
   jekyll_picture_tag (~> 2.0)
   rouge
   webrick

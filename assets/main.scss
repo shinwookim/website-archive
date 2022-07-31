@@ -1,5 +1,6 @@
 ---
 ---
+
 @import "bootstrap";
 @import "../_sass/tufte/syntax-highlighting";
 @import "customnav";
@@ -7,3 +8,7 @@
 @import "print";
 @import "global";
 @import "fonts";
+
+p.indent {
+  text-indent: 30px;
+}

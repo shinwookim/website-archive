@@ -5,13 +5,7 @@
   <!--link rel="stylesheet" href="{{"/assets/print.css" | absolute_url }}" media="print"-->
   <body>
     <header>
-      <h1 class="mb-0">
-        <a href="#" onclick="history.back()">⬅</a>
-        <a class="autography mb-0" href="{{ '/' | absolute_url }}"
-          >Shinwoo Kim</a
-        >
-      </h1>
-      <p class="title">{{page.title}}</p>
+      <p class="title"><a href="#" onclick="history.back()" class="back-link">⬅</a> {{page.title}}</p>
       <p class="subtitle">{{page.subtitle}}</p>
     </header>
     <article>{{ content }}</article>
@@ -24,5 +18,15 @@
       </p>
     </footer>
     {% include scripts.html %} {% include google-analytics.html %}
+    <style>
+      .back-link{
+        font-style: normal;
+        background: none;
+        transition: all 1.2s;
+      }
+      .back-link:hover{
+        color: #a00000;
+      }
+    </style>
   </body>
 </html>

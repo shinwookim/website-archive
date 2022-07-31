@@ -35,6 +35,7 @@ defaults:
       permalink: /:basename:output_ext
 include:
   - _pages
+  - teaching/CS0441-2231/handouts
 
 # Where things are
 jekyll-spaceship:

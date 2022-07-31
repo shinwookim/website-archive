@@ -1,10 +1,10 @@
 ---
 layout: docs
-title: CS0441 Discrete Structures for Computer Science (Fall 2022/3)
+title: CS0441 Discrete Structures for Computer Science (Fall 2022)
 published: true
 ---
 
-Welcome to **CS 0441**, Discrete Structures for Computer Science, for the Fall 2022/3 term!
+Welcome to **CS 0441**, Discrete Structures for Computer Science, for the Fall 2022 term!
 
 ---
 <!--
@@ -44,30 +44,33 @@ _See most accurate information on [Canvas](https://canvas.pitt.edu)_
 
 ---
 
-## Recitation Schedule & Handouts
+## Recitation Handouts
 
-| Date                        | Topic            | Handouts                                        | Remarks |
-| --------------------------- | ---------------- | ----------------------------------------------- | ------- |
-| Monday, September 1st, 2022 | 1. Administrivia | [[CS0441-2231] (1)  Administrivia](handouts/01) | N/A     |
+{% include_relative handouts/table.html %}
 
 ---
 
 ## Other Information
 <details markdown="1">
-<summary class='h3'>Diversity Statement</summary>
-At Pitt, we are always striving to improve our commitment to diversity and inclusion, and that includes promoting the most inclusive learning environmennt possible. I view diversity as a resource and a strength of our community, and I want to make this course work for students of all identities. It is my intent to teach in a way that is as respectful and inclusive as possible with regard to: race, gender/gender identity, sexual orientation, socioeconomic status, age, cultural background, as well as any other identities that I have unintentionally missed. I am always open to your suggestions, comments, concerns, and constructive criticism on how I carry out this ethos.  
-At Pitt we have stringent community standards for the treatment of others. I will not tolerate any hate speech, bullying, or harassment of any kind, and I will report any violations of our code of conduct to the [Title IX office](https://www.diversity.pitt.edu/civil-rights-title-ix-compliance).  
+<summary class='h5'>Diversity Statement</summary>
+At Pitt, we are always striving to improve our commitment to diversity and inclusion, and that includes promoting the most inclusive learning environmennt possible. I view diversity as a resource and a strength of our community, and I want to make this course work for students of all identities. It is my intent to teach in a way that is as respectful and inclusive as possible with regard to: race, gender/gender identity, sexual orientation, socioeconomic status, age, cultural background, as well as any other identities that I have unintentionally missed. I am always open to your suggestions, comments, concerns, and constructive criticism on how I carry out this ethos.
+{: .indent .my-0}
+At Pitt we have stringent community standards for the treatment of others. I will not tolerate any hate speech, bullying, or harassment of any kind, and I will report any violations of our code of conduct to the [Title IX office](https://www.diversity.pitt.edu/civil-rights-title-ix-compliance).
+{: .indent .my-0}  
 Please feel free to let me know what name and pronouns you prefer to go by, and/or how you want your name to be pronounced, and I will make sure to address you how you want to be addressed.
+{: .indent .mt-0}
 </details>
 
 <details markdown="1">
-<summary class='h3'>Religious Observances</summary>
+<summary class='h5'>Religious Observances</summary>
 In order to accommodate the observance of religious holidays, students should inform the instructor (by email, within the first two weeks of the term) of any such days which conflict with scheduled class activities.
+{: .indent}
 </details>
 
 <details markdown="1">
-<summary class='h3'>Students with Disabilities</summary>
+<summary class='h5'>Students with Disabilities</summary>
 If you have a disability for which you are or may be requesting an accommodation, you are encouraged to contact both your instructor and Disability Resources and Services (DRS), 140 William Pitt Union, (412) 648-7890, drsrecep@pitt.edu, (412) 228-5347, as early as possible in the term. DRS will verify your disability and determine whether reasonable accommodation(s) for this course are warranted. It is the responsibility of any student seeking accommodation(s) for this course to present any necessary documentation to the instructor by the start of the term.
+{: .indent}
 </details>
 
 ---

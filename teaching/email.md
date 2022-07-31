@@ -5,6 +5,7 @@ subtitle: that gets immediate replies.
 permalink: /teaching/email-policy
 published: true
 ---
+## Writing a Effective Subject Line
 
 Any time you send an email to me regarding the course, please you the following format in the subject line of the email.
 
@@ -17,7 +18,7 @@ For example, If I had a question about Lab 2 in CS0401, my subject line might be
 If you do not follow this format, I cannot guarantee a timely response to your email.
 Also, please use your **Pitt email account**{%sidenote PittEmail "*i.e, it should end with `@pitt.edu`*" %} to send the message, and let me know **who you are**!{%sidenote Name "Include your name, and the course/section. It helps me get back to you faster."%}
 
-# Sample Email
+## Sample Email
 
 > `SUBJECT: [CS0445] SHK148 Issues with files for lab 2`  
 > Hey,
