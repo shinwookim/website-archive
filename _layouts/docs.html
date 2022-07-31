@@ -4,14 +4,14 @@ layout: default
 <article>
   <div class="container" id="page-container">
     <div class="row">
-      <div class="col-md-4 col-lg-3 d-md-block p-0 side-menu no-print" id="side-menu">
-        <div class="position-sticky">
+      <div class="col-lg-2 d-xl-block d-none p-0 side-menu no-print" id="side-menu">
+        <div class="position-sticky me-1">
           <p>
             <strong>Quick Links</strong>
           </p>{% include toc.html html=content ordered=true %}
         </div>
       </div>
-      <div class="col-md-8 ms-sm-auto col-lg-9 border left-border-side" id="main-withsidebar">
+      <div class="ms-auto col-xl-9 border left-border-side" id="main-withsidebar">
         <div class="page-heading">
           <h1>{{ page.title }}
             <button type="button" class="btn btn-primary print-button text-light float-end mt-1" onclick="togglePrint()" data-bs-toggle="button" autocomplete="off">
