@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to send an email
-subtitle: that gets immediate replies.
+title: How to send effective emails
+# subtitle: that gets immediate replies.
 permalink: /teaching/email-policy
 published: true
 ---
