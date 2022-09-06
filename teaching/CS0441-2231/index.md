@@ -46,6 +46,9 @@ _See most up-to-date information on [Canvas](https://canvas.pitt.edu)_
 > - Students should allow at least 24 business hours before following up.
 > - See how to send an effective e-mail [here](../email-policy/).  
 
+#### Student Feedback
+[Please send me your anonymous feedback](https://pitt.co1.qualtrics.com/jfe/form/SV_dd9suL0AkJctj2S){: .btn .btn-secondary}
+{: .text-center}
 ---
 
 ## Recitation Handouts
@@ -54,13 +57,13 @@ _See most up-to-date information on [Canvas](https://canvas.pitt.edu)_
 
 <br />
 
-## Course Policies & Other Information
-{% include_relative policies.html %}
+## Course Policies & Resources
+{% include_relative policies.md %}
 
 ---
 
 ## Helpful Links
-[How to send effective emails](../email-policy/)  
-[University of Pittsburgh](https://pitt.edu){: target="_blank"}  
-[Department of Computer Science](https://cs.pitt.edu){: target="_blank"}  
-[Sign up for **peer tutoring** on Navigate](https://pitt.guide.eab.com/){: target="_blank"}
+- [How to send effective emails](../email-policy/)  
+- [University of Pittsburgh](https://pitt.edu){: target="_blank"}  
+- [Department of Computer Science](https://cs.pitt.edu){: target="_blank"}  
+- [Sign up for **peer tutoring** on Navigate](https://pitt.guide.eab.com/){: target="_blank"}
