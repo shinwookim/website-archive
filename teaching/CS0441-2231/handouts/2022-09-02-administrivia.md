@@ -1,6 +1,6 @@
 ---
 layout: handout
-date: 2022-09-01
+date: 2022-09-02
 title: "Administrivia(Slides)"
 notes: "Did not actually use in recitation"
 ---

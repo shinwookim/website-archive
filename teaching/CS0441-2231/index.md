@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: "CS0441: Discrete Structures for Computer Science (Term 2231)"
+title: 'CS0441: Discrete Structures for Computer Science (Term 2231)'
 published: true
 ---
 
@@ -10,22 +10,12 @@ This page will provide any information for the class that I go over in recitatio
 
 ---
 
-## Annonucements
-<ul>
-    <li>
-        <span class="badge bg-secondary">2022-09-02</span> Welcome to CS0441!
-    </li>
-</ul>
-
----
-
 ## Recitation Information
-_See most up-to-date information on [Canvas](https://canvas.pitt.edu)_  
-**Recitation:** CRN `17064`  
+_Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_  
+**CRN:**  `17064`  
 **Meets:** *Fridays 4:00 PM* at *501 Information Science Building*
 {: .mb-0}
-> This is the recitation section that accompanies professor Donald Bonidie's lecture section `1090` which meets **Tue/Thu, 4:30–5:45pm at 5502 Sennott Square**.
-
+ - Accompanies professor Donald Bonidie's lecture section `1090` which meets **Tue/Thu, 4:30–5:45pm at 5502 Sennott Square**
 
 ---
 
@@ -33,10 +23,12 @@ _See most up-to-date information on [Canvas](https://canvas.pitt.edu)_
 **TA**: Shinwoo Kim  
 **E-mail**: [`shinwookim@pitt.edu`](mailto:shiwookim@pitt.edu)  
 **Home Page:** [{{site.url}}{{site.baseurl}}]({{site.url}}{{site.baseurl}}/)  
-**TA Office Hours**  
+**TA Office Hours** (See [Canvas](https://canvas.pitt.edu/)) 
 {: .mb-0}
-- TBA
-- [By appointment](mailto:shinwookim@pitt.edu)
+- Monday 10 AM - 12 PM in 5712 Sennott
+- Tuesday 10 AM - 11:30 AM in 5712 Sennott
+- Wednesday 11 AM - 12 PM Virtual ([**https://pitt.zoom.us/j/3027565812**](https://pitt.zoom.us/j/3027565812))
+- By Appointment (In-Person or Virtual): [**Scheduler**](https://outlook.office.com/bookwithme/user/cf9122c6baae489ea2e99400607830e5@pitt.edu?anonymous&ep=pcard) Or E-mail me
 
 **Note when E-mailing:**
 {: .mb-0}

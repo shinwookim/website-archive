@@ -1,6 +1,6 @@
 <details markdown="1">
 <summary class='h5'>Canvas & Course Website</summary>
-Resources for this course can be found on-line on the University's Canvas website ; log in using your university computing account username and password. Assignments and grades will be located there, and you will submit assignments there. Supplementary materials which may aid your learning may be posted [here]({{site.url}}{{site.baseurl}}/teaching/CS0441-2231/) *exclusively*
+Resources for this course can be found on-line on the University's Canvas website; log in using your university computing account username and password. Assignments and grades will be located there, and you will submit assignments there. Supplementary materials which may aid your learning *may* be posted [here]({{site.url}}{{site.baseurl}}/teaching/CS0441-2231/) *exclusively*
 
 Canvas Support
 {: .h6}
