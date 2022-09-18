@@ -1,14 +1,15 @@
 title: Shinwoo Kim
 email: shinwookim@pitt.edu
-description: A student at the University of Pittsburgh studying computer science and mathematics
-author: Shinwoo Kim
+description: >- 
+  Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics.
+  His passions are in computer science, technology, and education; 
+  His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.
 baseurl: "/~shk148"
 url: "https://sites.pitt.edu"
 
 # Social Profiles
 twitter_username: _shinwookim
 github_username: shinwookim
-facebook_username: shinwoo.k73
 instagram_username: _shinwookim
 linkedin_username: kimshinwoo
 
@@ -18,15 +19,12 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 highlighter: rouge
-#paginate:           5
-#paginate_path:      "/blog/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-spaceship
-  #jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll_picture_tag
+  # - jekyll_picture_tag
   
 
 # Pages Path
@@ -39,9 +37,8 @@ include:
   - _pages
   - teaching/CS0441-2231/handouts
 
-# Where things are
+# jekyll-spaceship
 jekyll-spaceship:
-  # default enabled processors
   processors:
     - table-processor
     - mathjax-processor
@@ -107,8 +104,3 @@ jekyll-spaceship:
     css:
       class: emoji
     src: https://github.githubassets.com/images/icons/emoji/
-
-picture:
-  source: "assets/img"
-  output: "assets/img/generated"
-  suppress_warnings: true

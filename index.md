@@ -5,7 +5,7 @@ title: Shinwoo Kim | Student, Computer Scientist, Developer
 <div class="container col-xxl-8 px-4 py-5" id="page-container">
   <div class="row flex-lg-row align-items-center g-5 py-5">
      <div class="col-10 col-sm-8 col-lg-6">
-        {% picture jpt-webp profile.jpg class="d-block mx-lg-auto img-fluid img-thumbnail" alt="Shinwoo Kim" width="350" height="350" loading="lazy" %}
+        <img src="assets/img/profile.jpg" class="d-block mx-lg-auto img-fluid img-thumbnail" alt="Shinwoo Kim" width="350" height="350" loading="lazy">
      </div>
      <div class="col-lg-6">
         <p class="autography display-2 lh-1 text-primary">Shinwoo Kim</p>

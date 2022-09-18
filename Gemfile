@@ -11,5 +11,4 @@ group :jekyll_plugins do
   gem "jekyll-spaceship", git: "https://github.com/jeffreytse/jekyll-spaceship.git"
   gem 'rouge'
   gem 'jekyll-seo-tag'
-  gem 'jekyll_picture_tag', '~> 2.0'
 end

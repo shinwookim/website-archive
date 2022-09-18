@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-{% picture jpt-webp profile.jpg class="d-block img-fluid rounded float-start me-1 mb-0" width="250" %}I am an undergraduate student at the [University of Pittsburgh](https://pitt.edu)'s [School of Computing and Information](https://sci.pitt.edu) & [University Honors College](https://www.honorscollege.pitt.edu) where I am studying **computer science** and **mathematics**. I'm originally from *Seoul*, South Korea, and have lived in many amazing places including *Pacific Grove* (California), *Philadelphia*, and (currently) *Pittsburgh*.  
+ ![Shinwoo Kim](../assets/img/profile.jpg){: width="250" .d-block .img-fluid .rounded .float-start .me-2 .mb-0} I am an undergraduate student at the [University of Pittsburgh](https://pitt.edu)'s [School of Computing and Information](https://sci.pitt.edu) & [University Honors College](https://www.honorscollege.pitt.edu) where I am studying **computer science** and **mathematics**. I'm originally from *Seoul*, South Korea, and have lived in many amazing places including *Pacific Grove* (California), *Philadelphia*, and (currently) *Pittsburgh*.  
 
 Upon completion of my undergraduate studies, I plan on applying to graduate school to further my knowledge in computer science. My research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing although there are very few things in computer science that I'm *not* interested in.  
 
