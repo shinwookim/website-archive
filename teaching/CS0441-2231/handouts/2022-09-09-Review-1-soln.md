@@ -2,7 +2,7 @@
 layout: post
 date: 2022-09-10
 title: "Section 1.1 & 1.2 Review Solutions"
-notes: "Select problems from the text (&copy; McGraw Hill)"
+notes: "Solutions & Commentary to Accompany Section 1.1 & 1.2 Review"
 ---
 <style>.red{color: red !important;}</style>
 
@@ -15,25 +15,24 @@ Express each of these as a combination of ***p*** and ***q***.
 
 > a) I will get an A in CS0441 only if I do every exercise in the textbook.
 
-
-> *q* ⇒ *p*
+> $q \implies p$
 {: .red}
 
 > b) I will get an A in CS0441 and I will do every exercise in the textbook.
 
-> *q* ∧ *p*
+> $ q \land q$
 {: .red}
 
 > c) Either I will not get an A in CS0441 or I will not do every exercise in the textbook.
 
-> ¬ *p* ∨ ¬ *q*
+> $\neg p \lor \neg q$
 {: .red}
 
 # Problem 2
 Express your answer in terms of ***e***: “*You can edit a protected Wikipedia entry*” and ***a***: “*You are an administrator*”. 
 >You cannot edit a protected Wikipedia entry unless you are an administrator. 
 
-> *e* ⇒ *a* {%sidenote "contrapositive" "Note that [¬*a* ⇒ ¬*e*] is the **contrapositive** of [*e* ⇒ *a*] and the two statements are logically equivalent. Thus, either statements would be a valid answer."  %}
+> $e \implies a$ {%sidenote "contrapositive" "A student asked if [$\neg a \to \neg e$] would be a valid solution. The answer is YES. [$\neg a \to \neg e$] is the **contrapositive** of [$e \to a$], thus the two statements are logically equivalent. Therefore, either statements would be a valid answer."  %}
 {: .red}
 
 
@@ -41,9 +40,8 @@ Express your answer in terms of ***e***: “*You can edit a protected Wikipedia 
 Express your answer in terms of ***g***: “*You can graduate*,” ***m***: *“You owe money to the university*,” ***r***: “*You have completed the requirements of your major*,” and ***b***: “*You have an overdue library book*”.
 > "You can graduate only if you have completed the requirements of your major and you do not owe money to the university and you do not have an overdue library book."
 
-> *g* ⇒ (*r* ∧ (¬ *m*) ∧ (¬ *b*))
+> $g \to (r \land (\neg m) \land (\neg b))$
 {: .red}
-
 
 # Problem 4
 Show that these statements are inconsistent:
