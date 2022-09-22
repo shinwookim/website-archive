@@ -1,8 +1,9 @@
 ---
 layout: post
-date: 2022-09-10
+date: 2022-09-17
 title: "Section 1.1 & 1.2 Review Solutions"
 notes: "Solutions & Commentary to Accompany Section 1.1 & 1.2 Review"
+backlink: "./handouts"
 ---
 <style>.red{color: red !important;}</style>
 
