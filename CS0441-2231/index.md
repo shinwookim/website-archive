@@ -36,7 +36,6 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_
 > - For official communcations, messages should be sent using official **Pitt Emails**, or Canvas.
 > - Email body should include the **student name** and the **section** they're enrolled in.
 > - Students should allow at least 24 business hours before following up.
-> - See how to send an effective e-mail [here](../email-policy/).  
 
 #### Student Feedback
 [Please send me your anonymous feedback](https://pitt.co1.qualtrics.com/jfe/form/SV_dd9suL0AkJctj2S){: .btn .btn-secondary}
@@ -55,7 +54,6 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_
 ---
 
 ## Helpful Links
-- [How to send effective emails](../email-policy/)  
 - [University of Pittsburgh](https://pitt.edu){: target="_blank"}  
 - [Department of Computer Science](https://cs.pitt.edu){: target="_blank"}  
 - [Sign up for **peer tutoring** on Navigate](https://pitt.guide.eab.com/){: target="_blank"}
