@@ -1,10 +1,13 @@
 ---
 layout: docs
-title: 'CS0441: Discrete Structures for Computer Science (Term 2231)'
+title: 'CS0441: Discrete Structures for Computer Science'
+subtitle: 'Fall 2022, Term 2231'
 published: true
 ---
 
-Welcome to **CS 0441**, **Discrete Structures for Computer Science**, for the *Fall 2022* term! Throughout the term, we will study (abstract) discrete structures that are backbones of computer science. In particular, we will look at *logic, proofs, sets, relations, functions, counting, and probability, with an emphasis on applications in computer science*.
+Welcome to **CS 0441**, **Discrete Structures for Computer Science**, for the Fall 2022 term!
+
+Throughout the term, we will study (abstract) discrete structures that are backbones of computer science. In particular, we will look at *logic, proofs, sets, relations, functions, counting, and probability*, with an emphasis on applications in computer science.
 
 This page will provide any information for the class that I go over in recitation. Please check back for updates regularly, especially if you miss a recitation.
 
@@ -15,7 +18,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_
 **CRN:**  `17064`  
 **Meets:** *Fridays 4:00 PM* at *501 Information Science Building*
 {: .mb-0}
- - Accompanies professor Donald Bonidie's lecture section `1090` which meets **Tue/Thu, 4:30–5:45pm at 5502 Sennott Square**
+ - Accompanies professor **Donald Bonidie**'s lecture section `1090` which meets **Tue/Thu, 4:30–5:45pm at 5502 Sennott Square**
 
 ---
 
@@ -37,7 +40,9 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_
 > - Email body should include the **student name** and the **section** they're enrolled in.
 > - Students should allow at least 24 business hours before following up.
 
-#### Student Feedback
+---
+
+## Student Feedback
 [Please send me your anonymous feedback](https://pitt.co1.qualtrics.com/jfe/form/SV_dd9suL0AkJctj2S){: .btn .btn-secondary}
 {: .text-center}
 ---
@@ -48,12 +53,10 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_
 
 <br />
 
-## Course Policies & Resources
-{% include_relative policies.md %}
-
 ---
 
 ## Helpful Links
 - [University of Pittsburgh](https://pitt.edu){: target="_blank"}  
 - [Department of Computer Science](https://cs.pitt.edu){: target="_blank"}  
-- [Sign up for **peer tutoring** on Navigate](https://pitt.guide.eab.com/){: target="_blank"}
+- [Sign up for **Peer Tutoring** on Navigate](https://pitt.guide.eab.com/){: target="_blank"}
+{: .mb-2}

@@ -1,44 +1,62 @@
 ---
 layout: default
 ---
-<article>
-  <div class="container" id="page-container">
-    <div class="row">
-      <div class="col-lg-2 d-xl-block d-none p-0 side-menu no-print" id="side-menu">
-        <div class="position-sticky me-1">
-          <p>
-            <strong>Quick Links</strong>
-          </p>{% include toc.html html=content ordered=true %}
-        </div>
-      </div>
-      <div class="ms-auto col-xl-9 border left-border-side mb-3" id="main-withsidebar">
-        <div class="page-heading">
-          <h1>{{ page.title }}
-            <button type="button" class="btn btn-primary print-button text-light float-end mt-1" onclick="togglePrint()" data-bs-toggle="button" autocomplete="off">
-              <i class="fas fa-print"></i>
-            </button>
-          </h1>
-        </div>
-        {{ content }}
+
+<div class="container" id="page-container">
+  <div class="row">
+    <div class="col-lg-2 d-xl-block d-none p-0 side-menu no-print" id="side-menu">
+      <div class="position-sticky me-1">
+        <p>
+          <strong>Quick Links</strong>
+        </p>{% include toc.html html=content ordered=true %}
       </div>
     </div>
+    <div class="ms-auto col-xl-9 border left-border-side mb-3" id="main-withsidebar">
+      <div class="page-heading">
+        <div class="h1">{{ page.title }}</div>
+        <div class="row">
+          <div class="col-9 h6 text-start">
+            <em>{{ page.subtitle }}</em>
+          </div>
+          <div class="col-3 h6 text-end">
+            <a class="text-decoration-none" href='{{"/" | relative_url }}'>Shinwoo Kim</a>
+          </div>
+        </div>
+        <hr>
+      </div>
+      {{ content }}
+    </div>
   </div>
-</article>
+</div>
 <style>
-  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
     font-variant: small-caps;
     font-family: "Computer Modern Serif", serif;
     margin-bottom: 0;
   }
-  hr{
-    margin-top:0.5em;
-    margin-bottom:0.5em;
+
+  hr {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
   }
-  p{
+
+  p {
     margin-bottom: 1em;
   }
-  table{
+
+  table {
     margin-bottom: 0;
   }
 </style>
-<script src="{{"/assets/js/printMode.js" | absolute_url }}" defer></script>
+<script src="{{" /assets/js/printMode.js" | absolute_url }}" defer></script>
