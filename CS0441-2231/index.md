@@ -3,14 +3,12 @@ layout: docs
 title: 'CS0441: Discrete Structures for Computer Science'
 subtitle: 'Fall 2022, Term 2231'
 published: true
----
-
-Welcome to **CS 0441**, **Discrete Structures for Computer Science**, for the Fall 2022 term!
-
-Throughout the term, we will study (abstract) discrete structures that are backbones of computer science. In particular, we will look at *logic, proofs, sets, relations, functions, counting, and probability*, with an emphasis on applications in computer science.
-
-This page will provide any information for the class that I go over in recitation. Please check back for updates regularly, especially if you miss a recitation.
-
+blurb: |
+    Welcome to <strong>CS 0441</strong>, <strong>Discrete Structures for Computer Science</strong>, for the Fall 2022 term!
+    <br><br>
+    Throughout the term, we will study (abstract) discrete structures that are backbones of computer science. In particular, we will look at <em>logic, proofs, sets, relations, functions, counting, and probability</em>, with an emphasis on applications in computer science.
+    <br><br>
+    This page will provide any information for the class that I go over in recitation. Please check back for updates regularly, especially if you miss a recitation.
 ---
 
 ## Recitation Information
@@ -45,6 +43,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_
 ## Student Feedback
 [Please send me your anonymous feedback](https://pitt.co1.qualtrics.com/jfe/form/SV_dd9suL0AkJctj2S){: .btn .btn-secondary}
 {: .text-center}
+
 ---
 
 ## Recitation Handouts
@@ -53,7 +52,6 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_
 
 <br />
 
----
 
 ## Helpful Links
 - [University of Pittsburgh](https://pitt.edu){: target="_blank"}  
