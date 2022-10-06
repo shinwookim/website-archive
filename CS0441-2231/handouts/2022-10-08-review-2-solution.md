@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2022-10-04
+date: 2022-10-08
 title: "Solutions to More Practice on Proofs"
 notes: "Solutions & Commentary to Accompany More Practice on Proofs"
 backlink: "./handouts"
