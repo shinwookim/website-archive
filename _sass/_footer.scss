@@ -1,7 +1,8 @@
 .site-footer {
   padding: 1em;
   position: sticky;
-  min-height: 7.5vh;
+  //min-height: 10em;
+  @extend .my-4;
 }
 .footer-heading {
   font-family: "Autography" !important;
