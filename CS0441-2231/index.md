@@ -51,25 +51,39 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_
 ---
 
 ## Schedule
-<div class="table-responsive" markdown="1">
+Click the (underlined) date for annoucement slides, and the footnotes for important recitation information.
 
-| Week | Date | Topic | Handout | Notes |
+<div class="table-responsive" markdown="1">
+| # | Date | Topic | Handout | Important Announcements |
 |------|------|-------|----------|-------|
-| **1** | 09/02/2022 | **No Recitation** <br> Week 1 | | |
-| **2** | 09/09/2022 | Homework #1 | | Zoom Recitation (Link on Canvas). |
-| **3** | 09/16/2022 | Chapter 1.1 & 1.2 Review | [Problems](assets/2022-09-16-review-1.html)<sup>[1]</sup><br>[Solutions](assets/2022-09-17-review-1-solution.html) | |
-| **4** | [09/23/2022](assets/2022-09-23-rec-3-slides.html) | Homework #2 | | |
-| **5** | [09/30/2022](assets/2022-09-30-announcement.html) | Homework #3 |  | |
-| **6** | [10/07/2022](assets/2022-10-07-slides.html) | Proof Practice <br> *(Chapter 1.7)* | [Problems](assets/2022-10-07-review-2.html)<sup>[1]</sup><br>[Solutions](assets/2022-10-08-review-2-solution.html) | We will not cover HW #4, #5 before the Mid-Term; If you have questions, please come to Office Hours. <br> See slides for Common Mistakes. |
-| **7** | 10/14/2022 | **No Recitation** <br> Fall Break | | **MID-TERM EXAM DURING LECTURE (WED 10/19/2022)**|
-| **8** | 10/21/2022 | Principle of Mathematical Induction | [Slides](https://docs.google.com/presentation/d/e/2PACX-1vTrGs-V7YsDnXDXQFbmK_u3LsR5AeIbjSu_GvC59_s0IOOSH-yUTs9Kqy1mISxe1cTOe7uHVNRcp8Wq/pub?start=false&loop=false&delayms=3000) | Induction will not be on the exam, but is a useful concept to know for future courses. See *Chapter 5* of the text for more details. |
-| **9** | 10/28/2022 | | | |
+| **1** | 09/02/2022 | **No Recitation** <br> First Week of Class | - | |
+| **2** | 09/09/2022 | Homework #1 | - | Zoom Recitation (Link on Canvas). <br> **Homework 1 Due: 09/12/2022 11:59 PM ET** |
+| **3** | 09/16/2022 | Chapter 1.1 & 1.2 Review | [Problems](assets/2022-09-16-review-1.html)<sup>{% raw %}<a onclick='{{highlight("sch-nt-1")}}' href='#sch-nt-1'>[1]</a>{% endraw %}</sup><br>[Solutions](assets/2022-09-17-review-1-solution.html) | |
+| **4** | [09/23/2022](assets/2022-09-23-rec-3-slides.html) | Homework #2 | - |**Homework 2 Due: 09/24/2022 11:59 PM ET**|
+| **5** | [09/30/2022](assets/2022-09-30-announcement.html) | Homework #3 | - |**Homework 3 Due: 10/06/2022 11:59 PM ET**|
+| **6** | [10/07/2022](assets/2022-10-07-slides.html) | Mid-Term Prep (Common Mistakes)<sup>{% raw %}<a onclick='{{highlight("sch-nt-2")}}' href='#sch-nt-2'>[2]</a>{% endraw %}</sup><br>Proof Practice <br> *(Chapter 1.7)*<sup>{% raw %}<a onclick='{{highlight("sch-nt-3")}}' href='#sch-nt-3'>[3]</a>{% endraw %}</sup> | [Problems](assets/2022-10-07-review-2.html)<sup markdown="0">{% raw %}<a onclick='{{highlight("sch-nt-1")}}' href='#sch-nt-1'>[1]</a>{% endraw %}</sup><br>[Solutions](assets/2022-10-08-review-2-solution.html) |  **Homework 4 Due: 10/12/2022 11:59 PM ET**<br> **Homework 5 Due: 10/19/2022 11:59 PM ET** |
+| **7** | 10/14/2022 | **No Recitation** <br> Fall Break | - | **MID-TERM EXAM: 10/19/2022 (During Lecture)**<br> **Reference Sheet Due: 10/17/2022 11:59 PM ET**|
+| **8** | 10/21/2022 | Principle of Mathematical Induction<sup>{% raw %}<a onclick='{{highlight("sch-nt-4")}}' href='#sch-nt-4'>[4]</a>{% endraw %}</sup> | [Slides](https://docs.google.com/presentation/d/e/2PACX-1vTrGs-V7YsDnXDXQFbmK_u3LsR5AeIbjSu_GvC59_s0IOOSH-yUTs9Kqy1mISxe1cTOe7uHVNRcp8Wq/pub?start=false&loop=false&delayms=3000) |  |
+| **9** | 10/28/2022 | | - | |
+| **10** | 11/04/2022 | | - | |
+| **11** | 11/11/2022 | | - | |
+| **12** | 11/18/2022 | | - | |
+| **13** | 11/25/2022 | **No Recitation** <br> Thanksgiving Break | - | |
+| **14** | 12/02/2022 | | - | |
+| **15** | 12/02/2022 | **Last Day for Undergraduate Class** | | **See Peoplesoft for Final Exam Date** |
 
 </div>
 
-<div markdown="1" style="font-size: 75%">
-[0] Click the date for Annoucement Slides<br>
-[1] Select Problems from Text (&copy; McGraw Hill)
+<div style="font-size: 75%">
+<span id="sch-nt-1" onclick='highlight_off()'>[1] Select problems from Text (&copy; McGraw Hill)</span>
+<br>
+<span id="sch-nt-2" onclick='highlight_off()'>[2] See slides for Common Mistakes in chapter 1, and full document on course Discord</span>
+<br>
+<span id="sch-nt-3" onclick='highlight_off()'>[3] Majority of students voted to spend more time working with Proofs (Chapter 1.7). Thus, we will not be coveing HW#4, HW#5 during recitation. If you have questions, please come to Office Hours.</span>
+<br>
+<span id="sch-nt-4" onclick='highlight_off()'>[4] Induction will not be on the exam, but is a useful concept (that is often covered in a discrete math course) to know for future courses. See <em>Chapter 5</em> of the text for more details.</span>
+
+
 </div>
 
 ---
@@ -84,4 +98,20 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_
     th{
         text-align: center;
     }
+    .highlight{
+        background-color: #FFFF00;
+    }
 </style>
+
+<script>
+    function highlight(id) {
+        var already_highlighted = document.getElementsByClassName('highlight');
+        if(already_highlighted.length > 0) already_highlighted[0].classList.remove("highlight");
+        var toHighlight = document.getElementById(id);
+        toHighlight.classList.toggle("highlight");
+    }
+    function highlight_off() {
+        var already_highlighted = document.getElementsByClassName('highlight');
+        if(already_highlighted.length > 0) already_highlighted[0].classList.remove("highlight");
+    }
+</script>
