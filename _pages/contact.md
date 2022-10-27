@@ -20,18 +20,8 @@ permalink: /contacts/
          <input class="form-control" name="name" id="name" type="text" required/>      
       </div>
       <div class="col">
-         <label for="email">Email Address (Required)</label>
+         <label for="email">Email (Required)</label>
          <input class="form-control" name="email" id="email" type="email" required/>
-      </div>
-   </div>
-      <div class="row">
-      <div class="col">
-         <label for="org">Organization</label>
-         <input class="form-control" name="org" id="org" type="text"/>
-      </div>
-      <div class="col">
-         <label for="title">Title</label>
-         <input class="form-control" name="title" id="title" type="text" />  
       </div>
    </div>
    <!-- Message input -->

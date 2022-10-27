@@ -7,7 +7,8 @@ layout: default
     {%if page.navi%}
     <nav class="navbar navbar-expand-lg bg-light mb-2">
       <div class="container-fluid">
-        <a class="navbar-brand h1" href="#">{{page.navi_title}}</a>
+        <a class="navbar-brand h1"
+          href="{{site.baseurl}}{{site.data[page.navi_links].main_link}}">{{page.navi_title}}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -26,8 +27,7 @@ layout: default
     </nav>
     {%endif%}
     <div class="h2">{{ page.title }}</div>
-    <div class="h4"><em>{{ page.subtitle }}</em></div>
-    <div><a class="h6 text-decoration-none" href='{{"/" | relative_url }}'>Shinwoo Kim, TA</a></div>
+    <div class="h4">{{ page.subtitle }}</div>
     <hr>
     <div class="row">
       <div class="col-12 col-lg-9 text-start">

@@ -1,17 +1,15 @@
 ---
 layout: docs
 date: 2022-09-01
-title: 'CS 0441-2231: Discrete Structures for Computer Science'
-subtitle: Syllabus
-notes: Adapted from Canvas; See most up-to-date version on Canvas
-blurb: The purpose of this course is to understand and use (abstract) discrete structures that are backbones of computer science. In particular, this class is meant to introduce logic, proofs, sets, relations, functions, counting, and probability, with an emphasis on applications in computer science. <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--cqZpvxqB--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3kgxmx7ddk0ws4ng0xo3.jpg" class="w-100"/>
+title: "CS0441: Discrete Structures for Computer Science"
+subtitle: Fall 2022 (Term 2231)
+blurb: <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--cqZpvxqB--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3kgxmx7ddk0ws4ng0xo3.jpg" class="w-100"/> The purpose of this course is to understand and use (abstract) discrete structures that are backbones of computer science. In particular, this class is meant to introduce logic, proofs, sets, relations, functions, counting, and probability, with an emphasis on applications in computer science. 
 navi: true
 navi_title: CS0441
 navi_links: "cs0441_2231_nav"
 
 ---
-[Return to Course Home](../)
-{: .mb-0}
+
 **Please see Canvas for the most up-to-date version of the syllabus**
 {: .text-center}
 
@@ -31,7 +29,8 @@ navi_links: "cs0441_2231_nav"
 + {{ 'CS0441-2231' | absolute_url }} (*Recitation*)
 
 #### Textbook
-Kenneth H. Rosen. Discrete Mathematics and Its Applications, 8th Edition, McGraw Hill
+Kenneth H. Rosen. Discrete Mathematics and Its Applications, 8th Edition, McGraw Hill  .
+**A copy of the text is required for homework.**
 
 #### Grading Policy
 + Exams: (70%)
@@ -53,15 +52,17 @@ Kenneth H. Rosen. Discrete Mathematics and Its Applications, 8th Edition, McGraw
 *You cheat you flunk!*
 
 #### Tentative Topics
-+ Logic and proofs
-+ Sets
-+ Functions
-+ Integers and modular arithmetic
-+ Sequences and summations
-+ Counting
-+ Probability
-+ Relations
-+ Graphs
++ Logic and proofs (Chapter 1)
++ Sets (Chapter 2.1 - 2.2)
++ Functions (Chapter 2.3)
++ Integers and modular arithmetic (Chapter 4)
++ Sequences and summations (Chapter 2.4)
++ Counting (Chapter 6)
++ Probability (Chapter 7)
++ Relations (Chapter 9)
++ Graphs (Chapter 10)
+
+Chapter references are from the assigned text: Kenneth H. Rosen. Discrete Mathematics and Its Applications, 8th Edition, McGraw Hill
 
 #### Academic Integrity
 > Students in this course will be expected to comply with the University of Pittsburgh’s Policy on Academic Integrity. Any student suspected of violating this obligation for any reason during the semester will be required to participate in the procedural process, initiated at the instructor level, as outlined in the University Guidelines on Academic Integrity. This may include, but is not limited to, the confiscation of the examination of any individual suspected of violating University Policy. Furthermore, no student may bring any unauthorized materials to an exam, including dictionaries and programmable calculators.

@@ -3,11 +3,11 @@ layout: page
 title: About
 permalink: /about/
 ---
-![Shinwoo Kim](../assets/img/profile.jpg){: width="250" .d-block .img-fluid .rounded .float-start .me-2 .mb-0} I am student at the [University of Pittsburgh](https://pitt.edu)'s [School of Computing and Information](https://sci.pitt.edu) & [David C. Frederick Honors College](https://www.frederickhonors.pitt.edu/) where I am studying **computer science** and **mathematics**. I'm originally from Seoul (South Korea), but have lived in many amazing places including Pacific Grove (California), Philadelphia, and (currently) Pittsburgh.  
+![Shinwoo Kim](../assets/img/profile.jpg){: width="250" .d-block .img-fluid .rounded .float-start .me-2 .mb-0} I am student at the [University of Pittsburgh](https://pitt.edu)'s [School of Computing and Information](https://sci.pitt.edu) & [David C. Frederick Honors College](https://www.frederickhonors.pitt.edu/) where I am studying **computer science**, **data science**, and **mathematics**. 
 
 Upon completion of my undergraduate studies, I plan on applying to graduate school to further my knowledge in computer science. My research interests are in the field of **Artificial Intelligence**, **Machine Learning**, and **Natural Language Processing** although there are very few things in computer science that I'm *not* interested in.  
 
-Besides my own education, I've spent the past few years helping others learn. I am a teaching assistant at the University of Pittsburgh's Department of Computer Science where I teach courses like *Discrete Structures*. Prior to that, I taught a course for the CompTIA A+ Certificate course to high school students in Pittsburgh’s Hill District.
+Besides my own education, I've spent the past few years helping others learn. I am a teaching assistant at the University of Pittsburgh's Department of Computer Science where I teach [*Discrete Structures for Computer Science*](../teaching). Prior to that, I worked at the [Hill District Community Engagement Center](https://cec.pitt.edu/hilldistrict/) where I taught the [CompTIA A+ Certificate course](../teaching/) to high school students, and a course for *Girls Who Code*. Currently, I also serve as the Chief Technical Officer and Lead Software Developer for the [*Special Needs Assitance Program for Social Engagement*](https://snapfse.com) and the [*TouchTheInvisible*](https://touchtheinvisible.com) project at the University of Pittsburgh.
 
 <p class="text-center">Connect with Me
 <br />
@@ -68,7 +68,7 @@ Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-t
   </div>
 </div>
 
-#### Webmaster, Web Developer
+#### Lead Developer, Webmaster
 <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
   <div class="flex-grow-1">
     <p class="subheading mb-1">
@@ -87,7 +87,7 @@ Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-t
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-        <h4>Diversity Recruitment Education and Mentoring (DREAM) Team</h4>
+        <h4>Diversity Recruitment Educator and Mentor (DREAM)</h4>
       </button>
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" >
@@ -107,7 +107,7 @@ Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-t
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        <h4>S.T.E.A.M. Ambassador</h4>
+        <h4>Honors STEAM Ambassador</h4>
       </button>
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
