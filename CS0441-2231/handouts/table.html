@@ -1,9 +1,0 @@
-| Date Published | File Name | Notes |
-| -------------- | -------- | ----- |
-{% for ho in site.pages -%}
-{% if ho.path contains 'CS0441-2231/handouts'-%}
-{% unless ho.path contains 'index' -%}
-|{{ ho.date | date: "%A, %b %d, %Y"}}|[{{ ho.title }}]({{ ho.url | prepend: site.baseurl }})|{{ho.notes}}|
-{% endunless -%}
-{%- endif -%}
-{%- endfor -%}

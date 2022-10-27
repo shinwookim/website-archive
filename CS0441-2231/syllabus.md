@@ -5,6 +5,10 @@ title: 'CS 0441-2231: Discrete Structures for Computer Science'
 subtitle: Syllabus
 notes: Adapted from Canvas; See most up-to-date version on Canvas
 blurb: The purpose of this course is to understand and use (abstract) discrete structures that are backbones of computer science. In particular, this class is meant to introduce logic, proofs, sets, relations, functions, counting, and probability, with an emphasis on applications in computer science. <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--cqZpvxqB--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3kgxmx7ddk0ws4ng0xo3.jpg" class="w-100"/>
+navi: true
+navi_title: CS0441
+navi_links: "cs0441_2231_nav"
+
 ---
 [Return to Course Home](../)
 {: .mb-0}

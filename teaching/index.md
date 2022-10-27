@@ -15,8 +15,9 @@ published: true
 (*Taught as Recitation Instructor/Teaching Assistant*)
 
 ### [<i class="pitt-icon"></i>CS0441: Discrete Structures for Computer Science](../CS0441-2231/)
-- **University of Pittsburgh**, School of Computing & Information (Computer Science)
-- **Description**: The purpose of this course is to understand and use (abstract) discrete structures that are backbones of computer science. In particular, this class is meant to introduce logic, proofs, sets, relations, functions, counting, and probability, with an emphasis on applications in computer science. [Syllabus](../CS0441-2231/handouts/2022-09-01-syllabus.html)
+- **University of Pittsburgh**, School of Computing & Information (Department of Computer Science)
+- **Description**: The purpose of this course is to understand and use (abstract) discrete structures that are backbones of computer science. In particular, this class is meant to introduce logic, proofs, sets, relations, functions, counting, and probability, with an emphasis on applications in computer science.
+- [**Syllabus**](../CS0441-2231/syllabus.html)
 - **Primary Instructor**: Professor Donald Bonidie
 - **Course Website**: [Canvas](https://canvas.pitt.edu/courses/164204), [Recitation Website](../CS0441-2231/)
 - **Section**: 1090 (CRN: 17064)
