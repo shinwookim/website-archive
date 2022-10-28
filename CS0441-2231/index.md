@@ -24,7 +24,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_
 
 ---
 
-### TA Information
+## TA Information
 **TA**: Shinwoo Kim  
 **E-mail**: [`shinwookim@pitt.edu`](mailto:shiwookim@pitt.edu)  
 **Home Page:** [{{site.url}}{{site.baseurl}}]({{site.url}}{{site.baseurl}}/)  
@@ -51,7 +51,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_
 ---
 
 ## Schedule
-Click the (underlined) date for annoucement slides, and the footnotes for important recitation information.
+Click the  date for annoucement slides(underlined) and footnotes for important recitation information.
 
 <div class="table-responsive" markdown="1">
 | # | Date | Topic | Handout | Important Announcements |
@@ -75,16 +75,22 @@ Click the (underlined) date for annoucement slides, and the footnotes for import
 </div>
 
 <div style="font-size: 75%">
-<span id="sch-nt-1" onclick='highlight_off()'>[1] Select problems from Text (&copy; McGraw Hill)</span>
-<br>
-<span id="sch-nt-2" onclick='highlight_off()'>[2] See slides for Common Mistakes in chapter 1, and full document on course Discord</span>
-<br>
-<span id="sch-nt-3" onclick='highlight_off()'>[3] Majority of students voted to spend more time working with Proofs (Chapter 1.7). Thus, we will not be coveing HW#4, HW#5 during recitation. If you have questions, please come to Office Hours.</span>
-<br>
-<span id="sch-nt-4" onclick='highlight_off()'>[4] Induction will not be on the exam, but is a useful concept (that is often covered in a discrete math course) to know for future courses. See <em>Chapter 5</em> of the text for more details.</span>
+<p id="sch-nt-1" class="my-0" onclick='highlight_off()'>[1] Select problems from Text (&copy; McGraw Hill)</p>
+<p id="sch-nt-2" class="my-0" onclick='highlight_off()'>[2] See slides for Common Mistakes in chapter 1, and full document on course Discord</p>
+<p id="sch-nt-3" class="my-0" onclick='highlight_off()'>[3] Majority of students voted to spend more time working with Proofs (Chapter 1.7). Thus, we will not be coveing HW#4, HW#5 during recitation. If you have questions, please come to Office Hours.</p>
+<p id="sch-nt-4" class="my-0" onclick='highlight_off()'>[4] Induction will not be on the exam, but is a useful concept (that is often covered in a discrete math course) to know for future courses. See <em>Chapter 5</em> of the text for more details.</p>
 
 
 </div>
+
+---
+
+## Tips for Success
++ **Attend class and actively participate in class**.<br>The primary introduction to course material is through class lecture. Additionally, we often do exercises during class. Showing up is necessary, but not sufficient to success in the course: ask questions, participate in class discussions and in class activities, and take notes.
++ **Read the material before you come to class**.<br>Don't worry about total comprehension, but at least get a feel for what we will be covering that week. If you have some understanding of the material coming into class, it will be easier for you to follow the lecture and to ask questions during class.
++ **Start the assignments early**.<br>I realize this one is not always easy to do, but if you can get in the habit of doing this, you will be much better off. 
++ **Practice, practice, practice**.<br>The only effective way to learn the material and pass the exams is to consistently do the assignments, and to example problems presented in class and in the book. Forming study groups to go over practice problems and to review lecture and reading notes is a great way to prepare for exams.
++ **Seek help early and often.**<br>Because course material builds on previous material, it is essential to your success in this class that you keep up with the course material. There are a lot of sources of help: ask questions during lecture; ask your classmates (make sure you have read the "Academic Integrity"); get help during recitation; and come to office hours.
 
 ---
 
