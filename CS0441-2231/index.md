@@ -64,7 +64,7 @@ Click the  date for annoucement slides(underlined) and footnotes for important r
 | **6** | [10/07/2022](assets/2022-10-07-slides.html) | Mid-Term Prep (Common Mistakes)<sup>{% raw %}<a onclick='{{highlight("sch-nt-2")}}' href='#sch-nt-2'>[2]</a>{% endraw %}</sup><br>Proof Practice <br> *(Chapter 1.7)*<sup>{% raw %}<a onclick='{{highlight("sch-nt-3")}}' href='#sch-nt-3'>[3]</a>{% endraw %}</sup> | [Problems](assets/2022-10-07-review-2.html)<sup markdown="0">{% raw %}<a onclick='{{highlight("sch-nt-1")}}' href='#sch-nt-1'>[1]</a>{% endraw %}</sup><br>[Solutions](assets/2022-10-08-review-2-solution.html) |  **Homework 4 Due: 10/12/2022 11:59 PM ET**<br> **Homework 5 Due: 10/19/2022 11:59 PM ET** |
 | **7** | 10/14/2022 | **No Recitation** <br> Fall Break | - | **MID-TERM EXAM: 10/19/2022 (During Lecture)**<br> **Reference Sheet Due: 10/17/2022 11:59 PM ET**|
 | **8** | 10/21/2022 | Principle of Mathematical Induction<sup>{% raw %}<a onclick='{{highlight("sch-nt-4")}}' href='#sch-nt-4'>[4]</a>{% endraw %}</sup> | [Slides](https://docs.google.com/presentation/d/e/2PACX-1vTrGs-V7YsDnXDXQFbmK_u3LsR5AeIbjSu_GvC59_s0IOOSH-yUTs9Kqy1mISxe1cTOe7uHVNRcp8Wq/pub?start=false&loop=false&delayms=3000) |  |
-| **9** | 10/28/2022 | | - | |
+| **9** | [10/28/2022](https://docs.google.com/presentation/d/e/2PACX-1vSTvFU4oSnWedEcrefOAjjQ1n-4lxzrE_TBVSUaj71rAzpbgGyOBwQM27t_XkGhhm0a27vtWo4dPew7/pub?start=false&loop=false&delayms=3000) | Homework #6 | - |**Homework 6 Due: 11/04/2022 11:59 PM ET**|
 | **10** | 11/04/2022 | | - | |
 | **11** | 11/11/2022 | | - | |
 | **12** | 11/18/2022 | | - | |
