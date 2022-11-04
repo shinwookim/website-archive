@@ -5,7 +5,6 @@ subtitle: 'Fall 2022, Term 2231'
 navi: true
 navi_title: CS0441
 navi_links: "cs0441_2231_nav"
-
 blurb: |
     Welcome to <strong>CS 0441</strong>, <strong>Discrete Structures for Computer Science</strong>, for the Fall 2022 term!
     <br><br>
@@ -17,8 +16,8 @@ blurb: |
 
 ## Recitation Information
 _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_  
-**CRN:**  `17064`  
-**Meets:** *Fridays 4:00 PM* at *501 Information Science Building*
+**CRN:** `17064`  
+**Meets:** *Fridays 4:00 PM* at *501 [Information Science Building](https://map.concept3d.com/?id=1315#!m/386791)*
 {: .mb-0}
  - Accompanies professor **Donald Bonidie**'s lecture section `1090` which meets **Tue/Thu, 4:30–5:45pm at 5502 Sennott Square**
 
@@ -64,8 +63,8 @@ Click the  date for annoucement slides(underlined) and footnotes for important r
 | **6** | [10/07/2022](assets/2022-10-07-slides.html) | Mid-Term Prep (Common Mistakes)<sup>{% raw %}<a onclick='{{highlight("sch-nt-2")}}' href='#sch-nt-2'>[2]</a>{% endraw %}</sup><br>Proof Practice <br> *(Chapter 1.7)*<sup>{% raw %}<a onclick='{{highlight("sch-nt-3")}}' href='#sch-nt-3'>[3]</a>{% endraw %}</sup> | [Problems](assets/2022-10-07-review-2.html)<sup markdown="0">{% raw %}<a onclick='{{highlight("sch-nt-1")}}' href='#sch-nt-1'>[1]</a>{% endraw %}</sup><br>[Solutions](assets/2022-10-08-review-2-solution.html) |  **Homework 4 Due: 10/12/2022 11:59 PM ET**<br> **Homework 5 Due: 10/19/2022 11:59 PM ET** |
 | **7** | 10/14/2022 | **No Recitation** <br> Fall Break | - | **MID-TERM EXAM: 10/19/2022 (During Lecture)**<br> **Reference Sheet Due: 10/17/2022 11:59 PM ET**|
 | **8** | 10/21/2022 | Principle of Mathematical Induction<sup>{% raw %}<a onclick='{{highlight("sch-nt-4")}}' href='#sch-nt-4'>[4]</a>{% endraw %}</sup> | [Slides](https://docs.google.com/presentation/d/e/2PACX-1vTrGs-V7YsDnXDXQFbmK_u3LsR5AeIbjSu_GvC59_s0IOOSH-yUTs9Kqy1mISxe1cTOe7uHVNRcp8Wq/pub?start=false&loop=false&delayms=3000) |  |
-| **9** | [10/28/2022](https://docs.google.com/presentation/d/e/2PACX-1vSTvFU4oSnWedEcrefOAjjQ1n-4lxzrE_TBVSUaj71rAzpbgGyOBwQM27t_XkGhhm0a27vtWo4dPew7/pub?start=false&loop=false&delayms=3000) | Homework #6 | - |**Homework 6 Due: 11/04/2022 11:59 PM ET**|
-| **10** | 11/04/2022 | | - | |
+| **9** | [10/28/2022](https://docs.google.com/presentation/d/e/2PACX-1vSTvFU4oSnWedEcrefOAjjQ1n-4lxzrE_TBVSUaj71rAzpbgGyOBwQM27t_XkGhhm0a27vtWo4dPew7/pub?start=false&loop=false&delayms=3000) | Homework #6 | - | **Homework 6 Due: 11/04/2022 11:59 PM ET** |
+| **10** | 11/04/2022 | Homework #6 | - | **Homework 6 Due: 11/04/2022 11:59 PM ET** |
 | **11** | 11/11/2022 | | - | |
 | **12** | 11/18/2022 | | - | |
 | **13** | 11/25/2022 | **No Recitation** <br> Thanksgiving Break | - | |
@@ -91,6 +90,20 @@ Click the  date for annoucement slides(underlined) and footnotes for important r
 + **Start the assignments early**.<br>I realize this one is not always easy to do, but if you can get in the habit of doing this, you will be much better off. 
 + **Practice, practice, practice**.<br>The only effective way to learn the material and pass the exams is to consistently do the assignments, and to example problems presented in class and in the book. Forming study groups to go over practice problems and to review lecture and reading notes is a great way to prepare for exams.
 + **Seek help early and often.**<br>Because course material builds on previous material, it is essential to your success in this class that you keep up with the course material. There are a lot of sources of help: ask questions during lecture; ask your classmates (make sure you have read the "Academic Integrity"); get help during recitation; and come to office hours.
+
+---
+
+## Getting Help
+We expect that all students will need help at some point in this course. If you find yourself needing help, this is not cause for embarrassment: it is completely expected, and our goal is to ensure that you are able to receive the help you need. A good rule of thumb is that if you spend an hour on the assignment without making any progress, seek help! Please be sure to seek help early and often through any (or all!) of the following resources:
+
++ **Your Study Group**: Building a support system of friends with whom you can struggle and work through the challenges you encounter is one of the best ways to seek help. You will quickly learn how much you can figure out working together!
+
++ **Discord**: If you would prefer to have a more informal place to collaborate with your peers, I have created a discord server. You can get coding help through discord, or just use it to get to know your classmates better. As with Piazza, please use discretion and don't broadcast your code in a way that other students can easily copy it. The invite link for the server is here.
+
++ **Office Hours**: I am always willing to help you during our student hours. Please make frequent use of these times! Even if you don't have specific questions, you can come to student hours just to work until you do have a question.
+
++ **E-Mail**: Please send me emails as often as you need! But note that in my class, you are never allowed to apologize for sending an email or asking for help, and you are not allowed to dismiss your own questions as "dumb".
+
 
 ---
 

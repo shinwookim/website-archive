@@ -1,37 +1,42 @@
 <!-- Navigation -->
 <nav class="navbar no-print navbar-expand-lg bg-white navbar-light fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand titillium-bold" href="{{"/" | relative_url }}" id="nav-brand">SHINWOO KIM</a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand titillium-bold" href="{{" /" | relative_url }}" id="nav-brand">SHINWOO KIM</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
       <i class="fa fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <div class="navbar-nav ms-auto">
         {% for item in site.data.nav.links %}
-          {% if item.url=='#' %}
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                {{item.title}}
-              </a>
-              <ul class="dropdown-menu">
-                {% for entry in item.subfolderitems %}
-                {% if entry.url == '#' %}
-                <li><hr class="dropdown-divider"></li>
-                {% else %}
-                <li><a class="dropdown-item" href="{{site.baseurl}}{{entry.url}}">{{entry.page}}</a></li>
-                {% endif %}
-                {% endfor %}
-              </ul>
+        {% if item.url=='#' %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{item.title}}
+          </a>
+          <ul class="dropdown-menu">
+            {% for entry in item.subfolderitems %}
+            {% if entry.url == '#' %}
+            <li>
+              <hr class="dropdown-divider">
             </li>
-          {% else %}
-          <li class="nav-item">
-            <a class="nav-link {% if page.url == item.url %}active{% endif %}" href="{{site.baseurl}}{{item.url}}">{{item.title}}</a>
-          </li>
-          {% endif %}
+            {% else %}
+            <li><a class="dropdown-item" href="{{site.baseurl}}{{entry.url}}">{{entry.page}}</a></li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link {% if page.url == item.url %}active{% endif %}"
+            href="{{site.baseurl}}{{item.url}}">{{item.title}}</a>
+        </li>
+        {% endif %}
         {% endfor %}
-        
-       
+
+
       </div>
-   </div>
+    </div>
   </div>
 </nav>
