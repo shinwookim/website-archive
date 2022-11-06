@@ -1,22 +1,39 @@
 @font-face {
-	font-family: 'Autography';
-	src: url("../assets/fonts/Autography/Autography.woff2") format('woff2'), url("../assets/fonts/Autography/Autography.woff") format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Autography";
+  src: url("../assets/fonts/Autography/Autography.woff2") format("woff2"),
+    url("../assets/fonts/Autography/Autography.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 .autography {
-	font-family: 'Autography';
-	font-weight: normal;
+  font-family: "Autography";
+  font-weight: normal;
 }
-.titillium{
-	font-family: 'Titillium Web', sans-serif;
-	font-weight: 400;
+.titillium {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
 }
-.titillium-bold{
-	font-family: 'Titillium Web', sans-serif;
-	font-weight: 900;
+.titillium-bold {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  line-height: 54pt;
 }
-.syne{
-	font-family: 'Syne', sans-serif;
+
+.title-tt {
+  font-family: "League Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 62pt;
+  line-height: 54pt;
+  color: #000000;
+}
+
+.pfp {
+  height: 180px;
+  /* border: #404040 1px solid; */
+  /* margin-top: 2.5rem; */
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+  opacity: 1;
+  /* border-radius: 7%; */
 }

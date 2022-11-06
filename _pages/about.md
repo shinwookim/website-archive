@@ -3,11 +3,12 @@ layout: page
 title: About
 permalink: /about/
 ---
-![Shinwoo Kim](../assets/img/profile.jpg){: width="250" .d-block .img-fluid .rounded .float-start .me-2 .mb-0} I am student at the [University of Pittsburgh](https://pitt.edu)'s [School of Computing and Information](https://sci.pitt.edu) & [David C. Frederick Honors College](https://www.frederickhonors.pitt.edu/) where I am studying **computer science**, **data science**, and **mathematics**. 
 
-Upon completion of my undergraduate studies, I plan on applying to graduate school to further my knowledge in computer science. My research interests are in the field of **Artificial Intelligence**, **Machine Learning**, and **Natural Language Processing** although there are very few things in computer science that I'm *not* interested in.  
+![Shinwoo Kim](../assets/img/profile.jpg){: width="250" .d-block .img-fluid .rounded .float-start .me-2 .mb-0} I am student at the [University of Pittsburgh](https://pitt.edu)'s [School of Computing and Information](https://sci.pitt.edu) & [David C. Frederick Honors College](https://www.frederickhonors.pitt.edu/) Computer Science, Data Science, and Mathematics.
 
-Besides my own education, I've spent the past few years helping others learn. I am a teaching assistant at the University of Pittsburgh's Department of Computer Science where I teach [*Discrete Structures for Computer Science*](../teaching). Prior to that, I worked at the [Hill District Community Engagement Center](https://cec.pitt.edu/hilldistrict/) where I taught the [CompTIA A+ Certificate course](../teaching/) to high school students, and a course for *Girls Who Code*. Currently, I also serve as the Chief Technical Officer and Lead Software Developer for the [*Special Needs Assitance Program for Social Engagement*](https://snapfse.com) and the [*TouchTheInvisible*](https://touchtheinvisible.com) project at the University of Pittsburgh.
+Upon completion of my undergraduate studies, I plan on applying to graduate school to further my knowledge in computer science. My research interests are in the field of **Artificial Intelligence**, **Machine Learning**, and **Natural Language Processing** although there are very few things in computer science that I'm _not_ interested in.
+
+Besides my own education, I've spent the past few years helping others learn. I am a teaching assistant at the University of Pittsburgh's Department of Computer Science where I teach [_Discrete Structures for Computer Science_](../teaching). Prior to that, I worked at the [Hill District Community Engagement Center](https://cec.pitt.edu/hilldistrict/) where I taught the [CompTIA A+ Certificate course](../teaching/) to high school students, and a course for _Girls Who Code_. Currently, I also serve as the Chief Technical Officer and Lead Software Developer for the [_Special Needs Assitance Program for Social Engagement_](https://snapfse.com) and the [_TouchTheInvisible_](https://touchtheinvisible.com) project at the University of Pittsburgh.
 
 <p class="text-center">Connect with Me
 <br />
@@ -26,19 +27,25 @@ Besides my own education, I've spent the past few years helping others learn. I 
 ## Education
 
 ### <i class="pitt-icon"></i>University of Pittsburgh
+
 #### School of Computing and Information + David C. Frederick Honors College
+
 August 2021 - (Expected) May 2026  
-Bachelor of Science - Computer Science, Mathematics  
+Bachelor of Science - Computer Science, Mathematics
 
 ---
 
 ## Experience
+
 <style>
   h4{margin-bottom: 0 !important;}
 </style>
+
 Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-to-date information
 {: .text-center}
+
 ### Current Positions
+
 <div class="ms-4" markdown="1">
 #### Teaching Assistant
 <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
@@ -54,6 +61,7 @@ Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-t
 </div>
 
 #### Chief Technology Officer, Software Developer
+
 <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
   <div class="flex-grow-1">
     <p class="subheading mb-1">
@@ -69,6 +77,7 @@ Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-t
 </div>
 
 #### Lead Developer, Webmaster
+
 <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
   <div class="flex-grow-1">
     <p class="subheading mb-1">
@@ -83,6 +92,7 @@ Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-t
 </div>
 
 ### Past Experiences
+
 <div class="accordion accordion-flush mb-0" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
@@ -198,6 +208,5 @@ Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-t
 </div>
 
 Nothing I write, post, or link to here necessarily has anything to do with any past, present, or future employer(s), or any other institutions I've been associated with. My opinions are mine and mine alone.
-
 
 <link rel="stylesheet" href="{{"/assets/icons.css" | absolute_url }}">
