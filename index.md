@@ -33,95 +33,12 @@ I am student at the [University of Pittsburgh](https://pitt.edu)'s [School of Co
 {: .text-justify .about}
 
 <div class="text-center">
-    <a class="btn btn-outline-dark" href="{{ '/assets/Resume.pdf' | prepend: site.baseurl }}"> Résumé</a>
+    <a class="btn btn-outline-dark" href="{{ '/assets/Resume.pdf' | prepend: site.baseurl }}">About Me</a>
+	<a class="btn btn-outline-dark" href="{{ '/assets/Resume.pdf' | prepend: site.baseurl }}">Résumé</a>
     <a class="btn btn-outline-dark" href="{{ '/teaching/' | prepend: site.baseurl }}">Courses I've Taught</a>
 </div>
 
-### Education
 
-#### <i class="pitt-icon"></i>University of Pittsburgh
-
-##### School of Computing and Information + David C. Frederick Honors College
-
-August 2021 - (Expected) May 2025  
-Bachelor of Science - Computer Science, Data Science, Mathematics
-
-### Experience
-
-<style>
-  h5{margin-bottom: 0 !important;}
-</style>
-
-Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-to-date information. Click the buttons below to reveal
-{: .text-center}
-
-<div class="accordion accordion-flush mb-0" id="accordionExample">
-	<div class="accordion-item">
-		<h5 class="accordion-header">
-			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#currPos" aria-expanded="false" aria-controls="currPos">
-				<h5>Current Positions</h5>
-			</button>
-		</h5>
-		<div id="currPos" class="accordion-collapse collapse" aria-labelledby="currPos">
-			<div class="accordion-body">
-				<div class="accordion accordion-flush mb-0" id="accordionExample" markdown="1"> {% for item in site.data.experiences.current %} <div class="accordion-item">
-						<h5 class="accordion-header" id="Acc_{{item.id}}">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{item.id}}" aria-expanded="false" aria-controls="collapse{{item.id}}">
-								<h5>{{item.title}}</h5>
-							</button>
-						</h5>
-						<div id="collapse{{item.id}}" class="accordion-collapse collapse" aria-labelledby="Acc_{{item.id}}">
-							<div class="accordion-body">
-								<div class="d-flex flex-column flex-md-row justify-content-between mb-3">
-									<div class="flex-grow-1">
-										<p class="subheading mb-1">
-											<strong>{{item.employer}}</strong>
-										</p>
-										<p class="mb-0">{{item.desc}}</p>
-									</div>
-									<div class="flex-shrink-0">
-										<span class="text-primary">{{item.duration}}</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div> {% endfor %} </div>
-			</div>
-		</div>
-		<div class="accordion-item">
-			<h5 class="accordion-header">
-				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pastPos" aria-expanded="false" aria-controls="pastPos">
-					<h5>Past Experiences</h5>
-				</button>
-			</h5>
-			<div id="pastPos" class="accordion-collapse collapse" aria-labelledby="pastPos">
-				<div class="accordion-body">
-					<div class="accordion accordion-flush mb-0" id="accordionExample" markdown="1">
-						<div class="accordion accordion-flush mb-0" id="accordionExample"> {% for item in site.data.experiences.past %} <div class="accordion-item">
-								<h5 class="accordion-header" id="Acc_{{item.id}}">
-									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{item.id}}" aria-expanded="false" aria-controls="collapse{{item.id}}">
-										<h5>{{item.title}}</h5>
-									</button>
-								</h5>
-								<div id="collapse{{item.id}}" class="accordion-collapse collapse" aria-labelledby="Acc_{{item.id}}">
-									<div class="accordion-body">
-										<div class="d-flex flex-column flex-md-row justify-content-between mb-3">
-											<div class="flex-grow-1">
-												<p class="subheading mb-1">
-													<strong>{{item.employer}}</strong>
-												</p>
-												<p class="mb-0">{{item.desc}}</p>
-											</div>
-											<div class="flex-shrink-0">
-												<span class="text-primary">{{item.duration}}</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> {% endfor %} </div>
-					</div>
-				</div>
-			</div>
 
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
 <script src='{{"/assets/js/typed.js" | absolute_url }}' defer></script>
