@@ -2,9 +2,10 @@
 layout: page
 title: About
 permalink: /about/
+published: false
 ---
 
-![Shinwoo Kim](../assets/img/profile.jpg){: width="250" .d-block .img-fluid .rounded .float-start .me-2 .mb-0} I am student at the [University of Pittsburgh](https://pitt.edu)'s [School of Computing and Information](https://sci.pitt.edu) & [David C. Frederick Honors College](https://www.frederickhonors.pitt.edu/) Computer Science, Data Science, and Mathematics.
+![Shinwoo Kim](../assets/img/profile.jpg){: width="250" .d-block .img-fluid .rounded .float-end .me-2 .mb-0} I am student at the [University of Pittsburgh](https://pitt.edu)'s [School of Computing and Information](https://sci.pitt.edu) & [David C. Frederick Honors College](https://www.frederickhonors.pitt.edu/) Computer Science, Data Science, and Mathematics.
 
 Upon completion of my undergraduate studies, I plan on applying to graduate school to further my knowledge in computer science. My research interests are in the field of **Artificial Intelligence**, **Machine Learning**, and **Natural Language Processing** although there are very few things in computer science that I'm _not_ interested in.
 
