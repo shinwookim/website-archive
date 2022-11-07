@@ -2,6 +2,7 @@
 layout: page
 title: Teaching
 published: true
+permalink: /teaching/
 ---
 
 ---
