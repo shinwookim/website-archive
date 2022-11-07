@@ -1,7 +1,7 @@
 <!-- Navigation -->
 <nav class="navbar no-print navbar-expand-lg bg-white navbar-light fixed-top" id="mainNav">
   <div class="container">
-    <a class="navbar-brand titillium-bold" href="{{"/" | relative_url }}" id="nav-brand">SHINWOO KIM</a>
+    <a class="navbar-brand titillium-bold" href='{{"/" | relative_url }}' id="nav-brand">SHINWOO KIM</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
       data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
       aria-label="Toggle navigation">
@@ -12,7 +12,7 @@
         {% for item in site.data.nav.links %}
         {% if item.url=='#' %}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle {% if item.active contains page.url and page.url!='/' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{item.title}}
           </a>
           <ul class="dropdown-menu">

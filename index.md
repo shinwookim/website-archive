@@ -31,7 +31,7 @@ I am student at the [University of Pittsburgh](https://pitt.edu)'s [School of Co
 {: .text-justify .about}
 
 <div class="text-center">
-    <a class="btn btn-outline-dark" href="{{ '/assets/Resume.pdf' | prepend: site.baseurl }}">About Me</a>
+    <a class="btn btn-outline-dark" href="{{ '/background/' | prepend: site.baseurl }}">About Me</a>
 	<a class="btn btn-outline-dark" href="{{ '/assets/Resume.pdf' | prepend: site.baseurl }}">Résumé</a>
     <a class="btn btn-outline-dark" href="{{ '/teaching/' | prepend: site.baseurl }}">Courses I've Taught</a>
 </div>

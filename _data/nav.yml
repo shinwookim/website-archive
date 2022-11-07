@@ -9,6 +9,7 @@ links:
   #    url: /blog/
   - title: Teaching
     url: "#"
+    active: /teaching/, /CS0441-2231/
     subfolderitems:
       - page: See All Courses
         url: /teaching/
