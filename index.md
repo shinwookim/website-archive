@@ -2,11 +2,11 @@
 layout: page
 ---
 
-<div class="row">
-    <div class="col-6 ">
-        <img class="pfp float-end img-fluid rounded d-block" src="assets/img/profile.jpg">
+<div class="row py-1">
+    <div class="col h-100 ">
+        <img class="float-end img-fluid rounded d-block" style="max-height: 200px" src="assets/img/profile.jpg">
     </div>
-    <div class="col-6 align-items-end text-start">
+    <div class="col align-items-end text-start">
         <div class="NAME">
             SHINWOO<br>KIM
         </div>

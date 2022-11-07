@@ -68,7 +68,7 @@ Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-t
           >
             <div class="accordion-body">
               <div class="d-flex flex-column justify-content-between mb-3">
-                <div class="d-flex flex-row justify-content-between mb-3">
+                <div class="d-md-flex justify-content-between mb-3">
                   <div class="flex-grow-1">
                     <p class="subheading mb-1">
                       <strong markdown="1">{{item.employer}}</strong>
@@ -127,7 +127,7 @@ Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-t
             >
               <div class="accordion-body">
                 <div class="d-flex flex-column justify-content-between mb-3">
-                  <div class="d-flex flex-row justify-content-between mb-3">
+                  <div class="d-md-flex justify-content-between mb-3">
                     <div class="flex-grow-1">
                       <p class="subheading mb-1">
                         <strong markdown="1">{{item.employer}}</strong>
