@@ -5,7 +5,7 @@ permalink: /background/
 published: true
 ---
 
-<div class="text-center"><a class="btn btn-outline-dark" href="{{ '/assets/Resume.pdf' | prepend: site.baseurl }}">View my Résumé</a></div>
+<div class="text-center"><a class="btn btn-outline-dark" href="{{ '/resume/' | prepend: site.baseurl }}">View my Résumé</a></div>
 
 ## Education
 

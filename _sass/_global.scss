@@ -51,13 +51,11 @@ img::-moz-selection {
   background: transparent;
 }
 
-
 #page-container {
   position: relative;
   min-height: 82vh;
   margin-top: 1em;
 }
-
 
 .social-icon {
   font-size: 1.3em;
@@ -143,10 +141,16 @@ ul {
 }
 
 #top-btn {
-  transition: opacity .5s ease 0s;
+  transition: opacity 0.5s ease 0s;
   opacity: 0%;
   position: fixed;
   bottom: 20px;
   right: 30px;
   z-index: 99;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

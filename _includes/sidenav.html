@@ -1,6 +1,6 @@
 <div class="text-center text-md-end">
   <h1 class="my-0">
-    <a class="NAME text-decoration-none" href='{{"/" | relative_url }}'
+    <a class="league text-decoration-none" href='{{"/" | relative_url }}'
       >SHINWOO<br />KIM</a
     >
   </h1>
@@ -54,7 +54,7 @@
       {% for item in site.data.nav.links %} {% if item.url=='#' %}
       <li class="nav-item dropdown">
         <a
-          class="nav-link dropdown-toggle {% if item.active contains page.url and page.url!='/' %}active{% endif %}"
+          class="nav-link dropdown-toggle {% if item.active contains page.url and page.url!='/' %}this{% endif %}"
           href="#"
           role="button"
           data-bs-toggle="dropdown"
@@ -79,7 +79,7 @@
       {% else %}
       <li class="nav-item">
         <a
-          class="nav-link {% if page.url == item.url %}active{% endif %}"
+          class="nav-link {% if page.url == item.url %}this{% endif %}"
           href="{{site.baseurl}}{{item.url}}"
           >{{item.title}}</a
         >
@@ -88,19 +88,18 @@
     </ul>
   </div>
 </nav>
-<p class="text-md-end text-muted d-none d-md-block mb-0">
-  2021-2022 Shinwoo Kim.<br />
-  All Rights Reserved.
-</p>
-<a
-  class="text-md-end d-none d-md-block text-primary autography text-decoration-none"
-  style="font-size: 1.3em"
-  href='{{"/" | relative_url }}'
->
-  Shinwoo Kim
-</a>
 
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
 
 <script src='{{"/assets/js/typed.js" | absolute_url }}' defer></script>
 <link rel="stylesheet" href='{{"/assets/icons.css" | absolute_url }}' />
+
+<style>
+  .this {
+    font-weight: bold;
+  }
+  .nav-link {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.2em;
+  }
+</style>

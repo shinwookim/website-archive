@@ -3,19 +3,20 @@ links:
     url: /
   - title: Background
     url: /background/
-#  - title: Experience
-#    url: /experience/
+  #  - title: Experience
+  #    url: /experience/
   - title: Teaching
     #url: "#"
     #active: /teaching/, /CS0441-2231/
     #subfolderitems:
-     # - page: See All Courses
-    url: /teaching/
+    # - page: See All Courses
+    url:
+      /teaching/
       #- page: divider
       #  url: "#"
       #- page: CS0441 - Term 2231
       #  url: /CS0441-2231/
   - title: Résumé
-    url: /assets/Resume.pdf
+    url: /resume/
   - title: Contact
     url: /contacts/
