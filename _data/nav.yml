@@ -5,8 +5,8 @@ links:
     url: /background/
 #  - title: Experience
 #    url: /experience/
-  #  - title: Blog
-  #    url: /blog/
+  - title: Résumé
+    url: /assets/Resume.pdf
   - title: Teaching
     url: "#"
     active: /teaching/, /CS0441-2231/
