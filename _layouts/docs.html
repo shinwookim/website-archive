@@ -3,22 +3,38 @@ layout: default
 ---
 
 <div class="container" id="page-container">
-  <div class="mx-auto border px-5 py-3 mb-3 col-12 col-lg-9" id="main-withsidebar">
-    {%if page.navi%}
+  <div
+    class="mx-auto border px-5 py-3 mb-3 col-12 col-lg-9"
+    id="main-withsidebar"
+  >
+    {%if page.gloi%}
     <nav class="navbar navbar-expand-lg bg-light mb-2">
       <div class="container-fluid">
-        <a class="navbar-brand h1"
-          href="{{site.baseurl}}{{site.data[page.navi_links].main_link}}">{{page.navi_title}}</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a
+          class="navbar-brand h1"
+          href="{{site.baseurl}}{{site.data[page.navi_links].main_link}}"
+          >{{page.navi_title}}</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             {% for item in site.data[page.navi_links].links %}
             <li class="nav-item">
-              <a class="nav-link {% if page.url == item.url %}active{% endif %}"
-                href="{{site.baseurl}}{{item.url}}">{{item.title}}</a>
+              <a
+                class="nav-link {% if page.url == item.url %}active{% endif %}"
+                href="{{site.baseurl}}{{item.url}}"
+                >{{item.title}}</a
+              >
             </li>
             {% endfor %}
           </ul>
@@ -28,26 +44,29 @@ layout: default
     {%endif%}
     <div class="h2">{{ page.title }}</div>
     <div class="h4">{{ page.subtitle }}</div>
-    <hr>
+    <hr />
     <div class="row">
       <div class="col-12 col-lg-9 text-start">
-        <p>
-          {{ page.blurb }}
-        </p>
+        <p>{{ page.blurb }}</p>
       </div>
       <div class="border-start col-3 d-none d-lg-block">
         <span class="ms-1"><strong>Quick Links</strong></span>
         {% include toc.html html=content ordered=true item_class="tdn" %}
       </div>
-      <hr>
+      <hr />
     </div>
     {{ content }}
-    <button onclick="topFunction()" id="top-btn" class="btn btn-dark" title="Go to top">Top</button>
+    <button
+      onclick="topFunction()"
+      id="top-btn"
+      class="btn btn-dark"
+      title="Go to top"
+    >
+      Top
+    </button>
   </div>
-
-
-
 </div>
+<link rel="stylesheet" href="{{"/assets/bs_nav.css" | absolute_url }}">
 <style>
   h1,
   h2,
@@ -82,35 +101,4 @@ layout: default
   tdn.a {
     text-decoration: none;
   }
-
-  #top-btn {
-    transition: opacity .5s ease 0s;
-    opacity: 0%;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-  }
 </style>
-
-<script>
-  // Get the button:
-  let mybutton = document.getElementById("top-btn");
-
-  // When the user scrolls down 20px from the top of the document, show the button
-  window.onscroll = function () { scrollFunction() };
-
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      mybutton.style.opacity = "100%";
-
-    } else {
-      mybutton.style.opacity = "0%";
-    }
-  }
-  // When the user clicks on the button, scroll to the top of the document
-  function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  }
-</script>

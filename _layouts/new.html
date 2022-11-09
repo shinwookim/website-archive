@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %} {% include styles.html %}
+  <body>
+    <div class="container align-items-center" style="margin-top: 74px">
+      <div class="row">
+        <aside class="col-md-4 pe-md-5">
+          <header>{% include sidenav.html %}</header>
+        </aside>
+        <main class="col-md-8 ps-md-5 mt-2">
+          <h1>{{page.title}}</h1>
+          <article>{{ content }}</article>
+          <button
+            onclick="topFunction()"
+            id="top-btn"
+            class="btn btn-dark"
+            title="Go to top"
+          >
+            Top
+          </button>
+        </main>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer
+      class="d-md-none d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top bg-dark"
+      id="footer"
+    >
+      <div class="container col-lg-8 col-md-10 mx-auto">
+        <div class="text-light footer-text float-start">
+          &copy; 2021-2022 Shinwoo Kim. All Rights Reserved.
+        </div>
+        <div
+          class="align-middle footer-heading float-end text-primary autography display-6"
+        >
+          Shinwoo Kim
+        </div>
+      </div>
+    </footer>
+    {% include scripts.html %} {% include google-analytics.html %}
+  </body>
+</html>

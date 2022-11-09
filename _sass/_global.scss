@@ -1,37 +1,3 @@
-// Global styling for this template
-body {
-  color: $gray-900;
-  margin-top: 74px;
-  height: 90%;
-}
-@media (max-width: 979px) {
-  body {
-    margin-top: 0px;
-  }
-}
-
-p {
-  line-height: 1.5;
-
-  a {
-    text-decoration: underline;
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  //font-weight: 800;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  //font-family: "Playfair Display", serif;
-  font-style: normal;
-  line-height: 1.2;
-}
-
 a {
   color: $gray-900;
   transition: all 0.5s;
@@ -84,14 +50,12 @@ img::-moz-selection {
   color: $white;
   background: transparent;
 }
-.title {
-  @extend h1;
-}
+
 
 #page-container {
   position: relative;
   min-height: 82vh;
-  margin-top: 4em;
+  margin-top: 1em;
 }
 
 
@@ -176,4 +140,13 @@ ul {
 
 #main-withsidebar {
   background-color: #fffff8;
+}
+
+#top-btn {
+  transition: opacity .5s ease 0s;
+  opacity: 0%;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
 }

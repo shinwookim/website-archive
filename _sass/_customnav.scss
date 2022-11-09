@@ -7,7 +7,9 @@
   font-weight: 900 !important;
   padding: 0;
   transition: color 1s ease 0s;
+
 }
+
 .navbar-brand:hover {
   color: $primary !important;
 }
@@ -23,6 +25,7 @@
   border-bottom: 4px solid black;
   color: black;
 }
+
 html {
   scroll-padding-top: 4em;
 }
