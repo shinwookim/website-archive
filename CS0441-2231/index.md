@@ -66,12 +66,12 @@ Click the date for annoucement slides(underlined) and footnotes for important re
 | **3** | 09/16/2022 | Chapter 1.1 & 1.2 Review | [Problems](assets/review-1.html)<sup>{% raw %}<a onclick='{{highlight("sch-nt-1")}}' href='#sch-nt-1'>[1]</a>{% endraw %}</sup><br>[Solutions](assets/review-1-solution.html) | |
 | **4** | [09/23/2022](assets/20220923.html) | Homework #2 | - |**Homework 2 Due: 09/24/2022 11:59 PM ET**|
 | **5** | [09/30/2022](assets/05_CS0441R_Announcement.pptx) | Homework #3 | - |**Homework 3 Due: 10/06/2022 11:59 PM ET**|
-| **6** | [10/07/2022](assets/06_CS0441R_MidTermPrep.pptx) | Mid-Term Prep (Common Mistakes)<sup>{% raw %}<a onclick='{{highlight("sch-nt-2")}}' href='#sch-nt-2'>[2]</a>{% endraw %}</sup><br>Proof Practice <br> *(Chapter 1.7)*<sup>{% raw %}<a onclick='{{highlight("sch-nt-3")}}' href='#sch-nt-3'>[3]</a>{% endraw %}</sup> | [Problems](assets/2022-10-07-review-2.html)<sup markdown="0">{% raw %}<a onclick='{{highlight("sch-nt-1")}}' href='#sch-nt-1'>[1]</a>{% endraw %}</sup><br>[Solutions](assets/2022-10-08-review-2-solution.html) |  **Homework 4 Due: 10/12/2022 11:59 PM ET**<br> **Homework 5 Due: 10/19/2022 11:59 PM ET** |
+| **6** | [10/07/2022](assets/06_CS0441R_MidTermPrep.pptx) | Mid-Term Prep (Common Mistakes)<sup>{% raw %}<a onclick='{{highlight("sch-nt-2")}}' href='#sch-nt-2'>[2]</a>{% endraw %}</sup><br>Proof Practice <br> *(Chapter 1.7)*<sup>{% raw %}<a onclick='{{highlight("sch-nt-3")}}' href='#sch-nt-3'>[3]</a>{% endraw %}</sup> | [Problems](assets/review-2.html)<sup markdown="0">{% raw %}<a onclick='{{highlight("sch-nt-1")}}' href='#sch-nt-1'>[1]</a>{% endraw %}</sup><br>[Solutions](assets/review-2-solution.html) |  **Homework 4 Due: 10/12/2022 11:59 PM ET**<br> **Homework 5 Due: 10/19/2022 11:59 PM ET** |
 | **7** | 10/14/2022 | **No Recitation** <br> Fall Break | - | **MID-TERM EXAM: 10/19/2022 (During Lecture)**<br> **Reference Sheet Due: 10/17/2022 11:59 PM ET**|
 | **8** | 10/21/2022 | Principle of Mathematical Induction<sup>{% raw %}<a onclick='{{highlight("sch-nt-4")}}' href='#sch-nt-4'>[4]</a>{% endraw %}</sup> | [Slides](assets/08_CS0441R_Induction.pptx) |  |
 | **9** | [10/28/2022](assets/09_CS0441R_Homework6.pptx) | Homework #6 | - | **Homework 6 Due: 11/04/2022 11:59 PM ET** |
 | **10** | 11/04/2022 | Homework #6 | - | **Homework 6 Due: 11/04/2022 11:59 PM ET** |
-| **11** | 11/11/2022 | | - | |
+| **11** | 11/11/2022 | Chapter 6 Review | [Problems](assets/review-3.html)<sup markdown="0">{% raw %}<a onclick='{{highlight("sch-nt-1")}}' href='#sch-nt-1'>[1]</a>{% endraw %}</sup>| |
 | **12** | 11/18/2022 | | - | |
 | **13** | 11/25/2022 | **No Recitation** <br> Thanksgiving Break | - | |
 | **14** | 12/02/2022 | | - | |
