@@ -42,7 +42,7 @@ defaults:
       permalink: /:basename:output_ext
 include:
   - _pages
-  - teaching/CS0441-2231/handouts
+  - notes/CS0441
 
 # jekyll-spaceship
 jekyll-spaceship:

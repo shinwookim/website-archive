@@ -1,0 +1,6 @@
+main_link: /
+links:
+  - title: Home
+    url: /
+  - title: Notes
+    url: /notes/
