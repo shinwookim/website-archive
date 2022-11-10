@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
+  <link
+    rel="stylesheet"
+    href='{{"/assets/main.css" |
+  absolute_url }}'
+  />
   <link rel="stylesheet" href=' {{"/assets/tufte.css" | absolute_url }}' />
   <link rel="stylesheet" href=' {{"/assets/bs_nav.css" | absolute_url }}' />
-
+  <style>
+    .tdn {
+      font-size: 0.75em;
+      margin-bottom: 0.1em;
+      margin-top: 0;
+      line-height: 1em;
+      padding: 0;
+    }
+    .sticky-top > ol {
+      width: 100%;
+    }
+  </style>
   <body>
     <!--- Header and nav template site-wide -->
     <header>
-      <nav class="group">
+      <nav class="group ps-5 p-xxl-0">
         <a href="{{site.baseurl}}{{site.data[page.navi_links].main_link}}"
           >{{page.navi_title}}</a
         >
@@ -23,11 +39,20 @@
         <a href="{{node.url | prepend: site.baseurl}}">{{node.title}}</a>
         {% endif %} {% endfor %}
       </nav>
-
-      <p class="title">{{page.title}}</p>
-      <p class="subtitle">{{page.subtitle}}</p>
     </header>
-    <article>{{ content }}</article>
+    <div class="row p-5 p-md-1">
+      <aside class="col-md-2 d-none d-md-block ps-5 p-xxl-0">
+        <div class="sticky-top mt-5">
+          <div height="25px" style="opacity: 0">.</div>
+          {% include toc.html html=content ordered=true item_class="tdn" %}
+        </div>
+      </aside>
+      <article class="col-md-10 col">
+        <p class="title">{{page.title}}</p>
+        <p class="subtitle">{{page.subtitle}}</p>
+        {{ content }}
+      </article>
+    </div>
     <br />
     <hr class="slender" />
     <footer class="site-footer">
