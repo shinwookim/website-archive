@@ -1,9 +1,10 @@
 ---
 layout: new
-title: Teaching
+title: Courses I've Taught
 published: true
 permalink: /teaching/
 ---
+
 
 
 <style>

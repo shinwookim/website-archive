@@ -1,9 +1,10 @@
 ---
 layout: new
-title: Background
-permalink: /background/
+title: About Me
+permalink: /about/
 published: true
 ---
+
 
 <div class="text-center"><a class="btn btn-outline-dark" href="{{ '/resume/' | prepend: site.baseurl }}">View my Résumé</a></div>
 

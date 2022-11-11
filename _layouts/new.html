@@ -10,7 +10,10 @@
           </header>
         </aside>
         <main class="col-md-7 ps-md-5" style="padding-top: 74px">
-          <article>{{ content }}</article>
+          <article>
+            <h1 class="my-0 text-center">{{page.title}}</h1>
+            {{ content }}
+          </article>
           <button
             onclick="topFunction()"
             id="top-btn"
@@ -26,3 +29,10 @@
     google-analytics.html %}
   </body>
 </html>
+<style>
+  p {
+    line-height: 1.6;
+    font-weight: 100;
+    font-size: 13.6pt;
+  }
+</style>
