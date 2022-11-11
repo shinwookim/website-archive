@@ -71,11 +71,11 @@ Click the date for annoucement slides(underlined) and footnotes for important re
 | **8** | 10/21/2022 | Principle of Mathematical Induction<sup>{% raw %}<a onclick='{{highlight("sch-nt-4")}}' href='#sch-nt-4'>[4]</a>{% endraw %}</sup> | [Slides](assets/08_CS0441R_Induction.pptx) |  |
 | **9** | [10/28/2022](assets/09_CS0441R_Homework6.pptx) | Homework #6 | - | **Homework 6 Due: 11/04/2022 11:59 PM ET** |
 | **10** | 11/04/2022 | Homework #6 | - | **Homework 6 Due: 11/04/2022 11:59 PM ET** |
-| **11** | [11/11/2022](assets/11_CS0441R_Homework7.pptx) | Chapter 6 Review/Homework 7 | [Problems](assets/review-3.html)<sup markdown="0">{% raw %}<a onclick='{{highlight("sch-nt-1")}}' href='#sch-nt-1'>[1]</a>{% endraw %}</sup>|**Homework 7 Due: 11/19/2022 11:59 PM ET**|
+| **11** | [11/11/2022](assets/11_CS0441R_Homework7.pptx) | Chapter 6 Review/Homework 7 | [Problems](assets/review-3.html)<sup markdown="0">{% raw %}<a onclick='{{highlight("sch-nt-1")}}' href='#sch-nt-1'>[1]</a>{% endraw %}</sup><br>[Solutions](assets/review-3-solution.html)|**Homework 7 Due: 11/19/2022 11:59 PM ET**|
 | **12** | 11/18/2022 |Homework 7| - |**Homework 7 Due: 11/19/2022 11:59 PM ET**|
 | **13** | 11/25/2022 | **No Recitation** <br> Thanksgiving Break | - | |
 | **14** | 12/02/2022 | | - | |
-| **15** | 12/09/2022 | **Last Day for Undergraduate Class** | | **See Peoplesoft for Final Exam Date** |
+| **15** | 12/09/2022 |  |-| **Last Day for Undergraduate Class**<br />**See Peoplesoft for Final Exam Date** |
 
 </div>
 

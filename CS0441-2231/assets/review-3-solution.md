@@ -12,17 +12,23 @@ navi_links: "cs0441_2231_nav"
 ## Problem 1
 How many strings of all the first seven letters of the alphabet (A, B, C, D, E, F, G) are there that contain no repeated letters and begin or end with a vowel (A or E)?
 
-$2 \times6!  + 2\times 6! -2\times5!$
-{: .red}
+<p class="red" markdown="1">
 
-You need to count the number of words that begin with a vowel, plus the number of words that end with a vowel; then subtract the number of words that have been counted twice in this process. If the word begins with a vowel, there are two choices, A and E, for the first letter; once one of these two letters is chosen, there are $6!$ ways to place the remaining six letters. Likewise, if the word ends with a vowel, there are two choices, A and E, for the final letter; once one of these two letters is chosen, there are $6!$ ways to place the remaining six letters. In this process, we have counted strings of the form `A _ _ _ _ _ E` and `E _ _ _ _ _ A` twice. There are $2 \times 5!$ such words, which we subtract to obtain $2 \times6!  + 2\times 6! -2\times5!$.
-{: .red}
+$$2 \times6!  + 2\times 6! -2\times5!$$  
+
+First, we need to count the number of words that begin with a vowel, plus the number of words that end with a vowel. Then we subtract the number of words that have been counted twice in this process.  
+
+<br />
+
+If the word begins with a vowel, there are two choices, `A` and `E`, for the first letter; once one of these two letters is chosen, there are $6!$ ways to place the remaining six letters. Likewise, if the word ends with a vowel, there are two choices, A and E, for the final letter; once one of these two letters is chosen, there are $6!$ ways to place the remaining six letters. In this process, we have counted strings of the form `A _ _ _ _ _ E` and `E _ _ _ _ _ A` twice. There are $2 \times 5!$ such words, which we subtract to obtain $2 \times6!  + 2\times 6! -2\times5!$.
+
+</p>
 
 ## Problem 2
 When you buy a Powerball
 ticket, you select 5 different white numbers from among the numbers 1 through 59 (order of selection does not matter), and one red number from among the numbers 1 through 35. How many different Powerball tickets can you buy?
 
-You need to select 5 distinct white numbers, meaning there are $C(59, 5) = 5, 006, 386$ ways to do this. Then you can pick the red number $C(35, 1) = 35$ ways. So the total number of tickets is $C(59, 5) \times P(35, 1) = 5, 006, 386 \times 35 = 175, 223, 510.$
+You need to select 5 distinct white numbers, meaning there are $C(59, 5) = 5, 006, 386$ ways to do this. Then you can pick the red number $C(35, 1) = 35$ ways. So the total number of tickets is $$C(59, 5) \times P(35, 1) = 5, 006, 386 \times 35 = 175, 223, 510.$$
 {: .red}
 
 ## Problem 3
