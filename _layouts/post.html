@@ -22,45 +22,71 @@
   </style>
   <body>
     <!--- Header and nav template site-wide -->
-    <header>
-      <nav class="group ps-5 p-xxl-0">
-        <a href="{{site.baseurl}}{{site.data[page.navi_links].main_link}}"
-          >{{page.navi_title}}</a
-        >
-        {% for node in site.data[page.navi_links].links %} {% if page.url ==
-        node.url %}
-        <a
-          class="active"
-          href="{{node.url | prepend: site.baseurl}}"
-          class="active"
-          >{{node.title}}</a
-        >
-        {% else %}
-        <a href="{{node.url | prepend: site.baseurl}}">{{node.title}}</a>
-        {% endif %} {% endfor %}
-      </nav>
-    </header>
+    <div class="text-center mx-auto">
+      {% if site.data[page.navi_links].links%}
+      <header>
+        <nav>
+          <a href="{{site.baseurl}}{{site.data[page.navi_links].main_link}}"
+            >{{page.navi_title}}</a
+          >
+          {% for node in site.data[page.navi_links].links %} {% if page.url ==
+          node.url %}
+          <a
+            class="active"
+            href="{{node.url | prepend: site.baseurl}}"
+            class="active"
+            >{{node.title}}</a
+          >
+          {% else %}
+          <a href="{{node.url | prepend: site.baseurl}}">{{node.title}}</a>
+          {% endif %} {% endfor %}
+        </nav>
+      </header>
+      {% else %}
+      <header>
+        <nav>
+          <a href='{{"/" | relative_url }}' id="nav-brand">SHINWOO KIM</a>
+          {% for node in site.data.nav.links %} {% if page.url == node.url %}
+          <a
+            class="active"
+            href="{{node.url | prepend: site.baseurl}}"
+            class="active"
+            >{{node.title}}</a
+          >
+          {% else %}
+          <a href="{{node.url | prepend: site.baseurl}}">{{node.title}}</a>
+          {% endif %} {% endfor %}
+        </nav>
+      </header>
+      {% endif %}
+    </div>
     <div class="row p-5 p-md-1">
       <aside class="col-md-2 d-none d-md-block ps-5 p-xxl-0">
-        <div class="sticky-top mt-5">
-          <div height="25px" style="opacity: 0">.</div>
-          {% include toc.html html=content ordered=true item_class="tdn" %}
-        </div>
+        <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
       </aside>
       <article class="col-md-10 col">
         <p class="title">{{page.title}}</p>
         <p class="subtitle">{{page.subtitle}}</p>
         {{ content }}
+        <button
+          onclick="topFunction()"
+          id="top-btn"
+          class="btn btn-dark"
+          title="Go to top"
+        >
+          Top
+        </button>
       </article>
+      <hr class="slender" />
+      <footer class="site-footer text-center">
+        <p class="mb-0 mx-auto">
+          &copy; 2021-2022 Shinwoo Kim. All Rights Reserved.<br />
+          <a onclick="history.back()">Return to Previous Page</a>
+        </p>
+      </footer>
     </div>
     <br />
-    <hr class="slender" />
-    <footer class="site-footer">
-      <p class="mb-0">
-        &copy; 2021-2022 Shinwoo Kim. All Rights Reserved.<br />
-        <a onclick="history.back()">Return to Previous Page</a>
-      </p>
-    </footer>
+
     {% include scripts.html %} {% include google-analytics.html %}
     <style>
       .back-link {
@@ -71,6 +97,23 @@
 
       .back-link:hover {
         color: #a00000;
+      }
+      .toc {
+      }
+      .toc ol {
+        width: 100%;
+      }
+      ul ul {
+        width: 100%;
+      }
+      nav ul {
+        width: 100%;
+      }
+      nav ul li {
+        margin-top: 0;
+      }
+      nav[data-toggle="toc"] {
+        top: 42px;
       }
     </style>
   </body>
