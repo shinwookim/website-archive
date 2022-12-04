@@ -1,6 +1,11 @@
 ---
 layout: new
 ---
+<style>
+  p {
+    font-size: 13.6pt;
+  }
+</style>
 
 ![Shinwoo Kim](assets/img/hero-bg.webp){: .figure-img .img-fluid .rounded}
 
