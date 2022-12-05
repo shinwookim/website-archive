@@ -26,7 +26,7 @@ permalink: /teaching/
 
 
 ##### Fall 2021
-[<i class="pitt-icon"></i> **Bridges to IT: Jump-Starting a Career in IT** ](https://www.comptia.org/certifications/a)<sup><a href="#Instructor" type="button" onclick='highlight("Instructor")'  class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Primary/Lead Instructor">I</a></sup>
+[<i class="pitt-icon"></i> **Bridges to IT: Jump-Starting a Career in IT** ](bridges-to-it/)<sup><a href="#Instructor" type="button" onclick='highlight("Instructor")'  class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Primary/Lead Instructor">I</a></sup>
 
 ---
 <sup id="TA" onclick='highlight_off()'><span class="text-secondary">TA</span>: Taught as Recitation Instructor/Teaching Assistant</sup><br>
