@@ -7,7 +7,7 @@ permalink: /teaching/bridges-to-it
 navi_title: CS0441
 navi_links: "cs0441_2231_nav"
 blurb: |
-  This course introduces fundamental concepts needed for a career in Information Technology. This course provides the neccessary knowledge, training, and preparation required to attain the <a href="https://www.comptia.org/certifications/a">COMPTIA A+ 220-1001 & 220-1002</a> certificate. The course is intended for high school students who wish to begin their career and IT, and is open to students graduating in 2022.
+  This course introduces fundamental concepts needed for a career in Information Technology including customer service, troubleshooting skills, operating systems, hardware, networking, and security. The course aims to provide the neccessary knowledge, training, and preparation required to attain the <a href="https://www.comptia.org/certifications/a">COMPTIA A+ 220-1001 & 220-1002</a> certificate and useful information for people wanting to pursue a career in IT support. The course is intended for high school students who wish to begin their career and IT, and is open to students graduating in 2022.
 ---
 
 ## Class Information
@@ -15,6 +15,22 @@ blurb: |
 + **Meets:** Tu/Th 4:30 PM at [Pitt Hill District CEC](https://cec.pitt.edu/hilldistrict/); Saturdays Morning via Zoom
 + **Please see Microsoft Teams frequently for updates**
 <br><br>
+
+## Course Goals
+Students who complete this course successfully will be able to:  
++ Identify job market demand and career path for IT support workers 
++ Classify end users  
++ Identify and resolve common problems encountered by users  
++ Gain important communications and interpersonal skills (being a good listener)  
++ Identify what is meant by “excellent customer service”  
++ Identify and formulate strategies for troubleshooting and problem solving  
++ Put together a toolkit for the IT support professional  
++ Master the IT support terminology  
++ Identify and install CPU and Memory types  
++ Identify, troubleshoot, and install a wide variety of peripherals  
++ Learn introductory networking and Internet protocols  
++ Understand the various network hardware components  
++ Troubleshoot network problems including WiFi  
 
 ## COMPTIA A+ 220-1001 & 220-1002 Certificate
 CompTIA A+ certification has direct value in terms of tech jobs for which a person can be hired - certification can lead to being hired! It is trusted by employers around the world to identify the go-to person in end point management & technical support roles. CompTIA A+ appears in more tech support job listings than any other IT credential.
@@ -38,27 +54,34 @@ Upon successfuly completition of the course, students are guaranteed internships
 
 ## Tentative Schedule
 
-| Week                                  | Topic                                                     |
-|--------------------------------------:|:----------------------------------------------------------|
-| Week 1 (Nov 1)                        |                Introduction & Prerequisites               |
-| Week 2 (Nov 8)                        | Wrap-up Prerequisites & Communication + Hands-on-Hardware Activity |
-| Week 3 (Nov 15)                       |                   Hardware - Motherboards                   |
-| **NO CLASSES NOV 22**                 |                                                           |
-| Week 4 (Nov 29)                       |                   Hardware - CPU + Memory                 |
-| Week 5 (Dec 6)                        |                    Hardware - Peripherals                   |
-| Week 6 (Dec 13)<br>**END OF FALL SEMESTER**|                    Display Technologies                   |
-| Week 7 (Jan 17)                       |                     Operating Systems                     |
-| Week 8 (Jan 24th)                     |                    Operating Systems                   |
-| Week 9 (Jan 31st)                     |                         Networking                        |
-| Week 10 (Feb 7th)                     |                        Networking                     |
-| Week 11 Feb (14th)                    |                       Virtualization                      |
-| Week 12 (Feb 21st)                    |                     Portable Computing                    |
-| Week 13 (Feb 28th)                    |                          Printers                         |
-| Week 14 (Mar 14th)                    |                         Security                          |
-| Week 15 (Mar 21st)                    |                        Security                         |
-| Week 16 (Mar 28th)                    |                   Operational Procedures                  |
-| Week 17 (Apr - 4th)                   |              Review & Certification Prep              |
-| Week 18 (Apr - 18th)                  |              Review & Certification Prep              |
+|                                        Week | Topic                                                              |
+| ------------------------------------------: | :----------------------------------------------------------------- |
+|                              Week 1 (Nov 1) | Introduction & Prerequisites                                       |
+|                              Week 2 (Nov 8) | Wrap-up Prerequisites & Communication + Hands-on-Hardware Activity |
+|   Week 3 (Nov 15) <br>**NO CLASSES NOV 22** | Hardware - Motherboards                                            |
+|                             Week 4 (Nov 29) | Hardware - CPU + Memory                                            |
+|                              Week 5 (Dec 6) | Hardware - Peripherals                                             |
+| Week 6 (Dec 13)<br>**END OF FALL SEMESTER** | Display Technologies                                               |
+|                             Week 7 (Jan 17) | Operating Systems                                                  |
+|                           Week 8 (Jan 24th) | Operating Systems                                                  |
+|                           Week 9 (Jan 31st) | Networking                                                         |
+|                           Week 10 (Feb 7th) | Networking                                                         |
+|                          Week 11 Feb (14th) | Virtualization                                                     |
+|                          Week 12 (Feb 21st) | Portable Computing                                                 |
+|                          Week 13 (Feb 28th) | Printers                                                           |
+|                          Week 14 (Mar 14th) | Security                                                           |
+|                          Week 15 (Mar 21st) | Security                                                           |
+|                          Week 16 (Mar 28th) | Operational Procedures                                             |
+|                         Week 17 (Apr - 4th) | Review & Certification Prep                                        |
+|                        Week 18 (Apr - 18th) | Review & Certification Prep                                        |
+{: .table-hover}
+
+## Useful Links
++ [The Top CPU Manufacturers](https://www.ranker.com/list/the-best-cpu-manufacturers-and-top-cpu-brands/computer-hardware) 
++ [Computer Hardware Chart](https://www.deviantart.com/sonic840/art/Computer-Hardware-Chart-2-0-587798335)
++ [Guide to USB](https://www.digikey.com/en/articles/a-basic-guide-to-usb)
++ [HDD vs SSD](https://www.pcmag.com/news/ssd-vs-hdd-whats-the-difference)
++ [Supplemental Information](https://pitt.box.com/v/itsupportclass )
 
 ## Sponsers
 Thanks to Verizon, Level Up 412, Neighborhood Allies, and Pitt IT/CEC for sponsering this program.
