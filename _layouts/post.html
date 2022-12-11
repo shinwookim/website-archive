@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <link
-    rel="stylesheet"
-    href='{{"/assets/main.css" |
-  absolute_url }}'
-  />
+  <link rel="stylesheet" href='{{"/assets/main.css" |  absolute_url }}' />
   <link rel="stylesheet" href=' {{"/assets/tufte.css" | absolute_url }}' />
   <link rel="stylesheet" href=' {{"/assets/bs_nav.css" | absolute_url }}' />
   <style>
@@ -26,6 +22,7 @@
       {% if site.data[page.navi_links].links%}
       <header>
         <nav>
+          <a href="{{site.baseurl}}/">Shinwoo Kim</a>
           <a href="{{site.baseurl}}{{site.data[page.navi_links].main_link}}"
             >{{page.navi_title}}</a
           >
@@ -61,11 +58,11 @@
       {% endif %}
     </div>
     <div class="row p-5 p-md-1">
-      <aside class="col-md-2 d-none d-md-block ps-5 p-xxl-0">
+      <aside class="col-md-2 d-none d-md-block ps-lg-2 p-xxl-0">
         <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
       </aside>
       <article class="col-md-10 col">
-        <p class="title">{{page.title}}</p>
+        <h1 class="title">{{page.title}}</h1>
         <p class="subtitle">{{page.subtitle}}</p>
         {{ content }}
         <button
