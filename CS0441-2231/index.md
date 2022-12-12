@@ -39,10 +39,10 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_ {%marginno
 **Note when E-mailing:** {%marginnote "Hours" "Generally, my working hours are between 8AM and 6PM"%}
 {: .mb-0}
 
-> - Email subjects should be prefaced with **`[CS0441]`**
-> - For official communcation, messages should be sent using your official **Pitt E-Mail**(`ABC123@pitt.edu`), or Canvas message.
-> - Email body should include the **student name** and the **section** they're enrolled in.
-> - Students should allow at least 24 business hours before following up.
+- Email subjects should be prefaced with `[CS0441]`
+- For official communcation, messages should be sent using your official **Pitt E-Mail**(`ABC123@pitt.edu`), or Canvas message.
+- Email body should include the **student name** and the **section** they're enrolled in.
+- Students should allow at least 24 business hours before following up.
 
 ---
 

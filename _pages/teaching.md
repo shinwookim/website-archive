@@ -11,15 +11,17 @@ permalink: /teaching/
     p{margin-bottom: 0;}
 </style>
 
-#### Current Courses<br>(Fall 2022, Term 2231)
-
-(_Taught as Recitation Instructor/Teaching Assistant_)
-
-- [<i class="pitt-icon"></i> **CS0441: Discrete Structures for Computer Science**](../CS0441-2231/)<sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup>
+#### Current Courses
+##### (Spring 2023, Term 2234)
+- TBA   
 
 ---
 
 #### Previous Courses
+
+
+##### Fall 2022 (Term 2231)
+- [<i class="pitt-icon"></i> **CS0441: Discrete Structures for Computer Science**](../CS0441-2231/)<sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup>
 
 ##### Fall 2021
 
