@@ -1,13 +1,21 @@
 ---
 layout: post
 title: "Bridges to IT: Jump-Starting a Career in IT"
-subtitle: "Fall 2022"
+subtitle: "Fall 2021"
 navi: false
-permalink: /teaching/bridges-to-it/
+permalink: /teaching/bridges-to-it.html
 navi_title: Bridges to IT
 navi_links: ""
 ---
 
+<center><p><strong>This webpage is no longer maintained, and serves only archival purposes</strong></p></center>
+
+{%marginnote "Sponsers" "Thank you to our sponsors and partners for helping to launch this program:"%}
+{%marginfigure "verizon" "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Verizon_2015_logo_-vector.svg/2560px-Verizon_2015_logo_-vector.svg.png"%}
+{%marginfigure "412" "https://825130.smushcdn.com/1638194/wp-content/uploads/2021/03/LevelUp412-Logo-e1614984927426.png?lossy=1&strip=1&webp=1"%}
+{%marginfigure "Allies" "https://theopportunityfund.org/wp-content/uploads/2019/02/Neighborhood-Allies-Logo.png"%}
+{%marginfigure "CEC" "https://www.shrs.pitt.edu/sites/default/files/library/images/csd/CEC%20Logo.png"%}
+{%marginfigure "IT" "https://pbs.twimg.com/profile_images/1271509752678416385/D4jSHrpz_400x400.png"%}
 This course introduces fundamental concepts needed for a career in Information Technology including customer service, troubleshooting skills, operating systems, hardware, networking, and security. The course aims to provide the neccessary knowledge, training, and preparation required to attain the <a href="https://www.comptia.org/certifications/a">COMPTIA A+ 220-1001 & 220-1002</a> certificate and useful information for people wanting to pursue a career in IT support. The course is intended for high school students who wish to begin their career and IT, and is open to students graduating in 2022.
 
 ## Class Information
@@ -92,7 +100,3 @@ Upon successfuly completition of the course, students are guaranteed internships
 - [Guide to USB](https://www.digikey.com/en/articles/a-basic-guide-to-usb)
 - [HDD vs SSD](https://www.pcmag.com/news/ssd-vs-hdd-whats-the-difference)
 - [Supplemental Information](https://pitt.box.com/v/itsupportclass)
-
-## Sponsers
-
-Thanks to Verizon, Level Up 412, Neighborhood Allies, and Pitt IT/CEC for sponsering this program.

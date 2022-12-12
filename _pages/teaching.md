@@ -12,22 +12,24 @@ permalink: /teaching/
 </style>
 
 #### Current Courses
+
 ##### (Spring 2023, Term 2234)
-- TBA   
+
+- TBA
 
 ---
 
 #### Previous Courses
 
-
 ##### Fall 2022 (Term 2231)
+
 - [<i class="pitt-icon"></i> **CS0441: Discrete Structures for Computer Science**](../CS0441-2231/)<sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup>
 
 ##### Fall 2021
 
-- [<i class="pitt-icon"></i> **Bridges to IT: Jump-Starting a Career in IT** ](bridges-to-it/)<sup><a href="#Instructor" type="button" onclick='highlight("Instructor")'  class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Primary/Lead Instructor">I</a></sup>
+- [<i class="pitt-icon"></i> **Bridges to IT: Jump-Starting a Career in IT** ](bridges-to-it.html)<sup><a href="#Instructor" type="button" onclick='highlight("Instructor")'  class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Primary/Lead Instructor">I</a></sup>
 - [<i class="pitt-icon"></i> **CEC STEAM Saturday Courses**](https://cec.pitt.edu/calendar/s-t-e-a-m-saturdays/2022-10-08/)<sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup>
-  - <span style="font-size: 80%;">Girls Who Code</span>
+  - <span style="font-size: 80%;"><a href="https://girlswhocode.com/">Girls Who Code</a></span>
   - <span style="font-size: 80%;"> Video Game Design</span>
   - <span style="font-size: 80%;">Designing for the Elements</span>
 

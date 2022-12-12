@@ -7,6 +7,8 @@ navi_title: CS0441
 navi_links: "cs0441_2231_nav"
 ---
 
+<center><p><strong>This webpage is no longer maintained, and serves only archival purposes</strong></p></center>
+
 ## Course Description
 
 Welcome to **CS 0441**, **Discrete Structures for Computer Science**, for the Fall 2022 term!{% marginfigure 'mf-id-whatever' 'https://www.mheducation.com/cover-images/Jpeg_400-high/125967651X.jpeg' '**Course Textbook:** Kenneth H. Rosen. *Discrete Mathematics and Its Applications*, 8th Edition, McGraw Hill. **A copy of the text is required for homework.**' %}.
@@ -36,13 +38,13 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_ {%marginno
 - Wednesday 11 AM - 12 PM Virtual ([**https://pitt.zoom.us/j/3027565812**](https://pitt.zoom.us/j/3027565812))
 - By Appointment (In-Person or Virtual): [**Scheduler**](https://outlook.office.com/bookwithme/user/cf9122c6baae489ea2e99400607830e5@pitt.edu?anonymous&ep=pcard) Or E-mail me
 
-**Note when E-mailing:** {%marginnote "Hours" "Generally, my working hours are between 8AM and 6PM"%}
+**Note when E-mailing:**
 {: .mb-0}
 
 - Email subjects should be prefaced with `[CS0441]`
 - For official communcation, messages should be sent using your official **Pitt E-Mail**(`ABC123@pitt.edu`), or Canvas message.
 - Email body should include the **student name** and the **section** they're enrolled in.
-- Students should allow at least 24 business hours before following up.
+- Students should allow at least 24 business hours before following up.{%sidenote "Hours" "Generally, my working hours are between 8AM and 6PM"%}
 
 ---
 
@@ -56,9 +58,10 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_ {%marginno
 ## Schedule
 
 Click the date for annoucement slides and see footnotes for important recitation information.
+{%marginfigure "meme" "https://external-preview.redd.it/xHBy8Vbc9PPlRIkPmeztTsSwwwqFL9XGd8NgviiqWmQ.jpg?auto=webp&s=4e7586dbcafbb3dca7eed1d171684dfaf30da856"%}
 
 <div class="table-responsive" markdown="1" >
-| #      | Date                                               | Topic                                                                                                                                                                                                                                                                | Handout                                                                                                                                                                                    | Important Announcements                                                                            |
+| #      | Date/Slides                                               | Topic                                                                                                                                                                                                                                                                | Handout                                                                                                                                                                                    | Important Announcements                                                                            |
 | ------ | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
 | **1**  | [09/02/2022](assets/01_CS0441R_Administrivia.pptx) | **No Recitation** <br> First Week of Class                                                                                                                                                                                                                           | -                                                                                                                                                                                          |                                                                                                    |
 | **2**  | 09/09/2022                                         | Homework #1                                                                                                                                                                                                                                                          | -                                                                                                                                                                                          | Zoom Recitation (Link on Canvas). <br> **Homework 1 Due: 09/12/2022 11:59 PM ET**                  |
@@ -74,7 +77,7 @@ Click the date for annoucement slides and see footnotes for important recitation
 | **12** | 11/18/2022                                         | Homework 7                                                                                                                                                                                                                                                           | -                                                                                                                                                                                          | **Homework 7 Due: 11/19/2022 11:59 PM ET**                                                         |
 | **13** | 11/25/2022                                         | **No Recitation** <br> Thanksgiving Break                                                                                                                                                                                                                            | -                                                                                                                                                                                          |                                                                                                    |
 | **14** | [12/02/2022](assets/14_CS0441R_Homework8.pptx)     | Homework 8                                                                                                                                                                                                                                                           | -                                                                                                                                                                                          | **Homework 8 Due: 12/09/2022 11:59 PM ET**<br />**FINAL EXAM DURING LAST LECTURE**                 |
-| **15** | 12/09/2022                                         | **No Recitation**<br>(Final) Office Hours                                                                                                                                                                                                                            | -                                                                                                                                                                                          | **Last Day for Undergraduate Class**<br />***NO MORE OFFICE HOURS PAST THIS POINT***               |
+| **15** | 12/09/2022                                         | **No Recitation**<br>(Final) Office Hours                                                                                                                                                                                                                            | -                                                                                                                                                                                          | **Last Day for Undergraduate Class**<br />**NO MORE OFFICE HOURS PAST THIS POINT**               |
 {: .table-hover}
 </div>
 
@@ -89,6 +92,9 @@ Click the date for annoucement slides and see footnotes for important recitation
 ---
 
 ## Tips for Success
+
+{%marginnote 'tips' '[**Pitt CS Wiki**: How to Succeed in CS0441: Discrete Structures for Computer Science](https://pittcs.wiki/academics/succeed-in-course-x/succeed-in-441/)' %}
+{% epigraph 'If you want to do well in any course, the bare minimum is attending all lectures and doing all homework assignments.' 'Dylan Feehan' "PittCS Wiki" %}
 
 - **Attend class and actively participate in class**.<br>The primary introduction to course material is through class lecture. Additionally, we often do exercises during class. Showing up is necessary, but not sufficient to success in the course: ask questions, participate in class discussions and in class activities, and take notes.
 - **Read the material before you come to class**.<br>Don't worry about total comprehension, but at least get a feel for what we will be covering that week. If you have some understanding of the material coming into class, it will be easier for you to follow the lecture and to ask questions during class.
@@ -110,11 +116,10 @@ We expect that all students will need help at some point in this course. If you 
 
 ## Helpful Links
 
+- [Sign up for **Peer Tutoring** on Navigate](https://pitt.guide.eab.com/){: target="\_blank"}
+- [Tips from Previous Students](https://pittcs.wiki/academics/succeed-in-course-x/succeed-in-441/)
 - [University of Pittsburgh](https://pitt.edu){: target="\_blank"}
 - [Department of Computer Science](https://cs.pitt.edu){: target="\_blank"}
-- [Sign up for **Peer Tutoring** on Navigate](https://pitt.guide.eab.com/){: target="\_blank"}
-  {: .mb-2}
-
 <style>
     th{
         text-align: center;
