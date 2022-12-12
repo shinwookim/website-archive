@@ -431,8 +431,11 @@ blockquote .sidenote,
 blockquote .marginnote {
   margin-right: -79%;
 }
-blockquote {
-  width: 55%;
+
+@media screen and (min-width: 760px) {
+  blockquote {
+    width: 55%;
+  }
 }
 blockquote > ul,
 p > ul,
