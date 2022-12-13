@@ -19,7 +19,7 @@ Bachelor of Science - Computer Science, Data Science, Mathematics
 
 ---
 
-## Experiences
+## Work Experiences
 
 <style>
   h5{margin-bottom: 0 !important;}
