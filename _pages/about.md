@@ -5,29 +5,22 @@ permalink: /about/
 published: true
 ---
 
-
-<div class="text-center"><a class="btn btn-outline-dark" href="{{ '/resume/' | prepend: site.baseurl }}">View my Résumé</a></div>
-
-## Education
-
-### <i class="pitt-icon"></i>University of Pittsburgh
-
-#### School of Computing and Information + David C. Frederick Honors College
-
-August 2021 - (Expected) May 2026  
-Bachelor of Science - Computer Science, Data Science, Mathematics
-
----
-
-## Work Experiences
-
 <style>
-  h5{margin-bottom: 0 !important;}
+  h5{
+    margin-bottom: 0 !important;
+  }
 </style>
 
-Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-to-date information. Click the buttons below to reveal
-{: .text-center}
+My name is Shinwoo Kim, and I am a student at the [University of Pittsburgh](https://pitt.edu)'s [School of Computing and Information](https://sci.pitt.edu) & [David C. Frederick Honors College](https://www.frederickhonors.pitt.edu/) where I study Computer Science, Data Science, and Mathematics. My research interests are in the field of **Artificial Intelligence**, **Machine Learning**, and **Natural Language Processing** although there are very few things in computer science that I'm _not_ interested in. Currently, I am working as a [teaching assistant]({{ '/teaching/' | prepend: site.baseurl }}) for the University of Pittsburgh's Department of Computer Science; I also serve as the Chief Technical Officer and Lead Software Developer for the [_Special Needs Assitance Program for Social Engagement_](https://snapfse.com) and the [_TouchTheInvisible_](https://touchtheinvisible.com) project at the University of Pittsburgh.
 
+
+
+##### **Education**
+##### <i class="pitt-icon"></i>Bachelor of Science, Computer Science & Mathematics, (Exp.) 2026 
++ University of Pittsburgh (School of Computing and Information & David C. Frederick Honors College)
+<br><br>
+
+##### **Work Experiences**
 <div class="accordion accordion-flush border mb-0" id="accordionExperiences">
   <div class="accordion-item">
     <div class="accordion-header">
@@ -148,6 +141,9 @@ Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-t
     </div>
   </div>
 </div>
+
+Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-to-date information. Click the buttons below to reveal
+{: .text-center}
 
 ---
 
