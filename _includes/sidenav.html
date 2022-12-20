@@ -1,18 +1,18 @@
 <div class="text-center text-md-end">
-  <h1 class="my-0">
+  <div class="my-0 h1">
     <a class="league text-decoration-none" href='{{"/" | relative_url }}'
       >SHINWOO<br />KIM</a
     >
-  </h1>
-  <h2 class="my-0">
-    <code>
+  </div>
+  <div class="h2 my-0">
+    <code class="text-primary">
       <span
         class="typed"
         data-typed-items="Software Developer, Pitt Panther, Educator, Computer Scientist"
       ></span>
     </code>
-  </h2>
-  <p class="mb-0">
+  </div>
+  <div class="mb-0">
     <a class="social-icon" href="mailto:{{ site.email }}"
       ><i class="fas fa-envelope"></i
     ></a>
@@ -35,7 +35,7 @@
       href="https://instagram.com/{{ site.instagram_username }}"
       ><i class="fab fa-instagram"></i
     ></a>
-  </p>
+  </div>
 </div>
 <nav class="d-block mb-4 p-0 navbar navbar-expand-md navbar-light text-center">
   <button
@@ -54,7 +54,7 @@
       {% for item in site.data.nav.links %} {% if item.url=='#' %}
       <li class="nav-item dropdown">
         <a
-          class="nav-link dropdown-toggle {% if item.active contains page.url and page.url!='/' %}this{% endif %}"
+          class="nav-link dropdown-toggle {% if item.active contains page.url and page.url!='/' %}active{% endif %}"
           href="#"
           role="button"
           data-bs-toggle="dropdown"
@@ -79,7 +79,7 @@
       {% else %}
       <li class="nav-item">
         <a
-          class="nav-link {% if page.url == item.url %}this{% endif %}"
+          class="nav-link {% if page.url == item.url %}active{% endif %}"
           href="{{site.baseurl}}{{item.url}}"
           >{{item.title}}</a
         >
@@ -93,13 +93,3 @@
 
 <script src='{{"/assets/js/typed.js" | absolute_url }}' defer></script>
 <link rel="stylesheet" href='{{"/assets/icons.css" | absolute_url }}' />
-
-<style>
-  .this {
-    font-weight: bold;
-  }
-  .nav-link {
-    font-family: "Titillium Web", sans-serif;
-    font-size: 1.2em;
-  }
-</style>

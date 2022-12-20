@@ -2,7 +2,6 @@
 title: Teaching
 layout: default
 published: true
-permalink: /teaching/
 ---
 
 #### Current Courses
@@ -15,10 +14,9 @@ permalink: /teaching/
 
 #### Previous Courses
 
-- <i class="pitt-icon"></i>**CS0441:** Discrete Structures for Computer Science <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup>
-  [(Fall 2022)](../CS0441-2231/)
-- <i class="pitt-icon"></i> **Bridges to IT:** Jump-Starting a Career in IT <sup><a href="#Instructor" type="button" onclick='highlight("Instructor")'  class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Primary/Lead Instructor">I</a></sup> [(Fall 2021)](bridges-to-it.html)
-- <i class="pitt-icon"></i> **CEC STEAM** Saturday Courses <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [(Fall 2021)](https://cec.pitt.edu/calendar/s-t-e-a-m-saturdays/2022-10-08/)
+- <i class="pitt-icon"></i> **CS0441:** Discrete Structures for Computer Science <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Fall 2022](./CS0441-2231/)
+- <i class="pitt-icon"></i> **Bridges to IT:** Jump-Starting a Career in IT <sup><a href="#Instructor" type="button" onclick='highlight("Instructor")'  class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Primary/Lead Instructor">I</a></sup> [Fall 2021](bridges-to-it.html)
+- <i class="pitt-icon"></i> **CEC STEAM** Saturday Courses <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Fall 2021](https://cec.pitt.edu/calendar/s-t-e-a-m-saturdays/2022-10-08/)
 
 ---
 
@@ -27,7 +25,7 @@ permalink: /teaching/
 
 <link rel="stylesheet" href='{{"/assets/icons.css" | absolute_url }}'>
 <style>
-.highlight {
+    .highlight {
         background-color: #FFFF00;
     }
 </style>

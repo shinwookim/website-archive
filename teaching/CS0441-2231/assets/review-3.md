@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tufte
 date: 2022-11-10
 title: "Counting (Chapter 6) Review"
 notes: "Select problems from the text (&copy; McGraw Hill)"

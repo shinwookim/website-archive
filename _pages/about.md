@@ -18,7 +18,7 @@ My name is Shinwoo Kim, and I am a student at the [University of Pittsburgh](htt
 </style>
 
 ##### **Education**
-##### <i class="pitt-icon"></i>Bachelor of Science, Computer Science & Mathematics, (Exp.) 2026 
+##### <i class="pitt-icon"></i>B.S., Computer Science & Mathematics, (Exp.) 2026 
 + University of Pittsburgh (School of Computing and Information & David C. Frederick Honors College)
 <br><br>
 

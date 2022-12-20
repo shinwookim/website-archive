@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tufte
 date: 2022-09-17
 title: "Section 1.1 & 1.2 Review Solutions"
 notes: "Solutions & Commentary to Accompany Section 1.1 & 1.2 Review"
@@ -59,12 +59,12 @@ Show that these statements are inconsistent:
 <div class="red" markdown="1">
 Let:
 
-| Symbol | Meaning |
-|--------|---------|
-|t|Miranda takes a course in discrete mathematics|
-|g|Miranda  graduates|
-|r|Miranda reads this book|
-|q|Miranda is qualified for the job|
+| Symbol | Meaning                                        |
+| ------ | ---------------------------------------------- |
+| t      | Miranda takes a course in discrete mathematics |
+| g      | Miranda  graduates                             |
+| r      | Miranda reads this book                        |
+| q      | Miranda is qualified for the job               |
 
 Translating these statements into symbols, we have:
  ¬ *t* → ¬ *g*, ¬ *g* → ¬ *q*, *r* → *q*, and ¬ *t* ∧ *r*.{%sidenote "methodology" "Previously, we discussed how to use *truth tables* to show that a system is consistent. While that methodology is applicable here (you want to show that there is no case where all the given statements are true), you have to go through all 2<sup>4</sup> cases which can be time-consuming. Instead, we can use a more direct approach and show that there is a contradiction among the statements (thereby concluding that the system is inconsistent). "%}

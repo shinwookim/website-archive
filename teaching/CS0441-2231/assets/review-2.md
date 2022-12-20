@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tufte
 date: 2022-10-07
 title: "More Practice on Proofs"
 notes: "Select problems from the text (&copy; McGraw Hill)"

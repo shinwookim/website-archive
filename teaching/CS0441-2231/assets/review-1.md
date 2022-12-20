@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tufte
 date: 2022-09-16
 title: "Section 1.1 & 1.2 Review"
 notes: "Select problems from the text (&copy; McGraw Hill)"

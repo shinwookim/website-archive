@@ -3,18 +3,38 @@
 
 @import "bootstrap";
 @import "../_sass/tufte/syntax-highlighting";
-// @import "customnav";
 @import "footer";
 @import "global";
-@import "fonts";
-
-p.indent {
-  text-indent: 30px;
+@font-face {
+  font-family: "Autography";
+  src: url("../assets/fonts/Autography/Autography.woff2") format("woff2"),
+    url("../assets/fonts/Autography/Autography.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
-body {
-  background-color: #fffff8;
+.autography {
+  font-family: "Autography";
+  font-weight: normal;
+}
+
+.league {
+  font-family: "League Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 1em;
+}
+
+.nav-link {
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: #495057;
+  font-size: 1.2em;
+}
+.active {
+  font-weight: bold;
 }
 
 body {
-  font-size: 13.2pt;
+  background-color: #fffff8 !important;
+  font-size: 13.6pt;
 }
