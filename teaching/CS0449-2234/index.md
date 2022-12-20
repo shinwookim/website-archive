@@ -5,14 +5,14 @@ subtitle: "CS 0449 (Spring 2023, Term 2234)"
 navi: false
 ---
 
-
-
 ## Course Description
 
-Welcome to **CS 0441**, **Discrete Structures for Computer Science**, for the Fall 2022 term!{% marginfigure 'mf-mem' 'https://upload.wikimedia.org/wikipedia/commons/6/6e/C-memlayout.svg' 'Memory layout of a typical C program' %}
+Welcome to **CS 0441**, **Discrete Structures for Computer Science**, for the Fall 2022 term!
+{% marginfigure 'mf-mem' 'https://imgs.xkcd.com/comics/pointers.png' 'Pointers, [XKCD 138](https://xkcd.com/138/)' %}
 
 The purpose of this course is to provide a solid understanding of how computer systems execute programs, store information, and communicate. We will explore systems-level issues from a programmer’s view by examining the abstractions, interfaces, and design decisions that influence the way that software runs on the computer system. The perspective we will take is one of the life cycle of a program from implementation to execution. The act of compiling and running a program, a sequence of events we often take for granted, is a complex interaction of many different components that work together to manage the computer’s resources and perform the desired task.
 
+{% marginfigure 'mf-mem' 'https://upload.wikimedia.org/wikipedia/commons/6/6e/C-memlayout.svg' 'Memory layout of a typical C program' %}
 This page will provide any information for the class that I go over in recitation. Please check back for updates regularly, especially if you miss a recitation.
 
 ## Recitation Information
@@ -53,7 +53,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_ {%marginno
 
 ---
 
-## Schedule *&* Handout
+## Schedule _&_ Handout
 
 <div class="table-responsive" markdown="1" >
 | #     | Date/Slides | Topic | Handout | Important Announcements |
@@ -69,9 +69,6 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_ {%marginno
 {: .table-hover}
 
 </div>
-
-
-
 
 ---
 

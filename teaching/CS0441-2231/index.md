@@ -11,9 +11,11 @@ navi_links: "cs0441_2231_nav"
 
 ## Course Description
 
-Welcome to **CS 0441**, **Discrete Structures for Computer Science**, for the Fall 2022 term!{% marginfigure 'mf-id-whatever' 'https://www.mheducation.com/cover-images/Jpeg_400-high/125967651X.jpeg' '**Course Textbook:** Kenneth H. Rosen. *Discrete Mathematics and Its Applications*, 8th Edition, McGraw Hill. **A copy of the text is required for homework.**' %}.
+Welcome to **CS 0441**, **Discrete Structures for Computer Science**, for the Fall 2022 term!
+{%marginnote 'mn-satisfy' 'This course satisfies one of the Core Courses requirements for Computer Science Majors/Minors'%}
 
 The purpose of this course is to understand and use (abstract) discrete structures that are backbones of computer science. In particular, this class is meant to introduce logic, proofs, sets, relations, functions, counting, and probability, with an emphasis on applications in computer science.
+{%marginnote 'mn-preq' 'Co-Requisite: MATH 0220 or 0230 or 0235 or 0140 or 0221 or 0231 (Minimum grade C or Transfer)'%}
 
 This page will provide any information for the class that I go over in recitation. Please check back for updates regularly, especially if you miss a recitation.
 
@@ -22,6 +24,8 @@ This page will provide any information for the class that I go over in recitatio
 _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_ {%marginnote "Accompany" "Accompanies professor **Donald Bonidie**'s lecture section `1090` which meets **Tue/Thu, 4:30–5:45pm at 5502 Sennott Square**"%}
 **CRN:** `17064`  
 **Meets:** _Fridays 4:00 PM_ at _501 [Information Science Building](https://map.concept3d.com/?id=1315#!m/386791)_
+
+{% marginfigure 'mf-textbook' 'https://www.mheducation.com/cover-images/Jpeg_400-high/125967651X.jpeg' '**Course Textbook:** Kenneth H. Rosen. *Discrete Mathematics and Its Applications*, 8th Edition, McGraw Hill. **A copy of the text is required for homework.**' %}
 
 ---
 
