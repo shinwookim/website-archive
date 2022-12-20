@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tufte
 date: 2022-09-01
 title: "CS0441: Discrete Structures for Computer Science"
 subtitle: Fall 2022 (Term 2231)

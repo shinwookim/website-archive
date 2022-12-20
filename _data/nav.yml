@@ -2,22 +2,11 @@ main_link: /
 links:
   - title: Home
     url: /
-  - title: About
+  - title: About Me
     url: /about/
   - title: Résumé
     url: /resume/
   - title: Teaching
     url: /teaching/
-  - title: Contact
-    url: /contacts/
-
-  #  - title: Experience
-  #    url: /experience/
-  #url: "#"
-  #active: /teaching/, /CS0441-2231/
-  #subfolderitems:
-  # - page: See All Courses
-  #- page: divider
-  #  url: "#"
-  #- page: CS0441 - Term 2231
-  #  url: /CS0441-2231/
+  - title: Contact Me
+    url: /contact/

@@ -1,8 +1,7 @@
 ---
-layout: post
+layout: tufte
 title: "Bridges to IT: Jump-Starting a Career in IT"
 subtitle: "Fall 2021"
-navi: false
 permalink: /teaching/bridges-to-it.html
 navi_title: Bridges to IT
 navi_links: ""

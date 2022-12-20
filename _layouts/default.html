@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
-  {% include styles.html %}
-<body>
-  <header>
-    {% include navbar.html %}
-  </header>
-  <article>
-    {{ content }}
-  </article>
-    {% include footer.html %}
-    {% include scripts.html %}
-    {% include google-analytics.html %}
-</body>
+  {% include head.html %} {% include styles.html %}{% include scripts.html %}
+  <body>
+    <div class="container align-items-center mb-5 px-5">
+      <div class="row">
+        <aside class="col-md-4 pe-md-5">
+          <header class="sticky-top" style="padding-top: 74px">
+            {% include sidenav.html %}
+          </header>
+        </aside>
+        <main class="col-md-7 ps-md-5" style="padding-top: 74px">
+          <article>
+            <!--
+            <h1 class="my-0 text-center">{{page.title}}</h1>
+            -->
+            {{ content }}
+          </article>
+        </main>
+      </div>
+    </div>
+    {% include footer.html %} {% include google-analytics.html %}
+  </body>
 </html>

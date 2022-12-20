@@ -1,7 +1,7 @@
 ---
-layout: new
 title: Connect with Me
-permalink: /contacts/
+layout: default
+permalink: /contact/
 ---
 
 
