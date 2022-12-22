@@ -20,23 +20,40 @@
     <div class="text-center mx-auto">
       {% if site.data[page.navi_links].links%}
       <header>
-        <nav>
+        <nav class="navbar navbar-expand-md">
           <a href="{{site.baseurl}}/">Shinwoo Kim</a>
           <a href="{{site.baseurl}}{{site.data[page.navi_links].main_link}}"
             >{{page.navi_title}}</a
           >
-          {% for node in site.data[page.navi_links].links %} {% if page.url ==
-          node.url %}
           <a
-            class="active"
-            href="{{node.url | prepend: site.baseurl}}"
-            class="active"
-            >{{node.title}}</a
+            aria-controls="navbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="collapsed navbar-toggler"
+            data-bs-target="#navbar"
+            data-bs-toggle="collapse"
+            type="button"
           >
-          {% else %}
-          <a href="{{node.url | prepend: site.baseurl}}">{{node.title}}</a>
-          {% endif %} {% endfor %}
+            Menu
+          </a>
+          <div class="collapse navbar-collapse" id="navbar">
+            {% for node in site.data[page.navi_links].links %} {% if page.url ==
+            node.url %}
+            <a
+              class="active"
+              href="{{node.url | prepend: site.baseurl}}"
+              class="active"
+              >{{node.title}}</a
+            >
+            {% else %}
+            <a href="{{node.url | prepend: site.baseurl}}">{{node.title}}</a>
+            {% endif %} {% endfor %}
+          </div>
         </nav>
+      </header>
+      {% else %}
+      <header>
+        <nav><a href="{{site.baseurl}}/">Shinwoo Kim</a></nav>
       </header>
       {% endif %}
     </div>

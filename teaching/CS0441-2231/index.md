@@ -12,17 +12,17 @@ navi_links: "cs0441_2231_nav"
 ## Course Description
 
 Welcome to **CS 0441**, **Discrete Structures for Computer Science**, for the Fall 2022 term!
-{%marginnote 'mn-satisfy' 'This course satisfies one of the Core Courses requirements for Computer Science Majors/Minors'%}
 
-The purpose of this course is to understand and use (abstract) discrete structures that are backbones of computer science. In particular, this class is meant to introduce logic, proofs, sets, relations, functions, counting, and probability, with an emphasis on applications in computer science.
-{%marginnote 'mn-preq' 'Co-Requisite: MATH 0220 or 0230 or 0235 or 0140 or 0221 or 0231 (Minimum grade C or Transfer)'%}
+
+The purpose of this course is to understand and use (abstract) discrete structures that are backbones of computer science. {%marginnote 'mn-satisfy' 'This course satisfies one of the Core Courses requirements for Computer Science Majors/Minors'%} In particular, this class is meant to introduce logic, proofs, sets, relations, functions, counting, and probability, with an emphasis on applications in computer science. {%marginnote 'mn-preq' 'Co-Requisite: MATH 0220 or 0230 or 0235 or 0140 or 0221 or 0231 (Minimum grade C or Transfer)'%}
+
 
 This page will provide any information for the class that I go over in recitation. Please check back for updates regularly, especially if you miss a recitation.
 
 ## Recitation Information
 
-_Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_ {%marginnote "Accompany" "Accompanies professor **Donald Bonidie**'s lecture section `1090` which meets **Tue/Thu, 4:30–5:45pm at 5502 Sennott Square**"%}
-**CRN:** `17064`  
+_Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_
+**CRN:** `17064`{%marginnote "Accompany" "Accompanies professor **Donald Bonidie**'s lecture section `1090` which meets **Tue/Thu, 4:30–5:45pm at 5502 Sennott Square**"%}  
 **Meets:** _Fridays 4:00 PM_ at _501 [Information Science Building](https://map.concept3d.com/?id=1315#!m/386791)_
 
 {% marginfigure 'mf-textbook' 'https://www.mheducation.com/cover-images/Jpeg_400-high/125967651X.jpeg' '**Course Textbook:** Kenneth H. Rosen. *Discrete Mathematics and Its Applications*, 8th Edition, McGraw Hill. **A copy of the text is required for homework.**' %}
@@ -64,6 +64,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_ {%marginno
 Click the date for annoucement slides and see footnotes for important recitation information.
 {%marginfigure "meme" "https://external-preview.redd.it/xHBy8Vbc9PPlRIkPmeztTsSwwwqFL9XGd8NgviiqWmQ.jpg?auto=webp&s=4e7586dbcafbb3dca7eed1d171684dfaf30da856"%}
 
+
 <div class="table-responsive" markdown="1" >
 | #      | Date/Slides                                        | Topic                                                                                                                                                                                                                                                                | Handout                                                                                                                                                                                    | Important Announcements                                                                            |
 | ------ | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
@@ -97,8 +98,8 @@ Click the date for annoucement slides and see footnotes for important recitation
 
 ## Tips for Success
 
-{%marginnote 'tips' '[**Pitt CS Wiki**: How to Succeed in CS0441: Discrete Structures for Computer Science](https://pittcs.wiki/academics/succeed-in-course-x/succeed-in-441/)' %}
 {% epigraph 'If you want to do well in any course, the bare minimum is attending all lectures and doing all homework assignments.' 'Dylan Feehan' "PittCS Wiki" %}
+{%marginnote 'tips' '[**Pitt CS Wiki**: How to Succeed in CS0441: Discrete Structures for Computer Science](https://pittcs.wiki/academics/succeed-in-course-x/succeed-in-441/)' %}
 
 - **Attend class and actively participate in class**.<br>The primary introduction to course material is through class lecture. Additionally, we often do exercises during class. Showing up is necessary, but not sufficient to success in the course: ask questions, participate in class discussions and in class activities, and take notes.
 - **Read the material before you come to class**.<br>Don't worry about total comprehension, but at least get a feel for what we will be covering that week. If you have some understanding of the material coming into class, it will be easier for you to follow the lecture and to ask questions during class.

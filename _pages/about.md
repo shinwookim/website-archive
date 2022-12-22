@@ -5,6 +5,8 @@ permalink: /about/
 published: true
 ---
 
+![Shinwoo Kim](../assets/img/hero-bg.webp){: .figure-img .img-fluid .rounded}
+
 <style>
   h5{
     margin-bottom: 0 !important;
@@ -18,11 +20,14 @@ My name is Shinwoo Kim, and I am a student at the [University of Pittsburgh](htt
 </style>
 
 ##### **Education**
-##### <i class="pitt-icon"></i>B.S., Computer Science & Mathematics, (Exp.) 2026 
-+ University of Pittsburgh (School of Computing and Information & David C. Frederick Honors College)
-<br><br>
+
+##### <i class="pitt-icon"></i>B.S., Computer Science & Mathematics, (Exp.) 2026
+
+- University of Pittsburgh (School of Computing and Information & David C. Frederick Honors College)
+  <br><br>
 
 ##### **Work Experiences**
+
 <div class="accordion accordion-flush border mb-0" id="accordionExperiences">
   <div class="accordion-item">
     <div class="accordion-header">
@@ -147,9 +152,6 @@ My name is Shinwoo Kim, and I am a student at the [University of Pittsburgh](htt
 Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-to-date information. Click the buttons below to reveal
 {: .text-center}
 
-
-
 ---
 
 <link rel="stylesheet" href='{{"/assets/icons.css" | absolute_url }}'>
-

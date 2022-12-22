@@ -489,15 +489,21 @@ table {
 } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
 @media screen and (max-width: 760px) {
+  * {
+    margin: auto;
+  }
   p,
-  footer {
-    width: 90%;
+  footer,
+  li {
+    width: 100%;
+    padding-right: 0;
   }
   pre code {
     width: 87.5%;
   }
-  ul {
-    width: 85%;
+  ul,
+  ol {
+    width: 90%;
   }
   figure {
     max-width: 90%;
@@ -646,6 +652,9 @@ nav.group a.active:before {
 nav.group a.active:after {
   content: "\000a0\0003e";
 }
+header > nav {
+  padding-top: 1.5rem;
+}
 
 header > nav a {
   font-size: 1.5rem;
@@ -654,7 +663,6 @@ header > nav a {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: $contrast-color;
-  padding-top: 1.5rem;
   text-decoration: none;
   display: inline-block;
   float: left;

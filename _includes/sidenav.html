@@ -8,7 +8,7 @@
     <code class="text-primary">
       <span
         class="typed"
-        data-typed-items="Software Developer, Pitt Panther, Educator, Computer Scientist"
+        data-typed-items="Software Engineer, Developer, Pitt Panther, Educator, Computer Scientist"
       ></span>
     </code>
   </div>
@@ -54,7 +54,7 @@
       {% for item in site.data.nav.links %} {% if item.url=='#' %}
       <li class="nav-item dropdown">
         <a
-          class="nav-link dropdown-toggle {% if item.active contains page.url and page.url!='/' %}active{% endif %}"
+          class="nav-link dropdown-toggle {% if item.active contains page.url and page.url!='/' %}this{% endif %}"
           href="#"
           role="button"
           data-bs-toggle="dropdown"
@@ -79,7 +79,7 @@
       {% else %}
       <li class="nav-item">
         <a
-          class="nav-link {% if page.url == item.url %}active{% endif %}"
+          class="nav-link {% if page.url == item.url %}this{% endif %}"
           href="{{site.baseurl}}{{item.url}}"
           >{{item.title}}</a
         >

@@ -26,15 +26,15 @@
 }
 
 .nav-link {
-  font-family: "Helvetica", "Arial", sans-serif;
-  color: #495057;
+  /* font-family: "Helvetica", "Arial", sans-serif;*/
+  font-family: ETbook, "Libre Baskerville", Libre, Georgia, Times, serif;
+  color: #303539;
   font-size: 1.2em;
 }
-.active {
+.this {
   font-weight: bold;
 }
 
 body {
   background-color: #fffff8 !important;
-  font-size: 13.6pt;
 }
