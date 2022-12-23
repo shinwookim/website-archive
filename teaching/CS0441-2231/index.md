@@ -1,21 +1,19 @@
 ---
 layout: tufte
 title: "Discrete Structures for Computer Science"
-subtitle: "CS 0441 (Fall 2022, Term 2231)"
+subtitle: "CS 0441. Fall 2022, Term 2231"
 navi: true
 navi_title: CS0441
 navi_links: "cs0441_2231_nav"
 ---
 
-<center><p><strong>This webpage is no longer maintained, and serves only archival purposes</strong></p></center>
+<center><p class="highlight"><strong>This webpage is no longer maintained, and serves only archival purposes</strong></p></center>
 
 ## Course Description
 
-Welcome to **CS 0441**, **Discrete Structures for Computer Science**, for the Fall 2022 term!
+Welcome to **CS 0441**, **Discrete Structures for Computer Science**, for the Fall 2022 term!{%marginnote 'mn-preq' 'Co-Requisite: MATH 0220 or 0230 or 0235 or 0140 or 0221 or 0231 (Minimum grade C or Transfer)'%}
 
-
-The purpose of this course is to understand and use (abstract) discrete structures that are backbones of computer science. {%marginnote 'mn-satisfy' 'This course satisfies one of the Core Courses requirements for Computer Science Majors/Minors'%} In particular, this class is meant to introduce logic, proofs, sets, relations, functions, counting, and probability, with an emphasis on applications in computer science. {%marginnote 'mn-preq' 'Co-Requisite: MATH 0220 or 0230 or 0235 or 0140 or 0221 or 0231 (Minimum grade C or Transfer)'%}
-
+The purpose of this course is to understand and use (abstract) discrete structures that are backbones of computer science. In particular, this class is meant to introduce logic, proofs, sets, relations, functions, counting, and probability, with an emphasis on applications in computer science. {%marginnote 'mn-satisfy' 'This course satisfies one of the core course requirements for computer science majors/minors'%}
 
 This page will provide any information for the class that I go over in recitation. Please check back for updates regularly, especially if you miss a recitation.
 
