@@ -76,7 +76,7 @@ My name is Shinwoo Kim, and I am a student at the [University of Pittsburgh](htt
                     </p>
                   </div>
                   <div class="flex-shrink-0">
-                    <span class="text-primary">{{item.duration}}</span>
+                    <span class="text-pr  imary">{{item.duration}}</span>
                   </div>
                 </div>
                 <p class="mb-0" markdown="1">{{item.desc}}</p>
