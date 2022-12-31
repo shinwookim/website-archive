@@ -55,7 +55,7 @@ layout: default
       </div>
       <hr />
     </div>
-    {{ content }}
+    {% include anchor_headings.html html=content anchorBody="#" %}
     <button
       onclick="topFunction()"
       id="top-btn"

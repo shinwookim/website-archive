@@ -11,12 +11,12 @@ layout: default
   <a class="btn btn-outline-dark my-1" href="{{ '/contact/' | prepend: site.baseurl }}">Get in touch</a>
 </div>
 
-<h1 class="h5">News</h1>
+##### News
 {% for item in site.data.news %}
 {% if forloop.index < 4 %}
-<div class="row" style="font-size: 0.85rem;">
-  <div class="col-2">
-    <p markdown="1">**{{item.when}}**</p>
+<div class="row">
+  <div class="col-2" markdown="1">
+###### {{item.when}}
   </div>
   <div class="col-10">
     <p markdown="1">{{item.what}}</p>
@@ -29,10 +29,10 @@ layout: default
   </a>
 </div>
 <div class="collapse" id="news">
-  <div class="row" style="font-size: 0.85rem;">
-    <div class="col-2">
-      <p markdown="1">**{{item.when}}**</p>
-    </div>
+  <div class="row">
+  <div class="col-2" markdown="1">
+###### {{item.when}}
+  </div>
     <div class="col-10">
       <p markdown="1">{{item.what}}</p>
     </div>
@@ -40,10 +40,10 @@ layout: default
 </div>
 {% else %}
 <div class="collapse" id="news">
-  <div class="row" style="font-size: 0.85rem;">
-    <div class="col-2">
-      <p markdown="1">**{{item.when}}**</p>
-    </div>
+  <div class="row">
+     <div class="col-2" markdown="1">
+###### {{item.when}}
+  </div>
     <div class="col-10">
       <p markdown="1">{{item.what}}</p>
     </div>
@@ -51,3 +51,8 @@ layout: default
 </div>
 {% endif %}
 {% endfor %}
+
+<style>
+h6{font-size: 0.85rem; font-weight: bold;}
+.row{font-size: 0.85rem;}
+</style>
