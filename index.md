@@ -14,7 +14,7 @@ layout: default
 ##### News
 {% for item in site.data.news %}
 {% if forloop.index < 4 %}
-<div class="row">
+<div class="row font-85">
   <div class="col-2" markdown="1">
 ###### {{item.when}}
   </div>
@@ -29,7 +29,7 @@ layout: default
   </a>
 </div>
 <div class="collapse" id="news">
-  <div class="row">
+  <div class="row font-85">
   <div class="col-2" markdown="1">
 ###### {{item.when}}
   </div>
@@ -40,7 +40,7 @@ layout: default
 </div>
 {% else %}
 <div class="collapse" id="news">
-  <div class="row">
+  <div class="row font-85">
      <div class="col-2" markdown="1">
 ###### {{item.when}}
   </div>
@@ -54,5 +54,5 @@ layout: default
 
 <style>
 h6{font-size: 0.85rem; font-weight: bold;}
-.row{font-size: 0.85rem;}
+.font-85{font-size: 0.85rem;}
 </style>
