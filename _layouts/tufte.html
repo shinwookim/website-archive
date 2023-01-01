@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
+  {% include metadata.html %}
   <link rel="stylesheet" href='{{"/assets/main.css" |  absolute_url }}' />
   <link rel="stylesheet" href=' {{"/assets/tufte.css" | absolute_url }}' />
   <style>
@@ -15,6 +15,7 @@
       width: 100%;
     }
   </style>
+
   <body data-bs-spy="scroll" rootMargin="0px 100px 0%">
     <!--- Header and nav template site-wide -->
     <div class="text-center mx-auto">
@@ -65,7 +66,7 @@
         <h1 class="title">{{page.title}}</h1>
         <p class="subtitle">{{page.subtitle}}</p>
         {% include anchor_headings.html html=content anchorBody="†"
-        beforeHeading="true" anchorClass="anchor-link" %}
+        anchorClass="anchor-link" %}
         <button
           onclick="topFunction()"
           id="top-btn"
@@ -83,7 +84,6 @@
         </p>
       </footer>
     </div>
-    <br />
 
     {% include scripts.html %} {% include google-analytics.html %}
     <style>
@@ -96,30 +96,39 @@
       .back-link:hover {
         color: #a00000;
       }
+
       .toc {
       }
+
       .toc ol {
         width: 100%;
       }
+
       ul ul {
         width: 100%;
       }
+
       nav ul {
         width: 100%;
       }
+
       nav ul li {
         margin-top: 0;
       }
+
       nav[data-toggle="toc"] {
         top: 42px;
       }
+
       .nav-link {
         color: black !important;
       }
+
       .nav-link:hover {
         color: black !important;
         border: none !important;
       }
+
       .active {
         color: black !important;
         border: none !important;

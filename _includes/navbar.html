@@ -12,7 +12,8 @@
         {% for item in site.data.nav.links %}
         {% if item.url=='#' %}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle {% if item.active contains page.url and page.url!='/' %}active{% endif %}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle {% if item.active contains page.url and page.url!='/' %}active{% endif %}"
+            href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{item.title}}
           </a>
           <ul class="dropdown-menu">

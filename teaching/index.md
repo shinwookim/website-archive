@@ -3,17 +3,13 @@ title: Teaching
 layout: default
 published: true
 ---
-
 #### Current Courses
-
-##### (Spring 2023, Term 2234)
-
+(Spring 2023, Term 2234)
+{:.h5}
 - TBA
 
 ---
-
 #### Previous Courses
-
 - <i class="pitt-icon"></i> **CS0441:** Discrete Structures for Computer Science <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Fall 2022](./CS0441-2231/)
 - <i class="pitt-icon"></i> **Bridges to IT:** Jump-Starting a Career in IT <sup><a href="#Instructor" type="button" onclick='highlight("Instructor")'  class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Primary/Lead Instructor">I</a></sup> [Fall 2021](bridges-to-it.html)
 - <i class="pitt-icon"></i> **CEC STEAM** Saturday Courses <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Fall 2021](https://cec.pitt.edu/calendar/s-t-e-a-m-saturdays/2022-10-08/)
@@ -23,12 +19,12 @@ published: true
 <sup id="TA" onclick='highlight_off()'><span class="text-secondary">TA</span>: Taught as Recitation Instructor/Teaching Assistant/Course Assistant</sup><br>
 <sup id="Instructor" onclick='highlight_off()'><span class="text-secondary">I</span>: Taught as Primary/Lead Instructor</sup>
 
-<link rel="stylesheet" href='{{"/assets/icons.css" | absolute_url }}'>
 <style>
     .highlight {
         background-color: #FFFF00;
     }
 </style>
+{% include icons.html %}
 <script>
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));

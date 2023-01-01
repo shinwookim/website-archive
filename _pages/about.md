@@ -5,23 +5,18 @@ permalink: /about/
 published: true
 ---
 
-![Shinwoo Kim](../assets/img/hero-bg.webp){: .figure-img .img-fluid .rounded}
-
 <style>
-  h5{
+  h6,h6{
     margin-bottom: 0 !important;
   }
+  ul{list-style: none;}
 </style>
 
 My name is Shinwoo Kim, and I am a student at the [University of Pittsburgh](https://pitt.edu)'s [School of Computing and Information](https://sci.pitt.edu) & [David C. Frederick Honors College](https://www.frederickhonors.pitt.edu/) where I study Computer Science, Data Science, and Mathematics. My research interests are in the field of **Artificial Intelligence**, **Machine Learning**, and **Natural Language Processing** although there are very few things in computer science that I'm _not_ interested in. Currently, I am working as a [teaching assistant]({{ '/teaching/' | prepend: site.baseurl }}) for the University of Pittsburgh's Department of Computer Science; I also serve as the Chief Technical Officer and Lead Software Developer for the [_Special Needs Assitance Program for Social Engagement_](https://snapfse.com) and the [_TouchTheInvisible_](https://touchtheinvisible.com) project at the University of Pittsburgh.
 
-<style>
-  ul{list-style: none;}
-</style>
-
 ##### **Education**
 
-##### <i class="pitt-icon"></i>B.S., Computer Science & Mathematics, (Exp.) 2026
+###### <i class="pitt-icon"></i>B.S., Computer Science & Mathematics, (Exp.) 2026
 
 - University of Pittsburgh (School of Computing and Information & David C. Frederick Honors College)
   <br><br>
@@ -154,4 +149,4 @@ Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-t
 
 ---
 
-<link rel="stylesheet" href='{{"/assets/icons.css" | absolute_url }}'>
+{% include icons.html %}

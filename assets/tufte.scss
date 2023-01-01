@@ -115,6 +115,14 @@ body {
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
 
+@for $i from 1 through 6 {
+  h#{7 - $i} {
+    text-indent: 0;
+  }
+}
+.anchor-link {
+  font-size: 100%;
+}
 h1 {
   font-weight: 400;
   margin-top: 1.568rem;

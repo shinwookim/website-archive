@@ -22,7 +22,6 @@ This page will provide any information for the class that I go over in recitatio
 _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_
 **CRN:** `17064`{%marginnote "Accompany" "Accompanies professor **Donald Bonidie**'s lecture section `1090` which meets **Tue/Thu, 4:30–5:45pm at 5502 Sennott Square**"%}  
 **Meets:** _Fridays 4:00 PM_ at _501 [Information Science Building](https://map.concept3d.com/?id=1315#!m/386791)_
-
 {% marginfigure 'mf-textbook' 'https://www.mheducation.com/cover-images/Jpeg_400-high/125967651X.jpeg' '**Course Textbook:** Kenneth H. Rosen. *Discrete Mathematics and Its Applications*, 8th Edition, McGraw Hill. **A copy of the text is required for homework.**' %}
 
 ---
