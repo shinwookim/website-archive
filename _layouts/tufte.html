@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include metadata.html %}
-  <link rel="stylesheet" href='{{"/assets/main.css" |  absolute_url }}' />
-  <link rel="stylesheet" href=' {{"/assets/tufte.css" | absolute_url }}' />
-  <style>
-    .tdn {
-      font-size: 0.75em;
-      margin-bottom: 0.1em;
-      margin-top: 0;
-      line-height: 1em;
-      padding: 0;
-    }
-    .sticky-top > ol {
-      width: 100%;
-    }
-  </style>
-
+  <head>
+    {% include metadata.html %} {% include scripts.html %}
+    <link rel="stylesheet" href='{{"/assets/main.css" |  absolute_url }}' />
+    <link rel="stylesheet" href=' {{"/assets/tufte.css" | absolute_url }}' />
+    <style>
+      .tdn {
+        font-size: 0.75em;
+        margin-bottom: 0.1em;
+        margin-top: 0;
+        line-height: 1em;
+        padding: 0;
+      }
+      .sticky-top > ol {
+        width: 100%;
+      }
+    </style>
+  </head>
   <body data-bs-spy="scroll" rootMargin="0px 100px 0%">
     <!--- Header and nav template site-wide -->
     <div class="text-center mx-auto">
@@ -63,8 +64,8 @@
         <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
       </aside>
       <article class="col-md-10 col">
-        <h1 class="title">{{page.title}}</h1>
-        <p class="subtitle">{{page.subtitle}}</p>
+        <h1 class="title mb-0">{{page.title}}</h1>
+        <p class="subtitle mb-0">{{page.subtitle}}</p>
         {% include anchor_headings.html html=content anchorBody="†"
         anchorClass="anchor-link" %}
         <button
@@ -85,7 +86,7 @@
       </footer>
     </div>
 
-    {% include scripts.html %} {% include google-analytics.html %}
+    {% include google-analytics.html %}
     <style>
       .back-link {
         font-style: normal;

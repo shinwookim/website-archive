@@ -6,7 +6,8 @@ published: true
 #### Current Courses
 (Spring 2023, Term 2234)
 {:.h5}
-- TBA
+- <i class="pitt-icon"></i> **CS0441:** Discrete Structures for Computer Science <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Spring 2023](./CS0441-2234/)
+- <i class="pitt-icon"></i> **CS0449:** Introduction to System Software <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup>
 
 ---
 #### Previous Courses
