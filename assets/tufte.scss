@@ -4,6 +4,17 @@
 nav_exclude: true
 ---
 
+.table-responsive {
+  width: 55%;
+  margin-left: 0;
+}
+@media screen and (max-width: 760px) {
+  .table-responsive {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
 hr {
   @extend .slender;
   max-width: 55%;
