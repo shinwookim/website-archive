@@ -4,15 +4,8 @@
 nav_exclude: true
 ---
 
-.table-responsive {
-  width: 55%;
-  margin-left: 0;
-}
-@media screen and (max-width: 760px) {
-  .table-responsive {
-    width: 100%;
-    margin-left: 0;
-  }
+p {
+  margin-bottom: 0;
 }
 
 hr {
@@ -287,10 +280,15 @@ h3 code {
 } //left in for no real reason
 
 /*-- Table styling section - For Tufte-Jekyll, booktabs style is default for Markdown tables  --*/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 760px) {
   .table-responsive {
     width: 55%;
   }
+}
+
+.table-hover {
+  width: 100%;
+  margin-left: 0;
 }
 
 table,

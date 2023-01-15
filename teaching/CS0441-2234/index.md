@@ -5,10 +5,6 @@ subtitle: "CS 0441 (Spring 2023, Term 2234)"
 navi: false
 ---
 
-
-
-<center><p><strong>This webpage is no longer maintained, and serves only archival purposes</strong></p></center>
-
 ## Course Description
 
 Welcome to **CS 0441**, **Discrete Structures for Computer Science**, for the Fall 2022 term!{% marginfigure 'mf-id-whatever' 'https://www.mheducation.com/cover-images/Jpeg_400-high/125967651X.jpeg' '**Course Textbook:** Kenneth H. Rosen. *Discrete Mathematics and Its Applications*, 8th Edition, McGraw Hill. **A copy of the text is required for homework.**' %}.
@@ -31,12 +27,17 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_ {%marginno
 **E-mail**: [`shinwookim@pitt.edu`](mailto:shiwookim@pitt.edu)  
 **Home Page:** [{{site.url}}{{site.baseurl}}]({{site.url}}{{site.baseurl}}/)  
 **TA Office Hours** (See [Canvas](https://canvas.pitt.edu/))
-{: .mb-0}
 
-- Monday 10 AM - 12 PM in 5712 Sennott
-- Tuesday 10 AM - 11:30 AM in 5712 Sennott
-- Wednesday 11 AM - 12 PM Virtual ([**https://pitt.zoom.us/j/3027565812**](https://pitt.zoom.us/j/3027565812))
-- By Appointment (In-Person or Virtual): [**Scheduler**](https://outlook.office.com/bookwithme/user/cf9122c6baae489ea2e99400607830e5@pitt.edu?anonymous&ep=pcard) Or E-mail me
+- Tuesday 1 PM - 2PM in 5710 SENSQ; 3 PM - 3:45PM in 5806 SENSQ
+- Thursday 1 PM - 3:45PM in 6408 SENSQ
+- By appointment (via Zoom or in-person): message me
+
+**Additional Office Hours** (shared with CS 449 students):
+
+- Monday 1PM - 2:30PM @ 5806 SENSQ<sup>†</sup>
+- Wednesday 1PM - 2:30PM @ 5710 SENSQ<sup>†</sup>
+
+<sup>† These are office hours for my CS0449 students. You are more than welcome to attend these, however if there are students from my 449 class, I will prioritize my attention to them first</sup>
 
 **Note when E-mailing:**
 {: .mb-0}
@@ -55,24 +56,30 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_ {%marginno
 
 ---
 
-## Schedule *&* Handout
+## Schedule _&_ Handout
 
 Click the date for annoucement slides and see footnotes for important recitation information.
 {%marginfigure "meme" "https://external-preview.redd.it/xHBy8Vbc9PPlRIkPmeztTsSwwwqFL9XGd8NgviiqWmQ.jpg?auto=webp&s=4e7586dbcafbb3dca7eed1d171684dfaf30da856"%}
 
-
-
 <div class="table-responsive" markdown="1" >
-| #     | Date/Slides | Topic | Handout | Important Announcements |
-| ----- | ----------- | ----- | ------- | ----------------------- |
-| **1** |             |       | -       |                         |
-| **1** |             |       | -       |                         |
-| **1** |             |       | -       |                         |
-| **1** |             |       | -       |                         |
-| **1** |             |       | -       |                         |
-| **1** |             |       | -       |                         |
-| **1** |             |       | -       |                         |
-| **1** |             |       | -       |                         |
+| Week # |    Date    | Topic                                 | Handout | Important Announcements                                               |
+| :----: | :--------: | :-----------------------------------: | :-----: | --------------------------------------------------------------------- |
+| **1**  | 01/10/2023 | N/A                                   | -       | **No recitation during first week**                                   |
+| **2**  | 01/17/2023 | Introduction & Recitation Information | -       | **TA Office Hours posted to Canvas<br />See Canvas for Discord link** |
+| **3**  | 01/24/2023 |                                       | -       |                                                                       |
+| **4**  | 01/31/2023 |                                       | -       |                                                                       |
+| **5**  | 02/07/2023 |                                       | -       |                                                                       |
+| **6**  | 02/14/2023 |                                       | -       |                                                                       |
+| **7**  | 02/21/2023 |                                       | -       |                                                                       |
+| **8**  | 02/28/2023 |                                       | -       |                                                                       |
+|   -    | 03/07/2023 | **Spring Break**                      |         | **University Holiday - No Recitation**                                |
+| **9**  | 03/14/2023 |                                       | -       |                                                                       |
+| **10** | 03/21/2023 |                                       | -       |                                                                       |
+| **11** | 03/28/2023 |                                       | -       |                                                                       |
+| **12** | 04/04/2023 |                                       | -       |                                                                       |
+| **13** | 04/11/2023 |                                       | -       |                                                                       |
+| **14** | 04/18/2023 |                                       | -       |                                                                       |
+| **15** | 04/25/2023 |                                       | -       |                                                                       |
 {: .table-hover}
 
 </div>
