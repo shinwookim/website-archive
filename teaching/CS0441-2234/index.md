@@ -28,13 +28,13 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_ {%marginno
 **Home Page:** [{{site.url}}{{site.baseurl}}]({{site.url}}{{site.baseurl}}/)  
 **TA Office Hours** (See [Canvas](https://canvas.pitt.edu/))
 
-- Tuesday 1 PM - 2PM in 5710 SENSQ; 3 PM - 3:45PM in 5806 SENSQ
+- Tuesday 1 PM - 2PM in 5710 SENSQ; 3 PM - 3:45PM in 5712 SENSQ
 - Thursday 1 PM - 3:45PM in 6408 SENSQ
 - By appointment (via Zoom or in-person): message me
 
 **Additional Office Hours** (shared with CS 449 students):
 
-- Monday 1PM - 2:30PM @ 5806 SENSQ<sup>†</sup>
+- Monday 1PM - 2:30PM @ 5712 SENSQ<sup>†</sup>
 - Wednesday 1PM - 2:30PM @ 5710 SENSQ<sup>†</sup>
 
 <sup>† These are office hours for my CS0449 students. You are more than welcome to attend these, however if there are students from my 449 class, I will prioritize my attention to them first</sup>
