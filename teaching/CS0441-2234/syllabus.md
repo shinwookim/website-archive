@@ -2,19 +2,19 @@
 layout: tufte
 date: 2022-09-01
 title: "CS0441: Discrete Structures for Computer Science"
-subtitle: Fall 2022 (Term 2231)
+subtitle: Spring 2023 (Term 2234)
 nav: true
 nav-links:
   - title: CS0441
-    url: /teaching/CS0441-2231/
+    url: /teaching/CS0441-2234/
   - title: Syllabus
-    url: /teaching/CS0441-2231/syllabus.html
+    url: /teaching/CS0441-2234/syllabus.html
   - title: Schedule
-    url: /teaching/CS0441-2231/#schedule
+    url: /teaching/CS0441-2234/#schedule--handout
   - title: Student Feedback
-    url: /teaching/CS0441-2231/#student-feedback
+    url: /teaching/CS0441-2234/#student-feedback
   - title: Getting Help
-    url: /teaching/CS0441-2231/#getting-help
+    url: /teaching/CS0441-2234/#getting-help
 ---
 
 {%marginfigure "Discrete Structures" "https://res.cloudinary.com/practicaldev/image/fetch/s--cqZpvxqB--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3kgxmx7ddk0ws4ng0xo3.jpg"%}The purpose of this course is to understand and use (abstract) discrete structures that are backbones of computer science. In particular, this class is meant to introduce logic, proofs, sets, relations, functions, counting, and probability, with an emphasis on applications in computer science.

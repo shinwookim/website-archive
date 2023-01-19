@@ -2,7 +2,18 @@
 layout: tufte
 title: "Discrete Structures for Computer Science"
 subtitle: "CS 0441 (Spring 2023, Term 2234)"
-navi: false
+nav: true
+nav-links:
+  - title: CS0441
+    url: /teaching/CS0441-2234/
+  - title: Syllabus
+    url: /teaching/CS0441-2234/syllabus.html
+  - title: Schedule
+    url: /teaching/CS0441-2234/#schedule--handout
+  - title: Student Feedback
+    url: /teaching/CS0441-2234/#student-feedback
+  - title: Getting Help
+    url: /teaching/CS0441-2234/#getting-help
 ---
 
 ## Course Description
