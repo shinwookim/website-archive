@@ -83,7 +83,6 @@ hr {
 
 @import "tufte/fonts";
 @import "tufte/settings";
-@import "tufte/syntax-highlighting";
 
 // Global Resets
 //
@@ -1024,3 +1023,4 @@ hr.slender {
 .sticky-top > ol {
   width: 100%;
 }
+@import "tufte/syntax-highlighting";

@@ -1,6 +1,6 @@
 title: Shinwoo Kim
 email: shinwookim@pitt.edu
-description: >- 
+description: >-
   Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics.
   His passions are in computer science, technology, and education; 
   His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.
@@ -15,10 +15,12 @@ linkedin_username: kimshinwoo
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
-highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: html
+    css_class: "syntax"
 plugins:
   - jekyll-feed
   - jekyll-spaceship
@@ -26,13 +28,13 @@ plugins:
   - jekyll-seo-tag
   # - jekyll_picture_tag
 
-ftp_host: 'thoth.cs.pitt.edu'  
-ftp_dir: '/public/html'  
+ftp_host: "thoth.cs.pitt.edu"
+ftp_dir: "/public/html"
 ftp_passive: false
 
 # optional
-ftp_port: 22                  # default 21  
-ftp_username: 'shk148'     # default read from stdin  
+ftp_port: 22 # default 21
+ftp_username: "shk148" # default read from stdin
 
 # Pages Path
 defaults:
