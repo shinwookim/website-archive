@@ -58,7 +58,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
 | Week # |    Date    |                            Topic                            | Slides & Handouts | Recording |
 | :----: | :--------: | :---------------------------------------------------------: | :---------------: | :-------: |
 | **01** | 01/13/2023 |             **No recitation during first week**             |        N/A        |    N/A    |
-| **02** | 01/20/2023 | [Lab 0 - Hello Lab: Getting up to speed with the environment](https://cs0449.gitlab.io/sp2023/labs/00/) | [Slides](lab00.pptx) <br/> [`hello.c`](hello.c.html)|
+| **02** | 01/20/2023 | [Lab 0 - Hello Lab: Getting up to speed with the environment](https://cs0449.gitlab.io/sp2023/labs/00/) | [Slides](rec00.pptx) <br/> [`hello.c`](hello.c.html)|
 | **03** | 01/27/2023 |                                                             |                   |           |
 | **04** | 02/03/2023 |                                                             |                   |           |
 | **05** | 02/10/2023 |                                                             |                   |           |
