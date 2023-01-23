@@ -67,7 +67,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_ {%marginno
 
 ---
 
-## Schedule _&_ Handout
+<h2 id="handouts">Schedule <em>&</em> Handout</h2>
 
 Click the date for annoucement slides and see footnotes for important recitation information.
 {%marginfigure "meme" "https://external-preview.redd.it/xHBy8Vbc9PPlRIkPmeztTsSwwwqFL9XGd8NgviiqWmQ.jpg?auto=webp&s=4e7586dbcafbb3dca7eed1d171684dfaf30da856"%}
