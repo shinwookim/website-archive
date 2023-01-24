@@ -54,27 +54,33 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
 
 <h2 id="handouts">Schedule <em>&</em> Handout</h2>
 
-<div class="table-responsive" markdown="1" >
-| Week # |    Date    |                                                  Topic                                                  |                  Slides & Handouts                   | Recording |
-| :----: | :--------: | :-----------------------------------------------------------------------------------------------------: | :--------------------------------------------------: | :-------: |
-| **01** | 01/13/2023 |                                   **No recitation during first week**                                   |                         N/A                          |    N/A    |
-| **02** | 01/20/2023 | [Lab 0 - Hello Lab: Getting up to speed with the environment](https://cs0449.gitlab.io/sp2023/labs/00/) | [Slides](rec00.pptx) <br/> [`hello.c`](code/hello.c.html) |
-| **03** | 01/27/2023 |                                         Basic of C Programming                                          |[Slides](rec01.pptx)<br/>[`print.c`](code/print.c.html)<br/>[`scan.c`](code/scan.c.html) |           |
-| **04** | 02/03/2023 |                                                                                                         |                                                      |           |
-| **05** | 02/10/2023 |                                                                                                         |                                                      |           |
-| **06** | 02/17/2023 |                                                                                                         |                                                      |           |
-| **07** | 02/24/2023 |                                                                                                         |                                                      |           |
-| **08** | 02/03/2023 |                                                                                                         |                                                      |           |
-|   -    | 03/10/2023 |                                            **Spring Break**                                             |                                                      |           |
-| **09** | 03/17/2023 |                                                                                                         |                                                      |           |
-| **10** | 03/24/2023 |                                                                                                         |                                                      |           |
-| **11** | 03/31/2023 |                                                                                                         |                                                      |           |
-| **12** | 04/07/2023 |                                                                                                         |                                                      |           |
-| **13** | 04/14/2023 |                                                                                                         |                                                      |           |
-| **14** | 04/21/2023 |                                                                                                         |                                                      |           |
-| **15** | 04/28/2023 |                                                                                                         |                                                      |           |
-{: .table-hover}
 
+
+---
+
+<div class="table-responsive" markdown="1" >
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Week #</th>
+      <th scope="col">Date</th>
+      <th scope="col">Topic</th>
+      <th scope="col">Handout</th>
+      <th scope="col">Recording</th>
+    </tr>
+  </thead>
+  <tbody>
+  {%for REC in site.data.CS0449-2234-schedule %}
+    <tr>
+      <th scope="row">{{REC.week}}</th>
+      <td>{{REC.date}}</td>
+      <td>{%if REC.link %}<a href="{{REC.link}}">{{REC.title}}</a>{% else %}{{REC.title}}{% endif %}</td>
+      <td> {% for handout in REC.handout %}<a href="{{handout[1]}}">handout[0]</a><br/>{% endfor %}</td>
+      <td>{{REC.video}}</td>
+    </tr>
+  {%endfor%}
+  </tbody>
+</table>
 </div>
 
 ---

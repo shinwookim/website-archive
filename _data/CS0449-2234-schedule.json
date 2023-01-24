@@ -1,0 +1,20 @@
+[
+    {
+        "week": "01",
+        "date": "January 13",
+        "title": "**No recitation during first week**",
+        "handout": {},
+        "video": "N/A"
+    },
+    {
+        "week": "02",
+        "date": "January 20",
+        "title": "Hello Lab: Getting up to speed with the environment",
+        "link": "https://cs0449.gitlab.io/sp2023/labs/00/",
+        "handout": {
+            "Slides": "rec00.pptx",
+            "hello.c": "code/hello.c.html"
+        },
+        "video": "N/A"
+    }
+]
