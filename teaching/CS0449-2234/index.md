@@ -7,7 +7,7 @@ nav-links:
   - title: CS0449
     url: /teaching/CS0449-2234/
   - title: Schedule & Slides
-    url: /teaching/CS0449-2234/#schedule--handout
+    url: /teaching/CS0449-2234/#handouts
   - title: Student Feedback
     url: /teaching/CS0449-2234/#student-feedback
   - title: Getting Help
@@ -52,14 +52,9 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
 
 ---
 
-<h2 id="handouts">Schedule <em>&</em> Handout</h2>
-
-
-
----
-
-<div class="table-responsive" markdown="1" >
-<table class="table">
+<h2 id="handouts">Schedule <em>&</em> Handout</h2> {% marginnote "video" "If you require access to Zoom, or the recitation record, please contact me **prior** to the start of recitation"%}
+<div class="table-responsive">
+<table class=" table-hover">
   <thead>
     <tr>
       <th scope="col">Week #</th>
@@ -72,25 +67,21 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
   <tbody>
   {%for REC in site.data.CS0449-2234-schedule %}
     <tr>
-      <th scope="row">{{REC.week}}</th>
+      <td scope="row">{{REC.week}}</td>
       <td>{{REC.date}}</td>
-      <td>{%if REC.link %}<a href="{{REC.link}}">{{REC.title}}</a>{% else %}{{REC.title}}{% endif %}</td>
-      <td> {% for handout in REC.handout %}<a href="{{handout[1]}}">handout[0]</a><br/>{% endfor %}</td>
-      <td>{{REC.video}}</td>
+      <td>{{REC.title}}</td>
+      <td style="text-align: center;">{% for handout in REC.handout %}<a href="{{handout[1]}}">{{handout[0]}}</a><br/>{% endfor %}</td>
+      <td style="text-align: center;">{% if REC.video %} <a href="{{REC.video}}">External Link</a>{% else %}N/A{% endif %}</td>
     </tr>
   {%endfor%}
   </tbody>
 </table>
 </div>
 
----
-
 ## Student Feedback
 
 [Please send me your anonymous feedback](https://pitt.co1.qualtrics.com/jfe/form/SV_dd9suL0AkJctj2S)
 {: .text-center}
-
----
 
 ## Helpful Links
 

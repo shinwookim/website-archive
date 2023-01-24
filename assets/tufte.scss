@@ -57,7 +57,7 @@ p {
 
 hr {
   @extend .slender;
-  max-width: 55%;
+  max-width: 65%;
 }
 
 /*****************************************************************************/
@@ -328,7 +328,7 @@ h3 code {
 /*-- Table styling section - For Tufte-Jekyll, booktabs style is default for Markdown tables  --*/
 @media screen and (min-width: 760px) {
   .table-responsive {
-    width: 55%;
+    width: 65%;
   }
 }
 
@@ -434,7 +434,7 @@ section {
 
 ul,
 ol {
-  width: 55%;
+  width: 65%;
   -webkit-padding-start: 5%;
   -webkit-padding-end: 5%;
 
@@ -445,7 +445,7 @@ ol {
 
 figure,
 figure img.maincolumn {
-  max-width: 55%;
+  max-width: 65%;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
   margin-bottom: 3em;
@@ -507,7 +507,7 @@ blockquote {
 }
 @media screen and (min-width: 760px) {
   blockquote {
-    width: 55%;
+    width: 65%;
   }
 }
 blockquote > ul,
@@ -546,7 +546,7 @@ footer,
 div.table-wrapper,
 .MJXc-display,
 .MathJax {
-  width: 55%;
+  width: 65%;
 }
 
 div.table-wrapper,

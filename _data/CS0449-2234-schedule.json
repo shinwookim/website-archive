@@ -3,18 +3,26 @@
         "week": "01",
         "date": "January 13",
         "title": "**No recitation during first week**",
-        "handout": {},
-        "video": "N/A"
+        "handout": {}
     },
     {
         "week": "02",
         "date": "January 20",
         "title": "Hello Lab: Getting up to speed with the environment",
-        "link": "https://cs0449.gitlab.io/sp2023/labs/00/",
         "handout": {
             "Slides": "rec00.pptx",
-            "hello.c": "code/hello.c.html"
-        },
-        "video": "N/A"
+            "Instructions": "https://cs0449.gitlab.io/sp2023/labs/00/",
+            "`hello.c`": "code/hello.c.html"
+        }
+    },
+    {
+        "week": "03",
+        "date": "January 27",
+        "title": "Basic of C Programming",
+        "handout": {
+            "Slides": "rec01.pptx",
+            "`print.c`": "code/print.c.html",
+            "`scan.c`": "code/scan.c.html"
+        }
     }
 ]
