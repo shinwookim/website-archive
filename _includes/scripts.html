@@ -13,26 +13,7 @@
   href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.css"
 />
 <script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js"></script>
-<script>
-  let btn_to_top = document.getElementById("top-btn");
-  window.onscroll = function () {
-    scrollFunction();
-  };
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
-    ) {
-      btn_to_top.style.opacity = "100%";
-    } else {
-      btn_to_top.style.opacity = "0%";
-    }
-  }
-  function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Ope`
-  }
-</script>
+
 <script>
   function is_youtubelink(url) {
     var p =
