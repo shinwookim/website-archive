@@ -21,7 +21,6 @@
         "title": "Basic of C Programming",
         "handout": {
             "Slides": "rec01.pptx",
-            "`print.c`": "code/print.c.html",
             "`scan.c`": "code/scan.c.html"
         }
     }
