@@ -61,7 +61,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
       <th scope="col">Date</th>
       <th scope="col">Topic</th>
       <th scope="col">Handout</th>
-      <th scope="col">Recording</th>
+      
     </tr>
   </thead>
   <tbody>
@@ -71,7 +71,6 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
       <td>{{REC.date}}</td>
       <td>{{REC.title}}</td>
       <td style="text-align: center;">{% for handout in REC.handout %}<a href="{{handout[1]}}">{{handout[0]}}</a><br/>{% endfor %}</td>
-      <td style="text-align: center;">{% if REC.video %} <a href="{{REC.video}}">External Link</a>{% else %}N/A{% endif %}</td>
     </tr>
   {%endfor%}
   </tbody>
