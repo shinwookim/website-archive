@@ -67,8 +67,8 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
   <tbody>
   {%for REC in site.data.CS0449-2234-schedule %}
     <tr>
-      <td scope="row">{{REC.week}}</td>
-      <td>{{REC.date}}</td>
+      <td scope="row" class="text-center">{{REC.week}}</td>
+      <td class="text-center">{{REC.date}}</td>
       <td>{{REC.title}}</td>
       <td style="text-align: center;">{% for handout in REC.handout %}<a href="{{handout[1]}}">{{handout[0]}}</a><br/>{% endfor %}</td>
     </tr>

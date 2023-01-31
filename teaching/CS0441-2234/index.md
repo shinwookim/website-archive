@@ -73,24 +73,24 @@ Click the date for annoucement slides and see footnotes for important recitation
 {%marginfigure "meme" "https://external-preview.redd.it/xHBy8Vbc9PPlRIkPmeztTsSwwwqFL9XGd8NgviiqWmQ.jpg?auto=webp&s=4e7586dbcafbb3dca7eed1d171684dfaf30da856"%}
 
 <div class="table-responsive" markdown="1" >
-| Week # |    Date    |                  Topic                  |           Handout            | Important Announcements               |
-| :----: | :--------: | :-------------------------------------: | :--------------------------: | ------------------------------------- |
-| **1**  | 01/10/2023 |                   N/A                   |                              | **No recitation during first week**   |
-| **2**  | 01/17/2023 | Introduction & Recitation Administrivia | [Slides](administrivia.html) | **TA Office Hours posted to Canvas**  |
-| **3**  | 01/24/2023 |               Homework #1               |                              | Homework #1 due Friday                |
-| **4**  | 01/31/2023 |              Homework # 2               |                              |                                       |
-| **5**  | 02/07/2023 |                                         |                              |                                       |
-| **6**  | 02/14/2023 |                                         |                              |                                       |
-| **7**  | 02/21/2023 |                                         |                              |                                       |
-| **8**  | 02/28/2023 |                                         |                              |                                       |
-|        | 03/07/2023 |            **Spring Break**             |                              | **University Holiday  No Recitation** |
-| **9**  | 03/14/2023 |                                         |                              |                                       |
-| **10** | 03/21/2023 |                                         |                              |                                       |
-| **11** | 03/28/2023 |                                         |                              |                                       |
-| **12** | 04/04/2023 |                                         |                              |                                       |
-| **13** | 04/11/2023 |                                         |                              |                                       |
-| **14** | 04/18/2023 |                                         |                              |                                       |
-| **15** | 04/25/2023 |                                         |                              |                                       |
+| Week # |    Date    |                  Topic                  |                                Handout                                |        Important Announcements         |
+| :----: | :--------: | :-------------------------------------: | :-------------------------------------------------------------------: | :------------------------------------: |
+| **1**  | 01/10/2023 |                   N/A                   |                                                                       |  **No recitation during first week**   |
+| **2**  | 01/17/2023 | Introduction & Recitation Administrivia |                     [Slides](administrivia.html)                      |  **TA Office Hours posted to Canvas**  |
+| **3**  | 01/24/2023 |               Homework #1               |                                                                       |         Homework #1 due Friday         |
+| **4**  | 01/31/2023 |              Homework # 2               | [Extra Practice](review-1.html) ([Solutions](review-1-solution.html)) |         Homework #2 due Friday         |
+| **5**  | 02/07/2023 |                                         |                                                                       |                                        |
+| **6**  | 02/14/2023 |                                         |                                                                       |                                        |
+| **7**  | 02/21/2023 |                                         |                                                                       |                                        |
+| **8**  | 02/28/2023 |                                         |                                                                       |                                        |
+|        | 03/07/2023 |            **Spring Break**             |                                                                       | **University Holiday - No Recitation** |
+| **9**  | 03/14/2023 |                                         |                                                                       |                                        |
+| **10** | 03/21/2023 |                                         |                                                                       |                                        |
+| **11** | 03/28/2023 |                                         |                                                                       |                                        |
+| **12** | 04/04/2023 |                                         |                                                                       |                                        |
+| **13** | 04/11/2023 |                                         |                                                                       |                                        |
+| **14** | 04/18/2023 |                                         |                                                                       |                                        |
+| **15** | 04/25/2023 |                                         |                                                                       |                                        |
 {: .table-hover}
 
 </div>

@@ -11,7 +11,6 @@
         "title": "Hello Lab: Getting up to speed with the environment",
         "handout": {
             "Slides": "rec00.pptx",
-            "Instructions": "https://cs0449.gitlab.io/sp2023/labs/00/",
             "`hello.c`": "code/hello.c.html"
         }
     },
@@ -24,5 +23,11 @@
             "VS Code Guide": "vs_code.pdf",
             "`scan.c`": "code/scan.c.html"
         }
+    },
+    {
+        "week": "04",
+        "date": "February 3",
+        "title": "Project: Hiding data and reading files",
+        "handout": {}
     }
 ]
