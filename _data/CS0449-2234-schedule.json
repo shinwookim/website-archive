@@ -3,14 +3,16 @@
         "week": "01",
         "date": "January 13",
         "title": "**No recitation during first week**",
-        "handout": {}
+        "handout": {
+            "N/A": "#handouts"
+        }
     },
     {
         "week": "02",
         "date": "January 20",
         "title": "Hello Lab: Getting up to speed with the environment",
         "handout": {
-            "Slides": "rec00.pptx",
+            "Slide": "rec01.pptx",
             "`hello.c`": "code/hello.c.html"
         }
     },
@@ -19,7 +21,7 @@
         "date": "January 27",
         "title": "Data & Pointer Lab: Practice with data and input",
         "handout": {
-            "Slides": "rec01.pptx",
+            "Slide": "rec02.pptx",
             "VS Code Guide": "vs_code.pdf",
             "`scan.c`": "code/scan.c.html"
         }
@@ -27,7 +29,9 @@
     {
         "week": "04",
         "date": "February 3",
-        "title": "Project: Hiding data and reading files",
-        "handout": {}
+        "title": "Project1: Hiding data and reading files",
+        "handout": {
+            "Slide": "rec03.pdf"
+        }
     }
 ]
