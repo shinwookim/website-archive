@@ -70,7 +70,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_ {%marginno
 <h2 id="handouts">Schedule <em>&</em> Handout</h2>
 
 Click the date for annoucement slides and see footnotes for important recitation information.
-{%marginfigure "meme" "https://external-preview.redd.it/xHBy8Vbc9PPlRIkPmeztTsSwwwqFL9XGd8NgviiqWmQ.jpg?auto=webp&s=4e7586dbcafbb3dca7eed1d171684dfaf30da856"%}
+
 
 <div class="table-responsive" markdown="1" >
 | Week # |    Date    |                  Topic                  |                                Handout                                |        Important Announcements         |
@@ -109,7 +109,7 @@ Click the date for annoucement slides and see footnotes for important recitation
 - **Seek help early and often.**<br>Because course material builds on previous material, it is essential to your success in this class that you keep up with the course material. There are a lot of sources of help: ask questions during lecture; ask your classmates (make sure you have read the "Academic Integrity"); get help during recitation; and come to office hours.
 
 ## Getting Help
-
+{%marginfigure "meme" "https://external-preview.redd.it/xHBy8Vbc9PPlRIkPmeztTsSwwwqFL9XGd8NgviiqWmQ.jpg?auto=webp&s=4e7586dbcafbb3dca7eed1d171684dfaf30da856"%}
 We expect that all students will need help at some point in this course. If you find yourself needing help, this is not cause for embarrassment: it is completely expected, and our goal is to ensure that you are able to receive the help you need. A good rule of thumb is that if you spend an hour on the assignment without making any progress, seek help! Please be sure to seek help early and often through any (or all!) of the following resources:
 
 - **Your Study Group**: Building a support system of friends with whom you can struggle and work through the challenges you encounter is one of the best ways to seek help. You will quickly learn how much you can figure out working together!
