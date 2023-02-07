@@ -33,5 +33,13 @@
         "handout": {
             "Slide": "rec03.pdf"
         }
+    },
+    {
+        "week": "05",
+        "date": "February 10",
+        "title": "Pointer Lab",
+        "handout": {
+            "Slide": "#"
+        }
     }
 ]
