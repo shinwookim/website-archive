@@ -37,7 +37,7 @@
     {
         "week": "05",
         "date": "February 10",
-        "title": "Pointer Lab",
+        "title": "Pointer Lab: Looking at pointers",
         "handout": {
             "Slide": "rec04.pdf"
         }
