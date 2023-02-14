@@ -80,7 +80,7 @@ Click the date for annoucement slides and see footnotes for important recitation
 | **3**  | 01/24/2023 |               Homework #1               |                                                                       |         Homework #1 due Friday         |
 | **4**  | 01/31/2023 |               Homework #2               | [Extra Practice](review-1.html) ([Solutions](review-1-solution.html)) |         Homework #2 due Friday         |
 | **5**  | 02/07/2023 |               Homework #3               |                                                                       |                                        |
-| **6**  | 02/14/2023 |                                         |                                                                       |                                        |
+| **6**  | 02/14/2023 |               Homework #4               | [Extra Practice](review-2.html) ([Solutions](review-2-solution.html)) |                                        |
 | **7**  | 02/21/2023 |                                         |                                                                       |                                        |
 | **8**  | 02/28/2023 |                                         |                                                                       |                                        |
 |        | 03/07/2023 |            **Spring Break**             |                                                                       | **University Holiday - No Recitation** |
