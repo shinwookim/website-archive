@@ -46,6 +46,8 @@
         "week": "06",
         "date": "February 17",
         "title": "Queue Lab: Linking those nodes!",
-        "handout": {}
+        "handout": {
+            "Slide": "rec05.pdf"
+        }
     }
 ]
