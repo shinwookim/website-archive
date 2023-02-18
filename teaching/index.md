@@ -3,6 +3,22 @@ title: Teaching
 layout: default
 published: true
 ---
+
+### Spring 2023 Office Hours
+<a href="#" data-bs-toggle="collapse" data-bs-target="#collapseOfficeHours" aria-expanded="false" aria-controls="collapseOfficeHours">
+Click here to view Shinwoo's sping 2023 office hours schedule
+</a>
+<div class="collapse" id="collapseOfficeHours">
+  {%include_relative SP23_OH.html%}
+  <p markdown="1">
+  - Students in my sections: please see **course discord** for any updates to these hours.<br />
+  - If these times do not work for you, I am happy to set up appointments (via Zoom or in-person). Please send me an [E-mail](mailto:shinwookim@pitt.edu) to schedule a meeting with me !
+  </p>
+</div>
+
+
+
+
 #### Current Courses
 (Spring 2023, Term 2234)
 {:.h5}

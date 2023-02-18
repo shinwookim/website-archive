@@ -13,7 +13,7 @@ permalink: /projects/
       <img src="../assets/tti_screengrab.png" alt="Screenshot of Touch The Invisible's Website" class="w-100">
     </a>
     <p style="font-size: 80%" class="my-0">Click image to view larger version</p>
-    <div class="btn-group my-3" role="group" aria-label="TTI-Links">
+    <div class="btn-group flex-wrap my-3" role="group" aria-label="TTI-Links">
       <button type="button" class="btn btn-primary text-light" href="https://touchtheinvisible.com/">Website</button>
       <button type="button" class="btn btn-primary text-light" href="https://github.com/TouchTheInvisible/touchtheinvisible.github.io/">GitHub</button>
     </div>
@@ -30,7 +30,7 @@ Visualizing macromolecular systems cam help students better understand the basic
       <img src="../assets/snap_screengrab.png" alt="Screenshot of SNAP's Website" class="w-100">
     </a>
     <p style="font-size: 80%" class="my-0">Click image to view larger version</p>
-    <div class="btn-group my-3" role="group" aria-label="SNAP-Links">
+    <div class="btn-group flex-wrap my-3" role="group" aria-label="SNAP-Links">
       <button type="button" class="btn btn-primary text-light" href="https://snapfse.com/">Website</button>
     </div>
   </div>
@@ -46,7 +46,7 @@ SNAP is a pittsburg-based organization which focuses on promoting engagement, aw
       <img src="../assets/adventure-game.png" alt="Screenshot the Adventure Game" class="w-100">
     </a>
     <p style="font-size: 80%" class="my-0">Click image to view larger version</p>
-    <div class="btn-group my-3" role="group" aria-label="SNAP-Links">
+    <div class="btn-group flex-wrap my-3" role="group" aria-label="SNAP-Links">
       <button type="button disabled" class="btn btn-primary text-light" disabled href="#">GitHub</button>
     </div>
   </div>
