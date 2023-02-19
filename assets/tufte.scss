@@ -450,6 +450,16 @@ ol {
   // list-style-type: none;
 }
 
+ul {
+  list-style-type: none;
+}
+
+article ul li:before {
+  content: "\2014";
+  position: absolute;
+  margin-left: -20px;
+}
+
 //li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
 
 figure,

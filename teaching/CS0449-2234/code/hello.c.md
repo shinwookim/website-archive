@@ -10,3 +10,5 @@ Below is the syntax highlighted version of [`hello.c`](hello.c). {%marginnote "l
 ```
 
 <style>pre{border:solid; background: #ffffff}</style>
+
+{% include code_copy.html %}
