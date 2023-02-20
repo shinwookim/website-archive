@@ -54,3 +54,4 @@ Show that these statements are inconsistent:
 “Miranda does not take a course in discrete mathematics but she reads this book.”
 
 $$ $$
+

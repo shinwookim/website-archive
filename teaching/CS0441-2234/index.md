@@ -81,7 +81,7 @@ Click the date for annoucement slides and see footnotes for important recitation
 | **4**  | 01/31/2023 |                                  Homework #2                                  | [Extra Practice](review-1.html) ([Solutions](review-1-solution.html)) |
 | **5**  | 02/07/2023 |                                  Homework #3                                  |                                                                       |
 | **6**  | 02/14/2023 |                                  Homework #4                                  | [Extra Practice](review-2.html) ([Solutions](review-2-solution.html)) |
-| **7**  | 02/21/2023 |                        Homework #5 + Mid-Term Practice                        |                                                                       |
+| **7**  | 02/21/2023 |                        Homework #5 + Mid-term Practice                        |                                                                       |
 | **8**  | 02/28/2023 |                                                                               |                                                                       |
 | **9**  | 03/07/2023 |                       **Spring Break - No Recitation**                        |                                                                       |
 | **10** | 03/14/2023 |                                                                               |                                                                       |
