@@ -2,7 +2,7 @@
 title: Using debuggers
 subtitle: A Brief Introduction to GDB   
 layout: tufte
-published: true
+published: false
 ---
 
 <center>Adapted from materials developed by Samuel Huang (University of Maryland)</center>
