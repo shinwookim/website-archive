@@ -218,3 +218,16 @@ h6:hover .anchor-link {
   -ms-user-select: none;
   user-select: none;
 }
+
+.endmark {
+  margin-bottom: 1.2em;
+}
+.endmark::after {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  @extend .align-top;
+  font-family: "Autography";
+
+  height: 1em;
+  content: "sk";
+}

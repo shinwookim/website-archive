@@ -2,7 +2,7 @@
 title: Using debuggers
 subtitle: A Brief Introduction to GDB   
 layout: tufte
-published: false
+published: true
 ---
 
 <center>Adapted from materials developed by Samuel Huang (University of Maryland)</center>
@@ -191,4 +191,4 @@ You can also follow pointers iteratively, like in a linked list:
 ``` sh
 (gdb) print list prt->next->next->next->data
 ```
-
+<span class="endmark"></span>

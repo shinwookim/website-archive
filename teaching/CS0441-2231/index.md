@@ -132,24 +132,10 @@ We expect that all students will need help at some point in this course. If you 
 - [Tips from Previous Students](https://pittcs.wiki/academics/succeed-in-course-x/succeed-in-441/)
 - [University of Pittsburgh](https://pitt.edu){: target="\_blank"}
 - [Department of Computer Science](https://cs.pitt.edu){: target="\_blank"}
+
+<span class="endmark"></span>
 <style>
     th{
         text-align: center;
     }
-    .highlight{
-        background-color: #FFFF00;
-    }
 </style>
-
-<script>
-    function highlight(id) {
-        var already_highlighted = document.getElementsByClassName('highlight');
-        if(already_highlighted.length > 0) already_highlighted[0].classList.remove("highlight");
-        var toHighlight = document.getElementById(id);
-        toHighlight.classList.toggle("highlight");
-    }
-    function highlight_off() {
-        var already_highlighted = document.getElementsByClassName('highlight');
-        if(already_highlighted.length > 0) already_highlighted[0].classList.remove("highlight");
-    }
-</script>

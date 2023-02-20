@@ -144,7 +144,7 @@ My name is Shinwoo Kim, and I am a student at the [University of Pittsburgh](htt
   </div>
 </div>
 
-Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-to-date information. Click the buttons below to reveal
+Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-to-date information. <span class="endmark"></span>
 {: .text-center}
 
 ---

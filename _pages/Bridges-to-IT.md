@@ -94,3 +94,4 @@ Upon successfuly completition of the course, students are guaranteed internships
 - [Guide to USB](https://www.digikey.com/en/articles/a-basic-guide-to-usb)
 - [HDD vs SSD](https://www.pcmag.com/news/ssd-vs-hdd-whats-the-difference)
 - [Supplemental Information](https://pitt.box.com/v/itsupportclass)
+<span class="endmark"></span>

@@ -36,23 +36,6 @@ Click here to view Shinwoo's sping 2023 office hours schedule
 <sup id="TA" onclick='highlight_off()'><span class="text-secondary">TA</span>: Taught as Recitation Instructor/Teaching Assistant/Course Assistant</sup><br>
 <sup id="Instructor" onclick='highlight_off()'><span class="text-secondary">I</span>: Taught as Primary/Lead Instructor</sup>
 
-<style>
-    .highlight {
-        background-color: #FFFF00;
-    }
-</style>
 {% include icons.html %}
-<script>
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-    function highlight(id) {
-        var already_highlighted = document.getElementsByClassName('highlight');
-        if(already_highlighted.length > 0) already_highlighted[0].classList.remove("highlight");
-        var toHighlight = document.getElementById(id);
-        toHighlight.classList.toggle("highlight");
-    }
-    function highlight_off() {
-        var already_highlighted = document.getElementsByClassName('highlight');
-        if(already_highlighted.length > 0) already_highlighted[0].classList.remove("highlight");
-    }
-</script>
+
+

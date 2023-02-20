@@ -9,7 +9,7 @@ nav-links:
   - title: Syllabus
     url: /teaching/CS0441-2234/syllabus.html
   - title: Schedule
-    url: /teaching/CS0441-2234/#schedule--handout
+    url: /teaching/CS0441-2234/#handouts
   - title: Student Feedback
     url: /teaching/CS0441-2234/#student-feedback
   - title: Getting Help
@@ -73,24 +73,24 @@ Click the date for annoucement slides and see footnotes for important recitation
 
 
 <div class="table-responsive" markdown="1" >
-| Week # |    Date    |                  Topic                  |                                Handout                                |        Important Announcements         |
-| :----: | :--------: | :-------------------------------------: | :-------------------------------------------------------------------: | :------------------------------------: |
-| **1**  | 01/10/2023 |                   N/A                   |                                                                       |  **No recitation during first week**   |
-| **2**  | 01/17/2023 | Introduction & Recitation Administrivia |                     [Slides](administrivia.html)                      |  **TA Office Hours posted to Canvas**  |
-| **3**  | 01/24/2023 |               Homework #1               |                                                                       |         Homework #1 due Friday         |
-| **4**  | 01/31/2023 |               Homework #2               | [Extra Practice](review-1.html) ([Solutions](review-1-solution.html)) |         Homework #2 due Friday         |
-| **5**  | 02/07/2023 |               Homework #3               |                                                                       |                                        |
-| **6**  | 02/14/2023 |               Homework #4               | [Extra Practice](review-2.html) ([Solutions](review-2-solution.html)) |                                        |
-| **7**  | 02/21/2023 |                                         |                                                                       |                                        |
-| **8**  | 02/28/2023 |                                         |                                                                       |                                        |
-|        | 03/07/2023 |            **Spring Break**             |                                                                       | **University Holiday - No Recitation** |
-| **9**  | 03/14/2023 |                                         |                                                                       |                                        |
-| **10** | 03/21/2023 |                                         |                                                                       |                                        |
-| **11** | 03/28/2023 |                                         |                                                                       |                                        |
-| **12** | 04/04/2023 |                                         |                                                                       |                                        |
-| **13** | 04/11/2023 |                                         |                                                                       |                                        |
-| **14** | 04/18/2023 |                                         |                                                                       |                                        |
-| **15** | 04/25/2023 |                                         |                                                                       |                                        |
+| Week # |    Date    |                                     Topic                                     |                                Handout                                |
+| :----: | :--------: | :---------------------------------------------------------------------------: | :-------------------------------------------------------------------: |
+| **1**  | 01/10/2023 |                          **Week 1 - No Recitation**                           |                                                                       |
+| **2**  | 01/17/2023 | Introduction & Recitation Administrivia <br> TA Office Hours posted to Canvas |                     [Slides](administrivia.html)                      |
+| **3**  | 01/24/2023 |                                  Homework #1                                  |                                                                       |
+| **4**  | 01/31/2023 |                                  Homework #2                                  | [Extra Practice](review-1.html) ([Solutions](review-1-solution.html)) |
+| **5**  | 02/07/2023 |                                  Homework #3                                  |                                                                       |
+| **6**  | 02/14/2023 |                                  Homework #4                                  | [Extra Practice](review-2.html) ([Solutions](review-2-solution.html)) |
+| **7**  | 02/21/2023 |                        Homework #5 + Mid-Term Practice                        |                                                                       |
+| **8**  | 02/28/2023 |                                                                               |                                                                       |
+| **9**  | 03/07/2023 |                       **Spring Break - No Recitation**                        |                                                                       |
+| **10** | 03/14/2023 |                                                                               |                                                                       |
+| **11** | 03/21/2023 |                                                                               |                                                                       |
+| **12** | 03/28/2023 |                                                                               |                                                                       |
+| **13** | 04/04/2023 |                                                                               |                                                                       |
+| **14** | 04/11/2023 |                                                                               |                                                                       |
+| **15** | 04/18/2023 |                                                                               |                                                                       |
+| **16** | 04/25/2023 |                                                                               |                                                                       |
 {: .table-hover}
 
 </div>
@@ -126,24 +126,5 @@ We expect that all students will need help at some point in this course. If you 
 - [Tips from Previous Students](https://pittcs.wiki/academics/succeed-in-course-x/succeed-in-441/)
 - [University of Pittsburgh](https://pitt.edu){: target="\_blank"}
 - [Department of Computer Science](https://cs.pitt.edu){: target="\_blank"}
-<style>
-    th{
-        text-align: center;
-    }
-    .highlight{
-        background-color: #FFFF00;
-    }
-</style>
 
-<script>
-    function highlight(id) {
-        var already_highlighted = document.getElementsByClassName('highlight');
-        if(already_highlighted.length > 0) already_highlighted[0].classList.remove("highlight");
-        var toHighlight = document.getElementById(id);
-        toHighlight.classList.toggle("highlight");
-    }
-    function highlight_off() {
-        var already_highlighted = document.getElementsByClassName('highlight');
-        if(already_highlighted.length > 0) already_highlighted[0].classList.remove("highlight");
-    }
-</script>
+<span class="endmark"></span>
