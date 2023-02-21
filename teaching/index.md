@@ -4,6 +4,11 @@ layout: default
 published: true
 ---
 
+
+## Current Courses (Spring 2023, Term 2234)
+- <i class="pitt-icon"></i> **CS0441:** Discrete Structures for Computer Science <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Spring 2023](./CS0441-2234/)
+- <i class="pitt-icon"></i> **CS0449:** Introduction to System Software <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Spring 2023](./CS0449-2234/)
+
 ### Spring 2023 Office Hours
 <a href="#" data-bs-toggle="collapse" data-bs-target="#collapseOfficeHours" aria-expanded="false" aria-controls="collapseOfficeHours">
 Click here to view Shinwoo's sping 2023 office hours schedule
@@ -11,22 +16,14 @@ Click here to view Shinwoo's sping 2023 office hours schedule
 <div class="collapse" id="collapseOfficeHours">
   {%include_relative SP23_OH.html%}
   <p markdown="1">
-  - Students in my sections: please see **course discord** for any updates to these hours.<br />
+  - If you are a student in my sections, please see the **Course Discord** for any updates to these hours.<br />
   - If these times do not work for you, I am happy to set up appointments (via Zoom or in-person). Please send me an [E-mail](mailto:shinwookim@pitt.edu) to schedule a meeting with me !
   </p>
 </div>
 
 
-
-
-#### Current Courses
-(Spring 2023, Term 2234)
-{:.h5}
-- <i class="pitt-icon"></i> **CS0441:** Discrete Structures for Computer Science <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Spring 2023](./CS0441-2234/)
-- <i class="pitt-icon"></i> **CS0449:** Introduction to System Software <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Spring 2023](./CS0449-2234/)
-
 ---
-#### Previous Courses
+## Previous Courses
 - <i class="pitt-icon"></i> **CS0441:** Discrete Structures for Computer Science <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Fall 2022](./CS0441-2231/)
 - <i class="pitt-icon"></i> **Bridges to IT:** Jump-Starting a Career in IT <sup><a href="#Instructor" type="button" onclick='highlight("Instructor")'  class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Primary/Lead Instructor">I</a></sup> [Fall 2021](bridges-to-it.html)
 - <i class="pitt-icon"></i> **CEC STEAM** Saturday Courses <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Fall 2021](https://cec.pitt.edu/calendar/s-t-e-a-m-saturdays/2022-10-08/)

@@ -1,5 +1,5 @@
 ---
-title: About Me
+title: About
 layout: default
 permalink: /about/
 published: true
@@ -12,14 +12,14 @@ published: true
   ul{list-style: none;}
 </style>
 
-My name is Shinwoo Kim, and I am a student at the [University of Pittsburgh](https://pitt.edu)'s [School of Computing and Information](https://sci.pitt.edu) & [David C. Frederick Honors College](https://www.frederickhonors.pitt.edu/) where I study Computer Science and Mathematics. My current interests are in the field of **Computer Systems, Operating Systems, and Computer Architecture**, although there are very few things in computer science that I'm _not_ interested in. Currently, I am working as a [teaching assistant]({{ '/teaching/' | prepend: site.baseurl }}) for the University of Pittsburgh's Department of Computer Science; I also serve as the Chief Technical Officer and Lead Software Developer for the [_Special Needs Assitance Program for Social Engagement_](https://snapfse.com) and the [_TouchTheInvisible_](https://touchtheinvisible.com) project at the University of Pittsburgh.
+My name is Shinwoo Kim, and I am a student at the [University of Pittsburgh](https://pitt.edu)'s [School of Computing and Information](https://sci.pitt.edu) & [David C. Frederick Honors College](https://www.frederickhonors.pitt.edu/) where I study Computer Science and Mathematics. My current interests are in the field of **Computer Systems, Operating Systems, and Computer Architecture**, although there are very few things in computer science that I'm _not_ interested in. Currently, I am working as a [teaching assistant]({{ '/teaching/' | prepend: site.baseurl }}) for the University of Pittsburgh's Department of Computer Science; I also serve as the Chief Technical Officer and Lead Software Developer for the [_Special Needs Assitance Program for Social Engagement_](https://snapfse.com) and the [_TouchTheInvisible_](https://touchtheinvisible.com) project at the University of Pittsburgh. <span class="endmark"></span>
 
 ##### **Education**
 
-###### <i class="pitt-icon"></i>B.S., Computer Science & Mathematics, (Exp.) 2026
-
+###### <i class="pitt-icon"></i>B.S., Computer Science, (Exp.) 2024
 - University of Pittsburgh (School of Computing and Information & David C. Frederick Honors College)
-  <br><br>
+
+<br>
 
 ##### **Work Experiences**
 
@@ -144,7 +144,7 @@ My name is Shinwoo Kim, and I am a student at the [University of Pittsburgh](htt
   </div>
 </div>
 
-Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-to-date information. <span class="endmark"></span>
+Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-to-date information. 
 {: .text-center}
 
 ---

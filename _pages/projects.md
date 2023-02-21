@@ -3,8 +3,6 @@ title: Projects
 layout: default
 permalink: /projects/
 ---
-# Projects
-{: .mb-0}
 
 <div class="row" markdown="1">
 ## TouchTheInvisible

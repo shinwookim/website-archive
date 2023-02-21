@@ -46,71 +46,72 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
 - Email{%sidenote "discord" "You will receive a faster reply if you message me via Discord"%} subjects should be prefaced with `[CS0449]`
 - For official communication, messages should be sent using your official **Pitt E-Mail**(`ABC123@pitt.edu`).
 - Email body should include your **name** and the **section** you're enrolled in.
-- Students should allow at least 24 business hours before following up.{%sidenote "Hours" "Generally, my working hours are between 8AM and 6PM"%}
+- Students should allow at least 24 business hours before following up{%sidenote "Hours" "Generally, my working hours are between 8AM and 6PM"%}.<span class="endmark"></span>
+
 
 ---
 
 <h2 id="handouts">Schedule <em>&</em> Handout</h2> {% marginnote "video" "If you require access to Zoom, or the recitation recording, please contact me **prior** to the start of recitation"%}
 
 <div class="table-responsive">
-<table class=" table-hover">
+<table class="table-hover">
   <thead>
     <tr>
-      <th scope="col">Week</th>
-      <th scope="col">Date</th>
+      <th scope="col" class="text-center">Week</th>
+      <th scope="col" class="text-center">Date</th>
       <th scope="col">Topic</th>
-      <th scope="col">Handout</th>
+      <th scope="col" class="text-center">Handout</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td scope="row" class="text-center">00</td>
       <td class="text-center">January 13</td>
-      <td>**First Week <br>No Recitation**</td>
+      <td>**No Recitation**</td>
       <td class="text-center">n/a</td>
     </tr>
     <tr>
       <td scope="row" class="text-center">01</td>
       <td class="text-center">January 20</td>
-      <td>First Recitation <br>Hello Lab: Getting up to speed with the environment</td>
+      <td>**Hello Lab**<br>Getting up to speed with the environment</td>
       <td class="text-center">[slides](rec01.pptx) <br> [`hello.c`](code/hello.c.html)</td>
     </tr>
     <tr>
       <td scope="row" class="text-center">02</td>
       <td class="text-center">January 27</td>
-      <td>Data & Pointer Lab: Practice with data and input</td>
-      <td class="text-center">[slides](rec02.pptx) <br> [vs code tutorial](vs_code.pdf) <br> [`scan.c`](code/scan.c.html)</td>
+      <td>**Data & Pointer Lab**<br>Practice with data and input</td>
+      <td class="text-center">[slides](rec02.pptx) <br> [VS Code guide](vs_code.pdf) <br> [`scan.c`](code/scan.c.html)</td>
     </tr>
     <tr>
       <td scope="row" class="text-center">03</td>
       <td class="text-center">February 3 </td>
-      <td>Project1: Hiding data and reading files</td>
+      <td>**Project 1: BMP Steganography**<br>Hiding data and reading files</td>
       <td class="text-center">[slides](rec03.pdf)</td>
     </tr>
     <tr>
       <td scope="row" class="text-center">04</td>
       <td class="text-center">February 10</td>
-      <td>Pointer Lab: Looking at pointers</td>
+      <td>**Pointer Lab**<br>Looking at pointers</td>
       <td class="text-center">[slides](rec04.pdf)</td>
     </tr>
     <tr>
       <td scope="row" class="text-center">05</td>
       <td class="text-center">February 17</td>
-      <td>Queue Lab: Linking those nodes</td>
+      <td>**Queue Lab**<br>Linking those nodes</td>
       <td class="text-center">[slides](rec05.pdf)</td>
     </tr>
     <tr>
       <td scope="row" class="text-center">06</td>
       <td class="text-center">February 22</td>
-      <td>Project 2 Help Session<br>Malloc Night @ 5502 SENSQ</td>
-      <td class="text-center">[malloc_example.c](code/malloc_example.c.html)</td>
+      <td>**Project 2: Implementing a Heap Allocator**<br>Malloc Project Boot Camp</td>
+      <td class="text-center">[slides](#)<br>[malloc_example.c](code/malloc_example.c.html)</td>
     </tr>
-    <tr>
+    <!--tr>
       <td scope="row" class="text-center">06</td>
       <td class="text-center">February 24</td>
       <td>TBA</td>
       <td class="text-center">To Come</td>
-    </tr>
+    </!--tr--->
     <!--
     <tr>
       <td scope="row" class="text-center">07</td>
@@ -186,7 +187,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
 - [University of Pittsburgh](https://pitt.edu){: target="\_blank"}
 - [Department of Computer Science](https://cs.pitt.edu){: target="\_blank"}
  
-<span class="endmark"></span>
+
 
 
 

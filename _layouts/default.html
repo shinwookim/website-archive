@@ -3,6 +3,7 @@
   <head>
     {% include metadata.html %} {% include styles.html %}
   </head>
+
   <body>
     <div class="container align-items-center mb-5 px-md-3">
       <div class="row" style="padding-top: 74px" style="padding-top: 74px">
@@ -11,8 +12,10 @@
         </aside>
         <main class="col-md-7 ps-md-5">
           <article>
-            {% include anchor_headings.html html=content anchorBody="†"
-            beforeHeading="true" anchorClass="anchor-link" %}
+            {% unless page.hide_title %}
+            <h1>{{ page.title }}</h1>
+            {% endunless %} 
+            {% include anchor_headings.html html=content anchorBody="†" beforeHeading="true" anchorClass="anchor-link" %}
             <button
               onclick="topFunction()"
               id="top-btn"
