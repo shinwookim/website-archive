@@ -56,7 +56,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
 <table class=" table-hover">
   <thead>
     <tr>
-      <th scope="col">Week #</th>
+      <th scope="col">Week</th>
       <th scope="col">Date</th>
       <th scope="col">Topic</th>
       <th scope="col">Handout</th>
@@ -67,43 +67,49 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
       <td scope="row" class="text-center">00</td>
       <td class="text-center">January 13</td>
       <td>**First Week <br>No Recitation**</td>
-      <td class="text-center">-</td>
+      <td class="text-center">n/a</td>
     </tr>
     <tr>
       <td scope="row" class="text-center">01</td>
       <td class="text-center">January 20</td>
       <td>First Recitation <br>Hello Lab: Getting up to speed with the environment</td>
-      <td class="text-center">[Slides](rec01.pptx) <br> [`hello.c`](code/hello.c.html)</td>
+      <td class="text-center">[slides](rec01.pptx) <br> [`hello.c`](code/hello.c.html)</td>
     </tr>
     <tr>
       <td scope="row" class="text-center">02</td>
       <td class="text-center">January 27</td>
       <td>Data & Pointer Lab: Practice with data and input</td>
-      <td class="text-center">[Slides](rec02.pptx) <br> [VSCode Tutorial](vs_code.pdf) <br> [`scan.c`](code/scan.c.html)</td>
+      <td class="text-center">[slides](rec02.pptx) <br> [vs code tutorial](vs_code.pdf) <br> [`scan.c`](code/scan.c.html)</td>
     </tr>
     <tr>
       <td scope="row" class="text-center">03</td>
       <td class="text-center">February 3 </td>
       <td>Project1: Hiding data and reading files</td>
-      <td class="text-center">[Slides](rec03.pdf)</td>
+      <td class="text-center">[slides](rec03.pdf)</td>
     </tr>
     <tr>
       <td scope="row" class="text-center">04</td>
       <td class="text-center">February 10</td>
       <td>Pointer Lab: Looking at pointers</td>
-      <td class="text-center">[Slides](rec04.pdf)</td>
+      <td class="text-center">[slides](rec04.pdf)</td>
     </tr>
     <tr>
       <td scope="row" class="text-center">05</td>
       <td class="text-center">February 17</td>
       <td>Queue Lab: Linking those nodes</td>
-      <td class="text-center">[Slides](rec05.pdf)</td>
+      <td class="text-center">[slides](rec05.pdf)</td>
+    </tr>
+    <tr>
+      <td scope="row" class="text-center">06</td>
+      <td class="text-center">February 22</td>
+      <td>Project 2 Help Session<br>Malloc Night @ 5502 SENSQ</td>
+      <td class="text-center">[malloc_example.c](code/malloc_example.c.html)</td>
     </tr>
     <tr>
       <td scope="row" class="text-center">06</td>
       <td class="text-center">February 24</td>
       <td>TBA</td>
-      <td class="text-center">-</td>
+      <td class="text-center">To Come</td>
     </tr>
     <!--
     <tr>

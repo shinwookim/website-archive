@@ -1,8 +1,8 @@
 ---
-title: Using debuggers
-subtitle: A Brief Introduction to GDB   
+title: Debugging with GDB
+subtitle: Yet another GDB tutorial
 layout: tufte
-published: true
+published: false
 ---
 
 <center>Adapted from materials developed by Samuel Huang (University of Maryland)</center>
