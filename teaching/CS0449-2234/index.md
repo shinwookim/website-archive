@@ -104,7 +104,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
       <td scope="row" class="text-center">06</td>
       <td class="text-center">February 22</td>
       <td>**Project 2: Implementing a Heap Allocator**<br>Malloc Project Boot Camp</td>
-      <td class="text-center">[slides](#)<br>[malloc_example.c](code/malloc_example.c.html)</td>
+      <td class="text-center">[slides](Project_2_Help_Session.pdf)<br>[malloc_example.c](code/malloc_example.c.html)</td>
     </tr>
     <!--tr>
       <td scope="row" class="text-center">06</td>
