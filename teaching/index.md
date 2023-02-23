@@ -5,21 +5,14 @@ published: true
 hide_title: true
 ---
 
-<figure class="figure">
-  <img src="https://www.tour.pitt.edu/sites/default/files/styles/galleriffic_slide/public/SennottSquare3.jpg?itok=V1aDmIPP" class="figure-img img-fluid rounded" alt="Picture of Sennott Square">
-  <figcaption class="figure-caption">Sennott Square, Home of CS Department @ Pitt</figcaption>
+<h1>Teaching</h1>
+<figure class="figure" style="text-indent:-1.5em;">
+  <img src="https://www.cs.pitt.edu/sites/default/files/home-display-img/img_0760.jpg" class="figure-img img-fluid rounded" alt="Picture of Sennott Square">
+  <figcaption class="figure-caption ">Sennott Square, Home of the CS Department @ Pitt</figcaption>
 </figure>
 
-<h1>Teaching</h1>
-
 ## Current Courses (Spring 2023, Term 2234)
-- <i class="pitt-icon"></i> **CS0441:** Discrete Structures for Computer Science <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Spring 2023](./CS0441-2234/)
-- <i class="pitt-icon"></i> **CS0449:** Introduction to System Software <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Spring 2023](./CS0449-2234/)
-
-### Spring 2023 Office Hours
-<a href="#" data-bs-toggle="collapse" data-bs-target="#collapseOfficeHours" aria-expanded="false" aria-controls="collapseOfficeHours">
-Click here to view Shinwoo's sping 2023 office hours schedule
-</a>
+- <a href="#" data-bs-toggle="collapse" data-bs-target="#collapseOfficeHours" aria-expanded="false" aria-controls="collapseOfficeHours">Click here to view my spring2023 office hours schedule</a>
 <div class="collapse" id="collapseOfficeHours">
   {%include_relative SP23_OH.html%}
   <p markdown="1">
@@ -27,6 +20,10 @@ Click here to view Shinwoo's sping 2023 office hours schedule
   - If these times do not work for you, I am happy to set up appointments (via Zoom or in-person). Please send me an [E-mail](mailto:shinwookim@pitt.edu) to schedule a meeting with me !
   </p>
 </div>
+- <i class="pitt-icon"></i> **CS0441:** Discrete Structures for Computer Science <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Spring 2023](./CS0441-2234/)
+- <i class="pitt-icon"></i> **CS0449:** Introduction to System Software <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Spring 2023](./CS0449-2234/)
+
+
 
 
 ---
