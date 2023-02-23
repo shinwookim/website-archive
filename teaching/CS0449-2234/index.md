@@ -102,16 +102,16 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
     </tr>
     <tr>
       <td scope="row" class="text-center">06</td>
-      <td class="text-center">February 22</td>
+      <td class="text-center">**Wednesday, February** 22<br>5:45 PM (5502 SENSQ)</td>
       <td>**Project 2: Implementing a Heap Allocator**<br>Malloc Project Boot Camp</td>
       <td class="text-center">[slides](Project_2_Help_Session.pdf)<br>[malloc_example.c](code/malloc_example.c.html)</td>
     </tr>
-    <!--tr>
+    <tr>
       <td scope="row" class="text-center">06</td>
       <td class="text-center">February 24</td>
-      <td>TBA</td>
-      <td class="text-center">To Come</td>
-    </!--tr--->
+      <td>**Project 2: Implementing a Heap Allocator**<br>Implementing Phase 2 & 3</td>
+      <td class="text-center">n/a</td>
+    <tr>
     <!--
     <tr>
       <td scope="row" class="text-center">07</td>
