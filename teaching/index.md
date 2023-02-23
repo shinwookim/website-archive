@@ -2,8 +2,15 @@
 title: Teaching
 layout: default
 published: true
+hide_title: true
 ---
 
+<figure class="figure">
+  <img src="https://www.tour.pitt.edu/sites/default/files/styles/galleriffic_slide/public/SennottSquare3.jpg?itok=V1aDmIPP" class="figure-img img-fluid rounded" alt="Picture of Sennott Square">
+  <figcaption class="figure-caption">Sennott Square, Home of CS Department @ Pitt</figcaption>
+</figure>
+
+<h1>Teaching</h1>
 
 ## Current Courses (Spring 2023, Term 2234)
 - <i class="pitt-icon"></i> **CS0441:** Discrete Structures for Computer Science <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Spring 2023](./CS0441-2234/)

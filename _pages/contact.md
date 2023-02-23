@@ -4,7 +4,6 @@ layout: default
 permalink: /contact/
 ---
 
-
 <div class="text-center mb-4 lead">
    <a class="social-icon" href="mailto:{{ site.email }}"><i class="fas fa-envelope"></i></a>
    <a class="social-icon" href="https://linkedin.com/in/{{ site.linkedin_username }}"> <i class="fab fa-linkedin-in"></i></a>
@@ -12,6 +11,8 @@ permalink: /contact/
    <a class="social-icon" href="https://twitter.com/{{ site.twitter_username }}"><i class="fab fa-twitter"></i></a>
    <a class="social-icon" href="https://instagram.com/{{ site.instagram_username }}"><i class="fab fa-instagram"></i></a>
 </div>
+
+---
 
 <form id="contactForm" action="https://formspree.io/f/xwkagvap" method="POST">
    <div class="row">
