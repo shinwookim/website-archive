@@ -111,7 +111,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
       <td class="text-center">February 24</td>
       <td>**Project 2: Implementing a Heap Allocator**<br>Implementing Phase 2 & 3</td>
       <td class="text-center">[slides](rec06.pdf)</td>
-    <tr>
+    </tr>
     <!--
     <tr>
       <td scope="row" class="text-center">07</td>
