@@ -112,19 +112,18 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
       <td>**Project 2: Implementing a Heap Allocator**<br>Implementing Phase 2 & 3</td>
       <td class="text-center">[slides](rec06.pdf)</td>
     </tr>
-    <!--
     <tr>
       <td scope="row" class="text-center">07</td>
       <td class="text-center">March 3</td>
-      <td>TBA</td>
-      <td class="text-center">-</td>
+      <td>**Assembly Lab**<br>Investigating the code</td>
+      <td class="text-center">[slides](rec07.pdf)<br>[Demo code (GitHub)](https://github.com/shinwookim/ASM-demo)<br/>[At&T x86 Syntax](https://en.wikibooks.org/wiki/X86_Assembly/GNU_assembly_syntax)</td>
     </tr> 
-    <tr>
+    <!--tr>
       <td scope="row" class="text-center">08</td>
       <td class="text-center">March 10</td>
       <td>**Spring Break <br> No Recitation**</td>
       <td class="text-center">-</td>
-    </tr>
+    </!--tr>
     <tr>
       <td scope="row" class="text-center">09</td>
       <td class="text-center">March 17</td>
