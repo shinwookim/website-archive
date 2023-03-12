@@ -12,19 +12,12 @@ hide_title: true
 </figure>
 
 ## Current Courses (Spring 2023, Term 2234)
-- <a href="#" data-bs-toggle="collapse" data-bs-target="#collapseOfficeHours" aria-expanded="false" aria-controls="collapseOfficeHours">Click here to view my spring2023 office hours schedule</a>
-<div class="collapse" id="collapseOfficeHours">
-  {%include_relative SP23_OH.html%}
-  <p markdown="1">
-  - If you are a student in my sections, please see the **Course Discord** for any updates to these hours.<br />
-  - If these times do not work for you, I am happy to set up appointments (via Zoom or in-person). Please send me an [E-mail](mailto:shinwookim@pitt.edu) to schedule a meeting with me !
-  </p>
-</div>
 - <i class="pitt-icon"></i> **CS0441:** Discrete Structures for Computer Science <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Spring 2023](./CS0441-2234/)
 - <i class="pitt-icon"></i> **CS0449:** Introduction to System Software <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Spring 2023](./CS0449-2234/)
 
+---
 
-
+{%include_relative SP23_OH.html%}
 
 ---
 ## Previous Courses

@@ -12,12 +12,13 @@ nav-links:
     url: /teaching/CS0449-2234/#student-feedback
 ---
 
-## Course Description
-
-Welcome to **CS 0449**, **Introduction to Systems Software**, for the Fall 2022 term!
 {% marginfigure 'mf-mem' 'https://imgs.xkcd.com/comics/pointers.png' 'Pointers, [XKCD 138](https://xkcd.com/138/)' %}
-
 This page will provide any information for the class that I go over in recitation. Please check back for updates regularly, especially if you miss a recitation.
+
+## Course Description
+A *Computer System* is comprised of both hardware and software working in concert to accomplish useful work. In this course, we will explore the issues of programming a real computer system by examining the abstractions, interfaces, and design decisions that influence the way that software runs. This includes the role the Operating System has in communication and resource management.
+
+The perspective we will take is one of the lifecycle of a program from implementation to execution. The simple act of compiling and running a program, a sequence of events we often take for granted, is a complex interaction of many different components that work together to manage the computer’s resources and perform the desired task. Together, these components form a working computer system.
 
 ## Recitation Information
 
@@ -30,15 +31,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
 **TA**: Shinwoo Kim  
 **E-mail**: [`shinwookim@pitt.edu`](mailto:shiwookim@pitt.edu)  
 **Home Page:** [{{site.url}}{{site.baseurl}}]({{site.url}}{{site.baseurl}}/)  
-**TA Office Hours** (See [Canvas](https://canvas.pitt.edu/))
-{: .mb-0}
-
-- Monday 1:00PM - 2:30PM in 5712 SENSQ
-- Tuesday 3:00PM - 3:45PM in 5712 SENSQ
-- Wednesday 1:00PM - 2:30PM in 5710 SENSQ
-- Thursday 1:00PM - 3:45PM in 6408 SENSQ
-- Friday 11:00AM - 12:00PM in 5806 SENSQ
-- By appointment (via Zoom or in-person): message me
+**TA Office Hours:** [Spring 2023 Office Hours]({{ "/teaching/#OH" | absolute_url}})
 
 **Note when E-mailing:**
 {: .mb-0}

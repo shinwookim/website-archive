@@ -16,13 +16,14 @@ nav-links:
     url: /teaching/CS0441-2234/#getting-help
 ---
 
-## Course Description
+
 
 Welcome to **CS 0441**, **Discrete Structures for Computer Science**, for the Fall 2022 term!{% marginfigure 'mf-id-whatever' 'https://www.mheducation.com/cover-images/Jpeg_400-high/125967651X.jpeg' '**Course Textbook:** Kenneth H. Rosen. *Discrete Mathematics and Its Applications*, 8th Edition, McGraw Hill. **A copy of the text is required for homework.**' %}.
 
+This page will provide any information for the class that I go over in recitation. Please check back for updates regularly, especially if you miss a recitation.
+## Course Description
 The purpose of this course is to understand and use (abstract) discrete structures that are backbones of computer science. In particular, this class is meant to introduce logic, proofs, sets, relations, functions, counting, and probability, with an emphasis on applications in computer science.
 
-This page will provide any information for the class that I go over in recitation. Please check back for updates regularly, especially if you miss a recitation.
 
 ## Recitation Information
 
@@ -37,18 +38,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu)_ {%marginno
 **TA**: Shinwoo Kim  
 **E-mail**: [`shinwookim@pitt.edu`](mailto:shiwookim@pitt.edu)  
 **Home Page:** [{{site.url}}{{site.baseurl}}]({{site.url}}{{site.baseurl}}/)  
-**TA Office Hours** (See [Canvas](https://canvas.pitt.edu/))
-
-- Tuesday 1 PM - 2PM in 5710 SENSQ; 3 PM - 3:45PM in 5712 SENSQ
-- Thursday 1 PM - 3:45PM in 6408 SENSQ
-- By appointment (via Zoom or in-person): message me
-
-**Additional Office Hours** (shared with CS 449 students):
-
-- Monday 1PM - 2:30PM @ 5712 SENSQ<sup>†</sup>
-- Wednesday 1PM - 2:30PM @ 5710 SENSQ<sup>†</sup>
-
-<sup>† These are office hours for my CS0449 students. You are more than welcome to attend these, however if there are students from my 449 class, I will prioritize my attention to them first</sup>
+**TA Office Hours:** [Spring 2023 Office Hours]({{ "/teaching/#OH" | absolute_url}})
 
 **Note when E-mailing:**
 {: .mb-0}
