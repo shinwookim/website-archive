@@ -45,7 +45,9 @@ SNAP is a pittsburg-based organization which focuses on promoting engagement, aw
     </a>
     <p style="font-size: 80%" class="my-0">Click image to view larger version</p>
     <div class="btn-group flex-wrap my-3" role="group" aria-label="SNAP-Links">
-      <button type="button disabled" class="btn btn-primary text-light" disabled href="#">GitHub</button>
+    <button type="button" class="btn btn-primary text-light" data-bs-toggle="popover" data-bs-content="Top popover">
+  GitHub
+  </button>
     </div>
   </div>
   <div class="col-8" markdown="1">

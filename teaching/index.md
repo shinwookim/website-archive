@@ -17,7 +17,18 @@ hide_title: true
 
 ---
 
-{%include_relative SP23_OH.html%}
+
+<div class="text-center" markdown="1">
+<h3 id="OH">Spring 2023 Office Hours</h3>
+<a href="#" data-bs-toggle="collapse" data-bs-target="#collapseOH" aria-expanded="false" aria-controls="collapseOH">Click here to view my office hours schedule</a>
+<div class="collapse" id="collapseOH">
+  <div class="card card-body text-start">
+    {%include_relative SP23_OH.html%}
+  </div>
+</div>
+</div>
+
+
 
 ---
 ## Previous Courses
