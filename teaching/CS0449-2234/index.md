@@ -50,111 +50,111 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
 <table class="table-hover">
   <thead>
     <tr>
-      <th scope="col" class="text-center">Week</th>
-      <th scope="col" class="text-center">Date</th>
-      <th scope="col">Topic</th>
-      <th scope="col" class="text-center">Handout</th>
+      <th class="text-center">Week</th>
+      <th class="text-center">Date</th>
+      <th>Topic</th>
+      <th class="text-center">Handout</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td scope="row" class="text-center">00</td>
+      <td class="text-center">00</td>
       <td class="text-center">January 13</td>
       <td>**No Recitation**</td>
       <td class="text-center">n/a</td>
     </tr>
     <tr>
-      <td scope="row" class="text-center">01</td>
+      <td class="text-center">01</td>
       <td class="text-center">January 20</td>
       <td>**Hello Lab**<br>Getting up to speed with the environment</td>
       <td class="text-center">[slides](rec01.pptx) <br> [`hello.c`](code/hello.c.html)</td>
     </tr>
     <tr>
-      <td scope="row" class="text-center">02</td>
+      <td class="text-center">02</td>
       <td class="text-center">January 27</td>
       <td>**Data & Pointer Lab**<br>Practice with data and input</td>
       <td class="text-center">[slides](rec02.pptx) <br> [VS Code guide](vs_code.pdf) <br> [`scan.c`](code/scan.c.html)</td>
     </tr>
     <tr>
-      <td scope="row" class="text-center">03</td>
+      <td class="text-center">03</td>
       <td class="text-center">February 3 </td>
       <td>**Project 1: BMP Steganography**<br>Hiding data and reading files</td>
       <td class="text-center">[slides](rec03.pdf)</td>
     </tr>
     <tr>
-      <td scope="row" class="text-center">04</td>
+      <td class="text-center">04</td>
       <td class="text-center">February 10</td>
       <td>**Pointer Lab**<br>Looking at pointers</td>
       <td class="text-center">[slides](rec04.pdf)</td>
     </tr>
     <tr>
-      <td scope="row" class="text-center">05</td>
+      <td class="text-center">05</td>
       <td class="text-center">February 17</td>
       <td>**Queue Lab**<br>Linking those nodes</td>
       <td class="text-center">[slides](rec05.pdf)</td>
     </tr>
     <tr>
-      <td scope="row" class="text-center">06</td>
+      <td class="text-center">06</td>
       <td class="text-center">**Wednesday, February** 22<br>5:45 PM (5502 SENSQ)</td>
       <td>**Project 2: Implementing a Heap Allocator**<br>Malloc Project Boot Camp</td>
       <td class="text-center">[slides](Project_2_Help_Session.pdf)<br>[malloc_example.c](code/malloc_example.c.html)</td>
     </tr>
     <tr>
-      <td scope="row" class="text-center">06</td>
+      <td class="text-center">06</td>
       <td class="text-center">February 24</td>
       <td>**Project 2: Implementing a Heap Allocator**<br>Implementing Phase 2 & 3</td>
       <td class="text-center">[slides](rec06.pdf)</td>
     </tr>
     <tr>
-      <td scope="row" class="text-center">07</td>
+      <td class="text-center">07</td>
       <td class="text-center">March 3</td>
       <td>**Assembly Lab**<br>Investigating the code</td>
       <td class="text-center">[slides](rec07.pdf)<br>[Demo code (GitHub)](https://github.com/shinwookim/ASM-demo)<br/>[At&T x86 Syntax](https://en.wikibooks.org/wiki/X86_Assembly/GNU_assembly_syntax)</td>
     </tr> 
     <!--tr>
-      <td scope="row" class="text-center">08</td>
+      <td class="text-center">08</td>
       <td class="text-center">March 10</td>
       <td>**Spring Break <br> No Recitation**</td>
       <td class="text-center">-</td>
     </!--tr>
     <tr>
-      <td scope="row" class="text-center">09</td>
+      <td class="text-center">09</td>
       <td class="text-center">March 17</td>
       <td>TBA</td>
       <td class="text-center">-</td>
     </tr>
     <tr>
-      <td scope="row" class="text-center">10</td>
+      <td class="text-center">10</td>
       <td class="text-center">March 24</td>
       <td>TBA</td>
       <td class="text-center">-</td>
     </tr>
     <tr>
-      <td scope="row" class="text-center">11</td>
+      <td class="text-center">11</td>
       <td class="text-center">March 31</td>
       <td>TBA</td>
       <td class="text-center">-</td>
     </tr>
     <tr>
-      <td scope="row" class="text-center">12</td>
+      <td class="text-center">12</td>
       <td class="text-center">April 7</td>
       <td>TBA</td>
       <td class="text-center">-</td>
     </tr>
     <tr>
-      <td scope="row" class="text-center">13</td>
+      <td class="text-center">13</td>
       <td class="text-center">April 14</td>
       <td>TBA</td>
       <td class="text-center">-</td>
     </tr>
     <tr>
-      <td scope="row" class="text-center">14</td>
+      <td class="text-center">14</td>
       <td class="text-center">April 21</td>
       <td>Final Recitation <br> TBA</td>
       <td class="text-center">-</td>
     </tr>
     <tr>
-      <td scope="row" class="text-center">14</td>
+      <td class="text-center">14</td>
       <td class="text-center">April 28</td>
       <td>**Finals Week <br> No Recitation**</td>
       <td class="text-center">-</td>
