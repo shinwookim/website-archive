@@ -7,8 +7,8 @@ permalink: /projects/
 <div class="row" markdown="1">
 ## TouchTheInvisible
   <div class="col-4 text-center">
-    <a href="../assets/tti_screengrab.png">
-      <img src="../assets/tti_screengrab.png" alt="Screenshot of Touch The Invisible's Website" class="w-100">
+    <a href="../assets/img/tti_screengrab.png">
+      <img src="../assets/img/tti_screengrab.png" alt="Screenshot of Touch The Invisible's Website" class="w-100">
     </a>
     <p style="font-size: 80%" class="my-0">Click image to view larger version</p>
     <div class="btn-group flex-wrap my-3" role="group" aria-label="TTI-Links">
@@ -24,8 +24,8 @@ Visualizing macromolecular systems cam help students better understand the basic
 <div class="row" markdown="1">
 ## Special Needs Assistance Program
   <div class="col-4 text-center">
-    <a href="../assets/snap_screengrab.png">
-      <img src="../assets/snap_screengrab.png" alt="Screenshot of SNAP's Website" class="w-100">
+    <a href="../assets/img/snap_screengrab.png">
+      <img src="../assets/img/snap_screengrab.png" alt="Screenshot of SNAP's Website" class="w-100">
     </a>
     <p style="font-size: 80%" class="my-0">Click image to view larger version</p>
     <div class="btn-group flex-wrap my-3" role="group" aria-label="SNAP-Links">
@@ -40,8 +40,8 @@ SNAP is a pittsburg-based organization which focuses on promoting engagement, aw
 <div class="row" markdown="1">
 ## Assembly-based Adventure Game
   <div class="col-4 text-center">
-    <a href="../assets/adventure-game.png">
-      <img src="../assets/adventure-game.png" alt="Screenshot the Adventure Game" class="w-100">
+    <a href="../assets/img/adventure-game.png">
+      <img src="../assets/img/adventure-game.png" alt="Screenshot the Adventure Game" class="w-100">
     </a>
     <p style="font-size: 80%" class="my-0">Click image to view larger version</p>
     <div class="btn-group flex-wrap my-3" role="group" aria-label="SNAP-Links">

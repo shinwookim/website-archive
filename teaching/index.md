@@ -5,7 +5,6 @@ published: true
 hide_title: true
 ---
 
-<h1>Teaching</h1>
 <figure class="figure" style="text-indent:-1.5em;">
   <img src="https://www.cs.pitt.edu/sites/default/files/home-display-img/img_0760.jpg" class="figure-img img-fluid rounded" alt="Picture of Sennott Square">
   <figcaption class="figure-caption ">Sennott Square, Home of the CS Department @ Pitt</figcaption>

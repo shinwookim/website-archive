@@ -9,7 +9,7 @@ group :jekyll_plugins do
   gem "jekyll-feed"
 # gem "jekyll-paginate", "~> 1.1.0"
   gem "jekyll-sitemap"
-  gem "jekyll-spaceship", git: "https://github.com/jeffreytse/jekyll-spaceship.git"
+  gem "jekyll-spaceship"
   gem 'rouge'
   gem 'jekyll-seo-tag'
 
