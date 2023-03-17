@@ -111,24 +111,24 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
       <td>**Assembly Lab**<br>Investigating the code</td>
       <td class="text-center">[slides](rec07.pdf)<br>[Demo code (GitHub)](https://github.com/shinwookim/ASM-demo)<br/>[At&T x86 Syntax](https://en.wikibooks.org/wiki/X86_Assembly/GNU_assembly_syntax)</td>
     </tr> 
-    <!--tr>
+    <tr>
       <td class="text-center">08</td>
       <td class="text-center">March 10</td>
       <td>**Spring Break <br> No Recitation**</td>
-      <td class="text-center">-</td>
-    </!--tr>
+      <td class="text-center">n/a</td>
+    </tr>
     <tr>
       <td class="text-center">09</td>
       <td class="text-center">March 17</td>
-      <td>TBA</td>
-      <td class="text-center">-</td>
+      <td>**Project 3: Assembly bombs and attack** <br />Understanding the assembly</td>
+      <td class="text-center">[slides](rec08.pdf)</td>
     </tr>
-    <tr>
+    <!--tr>
       <td class="text-center">10</td>
       <td class="text-center">March 24</td>
       <td>TBA</td>
       <td class="text-center">-</td>
-    </tr>
+    </!--tr>
     <tr>
       <td class="text-center">11</td>
       <td class="text-center">March 31</td>
