@@ -123,18 +123,18 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
       <td>**Project 3: Assembly bombs and attack** <br />Understanding the assembly</td>
       <td class="text-center">[slides](rec08.pdf)</td>
     </tr>
-    <!--tr>
+    <tr>
       <td class="text-center">10</td>
       <td class="text-center">March 24</td>
-      <td>TBA</td>
+      <td>**Process Lab**</td>
       <td class="text-center">-</td>
-    </!--tr>
-    <tr>
+    </tr>
+    <!--tr>
       <td class="text-center">11</td>
       <td class="text-center">March 31</td>
       <td>TBA</td>
       <td class="text-center">-</td>
-    </tr>
+    </!--tr>
     <tr>
       <td class="text-center">12</td>
       <td class="text-center">April 7</td>
