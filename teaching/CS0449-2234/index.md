@@ -126,8 +126,8 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
     <tr>
       <td class="text-center">10</td>
       <td class="text-center">March 24</td>
-      <td>**Process Lab**</td>
-      <td class="text-center">-</td>
+	    <td>**Process Lab**:<br />The fork-exec model & Process management</td>
+      <td class="text-center">[slides]()</td>
     </tr>
     <!--tr>
       <td class="text-center">11</td>
