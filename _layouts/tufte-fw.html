@@ -3,12 +3,11 @@
 
 <head>
   {% include metadata.html %} {% include scripts.html %}
-  <!--link rel="stylesheet" href='{{"/assets/css/style.css" |  absolute_url }}' /-->
-  <!--link rel="stylesheet" href=' {{"/assets/css/tufte.css" | absolute_url }}' /-->
-  <link rel="stylesheet" href=' {{"/assets/css/tufte-og.css" | absolute_url }}' />
+  <link rel="stylesheet" href='{{"/assets/css/style.css" |  absolute_url }}' />
+  <link rel="stylesheet" href=' {{"/assets/css/tufte.css" | absolute_url }}' />
 </head>
 
-<body data-bs-spy="scroll" rootMargin="0px 100px 0%">
+<body class="full-width" data-bs-spy="scroll" rootMargin="0px 100px 0%">
   <!--- Header and nav template site-wide -->
   <div class="text-center">
     {% if page.nav %}
@@ -30,13 +29,13 @@
     </header>
     {% else %}
     <header>
-      <nav id="navbar"><a href="{{site.baseurl}}/">Shinwoo Kim</a></nav>
+      <nav><a href="{{site.baseurl}}/">Shinwoo Kim</a></nav>
     </header>
     {% endif %}
   </div>
   <div>
     <article class="">
-      <h1 class="title my-0">{{page.title}}</h1>
+      <h1 class="title mb-0">{{page.title}}</h1>
       <p class="subtitle mb-0">{{page.subtitle}}</p>
       {{content}}
       <button onclick="topFunction()" id="top-btn" class="btn btn-dark d-print-none" title="Go to top">

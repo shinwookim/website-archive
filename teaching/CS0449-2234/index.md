@@ -129,12 +129,12 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
 	    <td>**Process Lab**:<br />The fork-exec model & Process management</td>
       <td class="text-center">[slides](rec09.pdf)<br />[Solutions to In-class Problems](rec09-soln.html)</td>
     </tr>
-    <!--tr>
+    <tr>
       <td class="text-center">11</td>
       <td class="text-center">March 31</td>
-      <td>TBA</td>
-      <td class="text-center">-</td>
-    </!--tr>
+      <td>Project 4: The Shell<br>After the bomb, shell shock!</td>
+      <td class="text-center">[slides](rec10.pdf)<br/>[strtok.c](code/strtok.c.html)</td>
+    </tr>
     <tr>
       <td class="text-center">12</td>
       <td class="text-center">April 7</td>
@@ -154,7 +154,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
       <td class="text-center">-</td>
     </tr>
     <tr>
-      <td class="text-center">14</td>
+      <td class="text-center">15</td>
       <td class="text-center">April 28</td>
       <td>**Finals Week <br> No Recitation**</td>
       <td class="text-center">-</td>
