@@ -47,7 +47,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
 <h2 id="handouts">Schedule <em>&</em> Handout</h2> {% marginnote "video" "If you require access to Zoom, or the recitation recording, please contact me **prior** to the start of recitation"%}
 
 <div class="table-responsive">
-<table class="table-hover">
+<table class="table table-hover">
   <thead>
     <tr>
       <th class="text-center">Week</th>
