@@ -9,6 +9,5 @@ Below is the syntax highlighted version of [`scan.c`](scan.c).
 {% include_relative scan.c %}
 ```
 
-<style>pre{border:solid; background: #ffffff}</style>
 
 {% include code_copy.html %}

@@ -67,13 +67,13 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
       <td class="text-center">01</td>
       <td class="text-center">January 20</td>
       <td>**Hello Lab**<br>Getting up to speed with the environment</td>
-      <td class="text-center">[slides](rec01.pptx) <br> [`hello.c`](code/hello.c.html)</td>
+      <td class="text-center">[slides](rec01.pptx) <br> [hello.c](code/hello.c.html)</td>
     </tr>
     <tr>
       <td class="text-center">02</td>
       <td class="text-center">January 27</td>
       <td>**Data & Pointer Lab**<br>Practice with data and input</td>
-      <td class="text-center">[slides](rec02.pptx) <br> [VS Code guide](vs_code.pdf) <br> [`scan.c`](code/scan.c.html)</td>
+      <td class="text-center">[slides](rec02.pptx) <br> [VS Code guide](vs_code.pdf) <br> [scan.c](code/scan.c.html)</td>
     </tr>
     <tr>
       <td class="text-center">03</td>
@@ -95,7 +95,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
     </tr>
     <tr>
       <td class="text-center">06</td>
-      <td class="text-center">**Wednesday, February** 22<br>5:45 PM (5502 SENSQ)</td>
+      <td class="text-center">**Wednesday**<br/>February 22 5:45 PM<br/>(5502 SENSQ)</td>
       <td>**Project 2: Implementing a Heap Allocator**<br>Malloc Project Boot Camp</td>
       <td class="text-center">[slides](Project_2_Help_Session.pdf)<br>[malloc_example.c](code/malloc_example.c.html)</td>
     </tr>

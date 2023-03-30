@@ -3,8 +3,10 @@
 @import "tufte/fonts-og";
 
 
+
 html {
-    font-size: 15px
+    font-size: 13px;
+    font-weight: 400;
 }
 
 body {
@@ -19,13 +21,19 @@ body {
     counter-reset: sidenote-counter
 }
 
+
+/*
 @media (prefers-color-scheme:dark) {
     body {
         background-color: #151515;
         color: #ddd
     }
-}
-
+    $contrast-color: #ddd;
+    th,td {
+    color: #ddd;
+    }
+  }
+*/
 h1 {
     font-weight: 400;
     margin-top: 4rem;
@@ -191,7 +199,8 @@ figure.fullwidth figcaption {
 a:link,
 a:visited {
     //color: $contrast-color;
-    color: black;
+    color: inherit;
+    transition: all 0.5s;
 }
 
 .no-tufte-underline:link {
@@ -212,6 +221,9 @@ a:link {
     text-shadow: .03em 0 #fffff8, -.03em 0 #fffff8, 0 .03em #fffff8, 0 -.03em #fffff8, .06em 0 #fffff8, -.06em 0 #fffff8, .09em 0 #fffff8, -.09em 0 #fffff8, .12em 0 #fffff8, -.12em 0 #fffff8, .15em 0 #fffff8, -.15em 0 #fffff8;
     background-position: 0 93%, 100% 93%, 0 93%
 }
+a:link:hover {
+    color: #9a9671;
+}
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 
@@ -221,7 +233,7 @@ a:link {
         background-position-y: 87%, 87%, 87%
     }
 }
-
+/*
 @media (prefers-color-scheme:dark) {
 
     .hover-tufte-underline:hover,
@@ -230,7 +242,7 @@ a:link {
         text-shadow: .03em 0 #151515, -.03em 0 #151515, 0 .03em #151515, 0 -.03em #151515, .06em 0 #151515, -.06em 0 #151515, .09em 0 #151515, -.09em 0 #151515, .12em 0 #151515, -.12em 0 #151515, .15em 0 #151515, -.15em 0 #151515
     }
 }
-
+*/
 a:link::-moz-selection,
 a:link::selection {
     text-shadow: .03em 0 #b4d5fe, -.03em 0 #b4d5fe, 0 .03em #b4d5fe, 0 -.03em #b4d5fe, .06em 0 #b4d5fe, -.06em 0 #b4d5fe, .09em 0 #b4d5fe, -.09em 0 #b4d5fe, .12em 0 #b4d5fe, -.12em 0 #b4d5fe, .15em 0 #b4d5fe, -.15em 0 #b4d5fe;
@@ -461,6 +473,10 @@ body footer {
     padding-top: 2rem;
 }
 
+nav.group a.active {
+    color: black !important;
+}
+
 nav.group a.active:before {
     content: "\0003c\000a0";
 }
@@ -530,7 +546,11 @@ ul.footer-links li {
 }
 
 // End of Nav and Footer styling area
-
+article ul li::marker {
+    content: "\2014";
+    position: absolute;
+    margin-left: -20px;
+  }
 
 /*-- Table styling section - For Tufte-Jekyll, booktabs style is default for Markdown tables  --*/
 
@@ -633,8 +653,12 @@ caption {
 
 td a{
     text-shadow: none !important;
+    color: $contrast-color !important;
+    background: none !important;
 }
-
+td a:hover{
+    color: #9a9671 !important;
+}
 /* -- End of Table Styling section --*/
 @import "../node_modules/bootstrap/scss/tufte+bs.scss";
 
@@ -660,3 +684,5 @@ td a{
     right: 30px;
     z-index: 99;
 }
+
+@import "tufte/syntax-highlighting";

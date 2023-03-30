@@ -9,6 +9,4 @@ Below is the syntax highlighted version of [`print.c`](print.c).
 {% include_relative print.c %}
 ```
 
-<style>pre{border:solid; background: #ffffff}</style>
-
 {% include code_copy.html %}
