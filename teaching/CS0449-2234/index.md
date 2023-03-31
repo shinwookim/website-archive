@@ -109,7 +109,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
       <td class="text-center">07</td>
       <td class="text-center">March 3</td>
       <td>**Assembly Lab**<br>Investigating the code</td>
-      <td class="text-center">[slides](rec07.pdf)<br>[Demo code (GitHub)](https://github.com/shinwookim/ASM-demo)<br/>[At&T x86 Syntax](https://en.wikibooks.org/wiki/X86_Assembly/GNU_assembly_syntax)</td>
+      <td class="text-center">[slides](rec07.pdf)<br>[Demo code (GitHub)](https://github.com/shinwookim/ASM-demo)<br/>[AT&T x86 Syntax](https://en.wikibooks.org/wiki/X86_Assembly/GNU_assembly_syntax)</td>
     </tr> 
     <tr>
       <td class="text-center">08</td>
@@ -126,13 +126,13 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
     <tr>
       <td class="text-center">10</td>
       <td class="text-center">March 24</td>
-	    <td>**Process Lab**:<br />The fork-exec model & Process management</td>
+	    <td>**Process Lab**<br />The fork-exec model & Process management</td>
       <td class="text-center">[slides](rec09.pdf)<br />[Solutions to In-class Problems](rec09-soln.html)</td>
     </tr>
     <tr>
       <td class="text-center">11</td>
       <td class="text-center">March 31</td>
-      <td>Project 4: The Shell<br>After the bomb, shell shock!</td>
+      <td>**Project 4**: The Shell<br>After the bomb, shell shock!</td>
       <td class="text-center">[slides](rec10.pdf)<br/>[strtok.c](code/strtok.c.html)</td>
     </tr>
     <tr>
@@ -159,7 +159,6 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
       <td>**Finals Week <br> No Recitation**</td>
       <td class="text-center">-</td>
     </tr>
-    -->
   </tbody>
 </table>
 </div>
