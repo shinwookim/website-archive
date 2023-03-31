@@ -9,5 +9,18 @@ Below is the syntax highlighted version of [`hello.c`](hello.c). {%marginnote "l
 {% include_relative hello.c %}
 ```
 
-
 {% include code_copy.html %}
+
+## Output
+``` output
+$ ./hello
+Hello world! x is currently 2"
+
+```
+<style>
+    .language-output{
+        background-color: black;
+        color: white;
+        padding: 0.5em;
+    }
+</style>
