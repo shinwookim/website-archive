@@ -1,6 +1,6 @@
 ---
 layout: tufte
-title: hello.c
+title: <code>hello.c</code>
 ---
 [Back](./../)   
 Below is the syntax highlighted version of [`hello.c`](hello.c). {%marginnote "lab-link" "Code from [Lab 0](https://cs0449.gitlab.io/sp2023/labs/00/)"%}

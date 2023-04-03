@@ -1,6 +1,6 @@
 ---
 layout: tufte
-title: scan.c
+title: <code>scan.c</code>
 ---
 [Back](./../)  
 Below is the syntax highlighted version of [`scan.c`](scan.c).

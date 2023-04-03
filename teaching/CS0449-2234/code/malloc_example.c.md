@@ -1,6 +1,6 @@
 ---
 layout: tufte
-title: malloc_example.c
+title: <code>malloc_example.c</code>
 ---
 [Back](./../)  
 Below is the syntax highlighted version of [`malloc_example.c`](malloc_example.c).
