@@ -170,6 +170,10 @@ blockquote p {
   margin-right: 40px;
 }
 
+li p {
+  width: 100%;
+}
+
 blockquote footer {
   width: 55%;
   font-size: 1.1rem;
@@ -376,7 +380,7 @@ h6 > code {
 
 pre > code {
   font-size: 1.2rem;
-  width: 52.5%;
+  //width: 52.5%;
   margin-left: 2.5%;
   overflow-x: auto;
   display: block;
