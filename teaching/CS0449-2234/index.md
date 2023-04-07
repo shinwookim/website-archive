@@ -138,8 +138,9 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
     <tr>
       <td class="text-center">12</td>
       <td class="text-center">April 7</td>
-      <td>TBA</td>
-      <td class="text-center">-</td>
+      <td>**Multi-file Development:**<br/>Writing Makefiles
+</td>
+      <td class="text-center">[lab handout](Makefile-lab.html)<br/>[slides](rec11.pdf)</td>
     </tr>
     <tr>
       <td class="text-center">13</td>

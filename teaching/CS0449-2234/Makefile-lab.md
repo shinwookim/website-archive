@@ -12,6 +12,14 @@ Up to this point, you've been writing your entire program in a single file. Howe
 In this tutorial, you will learn how to manage a project that is split up across several files. As you've seen in lecture, multiple files can be compiled independently and then merged together in a process called **linking**. Technically, these two phases use different tools behind the scenes. However, though, the compilers will often hide that process and invoke it for us.
 
 Here, you will create some utility functions in a separate file and then call them from a main C file. You will learn how to compile each independently, and then learn how to use **`make`** which is a tool which helps us manage and simplify the build process. You should already be familiar with using make from past programming assignments. However, now, you will learn to write your own Makefiles.
+{%marginnote "cheatsheet" "[Makefile Cheat Sheet](Makefiles.html)"%}
+
+## Objective
+- Create a C program (`main.c`) which prints out $5!$.
+- The logic for $!$ should be defined as a function `factorial(int n)` stored in`util.c`.
+- Your `main.c` should *link* to the `util.c`
+- You should create a `Makefile` which allows for easy compilation of your program. 
+
 
 ## Procedure
 1. Login to `thoth.cs.pitt.edu` via SSH {%sidenote "step-1" "`ssh <username>@thoth.cs.pitt.edu`" %}
