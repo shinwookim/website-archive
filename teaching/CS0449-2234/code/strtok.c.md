@@ -1,6 +1,6 @@
 ---
 layout: tufte
-title: strtok.c
+title: <code>strtok.c</code>
 ---
 [Back](./../)  
 Below is the syntax highlighted version of [`strtok.c`](strtok.c).

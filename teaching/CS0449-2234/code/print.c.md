@@ -1,6 +1,6 @@
 ---
 layout: tufte
-title: print.c
+title: <code>print.c</code>
 ---
 [Back](./../)  
 Below is the syntax highlighted version of [`print.c`](print.c).

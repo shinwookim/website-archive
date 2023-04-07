@@ -59,6 +59,33 @@ h3 {
   line-height: 1;
 }
 
+h4 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.65rem;
+  margin-top: 2rem;
+  margin-bottom: 1.4rem;
+  line-height: 1;
+}
+
+h5 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.75rem;
+  margin-top: 2rem;
+  margin-bottom: 1.4rem;
+  line-height: 1;
+}
+
+h6 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.45rem;
+  margin-top: 2rem;
+  margin-bottom: 1.4rem;
+  line-height: 1;
+}
+
 hr {
   display: block;
   height: 1px;
@@ -335,7 +362,10 @@ pre > code {
 
 h1 > code,
 h2 > code,
-h3 > code {
+h3 > code,
+h4 > code,
+h5 > code,
+h6 > code {
   font-size: 0.8em;
 }
 
@@ -558,7 +588,7 @@ ul.footer-links li {
 
 // End of Nav and Footer styling area
 article ul li::marker {
-  content: "\2014";
+  content: "- ";
   position: absolute;
   margin-left: -20px;
 }
