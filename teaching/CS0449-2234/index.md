@@ -145,8 +145,8 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
     <tr>
       <td class="text-center">13</td>
       <td class="text-center">April 14</td>
-      <td>TBA</td>
-      <td class="text-center">-</td>
+      <td>Multithreading & Synchronization</td>
+      <td class="text-center">[slides](https://docs.google.com/presentation/d/e/2PACX-1vQRY_WALXixyTeEOCF6g--PUvhuEui7H6si2SMGct2gDzqkqjkwbMEwDdk0U7OvlNTMuP01-eiMfn_W/pub?start=false&loop=false&delayms=60000)</td>
     </tr>
     <tr>
       <td class="text-center">14</td>

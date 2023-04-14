@@ -72,15 +72,15 @@ Click the date for annoucement slides and see footnotes for important recitation
 | **5**  | 02/07/2023 |                                  Homework #3                                  |                                                                       |
 | **6**  | 02/14/2023 |                                  Homework #4                                  | [Extra Practice](review-2.html) ([Solutions](review-2-solution.html)) |
 | **7**  | 02/21/2023 |                        Homework #5 + Mid-term Practice                        |                                                                       |
-| **8**  | 02/28/2023 |Mid-term Exam Review|                                                                       |
+| **8**  | 02/28/2023 |                             Mid-term Exam Review                              |                                                                       |
 | **9**  | 03/07/2023 |                       **Spring Break - No Recitation**                        |                                                                       |
-| **10** | 03/14/2023 |Chapter 6 Review|                                                                       |
-| **11** | 03/21/2023 |Homework #6|                                                                       |
-| **12** | 03/28/2023 |                                                                               |                                                                       |
-| **13** | 04/04/2023 |                                                                               |                                                                       |
-| **14** | 04/11/2023 |                                                                               |                                                                       |
-| **15** | 04/18/2023 |                                                                               |                                                                       |
-| **16** | 04/25/2023 |                                                                               |                                                                       |
+| **10** | 03/14/2023 |                               Chapter 6 Review                                |                                                                       |
+| **11** | 03/21/2023 |                                  Homework #6                                  |                                                                       |
+| **12** | 03/28/2023 |                                  Homework #7                                  |                                                                       |
+| **13** | 04/04/2023 |                           Homework #7 + Homework #8                           |                                                                       |
+| **14** | 04/11/2023 |                                  Homework #8                                  |                                                                       |
+| **15** | 04/18/2023 |                              Final Exam Practice                              |                                                                       |
+| **16** | 04/25/2023 |                        Finals Week - **No Recitation**                        |                                                                       |
 {: .table-hover}
 
 </div>
