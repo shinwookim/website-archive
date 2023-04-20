@@ -151,7 +151,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
     <tr>
       <td class="text-center">14</td>
       <td class="text-center">April 21</td>
-      <td>Final Recitation <br> TBA</td>
+      <td>Final Recitation <br>Final Exam Review + Course Review</td>
       <td class="text-center">-</td>
     </tr>
     <tr>

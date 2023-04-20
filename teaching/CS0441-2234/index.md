@@ -16,7 +16,7 @@ nav-links:
     url: /teaching/CS0441-2234/#getting-help
 ---
 
-
+<center><p class="highlight"><strong>This webpage is no longer maintained, and serves only archival purposes</strong></p></center>
 
 Welcome to **CS 0441**, **Discrete Structures for Computer Science**, for the Fall 2022 term!{% marginfigure 'mf-id-whatever' 'https://www.mheducation.com/cover-images/Jpeg_400-high/125967651X.jpeg' '**Course Textbook:** Kenneth H. Rosen. *Discrete Mathematics and Its Applications*, 8th Edition, McGraw Hill. **A copy of the text is required for homework.**' %}.
 
@@ -80,7 +80,7 @@ Click the date for annoucement slides and see footnotes for important recitation
 | **13** | 04/04/2023 |                           Homework #7 + Homework #8                           |                                                                       |
 | **14** | 04/11/2023 |                                  Homework #8                                  |                                                                       |
 | **15** | 04/18/2023 |                              Final Exam Practice                              |                                                                       |
-| **16** | 04/25/2023 |                        Finals Week - **No Recitation**                        |                                                                       |
+| **16** | 04/25/2023 |                        Finals Week <br> **No Recitation**                        |                                                                       |
 {: .table-hover}
 
 </div>
