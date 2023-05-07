@@ -30,6 +30,6 @@ permalink: /contact/
    <textarea class="form-control" id="msg" name="message" style="height: 10rem;"></textarea>
    <!-- Form submit button -->
    <div class="d-grid">
-      <button class="btn btn-primary btn-lg text-light" type="submit">Submit</button>
+      <button class="btn btn-dark mt-1 text-light" type="submit">Submit</button>
    </div>
 </form>

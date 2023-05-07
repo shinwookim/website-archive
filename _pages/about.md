@@ -34,7 +34,7 @@ My name is Shinwoo Kim, and I am a student at the [University of Pittsburgh](htt
         aria-expanded="false"
         aria-controls="currentPositions"
       >
-        <h5>Current Positions</h5>
+        <div class="fw-bold">Current Positions</div>
       </button>
     </div>
     <div
@@ -54,7 +54,7 @@ My name is Shinwoo Kim, and I am a student at the [University of Pittsburgh](htt
               aria-expanded="false"
               aria-controls="collapse{{item.id}}"
             >
-              <h5>{{item.title}}</h5>
+              <div>{{item.title}}</div>
             </button>
           </div>
           <div
@@ -93,7 +93,7 @@ My name is Shinwoo Kim, and I am a student at the [University of Pittsburgh](htt
         aria-expanded="false"
         aria-controls="previousPositions"
       >
-        <h5>Previous Positions</h5>
+        <div class="fw-bold">Previous Positions</div>
       </button>
     </div>
     <div
@@ -113,7 +113,7 @@ My name is Shinwoo Kim, and I am a student at the [University of Pittsburgh](htt
                 aria-expanded="false"
                 aria-controls="collapse{{item.id}}"
               >
-                <h5>{{item.title}}</h5>
+                <div>{{item.title}}</div>
               </button>
             </div>
             <div

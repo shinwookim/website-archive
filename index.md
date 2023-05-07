@@ -4,14 +4,7 @@ layout: default
 
 <img alt="Shinwoo Kim" src="./assets/img/hero-bg_small.webp" data-echo="./assets/img/hero-bg.webp" class="figure-img img-fluid rounded" loading="lazy" >
 
-<div class="text-center mb-1">
-  <a class="btn btn-outline-dark my-1" href="{{ '/about/' | prepend: site.baseurl }}">About Me</a>
-  <a class="btn btn-outline-dark my-1" href="{{ '/resume/' | prepend: site.baseurl }}">Résumé</a>
-  <a class="btn btn-outline-dark my-1" href="{{ '/teaching/' | prepend: site.baseurl }}">Courses I'm Teaching</a>
-  <a class="btn btn-outline-dark my-1" href="{{ '/contact/' | prepend: site.baseurl }}">Get in touch</a>
-</div>
-
-##### News
+##### What's New?
 {% for item in site.data.news %}
 {% if forloop.index < 4 %}
 <div class="row font-85">

@@ -1,13 +1,16 @@
 ---
 ---
+
 // Custom color variables
 $golden: #ffd700;
-$primary: #9a9671;
+$primary: #c0c0c0;
 
 @import "../_sass/tufte/fonts";
-$font-family-base: ETbook, "Libre Baskerville", Libre, Georgia, Times, serif;
-$font-size-base: 1.1rem;
-//$font-family-base: "Roboto", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+//$font-family-base: ETbook, Libre, Georgia, Times, serif;
+// $font-size-base: 1.1rem;
+$font-family-base: "IBM Plex Sans", "Roboto", sans-serif;
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../_sass/tufte/syntax-highlighting";
@@ -21,6 +24,16 @@ $font-size-base: 1.1rem;
 
 @import "global";
 
+nav.group a.active:before {
+  content: "\0003c\000a0";
+}
+nav.group a.active:after {
+  content: "\000a0\0003e";
+}
+
+.nav-link {
+  color: black;
+}
 
 nav.group a.active:before {
   content: "\0003c\000a0";
@@ -34,26 +47,15 @@ nav.group a.active:after {
   font-weight: normal;
 }
 
-.league {
-  font-family: "League Gothic", sans-serif;
-  font-weight: 700;
-  font-size: 2em;
-  line-height: 1em;
-}
-
-.nav-link {
-  /* font-family: "Helvetica", "Arial", sans-serif;*/
-  font-family: ETbook, "Libre Baskerville", Libre, Georgia, Times, serif;
-  color: #303539;
-  font-size: 1.2em;
-}
-
 .this {
   font-weight: bold;
 }
 
 body {
-  background-color: #fffff8 !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  // background-color: #fffff8 !important;
 }
 
 .anchor-link {
@@ -72,12 +74,6 @@ h4:hover .anchor-link,
 h5:hover .anchor-link,
 h6:hover .anchor-link {
   opacity: 1;
-}
-
-@for $i from 1 through 6 {
-  h#{7 - $i} {
-    text-indent: -1em;
-  }
 }
 
 #lightbox {

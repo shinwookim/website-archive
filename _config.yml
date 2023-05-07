@@ -28,23 +28,14 @@ plugins:
   - jekyll-seo-tag
   # - jekyll_picture_tag
 
-ftp_host: "thoth.cs.pitt.edu"
-ftp_dir: "/public/html"
-ftp_passive: false
-
-# optional
-ftp_port: 22 # default 21
-ftp_username: "shk148" # default read from stdin
 
 # Pages Path
-defaults:
-  - scope:
-      path: "_pages"
-    values:
-      permalink: /:basename:output_ext
 include:
   - _pages
-  - notes/CS0441
+
+collections:
+  projects:
+    output: true
 
 # jekyll-spaceship
 jekyll-spaceship:
