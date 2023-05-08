@@ -1,9 +1,13 @@
 ---
 layout: project
 title: BattleShip
-img: assets/img/tti_screengrab.png
-imgtext: Screenshot of Touch The Invisible's Website
-tags: R Machine&nbsp;Learning
-year: 2023
+img: assets/img/projects/Battleship.png
+imgtext: Screenshot of BattleShip
+tags: HTML CSS JavaScript
+year: 2023-2
 ---
-Visualizing macromolecular systems cam help students better understand the basic principles governing cell function (from storage of genetic information, to production of cellular components). In this project, we combine the crystallography data with 3D-printing technology to build scientifically accurate models of molecular complexes and use them in undergraduate biology and biochemistry courses. Through classroom applications we engage students in multisensorial learning experience at deep cognitive and perceptual levels that other types of molecular visualizations do not provide. When holding a molecular complex in your hand, you can study the 3D-shape from different angles, find the functional groups enabling specific intra and inter molecular binding, or examine grooves and crevices allowing the structural domains to combine in a macromolecular structure.
+This is an implementation of the classic board game [BattleShip](https://en.wikipedia.org/wiki/Battleship_(game)) with support for *hotseat* multiplayer (i.e., two
+players are using a laptop that they pass back and forth between turns). Rules are identical to the traditional BattleShip game with ten-by-ten grids and 3 game pieces (aircraft carrier, battleship, and a submarine). The entire game is written in vanilla JavaScript and DOM manipulation without any dependencies required.<span class="endmark"></span>
+
+**Code Available Upon Request**
+{: .text-center}

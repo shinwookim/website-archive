@@ -1,7 +1,27 @@
 ---
 layout: default
 ---
+
+<div class="mb-2">
+    {%for tag in page.tags %}
+    <span class="badge rounded-pill text-bg-info mx-1">{{tag}}</span>
+    {%endfor%}
+</div>
+
+
 <a href="{{site.baseurl}}/{{page.img}}">
-    <img src="{{site.baseurl}}/{{page.img}}" class="rounded mx-auto d-block w-50" alt="{{page.imgtext}}">
+    <img src="{{site.baseurl}}/{{page.img}}" class="rounded mx-auto d-block" alt="{{page.imgtext}}">
 </a>
 {{content}}
+
+
+<style>
+    img{
+        width: 35vh;
+        transition: 0.5s ease;
+    }
+    img:hover{
+        scale: 1.05;
+        
+    }
+</style>

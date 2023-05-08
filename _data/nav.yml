@@ -1,7 +1,5 @@
 main_link: /
 links:
-  - title: Home
-    url: /
   - title: About Me
     url: /about/
   - title: Résumé
