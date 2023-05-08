@@ -4,19 +4,22 @@ layout: default
 permalink: /projects/
 ---
 <!--a href="{{post.img}}"><img src="{{post.img}}" alt="{{post.imgtext}}" class="card-img-top"></!--a-->
-{% for post in site.projects %}
+{% assign sorted = site.projects | sort: 'year' | reverse %}
+{% for post in sorted %}
 {% cycle 'add row' : '<div class="row">', '' %}
-<div class="col-lg-6 mb-3 d-flex align-items-stretch" >
-  <div class="card bg-dark text-white">
-    <img src="{{site.baseurl}}/{{post.img}}" alt="{{post.imgtext}}" class="card-img-top">
-    <div class="card-img-overlay d-flex flex-column">
-      <div class="card-text fw-bold"><span class="mr-auto">{{post.title}}</span></div>
-      <div>{%for tag in post.tags %}<span class="badge rounded-pill text-bg-info mx-1">{{tag}}</span>{%endfor%}</div>
-      <a class="mt-auto text-light" href="{{post.url | absolute_url}}"><i class="fas fa-search-plus"></i>Read More</span></a>
+  <div class="col-lg-6 mb-3 d-flex align-items-stretch">
+    <div class="card bg-dark text-white">
+      <img src="{{site.baseurl}}/{{post.img}}" alt="{{post.imgtext}}" class="card-img-top">
+      <div class="card-img-overlay d-flex flex-column">
+        <div class="card-text fw-bold"><span class="mr-auto">{{post.title}}</span></div>
+        <div>{%for tag in post.tags %}<span class="badge rounded-pill text-bg-info mx-1">{{tag}}</span>{%endfor%}</div>
+        <a class="mt-auto text-light" href="{{post.url | absolute_url}}"><i class="fas fa-search-plus"></i>Read
+          More</span></a>
+      </div>
     </div>
   </div>
-</div>
-{% cycle 'end row' : '', '</div>' %}
+  {% cycle 'end row' : '', '
+</div>' %}
 {% endfor %}
 {% cycle 'end row' : '', '</div>', '</div>' %}
 <!--style>
@@ -30,14 +33,12 @@ permalink: /projects/
 </!--style-->
 
 <style>
-.card-img-overlay{
-  background: rgba(0,0,0,0.65);
-}
-.card-img-top {
-  height: 100%;
-  object-fit: cover;
-}
+  .card-img-overlay {
+    background: rgba(0, 0, 0, 0.65);
+  }
+
+  .card-img-top {
+    height: 100%;
+    object-fit: cover;
+  }
 </style>
-
-
-

@@ -1,8 +1,12 @@
 ---
 layout: project
 title: Custom Heap Allocator
-img: assets/img/tti_screengrab.png
-imgtext: Screenshot of Touch The Invisible's Website
-tags: HTML CSS JavaScript
+img: assets/img/projects/malloc.png
+imgtext: Screenshot of Driver Program for the Custom Heap Allocator
+tags: C Systems
+year: 2023-1
 ---
-Visualizing macromolecular systems cam help students better understand the basic principles governing cell function (from storage of genetic information, to production of cellular components). In this project, we combine the crystallography data with 3D-printing technology to build scientifically accurate models of molecular complexes and use them in undergraduate biology and biochemistry courses. Through classroom applications we engage students in multisensorial learning experience at deep cognitive and perceptual levels that other types of molecular visualizations do not provide. When holding a molecular complex in your hand, you can study the 3D-shape from different angles, find the functional groups enabling specific intra and inter molecular binding, or examine grooves and crevices allowing the structural domains to combine in a macromolecular structure.
+This project was a custom implementation of the dynamic storage allocator that can be used for C programs (i.e., a custom version of the `malloc()` and `free()` routines). This heap allocator implementation used a **first-fit** approach and supports coalescing multiple free blocks to minimize memory waste. To boost free block search performance, this implementation kept a separate linked lists of free blocks which lived on top of the list of all blocks. After the allocator was fully implemented, the scores were computed by comparing its performance (`thru` - throughput) and efficiency (`util` - utilization) against that of the GNU standard library's `malloc()` and `free()` routines using predefined trace fioes. Hence a score of 90/100 roughly corresponds to a 90% equivalent performance to the GNU standard library.<span class="endmark"></span>
+
+
+<center class="mb-3"><strong>Code Available Upon Request</strong><br/>(Hidden for Academic Integrity)</center>
