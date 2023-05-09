@@ -1,8 +1,12 @@
 ---
-title: Connect with Me
+title: Contact Me
 layout: default
 permalink: /contact/
 ---
+
+---
+
+## Connect with Me on Social Media
 
 <div class="text-center mb-4 lead">
    <a class="social-icon" href="mailto:{{ site.email }}"><i class="fas fa-envelope"></i></a>
@@ -13,7 +17,7 @@ permalink: /contact/
 </div>
 
 ---
-
+## Send Me a Message
 <form id="contactForm" action="https://formspree.io/f/xwkagvap" method="POST">
    <div class="row">
       <div class="col">
@@ -33,3 +37,5 @@ permalink: /contact/
       <button class="btn btn-dark mt-1 text-light" type="submit">Submit</button>
    </div>
 </form>
+
+---
