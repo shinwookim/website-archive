@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>
+  
+    GNU Make Cheatsheet | Shinwoo Kim
+</title>
+<link rel="alternate" type="application/rss+xml" title="Shinwoo Kim" href="https://sites.pitt.edu/~shk148/feed.xml">
+
+<link rel="icon" type="image/x-icon" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon.ico">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/x-icon" sizes="16x16" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://sites.pitt.edu/~shk148/%20/assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="https://sites.pitt.edu/~shk148/assets/favicon/site.webmanifest">
+
+<meta name="twitter:card" content="summary">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.2">
+<meta property="og:title" content="GNU Make Cheatsheet">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.">
+<meta property="og:description" content="Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/teaching/CS0449-2234/Makefiles.html">
+<meta property="og:url" content="https://sites.pitt.edu/~shk148/teaching/CS0449-2234/Makefiles.html">
+<meta property="og:site_name" content="Shinwoo Kim">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="GNU Make Cheatsheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.","headline":"GNU Make Cheatsheet","url":"https://sites.pitt.edu/~shk148/teaching/CS0449-2234/Makefiles.html"}</script>
+<!-- End Jekyll SEO tag -->
+ <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.css">
+<script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js"></script>
+
+<script>
+  function is_youtubelink(url) {
+    var p =
+      /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return url.match(p) ? RegExp.$1 : false;
+  }
+  function is_imagelink(url) {
+    var p = /([a-z\-_0-9\/\:\.]*\.(jpg|jpeg|png|gif))/i;
+    return url.match(p) ? true : false;
+  }
+  function is_vimeolink(url, el) {
+    var id = false;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+        // XMLHttpRequest.DONE == 4
+        if (xmlhttp.status == 200) {
+          var response = JSON.parse(xmlhttp.responseText);
+          id = response.video_id;
+          console.log(id);
+          el.classList.add("lightbox-vimeo");
+          el.setAttribute("data-id", id);
+
+          el.addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("lightbox").innerHTML =
+              '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/' +
+              el.getAttribute("data-id") +
+              '/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>';
+            document.getElementById("lightbox").style.display = "block";
+
+            setGallery(this);
+          });
+        } else if (xmlhttp.status == 400) {
+          alert("There was an error 400");
+        } else {
+          alert("something else other than 200 was returned");
+        }
+      }
+    };
+    xmlhttp.open("GET", "https://vimeo.com/api/oembed.json?url=" + url, true);
+    xmlhttp.send();
+  }
+  function setGallery(el) {
+    var elements = document.body.querySelectorAll(".gallery");
+    elements.forEach((element) => {
+      element.classList.remove("gallery");
+    });
+    if (el.closest("ul, p")) {
+      var link_elements = el
+        .closest("ul, p")
+        .querySelectorAll("a[class*='lightbox-']");
+      link_elements.forEach((link_element) => {
+        link_element.classList.remove("current");
+      });
+      link_elements.forEach((link_element) => {
+        if (el.getAttribute("href") == link_element.getAttribute("href")) {
+          link_element.classList.add("current");
+        }
+      });
+      if (link_elements.length > 1) {
+        document.getElementById("lightbox").classList.add("gallery");
+        link_elements.forEach((link_element) => {
+          link_element.classList.add("gallery");
+        });
+      }
+      var currentkey;
+      var gallery_elements = document.querySelectorAll("a.gallery");
+      Object.keys(gallery_elements).forEach(function (k) {
+        if (gallery_elements[k].classList.contains("current")) currentkey = k;
+      });
+      if (currentkey == gallery_elements.length - 1) var nextkey = 0;
+      else var nextkey = parseInt(currentkey) + 1;
+      if (currentkey == 0) var prevkey = parseInt(gallery_elements.length - 1);
+      else var prevkey = parseInt(currentkey) - 1;
+      document.getElementById("next").addEventListener("click", function () {
+        gallery_elements[nextkey].click();
+      });
+      document.getElementById("prev").addEventListener("click", function () {
+        gallery_elements[prevkey].click();
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    //create lightbox div in the footer
+    var newdiv = document.createElement("div");
+    newdiv.setAttribute("id", "lightbox");
+    document.body.appendChild(newdiv);
+
+    //add classes to links to be able to initiate lightboxes
+    var elements = document.querySelectorAll("a");
+    elements.forEach((element) => {
+      var url = element.getAttribute("href");
+      if (url) {
+        if (
+          url.indexOf("vimeo") !== -1 &&
+          !element.classList.contains("no-lightbox")
+        ) {
+          is_vimeolink(url, element);
+        }
+        if (is_youtubelink(url) && !element.classList.contains("no-lightbox")) {
+          element.classList.add("lightbox-youtube");
+          element.setAttribute("data-id", is_youtubelink(url));
+        }
+        if (is_imagelink(url) && !element.classList.contains("no-lightbox")) {
+          element.classList.add("lightbox-image");
+          var href = element.getAttribute("href");
+          var filename = href.split("/").pop();
+          var split = filename.split(".");
+          var name = split[0];
+          element.setAttribute("title", name);
+        }
+      }
+    });
+
+    //remove the clicked lightbox
+    document
+      .getElementById("lightbox")
+      .addEventListener("click", function (event) {
+        if (event.target.id != "next" && event.target.id != "prev") {
+          this.innerHTML = "";
+          document.getElementById("lightbox").style.display = "none";
+        }
+      });
+
+    //add the youtube lightbox on click
+    var elements = document.querySelectorAll("a.lightbox-youtube");
+    elements.forEach((element) => {
+      element.addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("lightbox").innerHTML =
+          '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://www.youtube.com/embed/' +
+          this.getAttribute("data-id") +
+          '?autoplay=1&showinfo=0&rel=0"></iframe></div>';
+        document.getElementById("lightbox").style.display = "block";
+
+        setGallery(this);
+      });
+    });
+
+    //add the image lightbox on click
+    var elements = document.querySelectorAll("a.lightbox-image");
+    elements.forEach((element) => {
+      element.addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("lightbox").innerHTML =
+          '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="img" style="background: url(\'' +
+          this.getAttribute("href") +
+          '\') center center / contain no-repeat;" title="' +
+          this.getAttribute("title") +
+          '" ><img src="' +
+          this.getAttribute("href") +
+          '" alt="' +
+          this.getAttribute("title") +
+          '" /></div><span>' +
+          this.getAttribute("title") +
+          "</span>";
+        document.getElementById("lightbox").style.display = "block";
+
+        setGallery(this);
+      });
+    });
+  });
+</script>
+<style>
+  #lightbox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999999;
+    line-height: 0;
+    cursor: pointer;
+    display: none;
+  }
+  #lightbox .img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #lightbox .img img {
+    opacity: 0;
+    pointer-events: none;
+    width: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    #lightbox .img {
+      max-width: 1200px;
+    }
+  }
+  @media screen and (min-height: 1200px) {
+    #lightbox .img {
+      max-height: 1200px;
+    }
+  }
+  #lightbox span {
+    display: block;
+    position: fixed;
+    bottom: 13px;
+    height: 1.5em;
+    line-height: 1.4em;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+
+  #lightbox span {
+    display: none;
+  }
+
+  #lightbox .videoWrapperContainer {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 900px;
+    max-height: 100%;
+  }
+  #lightbox .videoWrapperContainer .videoWrapper {
+    height: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-bottom: 56.333%; /* custom */
+    background: black;
+  }
+  #lightbox .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  #lightbox #prev,
+  #lightbox #next {
+    height: 50px;
+    line-height: 36px;
+    display: none;
+    margin-top: -25px;
+    position: fixed;
+    top: 50%;
+    padding: 0 15px;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 99;
+    color: white;
+    font-size: 60px;
+  }
+  #lightbox.gallery #prev,
+  #lightbox.gallery #next {
+    display: block;
+  }
+  #lightbox #prev {
+    left: 0;
+  }
+  #lightbox #next {
+    right: 0;
+  }
+  #lightbox #close {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 99;
+    right: 0;
+    top: 0;
+  }
+  #lightbox #close:after,
+  #lightbox #close:before {
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 14px;
+    content: "";
+    height: 3px;
+    background: white;
+    width: 23px;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    /* Safari */
+    -webkit-transform: rotate(-45deg);
+    /* Firefox */
+    -moz-transform: rotate(-45deg);
+    /* IE */
+    -ms-transform: rotate(-45deg);
+    /* Opera */
+    -o-transform: rotate(-45deg);
+  }
+  #lightbox #close:after {
+    /* Safari */
+    -webkit-transform: rotate(45deg);
+    /* Firefox */
+    -moz-transform: rotate(45deg);
+    /* IE */
+    -ms-transform: rotate(45deg);
+    /* Opera */
+    -o-transform: rotate(45deg);
+  }
+  #lightbox,
+  #lightbox * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+</style>
+
+<style>
+  th {
+    text-align: center;
+  }
+  .highlight {
+    background-color: #ffff00;
+  }
+</style>
+
+<script>
+  function highlight(id) {
+    var already_highlighted = document.getElementsByClassName("highlight");
+    if (already_highlighted.length > 0)
+      already_highlighted[0].classList.remove("highlight");
+    var toHighlight = document.getElementById(id);
+    toHighlight.classList.toggle("highlight");
+  }
+  function highlight_off() {
+    var already_highlighted = document.getElementsByClassName("highlight");
+    if (already_highlighted.length > 0)
+      already_highlighted[0].classList.remove("highlight");
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+<script src="https://sites.pitt.edu/~shk148/assets/js/typed.js" defer></script>
+
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+</script>
+  <!--link rel="stylesheet" href='https://sites.pitt.edu/~shk148/assets/css/style.css' /-->
+  <!--link rel="stylesheet" href=' https://sites.pitt.edu/~shk148/assets/css/tufte.css' /-->
+  <link rel="stylesheet" href="https://sites.pitt.edu/~shk148/assets/css/tufte-og.css">
+<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"svg":{"fontCache":"global"},"options":{"enableMenu":true,"menuOptions":{"settings":{"assistiveMml":false},"renderActions":{"assistiveMml":[]}}}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body data-bs-spy="scroll" rootmargin="0px 100px 0%">
+  <!--- Header and nav template site-wide -->
+  <div class="text-center">
+    
+    <header>
+      <nav id="navbar"><a href="/~shk148/">Shinwoo Kim</a></nav>
+    </header>
+    
+  </div>
+  <div>
+    <article class="">
+      <h1 class="title my-0">GNU Make Cheatsheet</h1>
+      <p class="subtitle my-0"></p>
+      <p>Based on <a href="https://www.gnu.org/software/make/manual/html_node/Quick-Reference.html">https://www.gnu.org/software/make/manual/html_node/Quick-Reference.html</a></p>
+
+<h2 id="directives">Directives</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Directive</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">define variable</code> <br> <code class="language-html highlighter-rouge">define variable =</code> <br> <code class="language-html highlighter-rouge">define variable :=</code> <br> <code class="language-html highlighter-rouge">define variable ::=</code> <br> <code class="language-html highlighter-rouge">define variable +=</code> <br> <code class="language-html highlighter-rouge">define variable ?=</code> <br> <code class="language-html highlighter-rouge">endef</code>
+</td>
+      <td style="text-align: left">Define multi-line variables.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">undefine variable</code></td>
+      <td style="text-align: left">Undefining variables.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">ifdef variable</code> <br> <code class="language-html highlighter-rouge">ifndef variable</code> <br> <code class="language-html highlighter-rouge">ifeq (a,b)</code> <br> <code class="language-html highlighter-rouge">ifeq "a" "b"</code> <br> <code class="language-html highlighter-rouge">ifeq 'a' 'b'</code> <br> <code class="language-html highlighter-rouge">ifneq (a,b)</code> <br> <code class="language-html highlighter-rouge">ifneq "a" "b"</code> <br> <code class="language-html highlighter-rouge">ifneq 'a' 'b'</code> <br> <code class="language-html highlighter-rouge">else</code> <br> <code class="language-html highlighter-rouge">endif</code>
+</td>
+      <td style="text-align: left">Conditionally evaluate part of the makefile.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">include file</code> <br> <code class="language-html highlighter-rouge">-include file</code> <br> <code class="language-html highlighter-rouge">sinclude file</code>
+</td>
+      <td style="text-align: left">Include another makefile.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">override variable-assignment</code></td>
+      <td style="text-align: left">Define a variable, overriding any previous definition, even one from the command line.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">export</code></td>
+      <td style="text-align: left">Tell make to export all variables to child processes by default.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">export variable</code> <br> <code class="language-html highlighter-rouge">export variable-assignment</code> <br> <code class="language-html highlighter-rouge">unexport variable</code>
+</td>
+      <td style="text-align: left">Tell make whether or not to export a particular variable to child processes.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">private variable-assignment</code></td>
+      <td style="text-align: left">Do not allow this variable assignment to be inherited by prerequisites.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">vpath pattern path</code></td>
+      <td style="text-align: left">Specify a search path for files matching a ‘%’ pattern.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">vpath pattern</code></td>
+      <td style="text-align: left">Remove all search paths previously specified for pattern.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">vpath</code></td>
+      <td style="text-align: left">Remove all search paths previously specified in any vpath directive.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="built-in-functions">Built-in Functions</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Function</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(subst from,to,text)</code></td>
+      <td style="text-align: left">Replace <code class="language-html highlighter-rouge">from</code> with <code class="language-html highlighter-rouge">to</code> in <code class="language-html highlighter-rouge">text</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(patsubst pattern,replacement,text)</code></td>
+      <td style="text-align: left">Replace words matching <code class="language-html highlighter-rouge">pattern</code> with <code class="language-html highlighter-rouge">replacement</code> in <code class="language-html highlighter-rouge">text</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(strip string)</code></td>
+      <td style="text-align: left">Remove excess whitespace characters from <code class="language-html highlighter-rouge">string</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(findstring find,text)</code></td>
+      <td style="text-align: left">Locate find in <code class="language-html highlighter-rouge">text</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(filter pattern…,text)</code></td>
+      <td style="text-align: left">Select words in <code class="language-html highlighter-rouge">text</code> that match one of the <code class="language-html highlighter-rouge">pattern</code> words.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(filter-out pattern…,text)</code></td>
+      <td style="text-align: left">Select words in <code class="language-html highlighter-rouge">text</code> that do not match any of the <code class="language-html highlighter-rouge">pattern</code> words.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(sort list)</code></td>
+      <td style="text-align: left">Sort the words in <code class="language-html highlighter-rouge">list</code> lexicographically, removing duplicates.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(word n,text)</code></td>
+      <td style="text-align: left">Extract the <code class="language-html highlighter-rouge">n</code>-th word (one-origin) of <code class="language-html highlighter-rouge">text</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(words text)</code></td>
+      <td style="text-align: left">Count the number of words in <code class="language-html highlighter-rouge">text</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(wordlist s,e,text)</code></td>
+      <td style="text-align: left">Returns the list of words in <code class="language-html highlighter-rouge">text</code> from <code class="language-html highlighter-rouge">s</code> to <code class="language-html highlighter-rouge">e</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(firstword names…)</code></td>
+      <td style="text-align: left">Extract the first word of <code class="language-html highlighter-rouge">names</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(lastword names…)</code></td>
+      <td style="text-align: left">Extract the last word of <code class="language-html highlighter-rouge">names</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(dir names…)</code></td>
+      <td style="text-align: left">Extract the directory part of each file name.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(notdir names…)</code></td>
+      <td style="text-align: left">Extract the non-directory part of each file name.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(suffix names…)</code></td>
+      <td style="text-align: left">Extract the suffix (the last ‘.’ and following characters) of each file name.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(basename names…)</code></td>
+      <td style="text-align: left">Extract the base name (name without suffix) of each file name.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(addsuffix suffix,names…)</code></td>
+      <td style="text-align: left">Append <code class="language-html highlighter-rouge">suffix</code> to each word in <code class="language-html highlighter-rouge">names</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(addprefix prefix,names…)</code></td>
+      <td style="text-align: left">Prepend <code class="language-html highlighter-rouge">prefix</code> to each word in <code class="language-html highlighter-rouge">names</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(join list1,list2)</code></td>
+      <td style="text-align: left">Join two parallel lists of words.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(wildcard pattern…)</code></td>
+      <td style="text-align: left">Find file names matching a shell file name pattern (<em>not</em> a ‘%’ pattern).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(realpath names…)</code></td>
+      <td style="text-align: left">For each file name in <code class="language-html highlighter-rouge">names</code>, expand to an absolute name that does not contain any ., .., nor symlinks.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(abspath names…)</code></td>
+      <td style="text-align: left">For each file name in <code class="language-html highlighter-rouge">names</code>, expand to an absolute name that does not contain any . or .. components, but preserves symlinks.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(error text…)</code></td>
+      <td style="text-align: left">When this function is evaluated, make generates a fatal error with the message <code class="language-html highlighter-rouge">text</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(warning text…)</code></td>
+      <td style="text-align: left">When this function is evaluated, make generates a warning with the message <code class="language-html highlighter-rouge">text</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(shell command)</code></td>
+      <td style="text-align: left">Execute a shell command and return its output.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(origin variable)</code></td>
+      <td style="text-align: left">Return a string describing how the make variable <code class="language-html highlighter-rouge">variable</code> was defined.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(flavor variable)</code></td>
+      <td style="text-align: left">Return a string describing the flavor of the make variable <code class="language-html highlighter-rouge">variable</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(foreach var,words,text)</code></td>
+      <td style="text-align: left">Evaluate <code class="language-html highlighter-rouge">text</code> with <code class="language-html highlighter-rouge">var</code> bound to each word in <code class="language-html highlighter-rouge">words</code>, and concatenate the results.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(if cond,then-part[,else-part])</code></td>
+      <td style="text-align: left">Evaluate <code class="language-html highlighter-rouge">cond</code>; if it’s non-empty substitute the expansion of the <code class="language-html highlighter-rouge">then-part</code> otherwise substitute the expansion of the <code class="language-html highlighter-rouge">else-part</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(or cond1[,cond2[,cond3…]])</code></td>
+      <td style="text-align: left">Evaluate <code class="language-html highlighter-rouge">condN</code> one at a time; substitute the first non-empty expansion. If all expansions are empty, substitute the empty string.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(and cond1[,cond2[,cond3…]])</code></td>
+      <td style="text-align: left">Evaluate <code class="language-html highlighter-rouge">condN</code> one at a time; if any results in empty string substitute the empty string. Otherwise substitute the expansion of the last <code class="language-html highlighter-rouge">condN</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(call var,param,…)</code></td>
+      <td style="text-align: left">Evaluate the variable <code class="language-html highlighter-rouge">var</code> replacing any references to <code class="language-html highlighter-rouge">$(1)</code>, <code class="language-html highlighter-rouge">$(2)</code> with the first, second, etc. param values.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(eval text)</code></td>
+      <td style="text-align: left">Evaluate <code class="language-html highlighter-rouge">text</code> then read the results as makefile commands; expands to the empty string.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(file op filename,text)</code></td>
+      <td style="text-align: left">Expand the arguments, then open the file <code class="language-html highlighter-rouge">filename</code> using mode <code class="language-html highlighter-rouge">op</code> and write <code class="language-html highlighter-rouge">text</code> to that file.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$(value var)</code></td>
+      <td style="text-align: left">Evaluates to the contents of the variable <code class="language-html highlighter-rouge">var</code>, with no expansion performed on it.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="automatic-variables">Automatic Variables</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Variable</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$@</code></td>
+      <td style="text-align: left">The file name of the target.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$%</code></td>
+      <td style="text-align: left">The target member name, when the target is an archive member.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$<span class="nt">&lt;</span></code></td>
+      <td style="text-align: left">The name of the first prerequisite.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$?</code></td>
+      <td style="text-align: left">The names of all the prerequisites newer than the target, with spaces between them. For prerequisites which are archive members, only the named member is used (see Archives).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">$^</code> <br> <code class="language-html highlighter-rouge">$+</code>
+</td>
+      <td style="text-align: left">The names of all the prerequisites, with spaces between them. For prerequisites which are archive members, only the named member is used (see Archives). The value of $^ omits duplicate prerequisites, while $+ retains them and preserves their order.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">$*</code></td>
+      <td style="text-align: left">The stem with which an implicit rule matches (see How Patterns Match).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">$(@D)</code> <br> <code class="language-html highlighter-rouge">$(@F)</code>
+</td>
+      <td style="text-align: left">The directory part and the file-within-directory part of <code class="language-html highlighter-rouge">$@</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">$(*D)</code> <br> <code class="language-html highlighter-rouge">$(*F)</code>
+</td>
+      <td style="text-align: left">The directory part and the file-within-directory part of <code class="language-html highlighter-rouge">$*</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">$(%D)</code> <br> <code class="language-html highlighter-rouge">$(%F)</code>
+</td>
+      <td style="text-align: left">The directory part and the file-within-directory part of <code class="language-html highlighter-rouge">$%</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">$(<span class="nt">&lt;D</span><span class="err">)</span></code> <br> <code class="language-html highlighter-rouge">$(<span class="nt">&lt;F</span><span class="err">)</span></code>
+</td>
+      <td style="text-align: left">The directory part and the file-within-directory part of <code class="language-html highlighter-rouge">$<span class="nt">&lt;</span></code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">$(^D)</code> <br> <code class="language-html highlighter-rouge">$(^F)</code>
+</td>
+      <td style="text-align: left">The directory part and the file-within-directory part of <code class="language-html highlighter-rouge">$^</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">$(+D)</code> <br> <code class="language-html highlighter-rouge">$(+F)</code>
+</td>
+      <td style="text-align: left">The directory part and the file-within-directory part of <code class="language-html highlighter-rouge">$+</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-html highlighter-rouge">$(?D)</code> <br> <code class="language-html highlighter-rouge">$(?F)</code>
+</td>
+      <td style="text-align: left">The directory part and the file-within-directory part of <code class="language-html highlighter-rouge">$?</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="special-variables">Special Variables</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Variables</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">MAKEFILES</code></td>
+      <td style="text-align: left">Makefiles to be read on every invocation of make.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">VPATH</code></td>
+      <td style="text-align: left">Directory search path for files not found in the current directory.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">SHELL</code></td>
+      <td style="text-align: left">The name of the system default command interpreter, usually <code class="language-html highlighter-rouge">/bin/sh</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">MAKESHELL</code></td>
+      <td style="text-align: left">The name of the command interpreter that is to be used by make, taking precedence over <code class="language-html highlighter-rouge">SHELL</code> (MS-DOS only).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">MAKE</code></td>
+      <td style="text-align: left">The name with which make was invoked (using this variable in recipes has special meaning).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">MAKE_VERSION</code></td>
+      <td style="text-align: left">The built-in variable <code class="language-html highlighter-rouge">MAKE_VERSION</code> expands to the version number of the GNU make program.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">MAKE_HOST</code></td>
+      <td style="text-align: left">The built-in variable <code class="language-html highlighter-rouge">MAKE_HOST</code> expands to a string representing the host that GNU make was built to run on.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">MAKELEVEL</code></td>
+      <td style="text-align: left">The number of levels of recursion (sub-makes).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">MAKEFLAGS</code></td>
+      <td style="text-align: left">The flags given to make. You can set this in the environment or a makefile to set flags.  It is <em>never</em> appropriate to use MAKEFLAGS directly in a recipe line: its contents may not be quoted correctly for use in the shell. Always allow recursive make’s to obtain these values through the environment from its parent.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">GNUMAKEFLAGS</code></td>
+      <td style="text-align: left">Other flags parsed by make. You can set this in the environment or a makefile to set make command-line flags. GNU make never sets this variable itself. This variable is only needed if you’d like to set GNU make-specific flags in a POSIX-compliant makefile. This variable will be seen by GNU make and ignored by other make implementations. It’s not needed if you only use GNU make; just use MAKEFLAGS directly. See Communicating Options to a Sub-make.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">MAKECMDGOALS</code></td>
+      <td style="text-align: left">The targets given to make on the command line. Setting this variable has no effect on the operation of make.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">CURDIR</code></td>
+      <td style="text-align: left">Set to the absolute pathname of the current working directory (after all -C options are processed, if any). Setting this variable has no effect on the operation of make.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">SUFFIXES</code></td>
+      <td style="text-align: left">The default list of suffixes before make reads any makefiles.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-html highlighter-rouge">.LIBPATTERNS</code></td>
+      <td style="text-align: left">Defines the naming of the libraries make searches for, and their order.</td>
+    </tr>
+  </tbody>
+</table>
+
+      <button onclick="topFunction()" id="top-btn" class="btn btn-dark d-print-none" title="Go to top">
+        Top
+      </button>
+    </article>
+    <script>
+      let btn_to_top = document.getElementById("top-btn");
+      window.onscroll = function () {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          btn_to_top.style.opacity = "100%";
+        } else {
+          btn_to_top.style.opacity = "0%";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Ope`
+      }
+    </script>
+    <hr class="mx-auto slender">
+    <footer class="site-footer text-center">
+      <p class="mb-0 mx-auto">
+        © 2021-2023 Shinwoo Kim. All Rights Reserved.<br>
+        <a href="#" onclick="history.back()">Return to Previous Page</a>
+      </p>
+    </footer>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X43BZS6F4C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-X43BZS6F4C");
+</script>
+</body>
+</html>

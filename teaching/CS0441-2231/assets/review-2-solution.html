@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>
+  
+    Solutions to More Practice on Proofs | Shinwoo Kim
+</title>
+<link rel="alternate" type="application/rss+xml" title="Shinwoo Kim" href="https://sites.pitt.edu/~shk148/feed.xml">
+
+<link rel="icon" type="image/x-icon" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon.ico">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/x-icon" sizes="16x16" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://sites.pitt.edu/~shk148/%20/assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="https://sites.pitt.edu/~shk148/assets/favicon/site.webmanifest">
+
+<meta name="twitter:card" content="summary">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.2">
+<meta property="og:title" content="Solutions to More Practice on Proofs">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.">
+<meta property="og:description" content="Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/teaching/CS0441-2231/assets/review-2-solution.html">
+<meta property="og:url" content="https://sites.pitt.edu/~shk148/teaching/CS0441-2231/assets/review-2-solution.html">
+<meta property="og:site_name" content="Shinwoo Kim">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-10-08T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Solutions to More Practice on Proofs">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-08T00:00:00+00:00","datePublished":"2022-10-08T00:00:00+00:00","description":"Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.","headline":"Solutions to More Practice on Proofs","mainEntityOfPage":{"@type":"WebPage","@id":"https://sites.pitt.edu/~shk148/teaching/CS0441-2231/assets/review-2-solution.html"},"url":"https://sites.pitt.edu/~shk148/teaching/CS0441-2231/assets/review-2-solution.html"}</script>
+<!-- End Jekyll SEO tag -->
+ <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.css">
+<script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js"></script>
+
+<script>
+  function is_youtubelink(url) {
+    var p =
+      /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return url.match(p) ? RegExp.$1 : false;
+  }
+  function is_imagelink(url) {
+    var p = /([a-z\-_0-9\/\:\.]*\.(jpg|jpeg|png|gif))/i;
+    return url.match(p) ? true : false;
+  }
+  function is_vimeolink(url, el) {
+    var id = false;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+        // XMLHttpRequest.DONE == 4
+        if (xmlhttp.status == 200) {
+          var response = JSON.parse(xmlhttp.responseText);
+          id = response.video_id;
+          console.log(id);
+          el.classList.add("lightbox-vimeo");
+          el.setAttribute("data-id", id);
+
+          el.addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("lightbox").innerHTML =
+              '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/' +
+              el.getAttribute("data-id") +
+              '/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>';
+            document.getElementById("lightbox").style.display = "block";
+
+            setGallery(this);
+          });
+        } else if (xmlhttp.status == 400) {
+          alert("There was an error 400");
+        } else {
+          alert("something else other than 200 was returned");
+        }
+      }
+    };
+    xmlhttp.open("GET", "https://vimeo.com/api/oembed.json?url=" + url, true);
+    xmlhttp.send();
+  }
+  function setGallery(el) {
+    var elements = document.body.querySelectorAll(".gallery");
+    elements.forEach((element) => {
+      element.classList.remove("gallery");
+    });
+    if (el.closest("ul, p")) {
+      var link_elements = el
+        .closest("ul, p")
+        .querySelectorAll("a[class*='lightbox-']");
+      link_elements.forEach((link_element) => {
+        link_element.classList.remove("current");
+      });
+      link_elements.forEach((link_element) => {
+        if (el.getAttribute("href") == link_element.getAttribute("href")) {
+          link_element.classList.add("current");
+        }
+      });
+      if (link_elements.length > 1) {
+        document.getElementById("lightbox").classList.add("gallery");
+        link_elements.forEach((link_element) => {
+          link_element.classList.add("gallery");
+        });
+      }
+      var currentkey;
+      var gallery_elements = document.querySelectorAll("a.gallery");
+      Object.keys(gallery_elements).forEach(function (k) {
+        if (gallery_elements[k].classList.contains("current")) currentkey = k;
+      });
+      if (currentkey == gallery_elements.length - 1) var nextkey = 0;
+      else var nextkey = parseInt(currentkey) + 1;
+      if (currentkey == 0) var prevkey = parseInt(gallery_elements.length - 1);
+      else var prevkey = parseInt(currentkey) - 1;
+      document.getElementById("next").addEventListener("click", function () {
+        gallery_elements[nextkey].click();
+      });
+      document.getElementById("prev").addEventListener("click", function () {
+        gallery_elements[prevkey].click();
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    //create lightbox div in the footer
+    var newdiv = document.createElement("div");
+    newdiv.setAttribute("id", "lightbox");
+    document.body.appendChild(newdiv);
+
+    //add classes to links to be able to initiate lightboxes
+    var elements = document.querySelectorAll("a");
+    elements.forEach((element) => {
+      var url = element.getAttribute("href");
+      if (url) {
+        if (
+          url.indexOf("vimeo") !== -1 &&
+          !element.classList.contains("no-lightbox")
+        ) {
+          is_vimeolink(url, element);
+        }
+        if (is_youtubelink(url) && !element.classList.contains("no-lightbox")) {
+          element.classList.add("lightbox-youtube");
+          element.setAttribute("data-id", is_youtubelink(url));
+        }
+        if (is_imagelink(url) && !element.classList.contains("no-lightbox")) {
+          element.classList.add("lightbox-image");
+          var href = element.getAttribute("href");
+          var filename = href.split("/").pop();
+          var split = filename.split(".");
+          var name = split[0];
+          element.setAttribute("title", name);
+        }
+      }
+    });
+
+    //remove the clicked lightbox
+    document
+      .getElementById("lightbox")
+      .addEventListener("click", function (event) {
+        if (event.target.id != "next" && event.target.id != "prev") {
+          this.innerHTML = "";
+          document.getElementById("lightbox").style.display = "none";
+        }
+      });
+
+    //add the youtube lightbox on click
+    var elements = document.querySelectorAll("a.lightbox-youtube");
+    elements.forEach((element) => {
+      element.addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("lightbox").innerHTML =
+          '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://www.youtube.com/embed/' +
+          this.getAttribute("data-id") +
+          '?autoplay=1&showinfo=0&rel=0"></iframe></div>';
+        document.getElementById("lightbox").style.display = "block";
+
+        setGallery(this);
+      });
+    });
+
+    //add the image lightbox on click
+    var elements = document.querySelectorAll("a.lightbox-image");
+    elements.forEach((element) => {
+      element.addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("lightbox").innerHTML =
+          '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="img" style="background: url(\'' +
+          this.getAttribute("href") +
+          '\') center center / contain no-repeat;" title="' +
+          this.getAttribute("title") +
+          '" ><img src="' +
+          this.getAttribute("href") +
+          '" alt="' +
+          this.getAttribute("title") +
+          '" /></div><span>' +
+          this.getAttribute("title") +
+          "</span>";
+        document.getElementById("lightbox").style.display = "block";
+
+        setGallery(this);
+      });
+    });
+  });
+</script>
+<style>
+  #lightbox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999999;
+    line-height: 0;
+    cursor: pointer;
+    display: none;
+  }
+  #lightbox .img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #lightbox .img img {
+    opacity: 0;
+    pointer-events: none;
+    width: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    #lightbox .img {
+      max-width: 1200px;
+    }
+  }
+  @media screen and (min-height: 1200px) {
+    #lightbox .img {
+      max-height: 1200px;
+    }
+  }
+  #lightbox span {
+    display: block;
+    position: fixed;
+    bottom: 13px;
+    height: 1.5em;
+    line-height: 1.4em;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+
+  #lightbox span {
+    display: none;
+  }
+
+  #lightbox .videoWrapperContainer {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 900px;
+    max-height: 100%;
+  }
+  #lightbox .videoWrapperContainer .videoWrapper {
+    height: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-bottom: 56.333%; /* custom */
+    background: black;
+  }
+  #lightbox .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  #lightbox #prev,
+  #lightbox #next {
+    height: 50px;
+    line-height: 36px;
+    display: none;
+    margin-top: -25px;
+    position: fixed;
+    top: 50%;
+    padding: 0 15px;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 99;
+    color: white;
+    font-size: 60px;
+  }
+  #lightbox.gallery #prev,
+  #lightbox.gallery #next {
+    display: block;
+  }
+  #lightbox #prev {
+    left: 0;
+  }
+  #lightbox #next {
+    right: 0;
+  }
+  #lightbox #close {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 99;
+    right: 0;
+    top: 0;
+  }
+  #lightbox #close:after,
+  #lightbox #close:before {
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 14px;
+    content: "";
+    height: 3px;
+    background: white;
+    width: 23px;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    /* Safari */
+    -webkit-transform: rotate(-45deg);
+    /* Firefox */
+    -moz-transform: rotate(-45deg);
+    /* IE */
+    -ms-transform: rotate(-45deg);
+    /* Opera */
+    -o-transform: rotate(-45deg);
+  }
+  #lightbox #close:after {
+    /* Safari */
+    -webkit-transform: rotate(45deg);
+    /* Firefox */
+    -moz-transform: rotate(45deg);
+    /* IE */
+    -ms-transform: rotate(45deg);
+    /* Opera */
+    -o-transform: rotate(45deg);
+  }
+  #lightbox,
+  #lightbox * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+</style>
+
+<style>
+  th {
+    text-align: center;
+  }
+  .highlight {
+    background-color: #ffff00;
+  }
+</style>
+
+<script>
+  function highlight(id) {
+    var already_highlighted = document.getElementsByClassName("highlight");
+    if (already_highlighted.length > 0)
+      already_highlighted[0].classList.remove("highlight");
+    var toHighlight = document.getElementById(id);
+    toHighlight.classList.toggle("highlight");
+  }
+  function highlight_off() {
+    var already_highlighted = document.getElementsByClassName("highlight");
+    if (already_highlighted.length > 0)
+      already_highlighted[0].classList.remove("highlight");
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+<script src="https://sites.pitt.edu/~shk148/assets/js/typed.js" defer></script>
+
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+</script>
+  <!--link rel="stylesheet" href='https://sites.pitt.edu/~shk148/assets/css/style.css' /-->
+  <!--link rel="stylesheet" href=' https://sites.pitt.edu/~shk148/assets/css/tufte.css' /-->
+  <link rel="stylesheet" href="https://sites.pitt.edu/~shk148/assets/css/tufte-og.css">
+<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"svg":{"fontCache":"global"},"options":{"enableMenu":true,"menuOptions":{"settings":{"assistiveMml":false},"renderActions":{"assistiveMml":[]}}}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body data-bs-spy="scroll" rootmargin="0px 100px 0%">
+  <!--- Header and nav template site-wide -->
+  <div class="text-center">
+    
+    <header>
+      <nav id="navbar"><a href="/~shk148/">Shinwoo Kim</a></nav>
+    </header>
+    
+  </div>
+  <div>
+    <article class="">
+      <h1 class="title my-0">Solutions to More Practice on Proofs</h1>
+      <p class="subtitle my-0"></p>
+      <style>.red{color: red !important;}</style>
+
+<p><label for="copyright" class="margin-toggle"> ⊕</label><input type="checkbox" id="copyright" class="margin-toggle"><span class="marginnote">The questions presented here have been adapted from Kenneth Rosen’s <a href="https://www.amazon.com/Discrete-Mathematics-Applications-Kenneth-author/dp/1260091996/ref=pd_lpo_1?pd_rd_i=1260091996&psc=1">Discrete Mathematics and Its Applications</a>, 8th Edition and Oscar Levin’s Discrete Mathematics:An Open Introduction. </span></p>
+
+<h1 id="problem-1">Problem 1</h1>
+<p>Use a direct proof to show that the sum of two odd integers is even.</p>
+
+<p class="red">Let $n = 2k + 1$ and $m = 2l + 1$ be odd integers. Then $n+m=2k+1+2l+1=2k+2l+2=2(k+l+1)$<label for="1a" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1a" class="margin-toggle"><span class="sidenote">To make this more explicit, we can write $2(k+l+1)$ as $2(\alpha)$, where $\alpha = k+l+1$ </span> is even.</p>
+
+<h1 id="problem-2">Problem 2</h1>
+<p>Show that if $n$ is an integer and $n^3 + 5$ is odd, then $n$ is even</p>
+
+<div class="red">
+
+  <h2 id="proof-by-contraposition">Proof by Contraposition</h2>
+  <p>Assume that $n$ is odd, so $n = 2k + 1$ for some integer $k$. Then $$n^3 +5 = (2k+1)^3+5=(8k^3+12k^2+6k+1)+5$$$$=8k^3+12k^2+6k+6= 2(4k^3 +6k^2 +3k +3).$$ Because $n^3 + 5$ is two times some integer, it is even.</p>
+
+  <h2 id="proof-by-contradiction">Proof by Contradiction</h2>
+  <p>Suppose that $n^3 + 5$ is odd and $n$ is odd. Because $n$ is odd and the product of two odd numbers is odd, it follows that $n^2$ is odd and then that $n^3$ is odd. But then $5 = (n^3 + 5) − n^3$ would have to be even because it is the difference of two odd numbers. Therefore, the supposition that $n^3 + 5$ and $n$ were both odd is wrong.</p>
+</div>
+
+<h1 id="problem-3">Problem 3</h1>
+<p>Prove that if $n$ is an odd integer, then $n^3$ is an odd integer</p>
+
+<div class="red">
+
+  <p>$n$ is odd, therefore $n = 2k + 1$ for some integer $k$. Then $$n^3 = (2k+1)^3=(8k^3+12k^2+6k+1)$$$$=8k^3+12k^2+6k+1= 2(4k^3 +6k^2 +3k +1)+1.$$  Since $n^3$ is 1 plus 2 times some integer it is odd.<label for="3a" class="margin-toggle sidenote-number"></label><input type="checkbox" id="3a" class="margin-toggle"><span class="sidenote">To make this more explicit, we can write $2(4k^3 +6k^2 +3k +1)+1$ as $2(\alpha)+1$, where $\alpha = 4k^3 +6k^2 +3k +1$ </span></p>
+</div>
+
+<h1 id="problem-4">Problem 4</h1>
+<p>Prove that if $x^3$ is irrational, then $x$ is irrational.</p>
+
+<div class="red">
+
+  <p>Let’s prove the contrapositive: If $x$ is rational, then $x^3$ is also rational.<label for="4a" class="margin-toggle sidenote-number"></label><input type="checkbox" id="4a" class="margin-toggle"><span class="sidenote">If a number is not irrataional, it is rational </span></p>
+
+  <p>Since $x$ is rational, we can write $x=\frac{p}{q}$ where $p,q$ are <strong>integers</strong> with $q \neq 0$.<label for="4b" class="margin-toggle sidenote-number"></label><input type="checkbox" id="4b" class="margin-toggle"><span class="sidenote">$q \neq 0$ is an important note to make, since division by 0 is undefined. </span>$\implies x^3 = (\frac{p}{q})^3=\frac{p^3}{q^3}$ which is irrational (because $p^3$ and $q^3$ are integers).</p>
+
+  <p>Therefore by contrapositive, we have show that:if $x^3$ is irrational, then $x$ is irrational.</p>
+</div>
+
+<h1 id="problem-5">Problem 5</h1>
+<p>Prove that for all integers $a$ and $b$, if $a + b$ is odd, then $a$ is odd or $b$ is odd.</p>
+
+<p class="red">The problem with trying a direct proof is that it will be hard to separate $a$ and $b$ from knowing something about $a + b$. On the other hand, if we know something about $a$ and $b$ separately, then combining them might give us information about $a+b$. The contrapositive of the statement we are trying to prove is: for all integers $a$ and $b$, if $a$ and $b$ are even, then $a+b$ is even. <label for="5a" class="margin-toggle sidenote-number"></label><input type="checkbox" id="5a" class="margin-toggle"><span class="sidenote red">Note that our assumption that $a$ and $b$ are even is really the negation of $a$ is odd or $b$ is odd. We used De Morgan’s law here. </span></p>
+<p class="red">Thus our proof will have the following format:</p>
+<ol class="red">
+  <li>Let $a$ and $b$ be integers. Assume that $a$ and $b$ are both even.</li>
+  <li>Then, $a=2k$ and and $b =2l$ for some integers $k$and $l$.</li>
+  <li>Now, $a+b=2k+2l=2(k+l)$</li>
+  <li>Since $k+l$ is an integer (let’s called it $\alpha$), $a+b=2(k+l)=2(\alpha)$ is an even integer $\blacksquare$</li>
+</ol>
+
+
+      <button onclick="topFunction()" id="top-btn" class="btn btn-dark d-print-none" title="Go to top">
+        Top
+      </button>
+    </article>
+    <script>
+      let btn_to_top = document.getElementById("top-btn");
+      window.onscroll = function () {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          btn_to_top.style.opacity = "100%";
+        } else {
+          btn_to_top.style.opacity = "0%";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Ope`
+      }
+    </script>
+    <hr class="mx-auto slender">
+    <footer class="site-footer text-center">
+      <p class="mb-0 mx-auto">
+        © 2021-2023 Shinwoo Kim. All Rights Reserved.<br>
+        <a href="#" onclick="history.back()">Return to Previous Page</a>
+      </p>
+    </footer>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X43BZS6F4C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-X43BZS6F4C");
+</script>
+</body>
+</html>

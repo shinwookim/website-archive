@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>
+  
+    Practice Exam I | Shinwoo Kim
+</title>
+<link rel="alternate" type="application/rss+xml" title="Shinwoo Kim" href="https://sites.pitt.edu/~shk148/feed.xml">
+
+<link rel="icon" type="image/x-icon" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon.ico">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/x-icon" sizes="16x16" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://sites.pitt.edu/~shk148/%20/assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="https://sites.pitt.edu/~shk148/assets/favicon/site.webmanifest">
+
+<meta name="twitter:card" content="summary">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.2">
+<meta property="og:title" content="Practice Exam I">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.">
+<meta property="og:description" content="Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/teaching/CS0449-MidTerm.html">
+<meta property="og:url" content="https://sites.pitt.edu/~shk148/teaching/CS0449-MidTerm.html">
+<meta property="og:site_name" content="Shinwoo Kim">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Practice Exam I">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.","headline":"Practice Exam I","url":"https://sites.pitt.edu/~shk148/teaching/CS0449-MidTerm.html"}</script>
+<!-- End Jekyll SEO tag -->
+ <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.css">
+<script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js"></script>
+
+<script>
+  function is_youtubelink(url) {
+    var p =
+      /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return url.match(p) ? RegExp.$1 : false;
+  }
+  function is_imagelink(url) {
+    var p = /([a-z\-_0-9\/\:\.]*\.(jpg|jpeg|png|gif))/i;
+    return url.match(p) ? true : false;
+  }
+  function is_vimeolink(url, el) {
+    var id = false;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+        // XMLHttpRequest.DONE == 4
+        if (xmlhttp.status == 200) {
+          var response = JSON.parse(xmlhttp.responseText);
+          id = response.video_id;
+          console.log(id);
+          el.classList.add("lightbox-vimeo");
+          el.setAttribute("data-id", id);
+
+          el.addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("lightbox").innerHTML =
+              '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/' +
+              el.getAttribute("data-id") +
+              '/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>';
+            document.getElementById("lightbox").style.display = "block";
+
+            setGallery(this);
+          });
+        } else if (xmlhttp.status == 400) {
+          alert("There was an error 400");
+        } else {
+          alert("something else other than 200 was returned");
+        }
+      }
+    };
+    xmlhttp.open("GET", "https://vimeo.com/api/oembed.json?url=" + url, true);
+    xmlhttp.send();
+  }
+  function setGallery(el) {
+    var elements = document.body.querySelectorAll(".gallery");
+    elements.forEach((element) => {
+      element.classList.remove("gallery");
+    });
+    if (el.closest("ul, p")) {
+      var link_elements = el
+        .closest("ul, p")
+        .querySelectorAll("a[class*='lightbox-']");
+      link_elements.forEach((link_element) => {
+        link_element.classList.remove("current");
+      });
+      link_elements.forEach((link_element) => {
+        if (el.getAttribute("href") == link_element.getAttribute("href")) {
+          link_element.classList.add("current");
+        }
+      });
+      if (link_elements.length > 1) {
+        document.getElementById("lightbox").classList.add("gallery");
+        link_elements.forEach((link_element) => {
+          link_element.classList.add("gallery");
+        });
+      }
+      var currentkey;
+      var gallery_elements = document.querySelectorAll("a.gallery");
+      Object.keys(gallery_elements).forEach(function (k) {
+        if (gallery_elements[k].classList.contains("current")) currentkey = k;
+      });
+      if (currentkey == gallery_elements.length - 1) var nextkey = 0;
+      else var nextkey = parseInt(currentkey) + 1;
+      if (currentkey == 0) var prevkey = parseInt(gallery_elements.length - 1);
+      else var prevkey = parseInt(currentkey) - 1;
+      document.getElementById("next").addEventListener("click", function () {
+        gallery_elements[nextkey].click();
+      });
+      document.getElementById("prev").addEventListener("click", function () {
+        gallery_elements[prevkey].click();
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    //create lightbox div in the footer
+    var newdiv = document.createElement("div");
+    newdiv.setAttribute("id", "lightbox");
+    document.body.appendChild(newdiv);
+
+    //add classes to links to be able to initiate lightboxes
+    var elements = document.querySelectorAll("a");
+    elements.forEach((element) => {
+      var url = element.getAttribute("href");
+      if (url) {
+        if (
+          url.indexOf("vimeo") !== -1 &&
+          !element.classList.contains("no-lightbox")
+        ) {
+          is_vimeolink(url, element);
+        }
+        if (is_youtubelink(url) && !element.classList.contains("no-lightbox")) {
+          element.classList.add("lightbox-youtube");
+          element.setAttribute("data-id", is_youtubelink(url));
+        }
+        if (is_imagelink(url) && !element.classList.contains("no-lightbox")) {
+          element.classList.add("lightbox-image");
+          var href = element.getAttribute("href");
+          var filename = href.split("/").pop();
+          var split = filename.split(".");
+          var name = split[0];
+          element.setAttribute("title", name);
+        }
+      }
+    });
+
+    //remove the clicked lightbox
+    document
+      .getElementById("lightbox")
+      .addEventListener("click", function (event) {
+        if (event.target.id != "next" && event.target.id != "prev") {
+          this.innerHTML = "";
+          document.getElementById("lightbox").style.display = "none";
+        }
+      });
+
+    //add the youtube lightbox on click
+    var elements = document.querySelectorAll("a.lightbox-youtube");
+    elements.forEach((element) => {
+      element.addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("lightbox").innerHTML =
+          '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://www.youtube.com/embed/' +
+          this.getAttribute("data-id") +
+          '?autoplay=1&showinfo=0&rel=0"></iframe></div>';
+        document.getElementById("lightbox").style.display = "block";
+
+        setGallery(this);
+      });
+    });
+
+    //add the image lightbox on click
+    var elements = document.querySelectorAll("a.lightbox-image");
+    elements.forEach((element) => {
+      element.addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("lightbox").innerHTML =
+          '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="img" style="background: url(\'' +
+          this.getAttribute("href") +
+          '\') center center / contain no-repeat;" title="' +
+          this.getAttribute("title") +
+          '" ><img src="' +
+          this.getAttribute("href") +
+          '" alt="' +
+          this.getAttribute("title") +
+          '" /></div><span>' +
+          this.getAttribute("title") +
+          "</span>";
+        document.getElementById("lightbox").style.display = "block";
+
+        setGallery(this);
+      });
+    });
+  });
+</script>
+<style>
+  #lightbox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999999;
+    line-height: 0;
+    cursor: pointer;
+    display: none;
+  }
+  #lightbox .img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #lightbox .img img {
+    opacity: 0;
+    pointer-events: none;
+    width: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    #lightbox .img {
+      max-width: 1200px;
+    }
+  }
+  @media screen and (min-height: 1200px) {
+    #lightbox .img {
+      max-height: 1200px;
+    }
+  }
+  #lightbox span {
+    display: block;
+    position: fixed;
+    bottom: 13px;
+    height: 1.5em;
+    line-height: 1.4em;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+
+  #lightbox span {
+    display: none;
+  }
+
+  #lightbox .videoWrapperContainer {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 900px;
+    max-height: 100%;
+  }
+  #lightbox .videoWrapperContainer .videoWrapper {
+    height: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-bottom: 56.333%; /* custom */
+    background: black;
+  }
+  #lightbox .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  #lightbox #prev,
+  #lightbox #next {
+    height: 50px;
+    line-height: 36px;
+    display: none;
+    margin-top: -25px;
+    position: fixed;
+    top: 50%;
+    padding: 0 15px;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 99;
+    color: white;
+    font-size: 60px;
+  }
+  #lightbox.gallery #prev,
+  #lightbox.gallery #next {
+    display: block;
+  }
+  #lightbox #prev {
+    left: 0;
+  }
+  #lightbox #next {
+    right: 0;
+  }
+  #lightbox #close {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 99;
+    right: 0;
+    top: 0;
+  }
+  #lightbox #close:after,
+  #lightbox #close:before {
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 14px;
+    content: "";
+    height: 3px;
+    background: white;
+    width: 23px;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    /* Safari */
+    -webkit-transform: rotate(-45deg);
+    /* Firefox */
+    -moz-transform: rotate(-45deg);
+    /* IE */
+    -ms-transform: rotate(-45deg);
+    /* Opera */
+    -o-transform: rotate(-45deg);
+  }
+  #lightbox #close:after {
+    /* Safari */
+    -webkit-transform: rotate(45deg);
+    /* Firefox */
+    -moz-transform: rotate(45deg);
+    /* IE */
+    -ms-transform: rotate(45deg);
+    /* Opera */
+    -o-transform: rotate(45deg);
+  }
+  #lightbox,
+  #lightbox * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+</style>
+
+<style>
+  th {
+    text-align: center;
+  }
+  .highlight {
+    background-color: #ffff00;
+  }
+</style>
+
+<script>
+  function highlight(id) {
+    var already_highlighted = document.getElementsByClassName("highlight");
+    if (already_highlighted.length > 0)
+      already_highlighted[0].classList.remove("highlight");
+    var toHighlight = document.getElementById(id);
+    toHighlight.classList.toggle("highlight");
+  }
+  function highlight_off() {
+    var already_highlighted = document.getElementsByClassName("highlight");
+    if (already_highlighted.length > 0)
+      already_highlighted[0].classList.remove("highlight");
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+<script src="https://sites.pitt.edu/~shk148/assets/js/typed.js" defer></script>
+
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+</script>
+  <link rel="stylesheet" href="https://sites.pitt.edu/~shk148/assets/css/style.css">
+</head>
+
+<body data-bs-spy="scroll" rootmargin="0px 100px 0%">
+  <!--- Header and nav template site-wide -->
+
+  <article class="container">
+    <h1 class="title mb-0">Practice Exam I</h1>
+    <p class="subtitle mb-0">CS 0449 Introduction to Systems Software - Spring 2023</p>
+    <style>
+input{width:auto; margin-right: 1em;}
+.task-list-item{list-style:none;}
+details{margin-bottom: 2em;}
+</style>
+
+<h2 id="directions">Directions</h2>
+<p>This exam is <strong>closed book</strong>. You may not use any type of calculator (it is not needed). Put all materials under your desk, including cell/smart phones, smart watches, headphones, calculators, laptops, tablets, etc. All questions are marked with their point value. There should be plenty of workspace provided in the exam booklet, but if you need extra pages, you may use blank pieces of paper.</p>
+
+<p><strong>Show work</strong>. Be sure to show all work and turn in any extra pages that you use. If you do not show your work, you may not receive full or partial credit for a correct or wrong answer. Write legibly. If your handwriting cannot be read, then you will not receive credit for an answer.</p>
+
+<h3 id="variable-sizes-unless-otherwise-stated">Variable sizes (unless otherwise stated)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><code class="language-html highlighter-rouge">type</code></th>
+      <th><code class="language-html highlighter-rouge">sizeof(type)</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-html highlighter-rouge">char</code></td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td><code class="language-html highlighter-rouge">short</code></td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td><code class="language-html highlighter-rouge">int</code></td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td><code class="language-html highlighter-rouge">long</code></td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td><code class="language-html highlighter-rouge">pointer</code></td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="files-documentation">Files documentation</h3>
+<ul>
+  <li><code class="language-html highlighter-rouge">fopen(const char *path, const char *mode);</code></li>
+  <li><code class="language-html highlighter-rouge">int fclose(FILE *stream);</code></li>
+  <li><code class="language-html highlighter-rouge">size_t fread(void *ptr, size_t size, size_t n_items, FILE *stream);</code></li>
+  <li><code class="language-html highlighter-rouge">size_t fwrite(void *ptr, size_t size, size_t n_items, FILE *stream);</code></li>
+  <li>
+<code class="language-html highlighter-rouge">int fseek(FILE *stream, long offset, int whence);</code> where <code class="language-html highlighter-rouge">whence</code> is one of:
+    <ul>
+      <li>
+<code class="language-html highlighter-rouge">SEEK_SET</code>: Move relative to the beginning of the file</li>
+      <li>
+<code class="language-html highlighter-rouge">SEEK_CUR</code>: Move relative to the current cursor position</li>
+      <li>
+<code class="language-html highlighter-rouge">SEEK_END</code>: Move relative to the end of the file</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<h2 id="1-data-representation-25-points">1. Data Representation [25 points]</h2>
+<p><strong>QUESTION 1</strong>. Given a CPU that uses 2’s complement, answer the following questions about C variables and datatypes.<br>
+<strong>PART A</strong>. Mark the <strong>false</strong> statement.</p>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code class="language-html highlighter-rouge">-1 &gt; 0</code>
+</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code class="language-html highlighter-rouge">-1 &gt; (unsigned)0</code>
+</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code class="language-html highlighter-rouge">0 == - 0</code>
+</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code class="language-html highlighter-rouge">-1 == (unsigned)-1</code>
+</li>
+</ul>
+<details>
+  <summary><strong>Show Solution</strong></summary>
+  <p><strong>(3 points)</strong></p>
+  <ul>
+    <li>[ ]<code class="language-html highlighter-rouge">-1 &gt; 0</code> is <strong>false</strong> for signed numbers.</li>
+    <li>
+<code class="language-html highlighter-rouge">-1 &gt; (unsigned) 0</code> is <strong>true</strong>. When comparing unsigned and signed numbers, the variables are all converted (<em>coereced</em>) into unsigned forms. Therefore, as an unsigned number, <code class="language-html highlighter-rouge">-1</code> (which is <code class="language-html highlighter-rouge">1111....1111</code> in binary) becomes the largest unsigned number which is always greater than zero.</li>
+    <li>
+<code class="language-html highlighter-rouge">0 == -0</code> is <strong>true</strong>.</li>
+    <li>
+<code class="language-html highlighter-rouge">-1 == (unsigned) -1</code> is <strong>true</strong> since comparisons between unsigned and signed numbers force all numbers to be unsigned.</li>
+  </ul>
+
+  <p>Hence, <code class="language-html highlighter-rouge">-1 &gt; 0</code> is the only false statement.</p>
+
+  <p>For more information on two’s complement, review your CS447 notes and see <a href="https://www.omnicalculator.com/math/twos-complement/">this calculator</a>.</p>
+</details>
+
+<p><strong>PART B</strong>. Given the following variables, select <strong>ALL</strong> true statements.</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">foo</span><span class="p">();</span>  <span class="cm">/* arbitrary value */</span>
+<span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">bar</span><span class="p">();</span>  <span class="cm">/* arbitrary value */</span>
+<span class="kt">unsigned</span> <span class="n">ux</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+<span class="kt">unsigned</span> <span class="n">uy</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span>
+</code></pre></div></div>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code class="language-html highlighter-rouge">x <span class="nt">&lt;</span> <span class="err">0</span> <span class="err">||</span> <span class="na">-x</span> <span class="err">&lt;=</span> <span class="err">0</span></code>
+</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code class="language-html highlighter-rouge">x+y == uy+ux</code>
+</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code class="language-html highlighter-rouge">x &gt; 0 || -x &gt;= 0</code>
+</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code class="language-html highlighter-rouge">(x * x) &gt;= 0</code>
+</li>
+</ul>
+
+<details>
+  <summary><strong>Show Solution</strong></summary>
+  <p><strong>(3 points) No partial credits were given for this problem.</strong><br>
+<code class="language-html highlighter-rouge">x <span class="nt">&lt;</span> <span class="err">0</span> <span class="err">||</span> <span class="na">-x</span> <span class="err">&lt;=</span> <span class="err">0</span></code> is the only true statement.</p>
+</details>
+
+<p><strong>PART C</strong>. Select ALL strings that get printed by this program.</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">255</span><span class="p">;</span>
+<span class="kt">signed</span> <span class="kt">char</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="n">printf</span><span class="p">(</span><span class="s">"x is positive</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="n">printf</span><span class="p">(</span><span class="s">"x+1 is positive</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="n">printf</span><span class="p">(</span><span class="s">"y is negative</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">((</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="n">printf</span><span class="p">(</span><span class="s">"y+1 is negative</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+</code></pre></div></div>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code class="language-html highlighter-rouge">x</code> is positive</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code class="language-html highlighter-rouge">x+1</code> is positive</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code class="language-html highlighter-rouge">y</code> is negative</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code class="language-html highlighter-rouge">y+1</code> is negative</li>
+</ul>
+
+<details>
+  <summary><strong>Show Solution</strong></summary>
+  <p>(3 points) No partial credits were given for this problem.<br>
+“<code class="language-html highlighter-rouge">x</code> is positive” <strong>and</strong> “<code class="language-html highlighter-rouge">y+1</code> is negative”</p>
+</details>
+
+<hr>
+<p><strong>QUESTION 2</strong>. (9 points) Consider a 16-bit machine that uses two’s complement to represent signed integers. An integer is 16-bits long, and a short is 8-bits long. Answer each of the questions below using the correct number of bits!<br>
+E.g.: 8-bit representation of a binary number: <code class="language-html highlighter-rouge">10010011</code><br>
+Assume the following code executed:</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kt">short</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">127</span><span class="p">;</span>
+<span class="kt">short</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="o">-</span><span class="mi">128</span><span class="p">;</span>
+<span class="kt">unsigned</span> <span class="n">u_e</span> <span class="o">=</span> <span class="n">d</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><strong>PART A</strong>. What is the <strong>decimal</strong> representation <code class="language-html highlighter-rouge">b</code>?</p>
+<details>
+  <summary><strong>Show Solution</strong></summary>
+  <p><strong>(3 points)</strong> -128</p>
+</details>
+
+<p><strong>PART B</strong>. What is the <strong>decimal</strong> representation of <code class="language-html highlighter-rouge">c</code>?</p>
+<details>
+  <summary><strong>Show Solution</strong></summary>
+  <p><strong>(3 points)</strong> 128</p>
+</details>
+
+<p><strong>PART C</strong>. What is the <strong>binary</strong> representation of <code class="language-html highlighter-rouge">u_e</code>?</p>
+<details>
+  <summary><strong>Show Solution</strong></summary>
+  <p><strong>(3 points)</strong> 1111 1111 1000 0000</p>
+</details>
+
+<hr>
+<p><strong>QUESTION 3</strong>. Answer the following questions about floating point variables.<br>
+<strong>PART A</strong>. Read the following program, which is the true statement?</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kt">void</span> <span class="nf">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">float</span> <span class="n">f</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">((</span><span class="kt">int</span><span class="p">)(</span><span class="kt">double</span><span class="p">)</span><span class="n">i</span> <span class="o">==</span> <span class="n">i</span><span class="p">)</span> <span class="n">printf</span><span class="p">(</span><span class="s">"Success</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">((</span><span class="kt">float</span><span class="p">)(</span><span class="kt">int</span><span class="p">)</span><span class="n">f</span> <span class="o">==</span> <span class="n">f</span><span class="p">)</span> <span class="n">printf</span><span class="p">(</span><span class="s">"Success</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Always prints success twice</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Always prints success at least once</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Prints success exactly once</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>Will never print a success</li>
+</ul>
+<details>
+  <summary><strong>Show Solution</strong></summary>
+  <p><strong>(3 points)</strong> Always prints success at least once</p>
+</details>
+
+<p><strong>PART B</strong>. (4 points) Given the following program, what is the ouput?</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kt">float</span> <span class="n">f1</span> <span class="o">=</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">float</span> <span class="n">f2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="n">f2</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"f1 == f2? %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">f1</span> <span class="o">==</span> <span class="n">f2</span> <span class="o">?</span> <span class="s">"yes"</span> <span class="o">:</span> <span class="s">"no"</span> <span class="p">);</span>
+</code></pre></div></div>
+<details>
+  <summary><strong>Show Solution</strong></summary>
+  <p><strong>(4 points)</strong> f1 == f2? no</p>
+</details>
+
+<hr>
+<h2 id="memory-and-complex-datatypes-40-points">Memory and complex datatypes [40 points]</h2>
+<p><strong>QUESTION 4</strong>. (3 points) What is a pointer in C?</p>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>A variable that stores a memory address</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>An operator that can access a struct using its address</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>The same thing as an unsigned long</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>The same as an array</li>
+</ul>
+<details>
+  <summary><strong>Show Solution</strong></summary>
+  <p><strong>(4 points)</strong> A variable that stores a memory address</p>
+</details>
+
+<hr>
+<p><strong>QUESTION 5</strong>. (6 points) Pointerspointers. Pointerspointerspointers.</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">data</span> <span class="o">=</span> <span class="mh">0x6666</span><span class="p">;</span>
+    <span class="kt">int</span><span class="o">*</span> <span class="n">dataptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">data</span><span class="p">;</span>
+    <span class="kt">int</span><span class="o">**</span> <span class="n">dataptrptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">dataptr</span><span class="p">;</span>
+    <span class="kt">int</span><span class="o">***</span> <span class="n">dataptrptrptr</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">dataptrptr</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%x</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">***</span><span class="n">dataptrptrptr</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>Consider the code above and assume:</p>
+<ol>
+  <li>data is at address 0x0010</li>
+  <li>dataptr is at address 0x1550,</li>
+  <li>dataptrptr is at address 0x1440, and</li>
+  <li>dataptrptrptr is at address 0x1330
+NOTE: Assume both int and pointers are 32 bits!</li>
+</ol>
+
+<p><strong>PART A</strong>. (3 points) What is the value printed by the program above?</p>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>0x6666</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>0x0010</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>0x1550</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>0x1330</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>0x1337</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>0x1440</li>
+</ul>
+<details>
+  <summary><strong>Show Solution</strong></summary>
+  <p><strong>(4 points)</strong> 0x6666</p>
+</details>
+
+<p><strong>PART B</strong>. (3 points) What is the value of the expression <code class="language-html highlighter-rouge">**dataptrptrptr+1</code>?</p>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>0x1550</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>0x1554</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>0x0011</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>0x1551</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>0x0014</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>0x0010</li>
+</ul>
+<details>
+  <summary><strong>Show Solution</strong></summary>
+  <p><strong>(4 points)</strong> 0x0014</p>
+</details>
+
+<p><strong>QUESTION 6</strong>. (6 points) Arrays and strings<br>
+<strong>PART A.</strong> (3 points) What is the output of the code below?</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="syntax"><code> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<details>
+  <summary><strong>Show Solution</strong></summary>
+  <p><strong>(4 points)</strong> 5</p>
+</details>
+
+<p><strong>PART B</strong>. (3 points) What value is printed by the following code?</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kt">char</span> <span class="n">string</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="s">"Hello"</span><span class="p">;</span>
+<span class="kt">unsigned</span> <span class="kt">long</span> <span class="n">len</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">string</span><span class="p">);</span>
+<span class="n">string</span><span class="p">[</span><span class="n">len</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+<span class="n">string</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="sc">'\0'</span><span class="p">;</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"%lu"</span><span class="p">,</span> <span class="n">strnlen</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">len</span><span class="p">));</span>
+</code></pre></div></div>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>0</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>4</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>5</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>6</li>
+</ul>
+<details>
+  <summary><strong>Show Solution</strong></summary>
+  <p><strong>(4 points)</strong> 4</p>
+</details>
+
+<hr>
+<p><strong>QUESTION 7.</strong> (3 points) Given the following code, which of the following statements is true?</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">typedef</span> <span class="k">struct</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">year</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">semester</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">midterm_t</span><span class="p">;</span>
+<span class="n">midterm_t</span> <span class="n">variable</span><span class="p">;</span>
+
+<span class="n">variable</span><span class="p">.</span><span class="n">year</span> <span class="o">=</span> <span class="mi">2023</span><span class="p">;</span>
+<span class="n">variable</span><span class="p">.</span><span class="n">semester</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s">"%p %p</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">variable</span><span class="p">.</span><span class="n">year</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">variable</span><span class="p">.</span><span class="n">semester</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Output:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>0x404034
+0x404038
+</code></pre></div></div>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code class="language-html highlighter-rouge">*(<span class="err">&amp;</span>variable+1) == 4</code>
+</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code class="language-html highlighter-rouge"><span class="err">&amp;</span>variable.year+1 == 4</code>
+</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code class="language-html highlighter-rouge">*(<span class="err">&amp;</span>variable.year+1) == 4</code>
+</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled><code class="language-html highlighter-rouge">(<span class="err">&amp;</span>variable)-&gt;year == 4</code>
+</li>
+</ul>
+<details>
+  <summary><strong>Show Solution</strong></summary>
+  <p><strong>(4 points)</strong> <code class="language-html highlighter-rouge">*(<span class="err">&amp;</span>variable.year+1) == 4</code></p>
+</details>
+
+<hr>
+<p>For this section assume we are using a 64-bit x86-64 machine (little endian). The current state of the physical main memory (values in hex) is given below:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="4">
+</th>
+      <th colspan="3">Offset</th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      
+      
+      
+      
+      
+    </tr>
+    <tr>
+      <th> </th>
+      <th>Address</th>
+      <th>+0</th>
+      <th>+1</th>
+      <th>+2</th>
+      <th>+3</th>
+      <th>+4</th>
+      <th>+5</th>
+      <th>+6</th>
+      <th>+7</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>0x00</td>
+      <td>f7</td>
+      <td>48</td>
+      <td>39</td>
+      <td>65</td>
+      <td>a6</td>
+      <td>0a</td>
+      <td>f8</td>
+      <td>6f</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>0x08</td>
+      <td>21</td>
+      <td>1e</td>
+      <td>02</td>
+      <td>15</td>
+      <td>90</td>
+      <td>e9</td>
+      <td>f8</td>
+      <td>bd</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>0x10</td>
+      <td>e8</td>
+      <td>63</td>
+      <td>18</td>
+      <td>0c</td>
+      <td>b0</td>
+      <td>76</td>
+      <td>de</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>0x18</td>
+      <td>e5</td>
+      <td>cc</td>
+      <td>90</td>
+      <td>1b</td>
+      <td>67</td>
+      <td>01</td>
+      <td>e7</td>
+      <td>a7</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>0x20</td>
+      <td>19</td>
+      <td>6c</td>
+      <td>ee</td>
+      <td>0e</td>
+      <td>60</td>
+      <td>06</td>
+      <td>84</td>
+      <td>09</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>0x28</td>
+      <td>f4</td>
+      <td>76</td>
+      <td>db</td>
+      <td>61</td>
+      <td>b8</td>
+      <td>14</td>
+      <td>4f</td>
+      <td>e9</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>0x30</td>
+      <td>3f</td>
+      <td>48</td>
+      <td>ca</td>
+      <td>db</td>
+      <td>64</td>
+      <td>30</td>
+      <td>6e</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>0x38</td>
+      <td>26</td>
+      <td>e8</td>
+      <td>39</td>
+      <td>5d</td>
+      <td>67</td>
+      <td>c9</td>
+      <td>a2</td>
+      <td>03</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>QUESTION 8</strong>. (12 points) Based on the memory values shown above and the variable initialization below, write the hex value of each C expression using pointer arithmetic within the commented lines at their respective state in the execution of the given program. Write <strong>n/a</strong> in the blank if the value cannot be determined. <strong>Remember to write enough hex digits to fill up the width of the variable data type.</strong></p>
+<pre><code class="language-C">char*  cp = 0x10;    // char is 8b 
+short* sp = 0x2C;    // short is 16b
+int*   ip = 0x24;    // int is 32b
+long*  lp = 0x28;    // long AND pointers are 64b
+</code></pre>
+<ol>
+  <li><code class="language-html highlighter-rouge">*ip</code></li>
+  <li><code class="language-html highlighter-rouge">sp[-2]</code></li>
+  <li><code class="language-html highlighter-rouge"><span class="err">&amp;</span>lp[0]</code></li>
+  <li><code class="language-html highlighter-rouge">cp+16</code></li>
+  <li><code class="language-html highlighter-rouge">(char*********)sp+1</code></li>
+  <li>
+<code class="language-html highlighter-rouge">*( (char*)ip - 3)</code>
+ 
+—</li>
+</ol>
+
+<p><strong>QUESTION 9</strong>. (6 points) Give the different memory segments listed below to the left, and the function on the right.</p>
+<div class="row">
+<div class="col">
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code>|—————————|
+| STACK   |
+|—————————|
+|         |
+|—————————|
+| HEAP    |
+|—————————|
+| STATIC  |
+| DATA    |
+|—————————|
+| code    |
+|—————————|
+</code></pre></div>    </div>
+  </div>
+<div class="col">
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code><span class="kt">int</span> <span class="n">my_number</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="kt">long</span><span class="o">*</span> <span class="n">v</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="mi">8</span><span class="o">*</span><span class="mi">100</span><span class="p">);</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">str</span> <span class="o">=</span> <span class="s">"Hello"</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">arr</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">};</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </div>
+</div>
+
+<p>Fill in each entry on the left with the segment where the address listed on the right is located.</p>
+<ul>
+  <li>(A)<code class="language-html highlighter-rouge"><span class="err">&amp;</span>c</code>
+</li>
+  <li>(B)<code class="language-html highlighter-rouge"><span class="err">&amp;</span>v</code>
+</li>
+  <li>(C)<code class="language-html highlighter-rouge">v</code>
+</li>
+  <li>(D)<code class="language-html highlighter-rouge"><span class="err">&amp;</span>arr</code>
+</li>
+  <li>(E)<code class="language-html highlighter-rouge"><span class="err">&amp;</span>str[3]</code>
+</li>
+  <li>(F)<code class="language-html highlighter-rouge"><span class="err">&amp;</span>str</code>
+</li>
+</ul>
+
+<p><strong>QUESTION 10</strong>. We discussed two different techniques to keep track of array/string size. Describe them and discuss the advantages/disadvantages of each one of them.</p>
+<details>
+  <summary><strong>Show Solution</strong></summary>
+  <p><strong>(4 points)</strong></p>
+  <ol>
+    <li>Keep track of the array/string size explicitly by storing a “<strong>size variable</strong>”. This allows us to calculate size very quickly (simply read the size variable), but since this size variable is of a fixed size, there is a maximum value for this variable. For instance, if size was a 4 Byte integer, an array could only hold <em>2<sup>32</sup>-1</em> elements at most.</li>
+    <li>Keep track of the array/string implicitly by storing a <strong>sentinel value</strong> (such as <code class="language-html highlighter-rouge">\0</code>) at the end of the array. This allows us to have infinitely long variables (the issue of fixed size variables are fixed!), but each time we need to search the entire array to calculate the size (<em>O(n)</em>).</li>
+  </ol>
+</details>
+
+<h2 id="file-io-15-points">File I/O [15 points]</h2>
+
+<p><strong>QUESTION 11</strong>. (3 points) Which of the following modes opens a file that doesn’t yet exist for reading and writing?</p>
+<ul class="task-list">
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>“<code class="language-html highlighter-rouge">r+</code>”</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>“<code class="language-html highlighter-rouge">w</code>”</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>“<code class="language-html highlighter-rouge">w+</code>”</li>
+  <li class="task-list-item">
+<input type="checkbox" class="task-list-item-checkbox" disabled>“<code class="language-html highlighter-rouge">r</code>”</li>
+</ul>
+
+<p><strong>QUESTION 12</strong>. (12 points) Record Metadata.
+I need to store the metadata for my record collection. To do that, I want to create a binary file that contains for each track on a record. To keep the data on the record itself, I’ll include the following header on each file.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Offset (B)</th>
+      <th>Size (B)</th>
+      <th>Field description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>4</td>
+      <td>Number of tracks</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>100</td>
+      <td>Album title (string)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Then, for each track on the record, I’ll include the following information in the file.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Offset (B)</th>
+      <th>Size (B)</th>
+      <th>Field description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>2</td>
+      <td>Track duration</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>100</td>
+      <td>Track title (string)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>PART A</strong>. (2 points) Fill the blanks with the data type appropriate for each struct member. AlbumInfo is a struct that represents the Album header, and TrackInfo is a struct that represents a track.</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="cp">#pragma pack(1)
+</span><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="n">__</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="n">__</span> <span class="n">n_tracks</span><span class="p">;</span>
+    <span class="n">__</span><span class="p">(</span><span class="n">B</span><span class="p">)</span><span class="n">__</span> <span class="n">title</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+<span class="p">}</span> <span class="n">AlbumInfo</span><span class="p">;</span>
+
+<span class="cp">#pragma pack(1)
+</span><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="n">__</span><span class="p">(</span><span class="n">C</span><span class="p">)</span><span class="n">__</span> <span class="n">duration</span><span class="p">;</span>
+    <span class="n">__</span><span class="p">(</span><span class="n">D</span><span class="p">)</span><span class="n">__</span> <span class="n">title</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+<span class="p">}</span> <span class="n">TrackInfo</span><span class="p">;</span>
+</code></pre></div></div>
+<details>
+  <summary><strong>Show Solution</strong></summary>
+  <p><strong>(2 points)</strong></p>
+  <ul>
+    <li>(A) <code class="language-html highlighter-rouge">int</code>. The number of tracks are 4 bytes. Hence, we need a variable type capable of holding 4 bytes of data.</li>
+    <li>(B) <code class="language-html highlighter-rouge">char</code>. In C, Strings are simply character arrays (or pointers).</li>
+    <li>(C) <code class="language-html highlighter-rouge">short</code>. The track duration is 2 bytes. Hence, we need a variable type capable of holding 2 bytes of data.</li>
+    <li>(D) <code class="language-html highlighter-rouge">char</code>. In C, Strings are simply character arrays (or pointers).</li>
+  </ul>
+</details>
+
+<p><strong>PART B</strong>. (10 points) Now, complete the code below that prints the album information contained in file “myalbum”. It should output something like the following output:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>Album: Great title
+Number of tracks: 2
+  365:  My Album
+  123:  My Album
+</code></pre></div></div>
+<p>Rubric:</p>
+<ul>
+  <li>4 points – Read the header into variable ai</li>
+  <li>4 points – Read all tracks information, one at a time, into variable ti</li>
+  <li>2 points – Print the header and track info correctly</li>
+</ul>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">FILE</span><span class="o">*</span> <span class="n">f</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">"myalbum"</span><span class="p">,</span> <span class="s">"r"</span><span class="p">);</span>
+
+    <span class="n">AlbumInfo</span> <span class="n">ai</span><span class="p">;</span>
+    <span class="n">TrackInfo</span> <span class="n">ti</span><span class="p">;</span>
+
+    <span class="c1">// YOUR ANSWER HERE</span>
+
+    <span class="n">fclose</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<details>
+  <summary><strong>Show Solution</strong></summary>
+  <p><strong>(10 points)</strong></p>
+
+  <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">FILE</span><span class="o">*</span> <span class="n">f</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">"myalbum"</span><span class="p">,</span> <span class="s">"r"</span><span class="p">);</span>
+
+    <span class="n">AlbumInfo</span> <span class="n">ai</span><span class="p">;</span>
+    <span class="n">TrackInfo</span> <span class="n">ti</span><span class="p">;</span>
+
+    <span class="cm">/* ---START SOLUTION--- */</span>
+    <span class="n">fread</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ai</span><span class="p">.</span><span class="n">n_tracks</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>   <span class="c1">// Read the first four bytes of the file</span>
+                                    <span class="c1">// which contains the number of tracks</span>
+    
+    <span class="n">fread</span><span class="p">(</span><span class="n">ai</span><span class="p">.</span><span class="n">title</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>     <span class="c1">// Read the next 100 bytes of the file</span>
+                                    <span class="c1">// which contains the album title</span>
+                                    <span class="c1">// NOTE: calling fread moves the file pointer</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Album: %s</span><span class="se">\n</span><span class="s">Number of tracks: %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">ai</span><span class="p">.</span><span class="n">title</span><span class="p">,</span> <span class="n">ai</span><span class="p">.</span><span class="n">n_ntracks</span><span class="p">);</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="n">ai</span><span class="p">.</span><span class="n">n_tracks</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span> <span class="c1">// Iterate through the file 0 .. n_tracks</span>
+        <span class="n">fread</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ti</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">ti</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>  <span class="c1">// while reading the next `sizeof(ti)` bytes</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"%d: %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">ti</span><span class="p">.</span><span class="n">duration</span><span class="p">,</span> <span class="n">ti</span><span class="p">.</span><span class="n">title</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="cm">/* ---END SOLUTION--- */</span>
+
+    <span class="n">fclose</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+</code></pre></div>  </div>
+</details>
+
+<h2 id="c-code-20-points">C code [20 points]</h2>
+<p><strong>QUESTION 13</strong>. (2 points) Given the behavior of the C Preprocessor what is the output of this code?</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="cp">#define MAGIC(x, y) x + y
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="n">MAGIC</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">4</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<details>
+  <summary><strong>Show Solution</strong></summary>
+  <p><strong>(2 points)</strong></p>
+
+</details>
+
+<p><strong>QUESTION 14</strong>. (3 points) Call the “program” underneath such that it prints “Success”?</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">argc</span><span class="o">-</span><span class="mi">2</span><span class="p">))</span> <span class="n">printf</span><span class="p">(</span><span class="err">“</span><span class="o">%</span><span class="n">s</span><span class="err">”</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>QUESTION 15</strong>. (5 points) The following function allocates the int array in the heap, and not in the stack. Could the programmer allocate the array in the stack of the function? Explain why?</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kt">int</span> <span class="o">*</span><span class="nf">create_array</span> <span class="p">(</span><span class="kt">int</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">my_array</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="o">*</span><span class="n">size</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">my_array</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>QUESTION 16</strong>. (5 points) Read the following code. It compiles without problems, yet, there is a critical issue with it. Describe the issue, why it happens, and how you’d solve it.</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+    <span class="kt">long</span> <span class="n">a</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">b</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">c</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">MyStruct</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">MyStruct</span> <span class="o">*</span><span class="n">my_struct</span><span class="p">;</span>
+    <span class="n">my_struct</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">long</span><span class="p">)</span><span class="o">+</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="o">+</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">my_struct</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="c1">// Failed to malloc</span>
+    <span class="n">printf</span><span class="p">(</span><span class="err">“</span><span class="n">Successfully</span> <span class="n">allocated</span> <span class="n">the</span> <span class="k">struct</span><span class="err">\</span><span class="n">n</span><span class="err">”</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p> 
+<strong>QUESTION 17</strong>. (5 points) Based on a true story. The following code is supposed to print all negative elements of an array, and return immediately if a zero if found:</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="syntax"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="kt">int</span> <span class="n">array</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">54</span><span class="p">,</span><span class="o">-</span><span class="mi">34</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="o">-</span><span class="mi">43</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="o">-</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">87</span><span class="p">,</span><span class="o">-</span><span class="mi">42</span><span class="p">};</span>
+  <span class="kt">int</span> <span class="n">n_items</span> <span class="o">=</span> <span class="mi">11</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">n_items</span> <span class="p">)</span> <span class="p">{</span>
+    
+    <span class="k">if</span> <span class="p">(</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+            <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>However, the code doesn’t print anything. Find the single bug in the program and explain why nothing is printed.</p>
+
+<script>
+const checkboxes = document.getElementsByClassName('task-list-item-checkbox');
+
+Array.prototype.forEach.call(checkboxes, function (e) {
+  e.removeAttribute('disabled');
+});
+
+</script>
+
+
+
+  </article>
+ 
+  <hr class="mx-auto slender">
+  <footer class="site-footer text-center">
+    <p class="mb-0 mx-auto">
+      © 2021-2023 Shinwoo Kim. All Rights Reserved.<br>
+      <a href="#" onclick="history.back()">Return to Previous Page</a>
+    </p>
+  </footer>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X43BZS6F4C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-X43BZS6F4C");
+</script>
+</body>
+
+</html>

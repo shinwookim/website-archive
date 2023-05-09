@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>
+  
+    Bridges to IT: Jump-Starting a Career in IT | Shinwoo Kim
+</title>
+<link rel="alternate" type="application/rss+xml" title="Shinwoo Kim" href="https://sites.pitt.edu/~shk148/feed.xml">
+
+<link rel="icon" type="image/x-icon" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon.ico">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/x-icon" sizes="16x16" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://sites.pitt.edu/~shk148/%20/assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="https://sites.pitt.edu/~shk148/assets/favicon/site.webmanifest">
+
+<meta name="twitter:card" content="summary">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.2">
+<meta property="og:title" content="Bridges to IT: Jump-Starting a Career in IT">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.">
+<meta property="og:description" content="Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/teaching/bridges-to-it.html">
+<meta property="og:url" content="https://sites.pitt.edu/~shk148/teaching/bridges-to-it.html">
+<meta property="og:site_name" content="Shinwoo Kim">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Bridges to IT: Jump-Starting a Career in IT">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.","headline":"Bridges to IT: Jump-Starting a Career in IT","url":"https://sites.pitt.edu/~shk148/teaching/bridges-to-it.html"}</script>
+<!-- End Jekyll SEO tag -->
+ <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.css">
+<script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js"></script>
+
+<script>
+  function is_youtubelink(url) {
+    var p =
+      /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return url.match(p) ? RegExp.$1 : false;
+  }
+  function is_imagelink(url) {
+    var p = /([a-z\-_0-9\/\:\.]*\.(jpg|jpeg|png|gif))/i;
+    return url.match(p) ? true : false;
+  }
+  function is_vimeolink(url, el) {
+    var id = false;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+        // XMLHttpRequest.DONE == 4
+        if (xmlhttp.status == 200) {
+          var response = JSON.parse(xmlhttp.responseText);
+          id = response.video_id;
+          console.log(id);
+          el.classList.add("lightbox-vimeo");
+          el.setAttribute("data-id", id);
+
+          el.addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("lightbox").innerHTML =
+              '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/' +
+              el.getAttribute("data-id") +
+              '/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>';
+            document.getElementById("lightbox").style.display = "block";
+
+            setGallery(this);
+          });
+        } else if (xmlhttp.status == 400) {
+          alert("There was an error 400");
+        } else {
+          alert("something else other than 200 was returned");
+        }
+      }
+    };
+    xmlhttp.open("GET", "https://vimeo.com/api/oembed.json?url=" + url, true);
+    xmlhttp.send();
+  }
+  function setGallery(el) {
+    var elements = document.body.querySelectorAll(".gallery");
+    elements.forEach((element) => {
+      element.classList.remove("gallery");
+    });
+    if (el.closest("ul, p")) {
+      var link_elements = el
+        .closest("ul, p")
+        .querySelectorAll("a[class*='lightbox-']");
+      link_elements.forEach((link_element) => {
+        link_element.classList.remove("current");
+      });
+      link_elements.forEach((link_element) => {
+        if (el.getAttribute("href") == link_element.getAttribute("href")) {
+          link_element.classList.add("current");
+        }
+      });
+      if (link_elements.length > 1) {
+        document.getElementById("lightbox").classList.add("gallery");
+        link_elements.forEach((link_element) => {
+          link_element.classList.add("gallery");
+        });
+      }
+      var currentkey;
+      var gallery_elements = document.querySelectorAll("a.gallery");
+      Object.keys(gallery_elements).forEach(function (k) {
+        if (gallery_elements[k].classList.contains("current")) currentkey = k;
+      });
+      if (currentkey == gallery_elements.length - 1) var nextkey = 0;
+      else var nextkey = parseInt(currentkey) + 1;
+      if (currentkey == 0) var prevkey = parseInt(gallery_elements.length - 1);
+      else var prevkey = parseInt(currentkey) - 1;
+      document.getElementById("next").addEventListener("click", function () {
+        gallery_elements[nextkey].click();
+      });
+      document.getElementById("prev").addEventListener("click", function () {
+        gallery_elements[prevkey].click();
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    //create lightbox div in the footer
+    var newdiv = document.createElement("div");
+    newdiv.setAttribute("id", "lightbox");
+    document.body.appendChild(newdiv);
+
+    //add classes to links to be able to initiate lightboxes
+    var elements = document.querySelectorAll("a");
+    elements.forEach((element) => {
+      var url = element.getAttribute("href");
+      if (url) {
+        if (
+          url.indexOf("vimeo") !== -1 &&
+          !element.classList.contains("no-lightbox")
+        ) {
+          is_vimeolink(url, element);
+        }
+        if (is_youtubelink(url) && !element.classList.contains("no-lightbox")) {
+          element.classList.add("lightbox-youtube");
+          element.setAttribute("data-id", is_youtubelink(url));
+        }
+        if (is_imagelink(url) && !element.classList.contains("no-lightbox")) {
+          element.classList.add("lightbox-image");
+          var href = element.getAttribute("href");
+          var filename = href.split("/").pop();
+          var split = filename.split(".");
+          var name = split[0];
+          element.setAttribute("title", name);
+        }
+      }
+    });
+
+    //remove the clicked lightbox
+    document
+      .getElementById("lightbox")
+      .addEventListener("click", function (event) {
+        if (event.target.id != "next" && event.target.id != "prev") {
+          this.innerHTML = "";
+          document.getElementById("lightbox").style.display = "none";
+        }
+      });
+
+    //add the youtube lightbox on click
+    var elements = document.querySelectorAll("a.lightbox-youtube");
+    elements.forEach((element) => {
+      element.addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("lightbox").innerHTML =
+          '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://www.youtube.com/embed/' +
+          this.getAttribute("data-id") +
+          '?autoplay=1&showinfo=0&rel=0"></iframe></div>';
+        document.getElementById("lightbox").style.display = "block";
+
+        setGallery(this);
+      });
+    });
+
+    //add the image lightbox on click
+    var elements = document.querySelectorAll("a.lightbox-image");
+    elements.forEach((element) => {
+      element.addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("lightbox").innerHTML =
+          '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="img" style="background: url(\'' +
+          this.getAttribute("href") +
+          '\') center center / contain no-repeat;" title="' +
+          this.getAttribute("title") +
+          '" ><img src="' +
+          this.getAttribute("href") +
+          '" alt="' +
+          this.getAttribute("title") +
+          '" /></div><span>' +
+          this.getAttribute("title") +
+          "</span>";
+        document.getElementById("lightbox").style.display = "block";
+
+        setGallery(this);
+      });
+    });
+  });
+</script>
+<style>
+  #lightbox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999999;
+    line-height: 0;
+    cursor: pointer;
+    display: none;
+  }
+  #lightbox .img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #lightbox .img img {
+    opacity: 0;
+    pointer-events: none;
+    width: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    #lightbox .img {
+      max-width: 1200px;
+    }
+  }
+  @media screen and (min-height: 1200px) {
+    #lightbox .img {
+      max-height: 1200px;
+    }
+  }
+  #lightbox span {
+    display: block;
+    position: fixed;
+    bottom: 13px;
+    height: 1.5em;
+    line-height: 1.4em;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+
+  #lightbox span {
+    display: none;
+  }
+
+  #lightbox .videoWrapperContainer {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 900px;
+    max-height: 100%;
+  }
+  #lightbox .videoWrapperContainer .videoWrapper {
+    height: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-bottom: 56.333%; /* custom */
+    background: black;
+  }
+  #lightbox .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  #lightbox #prev,
+  #lightbox #next {
+    height: 50px;
+    line-height: 36px;
+    display: none;
+    margin-top: -25px;
+    position: fixed;
+    top: 50%;
+    padding: 0 15px;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 99;
+    color: white;
+    font-size: 60px;
+  }
+  #lightbox.gallery #prev,
+  #lightbox.gallery #next {
+    display: block;
+  }
+  #lightbox #prev {
+    left: 0;
+  }
+  #lightbox #next {
+    right: 0;
+  }
+  #lightbox #close {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 99;
+    right: 0;
+    top: 0;
+  }
+  #lightbox #close:after,
+  #lightbox #close:before {
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 14px;
+    content: "";
+    height: 3px;
+    background: white;
+    width: 23px;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    /* Safari */
+    -webkit-transform: rotate(-45deg);
+    /* Firefox */
+    -moz-transform: rotate(-45deg);
+    /* IE */
+    -ms-transform: rotate(-45deg);
+    /* Opera */
+    -o-transform: rotate(-45deg);
+  }
+  #lightbox #close:after {
+    /* Safari */
+    -webkit-transform: rotate(45deg);
+    /* Firefox */
+    -moz-transform: rotate(45deg);
+    /* IE */
+    -ms-transform: rotate(45deg);
+    /* Opera */
+    -o-transform: rotate(45deg);
+  }
+  #lightbox,
+  #lightbox * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+</style>
+
+<style>
+  th {
+    text-align: center;
+  }
+  .highlight {
+    background-color: #ffff00;
+  }
+</style>
+
+<script>
+  function highlight(id) {
+    var already_highlighted = document.getElementsByClassName("highlight");
+    if (already_highlighted.length > 0)
+      already_highlighted[0].classList.remove("highlight");
+    var toHighlight = document.getElementById(id);
+    toHighlight.classList.toggle("highlight");
+  }
+  function highlight_off() {
+    var already_highlighted = document.getElementsByClassName("highlight");
+    if (already_highlighted.length > 0)
+      already_highlighted[0].classList.remove("highlight");
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+<script src="https://sites.pitt.edu/~shk148/assets/js/typed.js" defer></script>
+
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+</script>
+  <!--link rel="stylesheet" href='https://sites.pitt.edu/~shk148/assets/css/style.css' /-->
+  <!--link rel="stylesheet" href=' https://sites.pitt.edu/~shk148/assets/css/tufte.css' /-->
+  <link rel="stylesheet" href="https://sites.pitt.edu/~shk148/assets/css/tufte-og.css">
+</head>
+
+<body data-bs-spy="scroll" rootmargin="0px 100px 0%">
+  <!--- Header and nav template site-wide -->
+  <div class="text-center">
+    
+    <header>
+      <nav id="navbar"><a href="/~shk148/">Shinwoo Kim</a></nav>
+    </header>
+    
+  </div>
+  <div>
+    <article class="">
+      <h1 class="title my-0">Bridges to IT: Jump-Starting a Career in IT</h1>
+      <p class="subtitle my-0">Fall 2021</p>
+      <center><p><strong>This webpage is no longer maintained, and serves only archival purposes</strong></p></center>
+<p><label for="Sponsers" class="margin-toggle"> ⊕</label><input type="checkbox" id="Sponsers" class="margin-toggle"><span class="marginnote">Thank you to our sponsors and partners for helping to launch this program: </span><label for="verizon" class="margin-toggle">⊕</label><input type="checkbox" id="verizon" class="margin-toggle"><span class="marginnote"><img class="fullwidth" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Verizon_2015_logo_-vector.svg/2560px-Verizon_2015_logo_-vector.svg.png"><br></span><label for="Allies" class="margin-toggle">⊕</label><input type="checkbox" id="Allies" class="margin-toggle"><span class="marginnote"><img class="fullwidth" src="https://theopportunityfund.org/wp-content/uploads/2019/02/Neighborhood-Allies-Logo.png"><br></span><label for="CEC" class="margin-toggle">⊕</label><input type="checkbox" id="CEC" class="margin-toggle"><span class="marginnote"><img class="fullwidth" src="https://www.shrs.pitt.edu/sites/default/files/library/images/csd/CEC%20Logo.png"><br></span><label for="IT" class="margin-toggle">⊕</label><input type="checkbox" id="IT" class="margin-toggle"><span class="marginnote"><img class="fullwidth" src="https://pbs.twimg.com/profile_images/1271509752678416385/D4jSHrpz_400x400.png"><br></span></p>
+
+<p>This course introduces fundamental concepts needed for a career in Information Technology including customer service, troubleshooting skills, operating systems, hardware, networking, and security. The course aims to provide the neccessary knowledge, training, and preparation required to attain the <a href="https://www.comptia.org/certifications/a">COMPTIA A+ 220-1001 &amp; 220-1002</a> certificate and useful information for people wanting to pursue a career in IT support. The course is intended for high school students who wish to begin their career and IT, and is open to students graduating in 2022.</p>
+
+<h2 id="class-information">Class Information</h2>
+
+<ul>
+  <li>The course will take place in small groups over two 9-week sessions (Nov 2021 - April 2022) with three 90 minute sessions per week. A small stipend will be provided based on attendance.</li>
+  <li>
+<strong>Meets:</strong> Tu/Th 4:30 PM at <a href="https://cec.pitt.edu/hilldistrict/">Pitt Hill District CEC</a>; Saturdays Morning via Zoom</li>
+  <li>
+<strong>Please see Microsoft Teams frequently for updates</strong>
+<br><br>
+</li>
+</ul>
+
+<h2 id="course-goals">Course Goals</h2>
+
+<p>Students who complete this course successfully will be able to:</p>
+
+<ul>
+  <li>Identify job market demand and career path for IT support workers</li>
+  <li>Classify end users</li>
+  <li>Identify and resolve common problems encountered by users</li>
+  <li>Gain important communications and interpersonal skills (being a good listener)</li>
+  <li>Identify what is meant by “excellent customer service”</li>
+  <li>Identify and formulate strategies for troubleshooting and problem solving</li>
+  <li>Put together a toolkit for the IT support professional</li>
+  <li>Master the IT support terminology</li>
+  <li>Identify and install CPU and Memory types</li>
+  <li>Identify, troubleshoot, and install a wide variety of peripherals</li>
+  <li>Learn introductory networking and Internet protocols</li>
+  <li>Understand the various network hardware components</li>
+  <li>Troubleshoot network problems including WiFi</li>
+</ul>
+
+<h2 id="comptia-a-220-1001--220-1002-certificate">COMPTIA A+ 220-1001 &amp; 220-1002 Certificate</h2>
+
+<p>CompTIA A+ certification has direct value in terms of tech jobs for which a person can be hired - certification can lead to being hired! It is trusted by employers around the world to identify the go-to person in end point management &amp; technical support roles. CompTIA A+ appears in more tech support job listings than any other IT credential.</p>
+
+<p>The CompTIA A+ Core Series requires candidates to pass two exams: Core 1 (220-1101) and Core 2 (220-1102), which focuses on the following nine skills:</p>
+
+<ol>
+  <li>
+<strong>HARDWARE</strong>: Identifying, using, and connecting hardware components and devices, including the broad knowledge about different devices that is now necessary to support the remote workforce</li>
+  <li>
+<strong>OPERATING SYSTEMS</strong>: Install and support Windows OS including command line &amp; client support. System configuration imaging and troubleshooting for Mac OS, Chrome OS, Android and Linux OS.</li>
+  <li>
+<strong>SOFTWARE TROUBLESHOOTING</strong>: Troubleshoot PC and mobile device issues including common OS, malware and security issues.</li>
+  <li>
+<strong>NETWORKING</strong>: Explain types of networks and connections including TCP/IP, WIFI and SOHO</li>
+  <li>
+<strong>TROUBLESHOOTING</strong>: Troubleshoot real-world device and network issues quickly and efficiently</li>
+  <li>
+<strong>SECURITY</strong>: Identify and protect against security vulnerabilities for devices and their network connections</li>
+  <li>
+<strong>MOBILE DEVICES</strong>: Install &amp; configure laptops and other mobile devices and support applications to ensure connectivity for end- users</li>
+  <li>
+<strong>VIRTUALIZATION &amp; CLOUD COMPUTING</strong>: Compare &amp; contrast cloud computing concepts &amp; set up client-side virtualization</li>
+  <li>
+<strong>OPERATIONAL PROCEDURES</strong>: Follow best practices for safety, environmental impacts, and communication and professionalism</li>
+</ol>
+
+<p class="text-center">(See <a href="https://www.comptia.org/certifications/a">https://www.comptia.org/certifications/a</a> for more details)</p>
+
+<h3 id="internships-and-long-term-employment-oppotunities">Internships and Long-term Employment Oppotunities</h3>
+
+<p>Upon successfuly completition of the course, students are guaranteed internships at Pitt IT or the University’s partnering vendors, which includes oppotunities for Long-term employment.</p>
+
+<h2 id="tentative-schedule">Tentative Schedule</h2>
+
+<div class="table-responsive">
+  <table class="table-hover">
+    <thead>
+      <tr>
+        <th style="text-align: right">Week</th>
+        <th style="text-align: left">Topic</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: right">Week 1 (Nov 1)</td>
+        <td style="text-align: left">Introduction &amp; Prerequisites</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Week 2 (Nov 8)</td>
+        <td style="text-align: left">Wrap-up Prerequisites &amp; Communication + Hands-on-Hardware Activity</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Week 3 (Nov 15) <br><strong>NO CLASSES NOV 22</strong>
+</td>
+        <td style="text-align: left">Hardware - Motherboards</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Week 4 (Nov 29)</td>
+        <td style="text-align: left">Hardware - CPU + Memory</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Week 5 (Dec 6)</td>
+        <td style="text-align: left">Hardware - Peripherals</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Week 6 (Dec 13)<br><strong>END OF FALL SEMESTER</strong>
+</td>
+        <td style="text-align: left">Display Technologies</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Week 7 (Jan 17)</td>
+        <td style="text-align: left">Operating Systems</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Week 8 (Jan 24th)</td>
+        <td style="text-align: left">Operating Systems</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Week 9 (Jan 31st)</td>
+        <td style="text-align: left">Networking</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Week 10 (Feb 7th)</td>
+        <td style="text-align: left">Networking</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Week 11 Feb (14th)</td>
+        <td style="text-align: left">Virtualization</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Week 12 (Feb 21st)</td>
+        <td style="text-align: left">Portable Computing</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Week 13 (Feb 28th)</td>
+        <td style="text-align: left">Printers</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Week 14 (Mar 14th)</td>
+        <td style="text-align: left">Security</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Week 15 (Mar 21st)</td>
+        <td style="text-align: left">Security</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Week 16 (Mar 28th)</td>
+        <td style="text-align: left">Operational Procedures</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Week 17 (Apr - 4th)</td>
+        <td style="text-align: left">Review &amp; Certification Prep</td>
+      </tr>
+      <tr>
+        <td style="text-align: right">Week 18 (Apr - 18th)</td>
+        <td style="text-align: left">Review &amp; Certification Prep</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h2 id="useful-links">Useful Links</h2>
+
+<ul>
+  <li><a href="https://www.ranker.com/list/the-best-cpu-manufacturers-and-top-cpu-brands/computer-hardware">The Top CPU Manufacturers</a></li>
+  <li><a href="https://www.deviantart.com/sonic840/art/Computer-Hardware-Chart-2-0-587798335">Computer Hardware Chart</a></li>
+  <li><a href="https://www.digikey.com/en/articles/a-basic-guide-to-usb">Guide to USB</a></li>
+  <li><a href="https://www.pcmag.com/news/ssd-vs-hdd-whats-the-difference">HDD vs SSD</a></li>
+  <li>
+<a href="https://pitt.box.com/v/itsupportclass">Supplemental Information</a>
+<span class="endmark"></span>
+</li>
+</ul>
+
+      <button onclick="topFunction()" id="top-btn" class="btn btn-dark d-print-none" title="Go to top">
+        Top
+      </button>
+    </article>
+    <script>
+      let btn_to_top = document.getElementById("top-btn");
+      window.onscroll = function () {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          btn_to_top.style.opacity = "100%";
+        } else {
+          btn_to_top.style.opacity = "0%";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Ope`
+      }
+    </script>
+    <hr class="mx-auto slender">
+    <footer class="site-footer text-center">
+      <p class="mb-0 mx-auto">
+        © 2021-2023 Shinwoo Kim. All Rights Reserved.<br>
+        <a href="#" onclick="history.back()">Return to Previous Page</a>
+      </p>
+    </footer>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X43BZS6F4C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-X43BZS6F4C");
+</script>
+</body>
+</html>

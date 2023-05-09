@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>
+  
+    Discrete Structures for Computer Science | Shinwoo Kim
+</title>
+<link rel="alternate" type="application/rss+xml" title="Shinwoo Kim" href="https://sites.pitt.edu/~shk148/feed.xml">
+
+<link rel="icon" type="image/x-icon" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon.ico">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/x-icon" sizes="16x16" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://sites.pitt.edu/~shk148/%20/assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="https://sites.pitt.edu/~shk148/assets/favicon/site.webmanifest">
+
+<meta name="twitter:card" content="summary">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.2">
+<meta property="og:title" content="Discrete Structures for Computer Science">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.">
+<meta property="og:description" content="Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/teaching/CS0441-2234/">
+<meta property="og:url" content="https://sites.pitt.edu/~shk148/teaching/CS0441-2234/">
+<meta property="og:site_name" content="Shinwoo Kim">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Discrete Structures for Computer Science">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.","headline":"Discrete Structures for Computer Science","url":"https://sites.pitt.edu/~shk148/teaching/CS0441-2234/"}</script>
+<!-- End Jekyll SEO tag -->
+ <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.css">
+<script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js"></script>
+
+<script>
+  function is_youtubelink(url) {
+    var p =
+      /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return url.match(p) ? RegExp.$1 : false;
+  }
+  function is_imagelink(url) {
+    var p = /([a-z\-_0-9\/\:\.]*\.(jpg|jpeg|png|gif))/i;
+    return url.match(p) ? true : false;
+  }
+  function is_vimeolink(url, el) {
+    var id = false;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+        // XMLHttpRequest.DONE == 4
+        if (xmlhttp.status == 200) {
+          var response = JSON.parse(xmlhttp.responseText);
+          id = response.video_id;
+          console.log(id);
+          el.classList.add("lightbox-vimeo");
+          el.setAttribute("data-id", id);
+
+          el.addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("lightbox").innerHTML =
+              '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/' +
+              el.getAttribute("data-id") +
+              '/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>';
+            document.getElementById("lightbox").style.display = "block";
+
+            setGallery(this);
+          });
+        } else if (xmlhttp.status == 400) {
+          alert("There was an error 400");
+        } else {
+          alert("something else other than 200 was returned");
+        }
+      }
+    };
+    xmlhttp.open("GET", "https://vimeo.com/api/oembed.json?url=" + url, true);
+    xmlhttp.send();
+  }
+  function setGallery(el) {
+    var elements = document.body.querySelectorAll(".gallery");
+    elements.forEach((element) => {
+      element.classList.remove("gallery");
+    });
+    if (el.closest("ul, p")) {
+      var link_elements = el
+        .closest("ul, p")
+        .querySelectorAll("a[class*='lightbox-']");
+      link_elements.forEach((link_element) => {
+        link_element.classList.remove("current");
+      });
+      link_elements.forEach((link_element) => {
+        if (el.getAttribute("href") == link_element.getAttribute("href")) {
+          link_element.classList.add("current");
+        }
+      });
+      if (link_elements.length > 1) {
+        document.getElementById("lightbox").classList.add("gallery");
+        link_elements.forEach((link_element) => {
+          link_element.classList.add("gallery");
+        });
+      }
+      var currentkey;
+      var gallery_elements = document.querySelectorAll("a.gallery");
+      Object.keys(gallery_elements).forEach(function (k) {
+        if (gallery_elements[k].classList.contains("current")) currentkey = k;
+      });
+      if (currentkey == gallery_elements.length - 1) var nextkey = 0;
+      else var nextkey = parseInt(currentkey) + 1;
+      if (currentkey == 0) var prevkey = parseInt(gallery_elements.length - 1);
+      else var prevkey = parseInt(currentkey) - 1;
+      document.getElementById("next").addEventListener("click", function () {
+        gallery_elements[nextkey].click();
+      });
+      document.getElementById("prev").addEventListener("click", function () {
+        gallery_elements[prevkey].click();
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    //create lightbox div in the footer
+    var newdiv = document.createElement("div");
+    newdiv.setAttribute("id", "lightbox");
+    document.body.appendChild(newdiv);
+
+    //add classes to links to be able to initiate lightboxes
+    var elements = document.querySelectorAll("a");
+    elements.forEach((element) => {
+      var url = element.getAttribute("href");
+      if (url) {
+        if (
+          url.indexOf("vimeo") !== -1 &&
+          !element.classList.contains("no-lightbox")
+        ) {
+          is_vimeolink(url, element);
+        }
+        if (is_youtubelink(url) && !element.classList.contains("no-lightbox")) {
+          element.classList.add("lightbox-youtube");
+          element.setAttribute("data-id", is_youtubelink(url));
+        }
+        if (is_imagelink(url) && !element.classList.contains("no-lightbox")) {
+          element.classList.add("lightbox-image");
+          var href = element.getAttribute("href");
+          var filename = href.split("/").pop();
+          var split = filename.split(".");
+          var name = split[0];
+          element.setAttribute("title", name);
+        }
+      }
+    });
+
+    //remove the clicked lightbox
+    document
+      .getElementById("lightbox")
+      .addEventListener("click", function (event) {
+        if (event.target.id != "next" && event.target.id != "prev") {
+          this.innerHTML = "";
+          document.getElementById("lightbox").style.display = "none";
+        }
+      });
+
+    //add the youtube lightbox on click
+    var elements = document.querySelectorAll("a.lightbox-youtube");
+    elements.forEach((element) => {
+      element.addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("lightbox").innerHTML =
+          '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://www.youtube.com/embed/' +
+          this.getAttribute("data-id") +
+          '?autoplay=1&showinfo=0&rel=0"></iframe></div>';
+        document.getElementById("lightbox").style.display = "block";
+
+        setGallery(this);
+      });
+    });
+
+    //add the image lightbox on click
+    var elements = document.querySelectorAll("a.lightbox-image");
+    elements.forEach((element) => {
+      element.addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("lightbox").innerHTML =
+          '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="img" style="background: url(\'' +
+          this.getAttribute("href") +
+          '\') center center / contain no-repeat;" title="' +
+          this.getAttribute("title") +
+          '" ><img src="' +
+          this.getAttribute("href") +
+          '" alt="' +
+          this.getAttribute("title") +
+          '" /></div><span>' +
+          this.getAttribute("title") +
+          "</span>";
+        document.getElementById("lightbox").style.display = "block";
+
+        setGallery(this);
+      });
+    });
+  });
+</script>
+<style>
+  #lightbox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999999;
+    line-height: 0;
+    cursor: pointer;
+    display: none;
+  }
+  #lightbox .img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #lightbox .img img {
+    opacity: 0;
+    pointer-events: none;
+    width: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    #lightbox .img {
+      max-width: 1200px;
+    }
+  }
+  @media screen and (min-height: 1200px) {
+    #lightbox .img {
+      max-height: 1200px;
+    }
+  }
+  #lightbox span {
+    display: block;
+    position: fixed;
+    bottom: 13px;
+    height: 1.5em;
+    line-height: 1.4em;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+
+  #lightbox span {
+    display: none;
+  }
+
+  #lightbox .videoWrapperContainer {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 900px;
+    max-height: 100%;
+  }
+  #lightbox .videoWrapperContainer .videoWrapper {
+    height: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-bottom: 56.333%; /* custom */
+    background: black;
+  }
+  #lightbox .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  #lightbox #prev,
+  #lightbox #next {
+    height: 50px;
+    line-height: 36px;
+    display: none;
+    margin-top: -25px;
+    position: fixed;
+    top: 50%;
+    padding: 0 15px;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 99;
+    color: white;
+    font-size: 60px;
+  }
+  #lightbox.gallery #prev,
+  #lightbox.gallery #next {
+    display: block;
+  }
+  #lightbox #prev {
+    left: 0;
+  }
+  #lightbox #next {
+    right: 0;
+  }
+  #lightbox #close {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 99;
+    right: 0;
+    top: 0;
+  }
+  #lightbox #close:after,
+  #lightbox #close:before {
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 14px;
+    content: "";
+    height: 3px;
+    background: white;
+    width: 23px;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    /* Safari */
+    -webkit-transform: rotate(-45deg);
+    /* Firefox */
+    -moz-transform: rotate(-45deg);
+    /* IE */
+    -ms-transform: rotate(-45deg);
+    /* Opera */
+    -o-transform: rotate(-45deg);
+  }
+  #lightbox #close:after {
+    /* Safari */
+    -webkit-transform: rotate(45deg);
+    /* Firefox */
+    -moz-transform: rotate(45deg);
+    /* IE */
+    -ms-transform: rotate(45deg);
+    /* Opera */
+    -o-transform: rotate(45deg);
+  }
+  #lightbox,
+  #lightbox * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+</style>
+
+<style>
+  th {
+    text-align: center;
+  }
+  .highlight {
+    background-color: #ffff00;
+  }
+</style>
+
+<script>
+  function highlight(id) {
+    var already_highlighted = document.getElementsByClassName("highlight");
+    if (already_highlighted.length > 0)
+      already_highlighted[0].classList.remove("highlight");
+    var toHighlight = document.getElementById(id);
+    toHighlight.classList.toggle("highlight");
+  }
+  function highlight_off() {
+    var already_highlighted = document.getElementsByClassName("highlight");
+    if (already_highlighted.length > 0)
+      already_highlighted[0].classList.remove("highlight");
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+<script src="https://sites.pitt.edu/~shk148/assets/js/typed.js" defer></script>
+
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+</script>
+  <!--link rel="stylesheet" href='https://sites.pitt.edu/~shk148/assets/css/style.css' /-->
+  <!--link rel="stylesheet" href=' https://sites.pitt.edu/~shk148/assets/css/tufte.css' /-->
+  <link rel="stylesheet" href="https://sites.pitt.edu/~shk148/assets/css/tufte-og.css">
+</head>
+
+<body data-bs-spy="scroll" rootmargin="0px 100px 0%">
+  <!--- Header and nav template site-wide -->
+  <div class="text-center">
+    
+    <header class="text-center">
+      <nav class="mx-auto group navbar navbar-expand-md justify-content-center">
+        <a aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+          Menu
+        </a>
+        <div class="collapse navbar-collapse justify-content-center" id="navbar">
+          <a class="" href="/~shk148/">Shinwoo Kim</a>
+           
+          <a class="active" href="/~shk148/teaching/CS0441-2234/">CS0441</a>
+            
+          <a href="/~shk148/teaching/CS0441-2234/syllabus.html">Syllabus</a>
+            
+          <a href="/~shk148/teaching/CS0441-2234/#handouts">Schedule</a>
+            
+          <a href="/~shk148/teaching/CS0441-2234/#student-feedback">Student Feedback</a>
+            
+          <a href="/~shk148/teaching/CS0441-2234/#getting-help">Getting Help</a>
+           
+        </div>
+      </nav>
+    </header>
+    
+  </div>
+  <div>
+    <article class="">
+      <h1 class="title my-0">Discrete Structures for Computer Science</h1>
+      <p class="subtitle my-0">CS 0441 (Spring 2023, Term 2234)</p>
+      <center><p class="highlight"><strong>This webpage is no longer maintained, and serves only archival purposes</strong></p></center>
+
+<p>Welcome to <strong>CS 0441</strong>, <strong>Discrete Structures for Computer Science</strong>, for the Fall 2022 term!<label for="mf-id-whatever" class="margin-toggle">⊕</label><input type="checkbox" id="mf-id-whatever" class="margin-toggle"><span class="marginnote"><img class="fullwidth" src="https://www.mheducation.com/cover-images/Jpeg_400-high/125967651X.jpeg"><br><strong>Course Textbook:</strong> Kenneth H. Rosen. <em>Discrete Mathematics and Its Applications</em>, 8th Edition, McGraw Hill. <strong>A copy of the text is required for homework.</strong></span>.</p>
+
+<p>This page will provide any information for the class that I go over in recitation. Please check back for updates regularly, especially if you miss a recitation.</p>
+<h2 id="course-description">Course Description</h2>
+<p>The purpose of this course is to understand and use (abstract) discrete structures that are backbones of computer science. In particular, this class is meant to introduce logic, proofs, sets, relations, functions, counting, and probability, with an emphasis on applications in computer science.</p>
+
+<h2 id="recitation-information">Recitation Information</h2>
+
+<p><em>Most up-to-date information is on <a href="https://canvas.pitt.edu">Canvas</a></em> <label for="Accompany" class="margin-toggle"> ⊕</label><input type="checkbox" id="Accompany" class="margin-toggle"><span class="marginnote">Accompanies professor <strong>Donald Bonidie</strong>’s lecture section <code class="language-html highlighter-rouge">1090</code> which meets <strong>Tue/Thu, 4:30–5:45pm at 5502 Sennott Square</strong> </span>
+<strong>CRN:</strong> <code class="language-html highlighter-rouge">17064</code><br>
+<strong>Meets:</strong> <em>Fridays 4:00 PM</em> at <em>501 <a href="https://map.concept3d.com/?id=1315#!m/386791">Information Science Building</a></em></p>
+
+<hr>
+
+<h2 id="ta-information">TA Information</h2>
+
+<p><strong>TA</strong>: Shinwoo Kim<br>
+<strong>E-mail</strong>: <a href="mailto:shiwookim@pitt.edu"><code class="language-html highlighter-rouge">shinwookim@pitt.edu</code></a><br>
+<strong>Home Page:</strong> <a href="https://sites.pitt.edu/~shk148/">https://sites.pitt.edu/~shk148</a><br>
+<strong>TA Office Hours:</strong> <a href="https://sites.pitt.edu/~shk148/teaching/#OH">Spring 2023 Office Hours</a></p>
+
+<p class="mb-0"><strong>Note when E-mailing:</strong></p>
+
+<ul>
+  <li>Email subjects should be prefaced with <code class="language-html highlighter-rouge">[CS0441]</code>
+</li>
+  <li>For official communcation, messages should be sent using your official <strong>Pitt E-Mail</strong>(<code class="language-html highlighter-rouge">ABC123@pitt.edu</code>), or Canvas message.</li>
+  <li>Email body should include the <strong>student name</strong> and the <strong>section</strong> they’re enrolled in.</li>
+  <li>Students should allow at least 24 business hours before following up.<label for="Hours" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Hours" class="margin-toggle"><span class="sidenote">Generally, my working hours are between 8AM and 6PM </span>
+</li>
+</ul>
+
+<hr>
+
+<h2 id="student-feedback">Student Feedback</h2>
+
+<p class="text-center"><a href="https://pitt.co1.qualtrics.com/jfe/form/SV_dd9suL0AkJctj2S">Please send me your anonymous feedback</a></p>
+
+<hr>
+
+<h2 id="handouts">Schedule <em>&amp;</em> Handout</h2>
+
+<p>Click the date for annoucement slides and see footnotes for important recitation information.</p>
+
+<div class="table-responsive">
+  <table class="table-hover">
+    <thead>
+      <tr>
+        <th style="text-align: center">Week #</th>
+        <th style="text-align: center">Date</th>
+        <th style="text-align: center">Topic</th>
+        <th style="text-align: center">Handout</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center"><strong>1</strong></td>
+        <td style="text-align: center">01/10/2023</td>
+        <td style="text-align: center"><strong>Week 1 - No Recitation</strong></td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><strong>2</strong></td>
+        <td style="text-align: center">01/17/2023</td>
+        <td style="text-align: center">Introduction &amp; Recitation Administrivia <br> TA Office Hours posted to Canvas</td>
+        <td style="text-align: center"><a href="administrivia.html">Slides</a></td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><strong>3</strong></td>
+        <td style="text-align: center">01/24/2023</td>
+        <td style="text-align: center">Homework #1</td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><strong>4</strong></td>
+        <td style="text-align: center">01/31/2023</td>
+        <td style="text-align: center">Homework #2</td>
+        <td style="text-align: center">
+<a href="review-1.html">Extra Practice</a> (<a href="review-1-solution.html">Solutions</a>)</td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><strong>5</strong></td>
+        <td style="text-align: center">02/07/2023</td>
+        <td style="text-align: center">Homework #3</td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><strong>6</strong></td>
+        <td style="text-align: center">02/14/2023</td>
+        <td style="text-align: center">Homework #4</td>
+        <td style="text-align: center">
+<a href="review-2.html">Extra Practice</a> (<a href="review-2-solution.html">Solutions</a>)</td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><strong>7</strong></td>
+        <td style="text-align: center">02/21/2023</td>
+        <td style="text-align: center">Homework #5 + Mid-term Practice</td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><strong>8</strong></td>
+        <td style="text-align: center">02/28/2023</td>
+        <td style="text-align: center">Mid-term Exam Review</td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><strong>9</strong></td>
+        <td style="text-align: center">03/07/2023</td>
+        <td style="text-align: center"><strong>Spring Break - No Recitation</strong></td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><strong>10</strong></td>
+        <td style="text-align: center">03/14/2023</td>
+        <td style="text-align: center">Chapter 6 Review</td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><strong>11</strong></td>
+        <td style="text-align: center">03/21/2023</td>
+        <td style="text-align: center">Homework #6</td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><strong>12</strong></td>
+        <td style="text-align: center">03/28/2023</td>
+        <td style="text-align: center">Homework #7</td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><strong>13</strong></td>
+        <td style="text-align: center">04/04/2023</td>
+        <td style="text-align: center">Homework #7 + Homework #8</td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><strong>14</strong></td>
+        <td style="text-align: center">04/11/2023</td>
+        <td style="text-align: center">Homework #8</td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><strong>15</strong></td>
+        <td style="text-align: center">04/18/2023</td>
+        <td style="text-align: center">Final Exam Practice</td>
+        <td style="text-align: center"> </td>
+      </tr>
+      <tr>
+        <td style="text-align: center"><strong>16</strong></td>
+        <td style="text-align: center">04/25/2023</td>
+        <td style="text-align: center">Finals Week <br> <strong>No Recitation</strong>
+</td>
+        <td style="text-align: center"> </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<hr>
+
+<h2 id="tips-for-success">Tips for Success</h2>
+
+<p><label for="tips" class="margin-toggle"> ⊕</label><input type="checkbox" id="tips" class="margin-toggle"><span class="marginnote"><a href="https://pittcs.wiki/academics/succeed-in-course-x/succeed-in-441/"><strong>Pitt CS Wiki</strong>: How to Succeed in CS0441: Discrete Structures for Computer Science</a> </span></p>
+<div class="epigraph"><blockquote>
+<p>If you want to do well in any course, the bare minimum is attending all lectures and doing all homework assignments.</p>
+<footer>Dylan Feehan, <cite>PittCS Wiki</cite></footer>
+</blockquote></div>
+
+<ul>
+  <li>
+<strong>Attend class and actively participate in class</strong>.<br>The primary introduction to course material is through class lecture. Additionally, we often do exercises during class. Showing up is necessary, but not sufficient to success in the course: ask questions, participate in class discussions and in class activities, and take notes.</li>
+  <li>
+<strong>Read the material before you come to class</strong>.<br>Don’t worry about total comprehension, but at least get a feel for what we will be covering that week. If you have some understanding of the material coming into class, it will be easier for you to follow the lecture and to ask questions during class.</li>
+  <li>
+<strong>Start the assignments early</strong>.<br>I realize this one is not always easy to do, but if you can get in the habit of doing this, you will be much better off.</li>
+  <li>
+<strong>Practice, practice, practice</strong>.<br>The only effective way to learn the material and pass the exams is to consistently do the assignments, and to example problems presented in class and in the book. Forming study groups to go over practice problems and to review lecture and reading notes is a great way to prepare for exams.</li>
+  <li>
+<strong>Seek help early and often.</strong><br>Because course material builds on previous material, it is essential to your success in this class that you keep up with the course material. There are a lot of sources of help: ask questions during lecture; ask your classmates (make sure you have read the “Academic Integrity”); get help during recitation; and come to office hours.</li>
+</ul>
+
+<h2 id="getting-help">Getting Help</h2>
+<p><label for="meme" class="margin-toggle">⊕</label><input type="checkbox" id="meme" class="margin-toggle"><span class="marginnote"><img class="fullwidth" src="https://external-preview.redd.it/xHBy8Vbc9PPlRIkPmeztTsSwwwqFL9XGd8NgviiqWmQ.jpg?auto=webp&s=4e7586dbcafbb3dca7eed1d171684dfaf30da856"><br></span>
+We expect that all students will need help at some point in this course. If you find yourself needing help, this is not cause for embarrassment: it is completely expected, and our goal is to ensure that you are able to receive the help you need. A good rule of thumb is that if you spend an hour on the assignment without making any progress, seek help! Please be sure to seek help early and often through any (or all!) of the following resources:</p>
+
+<ul>
+  <li>
+    <p><strong>Your Study Group</strong>: Building a support system of friends with whom you can struggle and work through the challenges you encounter is one of the best ways to seek help. You will quickly learn how much you can figure out working together!</p>
+  </li>
+  <li>
+    <p><strong>Discord</strong>: If you would prefer to have a more informal place to collaborate with your peers, we have created a discord server. You can get help through discord, or just use it to get to know your classmates better. As with any other form of communication, please use discretion and don’t broadcast your solution in a way that other students can easily copy it. The invite link for the server is on Canvas.</p>
+  </li>
+  <li>
+    <p><strong>Office Hours</strong>: I am always willing to help you during our office hours. Please make frequent use of these times! Even if you don’t have specific questions, you can come to student hours just to work until you do have a question.</p>
+  </li>
+  <li>
+    <p><strong>E-Mail</strong>: Please send me emails as often as you need! But note that in my class, you are never allowed to apologize for sending an email or asking for help, and you are not allowed to dismiss your own questions as “dumb”.</p>
+  </li>
+</ul>
+
+<h2 id="helpful-links">Helpful Links</h2>
+
+<ul>
+  <li><a href="https://pitt.guide.eab.com/" target="\_blank">Sign up for <strong>Peer Tutoring</strong> on Navigate</a></li>
+  <li><a href="https://pittcs.wiki/academics/succeed-in-course-x/succeed-in-441/">Tips from Previous Students</a></li>
+  <li><a href="https://pitt.edu" target="\_blank">University of Pittsburgh</a></li>
+  <li><a href="https://cs.pitt.edu" target="\_blank">Department of Computer Science</a></li>
+</ul>
+
+<p><span class="endmark"></span></p>
+
+      <button onclick="topFunction()" id="top-btn" class="btn btn-dark d-print-none" title="Go to top">
+        Top
+      </button>
+    </article>
+    <script>
+      let btn_to_top = document.getElementById("top-btn");
+      window.onscroll = function () {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          btn_to_top.style.opacity = "100%";
+        } else {
+          btn_to_top.style.opacity = "0%";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Ope`
+      }
+    </script>
+    <hr class="mx-auto slender">
+    <footer class="site-footer text-center">
+      <p class="mb-0 mx-auto">
+        © 2021-2023 Shinwoo Kim. All Rights Reserved.<br>
+        <a href="#" onclick="history.back()">Return to Previous Page</a>
+      </p>
+    </footer>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X43BZS6F4C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-X43BZS6F4C");
+</script>
+</body>
+</html>

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>
+  
+    Section 1.1 &amp; 1.2 Review Solutions | Shinwoo Kim
+</title>
+<link rel="alternate" type="application/rss+xml" title="Shinwoo Kim" href="https://sites.pitt.edu/~shk148/feed.xml">
+
+<link rel="icon" type="image/x-icon" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon.ico">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/x-icon" sizes="16x16" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://sites.pitt.edu/~shk148/%20/assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="https://sites.pitt.edu/~shk148/assets/favicon/site.webmanifest">
+
+<meta name="twitter:card" content="summary">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.2">
+<meta property="og:title" content="Section 1.1 &amp; 1.2 Review Solutions">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.">
+<meta property="og:description" content="Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/teaching/CS0441-2234/review-1-solution.html">
+<meta property="og:url" content="https://sites.pitt.edu/~shk148/teaching/CS0441-2234/review-1-solution.html">
+<meta property="og:site_name" content="Shinwoo Kim">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2023-01-31T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Section 1.1 &amp; 1.2 Review Solutions">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-01-31T00:00:00+00:00","datePublished":"2023-01-31T00:00:00+00:00","description":"Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.","headline":"Section 1.1 &amp; 1.2 Review Solutions","mainEntityOfPage":{"@type":"WebPage","@id":"https://sites.pitt.edu/~shk148/teaching/CS0441-2234/review-1-solution.html"},"url":"https://sites.pitt.edu/~shk148/teaching/CS0441-2234/review-1-solution.html"}</script>
+<!-- End Jekyll SEO tag -->
+ <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.css">
+<script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js"></script>
+
+<script>
+  function is_youtubelink(url) {
+    var p =
+      /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return url.match(p) ? RegExp.$1 : false;
+  }
+  function is_imagelink(url) {
+    var p = /([a-z\-_0-9\/\:\.]*\.(jpg|jpeg|png|gif))/i;
+    return url.match(p) ? true : false;
+  }
+  function is_vimeolink(url, el) {
+    var id = false;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+        // XMLHttpRequest.DONE == 4
+        if (xmlhttp.status == 200) {
+          var response = JSON.parse(xmlhttp.responseText);
+          id = response.video_id;
+          console.log(id);
+          el.classList.add("lightbox-vimeo");
+          el.setAttribute("data-id", id);
+
+          el.addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("lightbox").innerHTML =
+              '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/' +
+              el.getAttribute("data-id") +
+              '/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>';
+            document.getElementById("lightbox").style.display = "block";
+
+            setGallery(this);
+          });
+        } else if (xmlhttp.status == 400) {
+          alert("There was an error 400");
+        } else {
+          alert("something else other than 200 was returned");
+        }
+      }
+    };
+    xmlhttp.open("GET", "https://vimeo.com/api/oembed.json?url=" + url, true);
+    xmlhttp.send();
+  }
+  function setGallery(el) {
+    var elements = document.body.querySelectorAll(".gallery");
+    elements.forEach((element) => {
+      element.classList.remove("gallery");
+    });
+    if (el.closest("ul, p")) {
+      var link_elements = el
+        .closest("ul, p")
+        .querySelectorAll("a[class*='lightbox-']");
+      link_elements.forEach((link_element) => {
+        link_element.classList.remove("current");
+      });
+      link_elements.forEach((link_element) => {
+        if (el.getAttribute("href") == link_element.getAttribute("href")) {
+          link_element.classList.add("current");
+        }
+      });
+      if (link_elements.length > 1) {
+        document.getElementById("lightbox").classList.add("gallery");
+        link_elements.forEach((link_element) => {
+          link_element.classList.add("gallery");
+        });
+      }
+      var currentkey;
+      var gallery_elements = document.querySelectorAll("a.gallery");
+      Object.keys(gallery_elements).forEach(function (k) {
+        if (gallery_elements[k].classList.contains("current")) currentkey = k;
+      });
+      if (currentkey == gallery_elements.length - 1) var nextkey = 0;
+      else var nextkey = parseInt(currentkey) + 1;
+      if (currentkey == 0) var prevkey = parseInt(gallery_elements.length - 1);
+      else var prevkey = parseInt(currentkey) - 1;
+      document.getElementById("next").addEventListener("click", function () {
+        gallery_elements[nextkey].click();
+      });
+      document.getElementById("prev").addEventListener("click", function () {
+        gallery_elements[prevkey].click();
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    //create lightbox div in the footer
+    var newdiv = document.createElement("div");
+    newdiv.setAttribute("id", "lightbox");
+    document.body.appendChild(newdiv);
+
+    //add classes to links to be able to initiate lightboxes
+    var elements = document.querySelectorAll("a");
+    elements.forEach((element) => {
+      var url = element.getAttribute("href");
+      if (url) {
+        if (
+          url.indexOf("vimeo") !== -1 &&
+          !element.classList.contains("no-lightbox")
+        ) {
+          is_vimeolink(url, element);
+        }
+        if (is_youtubelink(url) && !element.classList.contains("no-lightbox")) {
+          element.classList.add("lightbox-youtube");
+          element.setAttribute("data-id", is_youtubelink(url));
+        }
+        if (is_imagelink(url) && !element.classList.contains("no-lightbox")) {
+          element.classList.add("lightbox-image");
+          var href = element.getAttribute("href");
+          var filename = href.split("/").pop();
+          var split = filename.split(".");
+          var name = split[0];
+          element.setAttribute("title", name);
+        }
+      }
+    });
+
+    //remove the clicked lightbox
+    document
+      .getElementById("lightbox")
+      .addEventListener("click", function (event) {
+        if (event.target.id != "next" && event.target.id != "prev") {
+          this.innerHTML = "";
+          document.getElementById("lightbox").style.display = "none";
+        }
+      });
+
+    //add the youtube lightbox on click
+    var elements = document.querySelectorAll("a.lightbox-youtube");
+    elements.forEach((element) => {
+      element.addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("lightbox").innerHTML =
+          '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://www.youtube.com/embed/' +
+          this.getAttribute("data-id") +
+          '?autoplay=1&showinfo=0&rel=0"></iframe></div>';
+        document.getElementById("lightbox").style.display = "block";
+
+        setGallery(this);
+      });
+    });
+
+    //add the image lightbox on click
+    var elements = document.querySelectorAll("a.lightbox-image");
+    elements.forEach((element) => {
+      element.addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("lightbox").innerHTML =
+          '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="img" style="background: url(\'' +
+          this.getAttribute("href") +
+          '\') center center / contain no-repeat;" title="' +
+          this.getAttribute("title") +
+          '" ><img src="' +
+          this.getAttribute("href") +
+          '" alt="' +
+          this.getAttribute("title") +
+          '" /></div><span>' +
+          this.getAttribute("title") +
+          "</span>";
+        document.getElementById("lightbox").style.display = "block";
+
+        setGallery(this);
+      });
+    });
+  });
+</script>
+<style>
+  #lightbox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999999;
+    line-height: 0;
+    cursor: pointer;
+    display: none;
+  }
+  #lightbox .img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #lightbox .img img {
+    opacity: 0;
+    pointer-events: none;
+    width: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    #lightbox .img {
+      max-width: 1200px;
+    }
+  }
+  @media screen and (min-height: 1200px) {
+    #lightbox .img {
+      max-height: 1200px;
+    }
+  }
+  #lightbox span {
+    display: block;
+    position: fixed;
+    bottom: 13px;
+    height: 1.5em;
+    line-height: 1.4em;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+
+  #lightbox span {
+    display: none;
+  }
+
+  #lightbox .videoWrapperContainer {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 900px;
+    max-height: 100%;
+  }
+  #lightbox .videoWrapperContainer .videoWrapper {
+    height: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-bottom: 56.333%; /* custom */
+    background: black;
+  }
+  #lightbox .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  #lightbox #prev,
+  #lightbox #next {
+    height: 50px;
+    line-height: 36px;
+    display: none;
+    margin-top: -25px;
+    position: fixed;
+    top: 50%;
+    padding: 0 15px;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 99;
+    color: white;
+    font-size: 60px;
+  }
+  #lightbox.gallery #prev,
+  #lightbox.gallery #next {
+    display: block;
+  }
+  #lightbox #prev {
+    left: 0;
+  }
+  #lightbox #next {
+    right: 0;
+  }
+  #lightbox #close {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 99;
+    right: 0;
+    top: 0;
+  }
+  #lightbox #close:after,
+  #lightbox #close:before {
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 14px;
+    content: "";
+    height: 3px;
+    background: white;
+    width: 23px;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    /* Safari */
+    -webkit-transform: rotate(-45deg);
+    /* Firefox */
+    -moz-transform: rotate(-45deg);
+    /* IE */
+    -ms-transform: rotate(-45deg);
+    /* Opera */
+    -o-transform: rotate(-45deg);
+  }
+  #lightbox #close:after {
+    /* Safari */
+    -webkit-transform: rotate(45deg);
+    /* Firefox */
+    -moz-transform: rotate(45deg);
+    /* IE */
+    -ms-transform: rotate(45deg);
+    /* Opera */
+    -o-transform: rotate(45deg);
+  }
+  #lightbox,
+  #lightbox * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+</style>
+
+<style>
+  th {
+    text-align: center;
+  }
+  .highlight {
+    background-color: #ffff00;
+  }
+</style>
+
+<script>
+  function highlight(id) {
+    var already_highlighted = document.getElementsByClassName("highlight");
+    if (already_highlighted.length > 0)
+      already_highlighted[0].classList.remove("highlight");
+    var toHighlight = document.getElementById(id);
+    toHighlight.classList.toggle("highlight");
+  }
+  function highlight_off() {
+    var already_highlighted = document.getElementsByClassName("highlight");
+    if (already_highlighted.length > 0)
+      already_highlighted[0].classList.remove("highlight");
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+<script src="https://sites.pitt.edu/~shk148/assets/js/typed.js" defer></script>
+
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+</script>
+  <!--link rel="stylesheet" href='https://sites.pitt.edu/~shk148/assets/css/style.css' /-->
+  <!--link rel="stylesheet" href=' https://sites.pitt.edu/~shk148/assets/css/tufte.css' /-->
+  <link rel="stylesheet" href="https://sites.pitt.edu/~shk148/assets/css/tufte-og.css">
+<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"svg":{"fontCache":"global"},"options":{"enableMenu":true,"menuOptions":{"settings":{"assistiveMml":false},"renderActions":{"assistiveMml":[]}}}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body data-bs-spy="scroll" rootmargin="0px 100px 0%">
+  <!--- Header and nav template site-wide -->
+  <div class="text-center">
+    
+    <header class="text-center">
+      <nav class="mx-auto group navbar navbar-expand-md justify-content-center">
+        <a aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+          Menu
+        </a>
+        <div class="collapse navbar-collapse justify-content-center" id="navbar">
+          <a class="" href="/~shk148/">Shinwoo Kim</a>
+           
+          <a href="/~shk148/teaching/CS0441-2234/">CS0441</a>
+            
+          <a href="/~shk148/teaching/CS0441-2234/syllabus.html">Syllabus</a>
+            
+          <a href="/~shk148/teaching/CS0441-2234/#schedule--handout">Schedule</a>
+            
+          <a href="/~shk148/teaching/CS0441-2234/#student-feedback">Student Feedback</a>
+            
+          <a href="/~shk148/teaching/CS0441-2234/#getting-help">Getting Help</a>
+           
+        </div>
+      </nav>
+    </header>
+    
+  </div>
+  <div>
+    <article class="">
+      <h1 class="title my-0">Section 1.1 &amp; 1.2 Review Solutions</h1>
+      <p class="subtitle my-0">Solutions &amp; Commentary to Accompany Section 1.1 &amp; 1.2 Review</p>
+      <style>.red{color: red !important;}</style>
+
+<p><label for="copyright" class="margin-toggle"> ⊕</label><input type="checkbox" id="copyright" class="margin-toggle"><span class="marginnote">The questions presented here have been adapted from Kenneth Rosen’s <a href="https://www.amazon.com/Discrete-Mathematics-Applications-Kenneth-author/dp/1260091996/ref=pd_lpo_1?pd_rd_i=1260091996&psc=1">Discrete Mathematics and Its Applications</a>, 8th Edition. </span></p>
+
+<h1 id="problem-1">Problem 1</h1>
+<p>Let $p$ be the proposition “<em>I will do every exercise in the textbook</em>” and $q$ be the proposition “<em>I will get an A in CS0441</em>”.</p>
+
+<p>Express each of these as a combination of $p$ and $q$.</p>
+
+<p>a) I will get an A in CS0441 only if I do every exercise in the textbook.</p>
+
+<p class="red">$q \implies p$</p>
+
+<p>b) I will get an A in CS0441 and I will do every exercise in the textbook.</p>
+
+<p class="red">$ q \land q$</p>
+
+<p>c) Either I will not get an A in CS0441 or I will not do every exercise in the textbook.</p>
+
+<p class="red">$\neg p \lor \neg q$</p>
+
+<h1 id="problem-2">Problem 2</h1>
+<p>Express your answer in terms of $e$: “<em>You can edit a protected Wikipedia entry</em>” and $a$: “<em>You are an administrator</em>”. 
+You cannot edit a protected Wikipedia entry unless you are an administrator.</p>
+
+<p class="red">$e \implies a$ <label for="contrapositive" class="margin-toggle sidenote-number"></label><input type="checkbox" id="contrapositive" class="margin-toggle"><span class="sidenote">A student asked if [$\neg a \to \neg e$] would be a valid solution. The answer is YES. [$\neg a \to \neg e$] is the <strong>contrapositive</strong> of [$e \to a$], thus the two statements are logically equivalent. Therefore, either statements would be a valid answer. </span></p>
+
+<h1 id="problem-3">Problem 3</h1>
+<p>Express your answer in terms of $g$: “<em>You can graduate</em>,” $m$: <em>“You owe money to the university</em>,” $r$: “<em>You have completed the requirements of your major</em>,” and $b$: “<em>You have an overdue library book</em>”.
+ “You can graduate only if you have completed the requirements of your major and you do not owe money to the university and you do not have an overdue library book.”</p>
+
+<p class="red">$g \to (r \land (\neg m) \land (\neg b))$</p>
+
+<h1 id="problem-4">Problem 4</h1>
+<p>Show that these statements are inconsistent:
+ “If Miranda does not take a course in discrete mathematics, then she will not graduate.”</p>
+
+<p>“If Miranda does not graduate, then she is not qualified for the job.”</p>
+
+<p>“If Miranda reads this book, then she is qualified for the job.”</p>
+
+<p>“Miranda does not take a course in discrete mathematics but she reads this book.”</p>
+<div class="red">
+  <p><label for="methodology" class="margin-toggle"> ⊕</label><input type="checkbox" id="methodology" class="margin-toggle"><span class="marginnote">Previously, we discussed how to use <em>truth tables</em> to show that a system is consistent. While that methodology is applicable here (you want to show that there is no case where all the given statements are true), you have to go through all 2<sup>4</sup> cases which can be time-consuming. Instead, we can use a more direct approach and show that there is a contradiction among the statements (thereby concluding that the system is inconsistent).  </span></p>
+</div>
+<div class="red">
+  <p>Let:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Symbol</th>
+        <th>Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>t</td>
+        <td>Miranda takes a course in discrete mathematics</td>
+      </tr>
+      <tr>
+        <td>g</td>
+        <td>Miranda  graduates</td>
+      </tr>
+      <tr>
+        <td>r</td>
+        <td>Miranda reads this book</td>
+      </tr>
+      <tr>
+        <td>q</td>
+        <td>Miranda is qualified for the job</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Translating these statements into symbols, we have:
+ ¬ <em>t</em> → ¬ <em>g</em>, ¬ <em>g</em> → ¬ <em>q</em>, <em>r</em> → <em>q</em>, and ¬ <em>t</em> ∧ <em>r</em>.</p>
+
+  <p>Suppose the these statements are consistent. The fourth statement tells us that ¬ <em>t</em> must be true. Therefore, by <strong>modus ponens</strong> with the first statement, we know that ¬ <em>g</em> is true, hence (from the second statement), that ¬ <em>q</em> is true. Also, the fourth statement tells us that <em>r</em> must be true, and so again modus ponens (third statement) makes <em>q</em> true. This is a <strong>contradiction</strong>: <em>q</em> ∧¬ <em>q</em>.</p>
+
+  <p>Thus, the statements are inconsistent.</p>
+</div>
+
+<p>$$ $$</p>
+
+      <button onclick="topFunction()" id="top-btn" class="btn btn-dark d-print-none" title="Go to top">
+        Top
+      </button>
+    </article>
+    <script>
+      let btn_to_top = document.getElementById("top-btn");
+      window.onscroll = function () {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          btn_to_top.style.opacity = "100%";
+        } else {
+          btn_to_top.style.opacity = "0%";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Ope`
+      }
+    </script>
+    <hr class="mx-auto slender">
+    <footer class="site-footer text-center">
+      <p class="mb-0 mx-auto">
+        © 2021-2023 Shinwoo Kim. All Rights Reserved.<br>
+        <a href="#" onclick="history.back()">Return to Previous Page</a>
+      </p>
+    </footer>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X43BZS6F4C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-X43BZS6F4C");
+</script>
+</body>
+</html>

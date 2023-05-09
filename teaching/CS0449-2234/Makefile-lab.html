@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>
+  
+    Makefile Tutorial | Shinwoo Kim
+</title>
+<link rel="alternate" type="application/rss+xml" title="Shinwoo Kim" href="https://sites.pitt.edu/~shk148/feed.xml">
+
+<link rel="icon" type="image/x-icon" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon.ico">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/x-icon" sizes="16x16" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://sites.pitt.edu/~shk148/%20/assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="https://sites.pitt.edu/~shk148/assets/favicon/site.webmanifest">
+
+<meta name="twitter:card" content="summary">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.2">
+<meta property="og:title" content="Makefile Tutorial">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.">
+<meta property="og:description" content="Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/teaching/CS0449-2234/Makefile-lab.html">
+<meta property="og:url" content="https://sites.pitt.edu/~shk148/teaching/CS0449-2234/Makefile-lab.html">
+<meta property="og:site_name" content="Shinwoo Kim">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Makefile Tutorial">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.","headline":"Makefile Tutorial","url":"https://sites.pitt.edu/~shk148/teaching/CS0449-2234/Makefile-lab.html"}</script>
+<!-- End Jekyll SEO tag -->
+ <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.css">
+<script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js"></script>
+
+<script>
+  function is_youtubelink(url) {
+    var p =
+      /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return url.match(p) ? RegExp.$1 : false;
+  }
+  function is_imagelink(url) {
+    var p = /([a-z\-_0-9\/\:\.]*\.(jpg|jpeg|png|gif))/i;
+    return url.match(p) ? true : false;
+  }
+  function is_vimeolink(url, el) {
+    var id = false;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+        // XMLHttpRequest.DONE == 4
+        if (xmlhttp.status == 200) {
+          var response = JSON.parse(xmlhttp.responseText);
+          id = response.video_id;
+          console.log(id);
+          el.classList.add("lightbox-vimeo");
+          el.setAttribute("data-id", id);
+
+          el.addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("lightbox").innerHTML =
+              '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/' +
+              el.getAttribute("data-id") +
+              '/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>';
+            document.getElementById("lightbox").style.display = "block";
+
+            setGallery(this);
+          });
+        } else if (xmlhttp.status == 400) {
+          alert("There was an error 400");
+        } else {
+          alert("something else other than 200 was returned");
+        }
+      }
+    };
+    xmlhttp.open("GET", "https://vimeo.com/api/oembed.json?url=" + url, true);
+    xmlhttp.send();
+  }
+  function setGallery(el) {
+    var elements = document.body.querySelectorAll(".gallery");
+    elements.forEach((element) => {
+      element.classList.remove("gallery");
+    });
+    if (el.closest("ul, p")) {
+      var link_elements = el
+        .closest("ul, p")
+        .querySelectorAll("a[class*='lightbox-']");
+      link_elements.forEach((link_element) => {
+        link_element.classList.remove("current");
+      });
+      link_elements.forEach((link_element) => {
+        if (el.getAttribute("href") == link_element.getAttribute("href")) {
+          link_element.classList.add("current");
+        }
+      });
+      if (link_elements.length > 1) {
+        document.getElementById("lightbox").classList.add("gallery");
+        link_elements.forEach((link_element) => {
+          link_element.classList.add("gallery");
+        });
+      }
+      var currentkey;
+      var gallery_elements = document.querySelectorAll("a.gallery");
+      Object.keys(gallery_elements).forEach(function (k) {
+        if (gallery_elements[k].classList.contains("current")) currentkey = k;
+      });
+      if (currentkey == gallery_elements.length - 1) var nextkey = 0;
+      else var nextkey = parseInt(currentkey) + 1;
+      if (currentkey == 0) var prevkey = parseInt(gallery_elements.length - 1);
+      else var prevkey = parseInt(currentkey) - 1;
+      document.getElementById("next").addEventListener("click", function () {
+        gallery_elements[nextkey].click();
+      });
+      document.getElementById("prev").addEventListener("click", function () {
+        gallery_elements[prevkey].click();
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    //create lightbox div in the footer
+    var newdiv = document.createElement("div");
+    newdiv.setAttribute("id", "lightbox");
+    document.body.appendChild(newdiv);
+
+    //add classes to links to be able to initiate lightboxes
+    var elements = document.querySelectorAll("a");
+    elements.forEach((element) => {
+      var url = element.getAttribute("href");
+      if (url) {
+        if (
+          url.indexOf("vimeo") !== -1 &&
+          !element.classList.contains("no-lightbox")
+        ) {
+          is_vimeolink(url, element);
+        }
+        if (is_youtubelink(url) && !element.classList.contains("no-lightbox")) {
+          element.classList.add("lightbox-youtube");
+          element.setAttribute("data-id", is_youtubelink(url));
+        }
+        if (is_imagelink(url) && !element.classList.contains("no-lightbox")) {
+          element.classList.add("lightbox-image");
+          var href = element.getAttribute("href");
+          var filename = href.split("/").pop();
+          var split = filename.split(".");
+          var name = split[0];
+          element.setAttribute("title", name);
+        }
+      }
+    });
+
+    //remove the clicked lightbox
+    document
+      .getElementById("lightbox")
+      .addEventListener("click", function (event) {
+        if (event.target.id != "next" && event.target.id != "prev") {
+          this.innerHTML = "";
+          document.getElementById("lightbox").style.display = "none";
+        }
+      });
+
+    //add the youtube lightbox on click
+    var elements = document.querySelectorAll("a.lightbox-youtube");
+    elements.forEach((element) => {
+      element.addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("lightbox").innerHTML =
+          '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://www.youtube.com/embed/' +
+          this.getAttribute("data-id") +
+          '?autoplay=1&showinfo=0&rel=0"></iframe></div>';
+        document.getElementById("lightbox").style.display = "block";
+
+        setGallery(this);
+      });
+    });
+
+    //add the image lightbox on click
+    var elements = document.querySelectorAll("a.lightbox-image");
+    elements.forEach((element) => {
+      element.addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("lightbox").innerHTML =
+          '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="img" style="background: url(\'' +
+          this.getAttribute("href") +
+          '\') center center / contain no-repeat;" title="' +
+          this.getAttribute("title") +
+          '" ><img src="' +
+          this.getAttribute("href") +
+          '" alt="' +
+          this.getAttribute("title") +
+          '" /></div><span>' +
+          this.getAttribute("title") +
+          "</span>";
+        document.getElementById("lightbox").style.display = "block";
+
+        setGallery(this);
+      });
+    });
+  });
+</script>
+<style>
+  #lightbox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999999;
+    line-height: 0;
+    cursor: pointer;
+    display: none;
+  }
+  #lightbox .img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #lightbox .img img {
+    opacity: 0;
+    pointer-events: none;
+    width: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    #lightbox .img {
+      max-width: 1200px;
+    }
+  }
+  @media screen and (min-height: 1200px) {
+    #lightbox .img {
+      max-height: 1200px;
+    }
+  }
+  #lightbox span {
+    display: block;
+    position: fixed;
+    bottom: 13px;
+    height: 1.5em;
+    line-height: 1.4em;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+
+  #lightbox span {
+    display: none;
+  }
+
+  #lightbox .videoWrapperContainer {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 900px;
+    max-height: 100%;
+  }
+  #lightbox .videoWrapperContainer .videoWrapper {
+    height: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-bottom: 56.333%; /* custom */
+    background: black;
+  }
+  #lightbox .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  #lightbox #prev,
+  #lightbox #next {
+    height: 50px;
+    line-height: 36px;
+    display: none;
+    margin-top: -25px;
+    position: fixed;
+    top: 50%;
+    padding: 0 15px;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 99;
+    color: white;
+    font-size: 60px;
+  }
+  #lightbox.gallery #prev,
+  #lightbox.gallery #next {
+    display: block;
+  }
+  #lightbox #prev {
+    left: 0;
+  }
+  #lightbox #next {
+    right: 0;
+  }
+  #lightbox #close {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 99;
+    right: 0;
+    top: 0;
+  }
+  #lightbox #close:after,
+  #lightbox #close:before {
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 14px;
+    content: "";
+    height: 3px;
+    background: white;
+    width: 23px;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    /* Safari */
+    -webkit-transform: rotate(-45deg);
+    /* Firefox */
+    -moz-transform: rotate(-45deg);
+    /* IE */
+    -ms-transform: rotate(-45deg);
+    /* Opera */
+    -o-transform: rotate(-45deg);
+  }
+  #lightbox #close:after {
+    /* Safari */
+    -webkit-transform: rotate(45deg);
+    /* Firefox */
+    -moz-transform: rotate(45deg);
+    /* IE */
+    -ms-transform: rotate(45deg);
+    /* Opera */
+    -o-transform: rotate(45deg);
+  }
+  #lightbox,
+  #lightbox * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+</style>
+
+<style>
+  th {
+    text-align: center;
+  }
+  .highlight {
+    background-color: #ffff00;
+  }
+</style>
+
+<script>
+  function highlight(id) {
+    var already_highlighted = document.getElementsByClassName("highlight");
+    if (already_highlighted.length > 0)
+      already_highlighted[0].classList.remove("highlight");
+    var toHighlight = document.getElementById(id);
+    toHighlight.classList.toggle("highlight");
+  }
+  function highlight_off() {
+    var already_highlighted = document.getElementsByClassName("highlight");
+    if (already_highlighted.length > 0)
+      already_highlighted[0].classList.remove("highlight");
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+<script src="https://sites.pitt.edu/~shk148/assets/js/typed.js" defer></script>
+
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+</script>
+  <!--link rel="stylesheet" href='https://sites.pitt.edu/~shk148/assets/css/style.css' /-->
+  <!--link rel="stylesheet" href=' https://sites.pitt.edu/~shk148/assets/css/tufte.css' /-->
+  <link rel="stylesheet" href="https://sites.pitt.edu/~shk148/assets/css/tufte-og.css">
+<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"},"svg":{"fontCache":"global"},"options":{"enableMenu":true,"menuOptions":{"settings":{"assistiveMml":false},"renderActions":{"assistiveMml":[]}}}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body data-bs-spy="scroll" rootmargin="0px 100px 0%">
+  <!--- Header and nav template site-wide -->
+  <div class="text-center">
+    
+    <header>
+      <nav id="navbar"><a href="/~shk148/">Shinwoo Kim</a></nav>
+    </header>
+    
+  </div>
+  <div>
+    <article class="">
+      <h1 class="title my-0">Makefile Tutorial</h1>
+      <p class="subtitle my-0">CS 0449: Introduction to System Software</p>
+      <h2 id="background">Background</h2>
+<p><label for="credit" class="margin-toggle"> ⊕</label><input type="checkbox" id="credit" class="margin-toggle"><span class="marginnote">Tutorial adapted from <a href="https://people.cs.pitt.edu/~jmisurda/">Dr. Jonathan Misurda</a>’s CS0449 <a href="https://cs0449.gitlab.io/sp2023/resources/worksheets/makefiles/makefiles.pdf">Makefiles Lab</a> </span>
+Up to this point, you’ve been writing your entire program in a single file. However, that is not something very practical. Good programing practices suggest that you should group similar code (such as all of your code for data structures) into their own files. This improves the readbility of your code, keeps it neat, and ultimately makes it easier to debug.</p>
+
+<p>In this tutorial, you will learn how to manage a project that is split up across several files. As you’ve seen in lecture, multiple files can be compiled independently and then merged together in a process called <strong>linking</strong>. Technically, these two phases use different tools behind the scenes. However, though, the compilers will often hide that process and invoke it for us.</p>
+
+<p>Here, you will create some utility functions in a separate file and then call them from a main C file. You will learn how to compile each independently, and then learn how to use <strong><code class="language-html highlighter-rouge">make</code></strong> which is a tool which helps us manage and simplify the build process. You should already be familiar with using make from past programming assignments. However, now, you will learn to write your own Makefiles.
+<label for="cheatsheet" class="margin-toggle"> ⊕</label><input type="checkbox" id="cheatsheet" class="margin-toggle"><span class="marginnote"><a href="Makefiles.html">Makefile Cheat Sheet</a> </span></p>
+
+<h2 id="objective">Objective</h2>
+<ul>
+  <li>Create a C program (<code class="language-html highlighter-rouge">main.c</code>) which prints out $5!$.</li>
+  <li>The logic for $!$ should be defined as a function <code class="language-html highlighter-rouge">factorial(int n)</code> stored in<code class="language-html highlighter-rouge">util.c</code>.</li>
+  <li>Your <code class="language-html highlighter-rouge">main.c</code> should <em>link</em> to the <code class="language-html highlighter-rouge">util.c</code>
+</li>
+  <li>You should create a <code class="language-html highlighter-rouge">Makefile</code> which allows for easy compilation of your program.</li>
+</ul>
+
+<h2 id="procedure">Procedure</h2>
+<ol>
+  <li>Login to <code class="language-html highlighter-rouge">thoth.cs.pitt.edu</code> via SSH <label for="step-1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="step-1" class="margin-toggle"><span class="sidenote"><code class="language-html highlighter-rouge">ssh <span class="nt">&lt;username&gt;</span>@thoth.cs.pitt.edu</code> </span>
+</li>
+  <li>Move into your private directory where you store all your work for this class<label for="step-2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="step-2" class="margin-toggle"><span class="sidenote"><code class="language-html highlighter-rouge">cd private/DIRECTORY</code> </span>.</li>
+  <li>Then, create a directory for this worksheet and navigate to it:
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code><span class="nb">mkdir </span>makefile-lab
+<span class="nb">cd </span>makefile-lab
+</code></pre></div>    </div>
+  </li>
+  <li>The first step will be to create our main C file (using the terminal editor of your choice):
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code>nano main.c
+</code></pre></div>    </div>
+  </li>
+  <li>Now enter the initial skeleton code:<label for="step-5" class="margin-toggle sidenote-number"></label><input type="checkbox" id="step-5" class="margin-toggle"><span class="sidenote">Notice that this program will not do anything meaningful (just yet) </span>
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+ <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p>and save the file.</p>
+  </li>
+  <li>We now need to compile this. This is a rather straightforward process since it is just a single file. However we want to compile and link in separate steps for now:
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code>gcc <span class="nt">-c</span> main.c
+</code></pre></div>    </div>
+  </li>
+  <li>The “<code class="language-html highlighter-rouge">-c</code>” argument to gcc will create a <code class="language-html highlighter-rouge">main.o</code> object file instead of linking an entire executable. You can see it if you use the <code class="language-html highlighter-rouge">ls</code> command to list the directory. We can now link the object file with the C standard library and create an executable called main by using the following:
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code>gcc <span class="nt">-o</span> main main.o
+</code></pre></div>    </div>
+  </li>
+  <li>Now, what if we had another file? Let’s create a <code class="language-html highlighter-rouge">util.c</code> file that contains some functions we would like to use. Create the following file and fill it with the provided code:
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code>nano util.c
+</code></pre></div>    </div>
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code><span class="kt">int</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+ <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span>
+ <span class="p">{</span>
+     <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+ <span class="p">}</span>
+ <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>We don’t need to do much inside this C file. However, how do we call it from our <code class="language-html highlighter-rouge">main.c</code> file? Well, it has to know what is defined in <code class="language-html highlighter-rouge">util.c</code>. So, we have to write a separate file that contains a listing of functions and definitions useful to our second file<label for="step-9" class="margin-toggle sidenote-number"></label><input type="checkbox" id="step-9" class="margin-toggle"><span class="sidenote">This file is often called a header file as include statements often appear towards the <em>head</em> in source files </span>. So, let’s create a <code class="language-html highlighter-rouge">util.h</code> file:
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code>nano util.h
+</code></pre></div>    </div>
+  </li>
+  <li>Place this code inside:
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code><span class="kt">int</span> <span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+</code></pre></div>    </div>
+
+    <p>Notice that this “<strong>header file</strong>” only needs the strict definition of any functions you want to expose to your C files. Here, it suggests that you can call a function named factorial and it will return an <code class="language-html highlighter-rouge">int</code> and takes an <code class="language-html highlighter-rouge">int</code> as input. This is called a <strong>function prototype</strong>. The rest of your code does not need to know the implementation details (such as it being recursive).</p>
+  </li>
+  <li>Now we can build this file as well: (Notice, we do not do anything with the header file, <code class="language-html highlighter-rouge">util.h</code>)
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code>gcc <span class="nt">-c</span> util.c
+</code></pre></div>    </div>
+  </li>
+  <li>Now let’s modify our <code class="language-html highlighter-rouge">main.c</code> to have it call the factorial function:
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code>nano main.c
+</code></pre></div>    </div>
+
+    <p>And let’s use the following code to have it call the factorial function:</p>
+
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code><span class="cp">#include</span> <span class="cpf">"util.h"</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="c1"> //for printf</span><span class="cp">
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+<span class="c1">// Should print 120 to stdout</span>
+<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Yes, we <code class="language-html highlighter-rouge">#include</code> the <code class="language-html highlighter-rouge">util.h</code>. This effectively just copies-and-pastes the contents of <code class="language-html highlighter-rouge">util.h</code> into this file. This is why we need the separate files since copying the actual function duplicates the code for the factorial function and multiple versions of a function will cause us grief later on.</p>
+
+    <p>Could we just type the function declaration contained in <code class="language-html highlighter-rouge">util.h</code> into the top of <code class="language-html highlighter-rouge">main.c</code> instead of including the file with the preprocessor? Yes! But it sure is more annoying to change…</p>
+  </li>
+  <li>Finally, we can re-compile our main function:
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code>gcc <span class="nt">-c</span> main.c
+</code></pre></div>    </div>
+  </li>
+  <li>And then re-link our executable (including the code in util!):
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code>gcc <span class="nt">-o</span> main main.o util.o
+</code></pre></div>    </div>
+    <p>NOTE: why did we not have to re-compile util.c? It did not change! You only have to recompile files that change, which is the power of linking. We will exploit this in our tooling with <code class="language-html highlighter-rouge">make</code>!</p>
+  </li>
+  <li>However, this gives us an opportunity to do something smarter. A tool called <strong>make</strong> is designed to invoke commands, such as each of the gcc commands above. Furthermore, it can be written to only run commands on files that have changed. Let’s look at the Makefile for our little project so far. <code class="language-html highlighter-rouge">make</code> looks for a particular file in the current directory. Create the file we need here (note the capitalization):
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code>nano Makefile
+</code></pre></div>    </div>
+    <p>Write the following and save the file:</p>
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code>main: main.o util.o
+    gcc -o main main.o util.o
+main.o: main.c
+    gcc -c main.c
+util.o: util.c
+    gcc -c util.c
+</code></pre></div>    </div>
+
+    <p><strong>NOTE</strong>: It is VERY important that the indentation you use are strictly tabs. That is, you must tab over the “<code class="language-html highlighter-rouge">gcc -c util.c</code>”, etc using your keyboard’s tab key. If you use spaces (or your editor replaces tabs with spaces) you will get errors from Make such as:</p>
+    <div class="language-html highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code>Makefile:2: *** missing separator. Stop.
+</code></pre></div>    </div>
+  </li>
+  <li>Back at your shell, run your makefile by typing this command:
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="syntax"><code>make
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="adding-features-to-makefiles">Adding features to Makefiles</h2>
+<p>Congratulations, You wrote your first Makefile! However, as you have seen in recitation, Makefiles offer a whole lot more features than we’ve just used. Here, we’ll explore how to implement some of them.</p>
+
+<h3 id="make-clean"><code class="language-html highlighter-rouge">make clean</code></h3>
+<p>Makefiles are great because it allows you to re-compile only the modified files (which speeds up compilation time). However, sometimes, you may want to re-compile your entire project from scratch. Sure, you can look through your file explorer to delte all the compiled binaries, and run <code class="language-html highlighter-rouge">make</code> again. But, make offers a simply way to <strong>clean</strong> your compiled files.</p>
+
+<p>Add the following rule to your Makefile:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>clean:
+        rm -f main main.o util.o
+</code></pre></div></div>
+
+<p>With those lines added, you can run <code class="language-html highlighter-rouge">make clean</code> to remove all the compiled files automatically.</p>
+
+<h3 id="using-variables">Using variables</h3>
+<p>Often times, when we are compiling, we want to use certain flags. For example, the <code class="language-html highlighter-rouge">-g</code> flag, which preserves debugging symbols, allows our compiled executable to be run via GDB and is particularly useful when programming.</p>
+
+<p>We could modify our Makefiles and add the flags to each rule like:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>main: main.o util.o
+        gcc -Wall -g -o main main.o util.o
+main.o: main.c
+        gcc -Wall -g -c main.c
+util.o: util.c
+        gcc -Wall -g -c util.c
+</code></pre></div></div>
+<p>However, typing all that is tedious and modifying it even more so. Instead, we can define a <code class="language-html highlighter-rouge">$(CFLAGS)</code> variable to make it easily modifiable.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="syntax"><code>CFLAGS := -Wall -g
+main: main.o util.o
+        gcc $(CFLAGS) -o main main.o util.o
+main.o: main.c
+        gcc $(CFLAGS) -c main.c
+util.o: util.c
+        gcc $(CFLAGS) -c util.c
+</code></pre></div></div>
+<p>Now, if you wanted to drop the <code class="language-html highlighter-rouge">-g</code> flag (for instance, as your code moves to production), you can simply modify the <code class="language-html highlighter-rouge">$(CFLAGS)</code> variable once instead of modifying all the rules.</p>
+
+<p>Similarly, we can use the <code class="language-html highlighter-rouge">$(CC)</code> variable to define the compiler we are using. This can be particularly useful if you are distributing your source to multiple machines running different architecture. The user can simply modify <code class="language-html highlighter-rouge">CC := gcc</code> to <code class="language-html highlighter-rouge">CC := clang</code> to swap out their compiler (There are differences between gcc and clang’s falgs so this is not always guaranteed to work).</p>
+
+<h3 id="more-features">More features</h3>
+<p>Makefiles offer so much more functionalities (some more useless than others) than what is described here. For instance, automatic variables such as <code class="language-html highlighter-rouge">*</code> wildcards and <code class="language-html highlighter-rouge">%</code> wildcards offer a useful way to compile hundreds or even thousands of files easily. Makefiles even support conditionals, string substitutions, and even functions!</p>
+
+<p><img src="https://malithjayaweera.com/wp-content/uploads/2020/05/makefile_tutorial_2.jpg" alt=""></p>
+
+<p>GNU has an <a href="https://www.gnu.org/software/make/manual/make.html">official documentation</a> on how Makefiles work, however that can be a bit dense to read. <label for="There is also an entire book on Makefiles, but there are better ways to spend your money" class="margin-toggle">⊕</label><input type="checkbox" id="There is also an entire book on Makefiles, but there are better ways to spend your money" class="margin-toggle"><span class="marginnote"><img class="fullwidth" src="https://img.thriftbooks.com/api/images/m/36188bb7727c0af39dd0175f2919948a871f0a73.jpg"><br></span></p>
+
+<p><a href="https://makefiletutorial.com/">The Makefile Tutorial</a> is another great resource which provide excellent explanations as well as examples on everything you can do with Makefiles (and I mean everything!).</p>
+
+<p>As you become a better programmer and your projects grow in complexity, try to keep in mind great software engineering principles (such as <strong>modularity</strong>) and learn tools (such as <strong>make</strong>) to apply those principles!</p>
+
+      <button onclick="topFunction()" id="top-btn" class="btn btn-dark d-print-none" title="Go to top">
+        Top
+      </button>
+    </article>
+    <script>
+      let btn_to_top = document.getElementById("top-btn");
+      window.onscroll = function () {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          btn_to_top.style.opacity = "100%";
+        } else {
+          btn_to_top.style.opacity = "0%";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Ope`
+      }
+    </script>
+    <hr class="mx-auto slender">
+    <footer class="site-footer text-center">
+      <p class="mb-0 mx-auto">
+        © 2021-2023 Shinwoo Kim. All Rights Reserved.<br>
+        <a href="#" onclick="history.back()">Return to Previous Page</a>
+      </p>
+    </footer>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X43BZS6F4C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-X43BZS6F4C");
+</script>
+</body>
+</html>

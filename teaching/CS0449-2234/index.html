@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>
+  
+    Introduction to Systems Software | Shinwoo Kim
+</title>
+<link rel="alternate" type="application/rss+xml" title="Shinwoo Kim" href="https://sites.pitt.edu/~shk148/feed.xml">
+
+<link rel="icon" type="image/x-icon" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon.ico">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/x-icon" sizes="16x16" href="https://sites.pitt.edu/~shk148/assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://sites.pitt.edu/~shk148/%20/assets/favicon/apple-touch-icon.png">
+<link rel="manifest" href="https://sites.pitt.edu/~shk148/assets/favicon/site.webmanifest">
+
+<meta name="twitter:card" content="summary">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.2">
+<meta property="og:title" content="Introduction to Systems Software">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.">
+<meta property="og:description" content="Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/teaching/CS0449-2234/">
+<meta property="og:url" content="https://sites.pitt.edu/~shk148/teaching/CS0449-2234/">
+<meta property="og:site_name" content="Shinwoo Kim">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Introduction to Systems Software">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education; His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.","headline":"Introduction to Systems Software","url":"https://sites.pitt.edu/~shk148/teaching/CS0449-2234/"}</script>
+<!-- End Jekyll SEO tag -->
+ <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.css">
+<script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js"></script>
+
+<script>
+  function is_youtubelink(url) {
+    var p =
+      /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return url.match(p) ? RegExp.$1 : false;
+  }
+  function is_imagelink(url) {
+    var p = /([a-z\-_0-9\/\:\.]*\.(jpg|jpeg|png|gif))/i;
+    return url.match(p) ? true : false;
+  }
+  function is_vimeolink(url, el) {
+    var id = false;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+        // XMLHttpRequest.DONE == 4
+        if (xmlhttp.status == 200) {
+          var response = JSON.parse(xmlhttp.responseText);
+          id = response.video_id;
+          console.log(id);
+          el.classList.add("lightbox-vimeo");
+          el.setAttribute("data-id", id);
+
+          el.addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("lightbox").innerHTML =
+              '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/' +
+              el.getAttribute("data-id") +
+              '/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>';
+            document.getElementById("lightbox").style.display = "block";
+
+            setGallery(this);
+          });
+        } else if (xmlhttp.status == 400) {
+          alert("There was an error 400");
+        } else {
+          alert("something else other than 200 was returned");
+        }
+      }
+    };
+    xmlhttp.open("GET", "https://vimeo.com/api/oembed.json?url=" + url, true);
+    xmlhttp.send();
+  }
+  function setGallery(el) {
+    var elements = document.body.querySelectorAll(".gallery");
+    elements.forEach((element) => {
+      element.classList.remove("gallery");
+    });
+    if (el.closest("ul, p")) {
+      var link_elements = el
+        .closest("ul, p")
+        .querySelectorAll("a[class*='lightbox-']");
+      link_elements.forEach((link_element) => {
+        link_element.classList.remove("current");
+      });
+      link_elements.forEach((link_element) => {
+        if (el.getAttribute("href") == link_element.getAttribute("href")) {
+          link_element.classList.add("current");
+        }
+      });
+      if (link_elements.length > 1) {
+        document.getElementById("lightbox").classList.add("gallery");
+        link_elements.forEach((link_element) => {
+          link_element.classList.add("gallery");
+        });
+      }
+      var currentkey;
+      var gallery_elements = document.querySelectorAll("a.gallery");
+      Object.keys(gallery_elements).forEach(function (k) {
+        if (gallery_elements[k].classList.contains("current")) currentkey = k;
+      });
+      if (currentkey == gallery_elements.length - 1) var nextkey = 0;
+      else var nextkey = parseInt(currentkey) + 1;
+      if (currentkey == 0) var prevkey = parseInt(gallery_elements.length - 1);
+      else var prevkey = parseInt(currentkey) - 1;
+      document.getElementById("next").addEventListener("click", function () {
+        gallery_elements[nextkey].click();
+      });
+      document.getElementById("prev").addEventListener("click", function () {
+        gallery_elements[prevkey].click();
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    //create lightbox div in the footer
+    var newdiv = document.createElement("div");
+    newdiv.setAttribute("id", "lightbox");
+    document.body.appendChild(newdiv);
+
+    //add classes to links to be able to initiate lightboxes
+    var elements = document.querySelectorAll("a");
+    elements.forEach((element) => {
+      var url = element.getAttribute("href");
+      if (url) {
+        if (
+          url.indexOf("vimeo") !== -1 &&
+          !element.classList.contains("no-lightbox")
+        ) {
+          is_vimeolink(url, element);
+        }
+        if (is_youtubelink(url) && !element.classList.contains("no-lightbox")) {
+          element.classList.add("lightbox-youtube");
+          element.setAttribute("data-id", is_youtubelink(url));
+        }
+        if (is_imagelink(url) && !element.classList.contains("no-lightbox")) {
+          element.classList.add("lightbox-image");
+          var href = element.getAttribute("href");
+          var filename = href.split("/").pop();
+          var split = filename.split(".");
+          var name = split[0];
+          element.setAttribute("title", name);
+        }
+      }
+    });
+
+    //remove the clicked lightbox
+    document
+      .getElementById("lightbox")
+      .addEventListener("click", function (event) {
+        if (event.target.id != "next" && event.target.id != "prev") {
+          this.innerHTML = "";
+          document.getElementById("lightbox").style.display = "none";
+        }
+      });
+
+    //add the youtube lightbox on click
+    var elements = document.querySelectorAll("a.lightbox-youtube");
+    elements.forEach((element) => {
+      element.addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("lightbox").innerHTML =
+          '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://www.youtube.com/embed/' +
+          this.getAttribute("data-id") +
+          '?autoplay=1&showinfo=0&rel=0"></iframe></div>';
+        document.getElementById("lightbox").style.display = "block";
+
+        setGallery(this);
+      });
+    });
+
+    //add the image lightbox on click
+    var elements = document.querySelectorAll("a.lightbox-image");
+    elements.forEach((element) => {
+      element.addEventListener("click", function (event) {
+        event.preventDefault();
+        document.getElementById("lightbox").innerHTML =
+          '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="img" style="background: url(\'' +
+          this.getAttribute("href") +
+          '\') center center / contain no-repeat;" title="' +
+          this.getAttribute("title") +
+          '" ><img src="' +
+          this.getAttribute("href") +
+          '" alt="' +
+          this.getAttribute("title") +
+          '" /></div><span>' +
+          this.getAttribute("title") +
+          "</span>";
+        document.getElementById("lightbox").style.display = "block";
+
+        setGallery(this);
+      });
+    });
+  });
+</script>
+<style>
+  #lightbox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999999;
+    line-height: 0;
+    cursor: pointer;
+    display: none;
+  }
+  #lightbox .img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+  }
+  #lightbox .img img {
+    opacity: 0;
+    pointer-events: none;
+    width: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    #lightbox .img {
+      max-width: 1200px;
+    }
+  }
+  @media screen and (min-height: 1200px) {
+    #lightbox .img {
+      max-height: 1200px;
+    }
+  }
+  #lightbox span {
+    display: block;
+    position: fixed;
+    bottom: 13px;
+    height: 1.5em;
+    line-height: 1.4em;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+
+  #lightbox span {
+    display: none;
+  }
+
+  #lightbox .videoWrapperContainer {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 900px;
+    max-height: 100%;
+  }
+  #lightbox .videoWrapperContainer .videoWrapper {
+    height: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-bottom: 56.333%; /* custom */
+    background: black;
+  }
+  #lightbox .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  #lightbox #prev,
+  #lightbox #next {
+    height: 50px;
+    line-height: 36px;
+    display: none;
+    margin-top: -25px;
+    position: fixed;
+    top: 50%;
+    padding: 0 15px;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 99;
+    color: white;
+    font-size: 60px;
+  }
+  #lightbox.gallery #prev,
+  #lightbox.gallery #next {
+    display: block;
+  }
+  #lightbox #prev {
+    left: 0;
+  }
+  #lightbox #next {
+    right: 0;
+  }
+  #lightbox #close {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 99;
+    right: 0;
+    top: 0;
+  }
+  #lightbox #close:after,
+  #lightbox #close:before {
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 14px;
+    content: "";
+    height: 3px;
+    background: white;
+    width: 23px;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    /* Safari */
+    -webkit-transform: rotate(-45deg);
+    /* Firefox */
+    -moz-transform: rotate(-45deg);
+    /* IE */
+    -ms-transform: rotate(-45deg);
+    /* Opera */
+    -o-transform: rotate(-45deg);
+  }
+  #lightbox #close:after {
+    /* Safari */
+    -webkit-transform: rotate(45deg);
+    /* Firefox */
+    -moz-transform: rotate(45deg);
+    /* IE */
+    -ms-transform: rotate(45deg);
+    /* Opera */
+    -o-transform: rotate(45deg);
+  }
+  #lightbox,
+  #lightbox * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+</style>
+
+<style>
+  th {
+    text-align: center;
+  }
+  .highlight {
+    background-color: #ffff00;
+  }
+</style>
+
+<script>
+  function highlight(id) {
+    var already_highlighted = document.getElementsByClassName("highlight");
+    if (already_highlighted.length > 0)
+      already_highlighted[0].classList.remove("highlight");
+    var toHighlight = document.getElementById(id);
+    toHighlight.classList.toggle("highlight");
+  }
+  function highlight_off() {
+    var already_highlighted = document.getElementsByClassName("highlight");
+    if (already_highlighted.length > 0)
+      already_highlighted[0].classList.remove("highlight");
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+<script src="https://sites.pitt.edu/~shk148/assets/js/typed.js" defer></script>
+
+<script>
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+</script>
+  <!--link rel="stylesheet" href='https://sites.pitt.edu/~shk148/assets/css/style.css' /-->
+  <!--link rel="stylesheet" href=' https://sites.pitt.edu/~shk148/assets/css/tufte.css' /-->
+  <link rel="stylesheet" href="https://sites.pitt.edu/~shk148/assets/css/tufte-og.css">
+</head>
+
+<body data-bs-spy="scroll" rootmargin="0px 100px 0%">
+  <!--- Header and nav template site-wide -->
+  <div class="text-center">
+    
+    <header class="text-center">
+      <nav class="mx-auto group navbar navbar-expand-md justify-content-center">
+        <a aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="collapsed navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+          Menu
+        </a>
+        <div class="collapse navbar-collapse justify-content-center" id="navbar">
+          <a class="" href="/~shk148/">Shinwoo Kim</a>
+           
+          <a class="active" href="/~shk148/teaching/CS0449-2234/">CS0449</a>
+            
+          <a href="/~shk148/teaching/CS0449-2234/#handouts">Schedule &amp; Handout</a>
+            
+          <a href="/~shk148/teaching/CS0449-2234/#student-feedback">Student Feedback</a>
+           
+        </div>
+      </nav>
+    </header>
+    
+  </div>
+  <div>
+    <article class="">
+      <h1 class="title my-0">Introduction to Systems Software</h1>
+      <p class="subtitle my-0">CS 0449 (Spring 2023, Term 2234)</p>
+      <p><label for="mf-mem" class="margin-toggle">⊕</label><input type="checkbox" id="mf-mem" class="margin-toggle"><span class="marginnote"><img class="fullwidth" src="https://imgs.xkcd.com/comics/pointers.png"><br>Pointers, <a href="https://xkcd.com/138/">XKCD 138</a></span>
+This page will provide any information for the class that I go over in recitation. Please check back for updates regularly, especially if you miss a recitation.</p>
+
+<h2 id="course-description">Course Description</h2>
+<p>A <em>Computer System</em> is comprised of both hardware and software working in concert to accomplish useful work. In this course, we will explore the issues of programming a real computer system by examining the abstractions, interfaces, and design decisions that influence the way that software runs. This includes the role the Operating System has in communication and resource management.</p>
+
+<p>The perspective we will take is one of the lifecycle of a program from implementation to execution. The simple act of compiling and running a program, a sequence of events we often take for granted, is a complex interaction of many different components that work together to manage the computer’s resources and perform the desired task. Together, these components form a working computer system.</p>
+
+<h2 id="recitation-information">Recitation Information</h2>
+
+<p><em>Most up-to-date information is on <a href="https://canvas.pitt.edu">Canvas</a>, and <a href="https://cs0449.gitlab.io/sp2023/">Course Website</a></em> <label for="Accompany" class="margin-toggle"> ⊕</label><input type="checkbox" id="Accompany" class="margin-toggle"><span class="marginnote">Accompanies professor <strong>Luis Oliveira</strong>’s lecture section <code class="language-html highlighter-rouge">1090</code> which meets <strong>Tue/Thu, 2:30–3:45pm at 405 Information Science Building</strong> </span><br>
+<strong>CRN:</strong> 23985<br>
+<strong>Meets:</strong> <em>Fridays 12:00 PM</em> at <em>5502 <a href="https://map.concept3d.com/?id=1315#!m/376171">Sennott Square</a></em></p>
+
+<h2 id="ta-information">TA Information</h2>
+
+<p><strong>TA</strong>: Shinwoo Kim<br>
+<strong>E-mail</strong>: <a href="mailto:shiwookim@pitt.edu"><code class="language-html highlighter-rouge">shinwookim@pitt.edu</code></a><br>
+<strong>Home Page:</strong> <a href="https://sites.pitt.edu/~shk148/">https://sites.pitt.edu/~shk148</a><br>
+<strong>TA Office Hours:</strong> <a href="https://sites.pitt.edu/~shk148/teaching/#OH">Spring 2023 Office Hours</a></p>
+
+<p class="mb-0"><strong>Note when E-mailing:</strong></p>
+
+<ul>
+  <li>Email<label for="discord" class="margin-toggle sidenote-number"></label><input type="checkbox" id="discord" class="margin-toggle"><span class="sidenote">You will receive a faster reply if you message me via Discord </span> subjects should be prefaced with <code class="language-html highlighter-rouge">[CS0449]</code>
+</li>
+  <li>For official communication, messages should be sent using your official <strong>Pitt E-Mail</strong>(<code class="language-html highlighter-rouge">ABC123@pitt.edu</code>).</li>
+  <li>Email body should include your <strong>name</strong> and the <strong>section</strong> you’re enrolled in.</li>
+  <li>Students should allow at least 24 business hours before following up<label for="Hours" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Hours" class="margin-toggle"><span class="sidenote">Generally, my working hours are between 8AM and 6PM </span>.<span class="endmark"></span>
+</li>
+</ul>
+
+<hr>
+
+<h2 id="handouts">Schedule <em>&amp;</em> Handout</h2>
+<p><label for="video" class="margin-toggle"> ⊕</label><input type="checkbox" id="video" class="margin-toggle"><span class="marginnote">If you require access to Zoom, or the recitation recording, please contact me <strong>prior</strong> to the start of recitation </span></p>
+
+<div class="table-responsive">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th class="text-center">Week</th>
+      <th class="text-center">Date</th>
+      <th>Topic</th>
+      <th class="text-center">Handout</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="text-center">00</td>
+      <td class="text-center">January 13</td>
+      <td><strong>No Recitation</strong></td>
+      <td class="text-center">n/a</td>
+    </tr>
+    <tr>
+      <td class="text-center">01</td>
+      <td class="text-center">January 20</td>
+      <td>
+<strong>Hello Lab</strong><br>Getting up to speed with the environment</td>
+      <td class="text-center">
+<a href="rec01.pptx">slides</a> <br> <a href="code/hello.c.html">hello.c</a>
+</td>
+    </tr>
+    <tr>
+      <td class="text-center">02</td>
+      <td class="text-center">January 27</td>
+      <td>
+<strong>Data &amp; Pointer Lab</strong><br>Practice with data and input</td>
+      <td class="text-center">
+<a href="rec02.pptx">slides</a> <br> <a href="vs_code.pdf">VS Code guide</a> <br> <a href="code/scan.c.html">scan.c</a>
+</td>
+    </tr>
+    <tr>
+      <td class="text-center">03</td>
+      <td class="text-center">February 3</td>
+      <td>
+<strong>Project 1: BMP Steganography</strong><br>Hiding data and reading files</td>
+      <td class="text-center"><a href="rec03.pdf">slides</a></td>
+    </tr>
+    <tr>
+      <td class="text-center">04</td>
+      <td class="text-center">February 10</td>
+      <td>
+<strong>Pointer Lab</strong><br>Looking at pointers</td>
+      <td class="text-center"><a href="rec04.pdf">slides</a></td>
+    </tr>
+    <tr>
+      <td class="text-center">05</td>
+      <td class="text-center">February 17</td>
+      <td>
+<strong>Queue Lab</strong><br>Linking those nodes</td>
+      <td class="text-center"><a href="rec05.pdf">slides</a></td>
+    </tr>
+    <tr>
+      <td class="text-center">06</td>
+      <td class="text-center">
+<strong>Wednesday</strong><br>February 22 5:45 PM<br>(5502 SENSQ)</td>
+      <td>
+<strong>Project 2: Implementing a Heap Allocator</strong><br>Malloc Project Boot Camp</td>
+      <td class="text-center">
+<a href="Project_2_Help_Session.pdf">slides</a><br><a href="code/malloc_example.c.html">malloc_example.c</a>
+</td>
+    </tr>
+    <tr>
+      <td class="text-center">06</td>
+      <td class="text-center">February 24</td>
+      <td>
+<strong>Project 2: Implementing a Heap Allocator</strong><br>Implementing Phase 2 &amp; 3</td>
+      <td class="text-center"><a href="rec06.pdf">slides</a></td>
+    </tr>
+    <tr>
+      <td class="text-center">07</td>
+      <td class="text-center">March 3</td>
+      <td>
+<strong>Assembly Lab</strong><br>Investigating the code</td>
+      <td class="text-center">
+<a href="rec07.pdf">slides</a><br><a href="https://github.com/shinwookim/ASM-demo">Demo code (GitHub)</a><br><a href="https://en.wikibooks.org/wiki/X86_Assembly/GNU_assembly_syntax">AT&amp;T x86 Syntax</a>
+</td>
+    </tr> 
+    <tr>
+      <td class="text-center">08</td>
+      <td class="text-center">March 10</td>
+      <td><strong>Spring Break <br> No Recitation</strong></td>
+      <td class="text-center">n/a</td>
+    </tr>
+    <tr>
+      <td class="text-center">09</td>
+      <td class="text-center">March 17</td>
+      <td>
+<strong>Project 3: Assembly bombs and attack</strong> <br>Understanding the assembly</td>
+      <td class="text-center"><a href="rec08.pdf">slides</a></td>
+    </tr>
+    <tr>
+      <td class="text-center">10</td>
+      <td class="text-center">March 24</td>
+	    <td>
+<strong>Process Lab</strong><br>The fork-exec model &amp; Process management</td>
+      <td class="text-center">
+<a href="rec09.pdf">slides</a><br><a href="rec09-soln.html">Solutions to In-class Problems</a>
+</td>
+    </tr>
+    <tr>
+      <td class="text-center">11</td>
+      <td class="text-center">March 31</td>
+      <td>
+<strong>Project 4</strong>: The Shell<br>After the bomb, shell shock!</td>
+      <td class="text-center">
+<a href="rec10.pdf">slides</a><br><a href="code/strtok.c.html">strtok.c</a>
+</td>
+    </tr>
+    <tr>
+      <td class="text-center">12</td>
+      <td class="text-center">April 7</td>
+      <td>
+<strong>Multi-file Development:</strong><br>Writing Makefiles</td>
+      <td class="text-center">
+<a href="Makefile-lab.html">lab handout</a><br><a href="rec11.pdf">slides</a>
+</td>
+    </tr>
+    <tr>
+      <td class="text-center">13</td>
+      <td class="text-center">April 14</td>
+      <td>Multithreading &amp; Synchronization</td>
+      <td class="text-center"><a href="https://docs.google.com/presentation/d/e/2PACX-1vQRY_WALXixyTeEOCF6g--PUvhuEui7H6si2SMGct2gDzqkqjkwbMEwDdk0U7OvlNTMuP01-eiMfn_W/pub?start=false&loop=false&delayms=60000">slides</a></td>
+    </tr>
+    <tr>
+      <td class="text-center">14</td>
+      <td class="text-center">April 21</td>
+      <td>Final Recitation <br>Final Exam Review + Course Review</td>
+      <td class="text-center"><a href="rec12.pdf">slides</a></td>
+    </tr>
+    <tr>
+      <td class="text-center">15</td>
+      <td class="text-center">April 28</td>
+      <td><strong>Finals Week <br> No Recitation</strong></td>
+      <td class="text-center">-</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="student-feedback">Student Feedback</h2>
+
+<p class="text-center"><a href="https://pitt.co1.qualtrics.com/jfe/form/SV_dd9suL0AkJctj2S">Please send me your anonymous feedback</a></p>
+
+<h2 id="helpful-links">Helpful Links</h2>
+
+<ul>
+  <li><a href="https://pitt.guide.eab.com/" target="\_blank">Sign up for <strong>Peer Tutoring</strong> on Navigate</a></li>
+  <li><a href="https://pitt.edu" target="\_blank">University of Pittsburgh</a></li>
+  <li><a href="https://cs.pitt.edu" target="\_blank">Department of Computer Science</a></li>
+</ul>
+
+
+      <button onclick="topFunction()" id="top-btn" class="btn btn-dark d-print-none" title="Go to top">
+        Top
+      </button>
+    </article>
+    <script>
+      let btn_to_top = document.getElementById("top-btn");
+      window.onscroll = function () {
+        scrollFunction();
+      };
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          btn_to_top.style.opacity = "100%";
+        } else {
+          btn_to_top.style.opacity = "0%";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Ope`
+      }
+    </script>
+    <hr class="mx-auto slender">
+    <footer class="site-footer text-center">
+      <p class="mb-0 mx-auto">
+        © 2021-2023 Shinwoo Kim. All Rights Reserved.<br>
+        <a href="#" onclick="history.back()">Return to Previous Page</a>
+      </p>
+    </footer>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X43BZS6F4C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-X43BZS6F4C");
+</script>
+</body>
+</html>
