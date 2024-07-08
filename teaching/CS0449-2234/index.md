@@ -1,8 +1,9 @@
 ---
-layout: tufte
+layout: post
 title: "Introduction to Systems Software"
 subtitle: "CS 0449 (Spring 2023, Term 2234)"
 nav: true
+tufte: true
 nav-links:
   - title: CS0449
     url: /teaching/CS0449-2234/
@@ -45,35 +46,42 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
 ---
 
 <h2 id="handouts">Schedule <em>&</em> Handout</h2> {% marginnote "video" "If you require access to Zoom, or the recitation recording, please contact me **prior** to the start of recitation"%}
-
+<style>
+  table tr td, table tr th{
+    background-color: rgba(0,0,0, 0) !important;
+  }
+  td a {
+    text-shadow: none !important;
+  }
+</style>
 <div class="table-responsive">
-<table class="table table-hover">
+<table class="table table-hover bg-none">
   <thead>
-    <tr>
-      <th class="text-center">Week</th>
-      <th class="text-center">Date</th>
-      <th>Topic</th>
-      <th class="text-center">Handout</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="text-center">00</td>
-      <td class="text-center">January 13</td>
-      <td>**No Recitation**</td>
-      <td class="text-center">n/a</td>
-    </tr>
-    <tr>
-      <td class="text-center">01</td>
-      <td class="text-center">January 20</td>
-      <td>**Hello Lab**<br>Getting up to speed with the environment</td>
-      <td class="text-center">[slides](rec01.pptx) <br> [hello.c](code/hello.c.html)</td>
-    </tr>
-    <tr>
-      <td class="text-center">02</td>
-      <td class="text-center">January 27</td>
+<tr>
+<th class="text-center">Week</th>
+<th class="text-center">Date</th>
+<th>Topic</th>
+<th class="text-center">Handout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="text-center">00</td>
+<td class="text-center">January 13</td>
+<td>**No Recitation**</td>
+<td class="text-center">n/a</td>
+</tr>
+<tr>
+<td class="text-center">01</td>
+<td class="text-center">January 20</td>
+<td>**Hello Lab**<br>Getting up to speed with the environment</td>
+<td class="text-center">[slides](rec01.pptx) <br> [hello.c](code/hello.c)</td>
+</tr>
+<tr>
+<td class="text-center">02</td>
+<td class="text-center">January 27</td>
       <td>**Data & Pointer Lab**<br>Practice with data and input</td>
-      <td class="text-center">[slides](rec02.pptx) <br> [VS Code guide](vs_code.pdf) <br> [scan.c](code/scan.c.html)</td>
+      <td class="text-center">[slides](rec02.pptx) <br> [VS Code guide](vs_code.pdf) <br> [scan.c](code/scan.c)</td>
     </tr>
     <tr>
       <td class="text-center">03</td>
@@ -97,7 +105,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
       <td class="text-center">06</td>
       <td class="text-center">**Wednesday**<br/>February 22 5:45 PM<br/>(5502 SENSQ)</td>
       <td>**Project 2: Implementing a Heap Allocator**<br>Malloc Project Boot Camp</td>
-      <td class="text-center">[slides](Project_2_Help_Session.pdf)<br>[malloc_example.c](code/malloc_example.c.html)</td>
+      <td class="text-center">[slides](Project_2_Help_Session.pdf)<br>[malloc_example.c](code/malloc_example.c)</td>
     </tr>
     <tr>
       <td class="text-center">06</td>
@@ -133,7 +141,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
       <td class="text-center">11</td>
       <td class="text-center">March 31</td>
       <td>**Project 4**: The Shell<br>After the bomb, shell shock!</td>
-      <td class="text-center">[slides](rec10.pdf)<br/>[strtok.c](code/strtok.c.html)</td>
+      <td class="text-center">[slides](rec10.pdf)<br/>[strtok.c](code/strtok.c)</td>
     </tr>
     <tr>
       <td class="text-center">12</td>

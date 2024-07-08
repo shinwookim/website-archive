@@ -1,0 +1,13 @@
+/* Autography Font */
+@font-face {
+  font-family: "Autography";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Autography"),
+    url("../fonts/autography/Autography.woff") format("woff");
+}
+
+.autography {
+  font-family: "Autography";
+  font-weight: normal;
+}

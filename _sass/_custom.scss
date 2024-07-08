@@ -1,0 +1,84 @@
+/* body {
+    margin: 0 !important;
+    padding: 0 !important;
+  } */
+
+/* hr {
+    width: 100%;
+  } */
+
+/* li,
+  a {
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  } */
+
+.footnotes ol li,
+.footnotes ol li p,
+.footnote {
+    font-size: 0.8em;
+    line-height: normal;
+    margin-bottom: 0.65em;
+}
+
+.endmark {
+    margin-bottom: 1.2em;
+}
+
+.endmark::after {
+    font-size: 1.5em;
+    margin-left: 0.1rem;
+    vertical-align: top;
+    font-family: "Autography";
+    height: 1em;
+    content: "sk";
+}
+
+
+
+a:link,
+a:visited {
+    color: inherit;
+}
+
+
+a:link,
+.tufte-underline,
+.hover-tufte-underline:hover {
+    text-decoration: none;
+    background: -webkit-linear-gradient(var(--background-color), var(--background-color)),
+        -webkit-linear-gradient(var(--background-color), var(--background-color)),
+        -webkit-linear-gradient(currentColor, currentColor);
+    background: linear-gradient(var(--background-color), var(--background-color)),
+        linear-gradient(var(--background-color), var(--background-color)),
+        linear-gradient(currentColor, currentColor);
+    -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    text-shadow: var(--shadow-color);
+    background-position: 0% 93%, 100% 93%, 0% 93%;
+    transition: color 0.5s ease;
+}
+
+
+
+a:link::selection,
+a:link::-moz-selection {
+    text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe,
+        0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe,
+        -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe,
+        -0.15em 0 #b4d5fe;
+    background: #b4d5fe;
+}
+
+.no-tufte-underline:link {
+    background: unset;
+    text-shadow: unset;
+}
+
+pre>code,
+code {
+    font-family: Menlo, Consolas, "Liberation Mono", Courier, monospace;
+}

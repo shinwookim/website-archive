@@ -1,20 +1,9 @@
 ---
-layout: tufte
-date: 2023-01-31`
+layout: post
+tufte: true
+date: 2022-09-17
 title: "Section 1.1 & 1.2 Review Solutions"
 subtitle: "Solutions & Commentary to Accompany Section 1.1 & 1.2 Review"
-nav: true
-nav-links:
-  - title: CS0441
-    url: /teaching/CS0441-2234/
-  - title: Syllabus
-    url: /teaching/CS0441-2234/syllabus.html
-  - title: Schedule
-    url: /teaching/CS0441-2234/#schedule--handout
-  - title: Student Feedback
-    url: /teaching/CS0441-2234/#student-feedback
-  - title: Getting Help
-    url: /teaching/CS0441-2234/#getting-help
 ---
 <style>.red{color: red !important;}</style>
 
@@ -64,9 +53,7 @@ Show that these statements are inconsistent:
  “If Miranda reads this book, then she is qualified for the job.”
 
  “Miranda does not take a course in discrete mathematics but she reads this book.”
-<div class="red" markdown="1">
-{%marginnote "methodology" "Previously, we discussed how to use *truth tables* to show that a system is consistent. While that methodology is applicable here (you want to show that there is no case where all the given statements are true), you have to go through all 2<sup>4</sup> cases which can be time-consuming. Instead, we can use a more direct approach and show that there is a contradiction among the statements (thereby concluding that the system is inconsistent). "%}
-</div>
+
 <div class="red" markdown="1">
 Let:
 
@@ -78,7 +65,7 @@ Let:
 | q      | Miranda is qualified for the job               |
 
 Translating these statements into symbols, we have:
- ¬ *t* → ¬ *g*, ¬ *g* → ¬ *q*, *r* → *q*, and ¬ *t* ∧ *r*.
+ ¬ *t* → ¬ *g*, ¬ *g* → ¬ *q*, *r* → *q*, and ¬ *t* ∧ *r*.{%sidenote "methodology" "Previously, we discussed how to use *truth tables* to show that a system is consistent. While that methodology is applicable here (you want to show that there is no case where all the given statements are true), you have to go through all 2<sup>4</sup> cases which can be time-consuming. Instead, we can use a more direct approach and show that there is a contradiction among the statements (thereby concluding that the system is inconsistent). "%}
 
 Suppose the these statements are consistent. The fourth statement tells us that ¬ *t* must be true. Therefore, by **modus ponens** with the first statement, we know that ¬ *g* is true, hence (from the second statement), that ¬ *q* is true. Also, the fourth statement tells us that *r* must be true, and so again modus ponens (third statement) makes *q* true. This is a **contradiction**: *q* ∧¬ *q*. 
 

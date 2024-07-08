@@ -1,11 +1,8 @@
 ---
-layout: tufte
-date: 2022-10-08
+layout: post
+tufte: true
 title: "Solutions to More Practice on Proofs"
-notes: "Solutions & Commentary to Accompany More Practice on Proofs"
-backlink: "../"
-navi_title: CS0441
-navi_links: "cs0441_2231_nav"
+subtitle: "Solutions & Commentary to Accompany More Practice on Proofs"
 ---
 <style>.red{color: red !important;}</style>
 

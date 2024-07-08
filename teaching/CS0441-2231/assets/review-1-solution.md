@@ -1,11 +1,8 @@
 ---
-layout: tufte
-date: 2022-09-17
+layout: post
+tufte: true
 title: "Section 1.1 & 1.2 Review Solutions"
-notes: "Solutions & Commentary to Accompany Section 1.1 & 1.2 Review"
-backlink: "../"
-navi_title: CS0441
-navi_links: "cs0441_2231_nav"
+subtitle: "Solutions & Commentary to Accompany Section 1.1 & 1.2 Review"
 ---
 <style>.red{color: red !important;}</style>
 

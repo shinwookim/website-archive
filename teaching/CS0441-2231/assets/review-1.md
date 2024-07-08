@@ -1,18 +1,15 @@
 ---
-layout: tufte
-date: 2022-09-16
-title: "Section 1.1 & 1.2 Review"
-notes: "Select problems from the text (&copy; McGraw Hill)"
-backlink: "../"
-navi_title: CS0441
-navi_links: "cs0441_2231_nav"
+layout: post
+tufte: true
+title: "Section 1.1 & 1.2 Review Solutions"
+subtitle: "Select problems from the text (&copy; McGraw Hill)"
 ---
 
 {%marginnote "copyright" "The questions presented here have been adapted from Kenneth Rosen's [Discrete Mathematics and Its Applications](https://www.amazon.com/Discrete-Mathematics-Applications-Kenneth-author/dp/1260091996/ref=pd_lpo_1?pd_rd_i=1260091996&psc=1), 8th Edition."%}
 
 # Problem 1
 
-Let $p$ be the proposition “_I will do every exercise in the textbook_” and $q$ be the proposition “_I will get an A in CS0441_”.
+Let $p$ be the proposition “_I will do every exercise in the textbook_” and $q$ be the proposition “_I will get an A in CS0441_.”
 
 Express each of these as a combination of $p$ and $q$.
 
@@ -24,7 +21,7 @@ c) Either I will not get an A in CS0441 or I will not do every exercise in the t
 
 # Problem 2
 
-Express your answer in terms of $e$: “_You can edit a protected Wikipedia entry_” and $a$: “_You are an administrator_”.
+Express your answer in terms of $e$: “_You can edit a protected Wikipedia entry_” and $a$: “_You are an administrator_.”
 You cannot edit a protected Wikipedia entry unless you are an administrator.
 
 # Problem 3

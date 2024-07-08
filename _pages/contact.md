@@ -1,6 +1,6 @@
 ---
 title: Contact Me
-layout: default
+layout: page
 permalink: /contact/
 ---
 
@@ -9,11 +9,11 @@ permalink: /contact/
 ## Connect with Me on Social Media
 
 <div class="text-center mb-4 lead">
-   <a class="social-icon" href="mailto:{{ site.email }}"><i class="fas fa-envelope"></i></a>
-   <a class="social-icon" href="https://linkedin.com/in/{{ site.linkedin_username }}"> <i class="fab fa-linkedin-in"></i></a>
-   <a class="social-icon" href="https://github.com/{{ site.github_username }}"><i class="fab fa-github"></i></a>
-   <a class="social-icon" href="https://twitter.com/{{ site.twitter_username }}"><i class="fab fa-twitter"></i></a>
-   <a class="social-icon" href="https://instagram.com/{{ site.instagram_username }}"><i class="fab fa-instagram"></i></a>
+   <a class="no-tufte-underline" href="mailto:{{ site.email }}"><i class="fas fa-envelope"></i></a>
+   <a class="no-tufte-underline" href="https://linkedin.com/in/{{ site.linkedin_username }}"> <i class="fab fa-linkedin-in"></i></a>
+   <a class="no-tufte-underline" href="https://github.com/{{ site.github_username }}"><i class="fab fa-github"></i></a>
+   <a class="no-tufte-underline" href="https://twitter.com/{{ site.twitter_username }}"><i class="fab fa-twitter"></i></a>
+   <a class="no-tufte-underline" href="https://instagram.com/{{ site.instagram_username }}"><i class="fab fa-instagram"></i></a>
 </div>
 
 ---

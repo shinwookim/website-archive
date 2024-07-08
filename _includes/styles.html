@@ -1,4 +1,25 @@
-<link rel="stylesheet" href='{{ "/assets/css/style.css" | absolute_url }}'>
+<!-- Styles -->
+<link rel="stylesheet" type="text/css" href="{{ '/assets/css/bootstrap.css' | prepend: site.baseurl }}" />
+<link rel="stylesheet" type="text/css" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}" />
+<link rel="stylesheet" type="text/css" href="{{ '/assets/css/fonts-et-book.css' | prepend: site.baseurl}}" />
+<link rel="stylesheet" type="text/css" href="{{ '/assets/css/fonts-autography.css' | prepend:site.baseurl }}" />
+{% if page.tufte %}
+<link rel="stylesheet" type="text/css" href="{{ '/assets/css/tufte.css' | prepend: site.baseurl }}" />
+{% endif %}
+<link rel="stylesheet" type="text/css" href="{{ '/assets/css/lightbox.css' | prepend: site.baseurl }}" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
   integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
   crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="apple-touch-icon" type="image/png" sizes="180x180"
+  href="{{ '/assets/favicon/apple-touch-icon.png' | prepend: site.baseurl }}">
+<link rel="icon" type="image/png" sizes="32x32"
+  href="{{ '/assets/favicon/favicon-32x32.png' | prepend: site.baseurl }}">
+<link rel="icon" type="image/png" sizes="16x16"
+  href="{{ '/assets/favicon/favicon-16x16.png' | prepend: site.baseurl }}">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="{{ '/assets/favicon/favicon.ico' | prepend: site.baseurl }}">
+<link rel="manifest" href="{{ '/assets/favicon/manifest.json' | prepend: site.baseurl }}" />
+
+<!-- End Styles-->
+
+<!-- <link rel="stylesheet" type="text/css" href="{{ '/assets/css/fonts-lato.css' | prepend: site.baseurl }}" /> -->

@@ -1,5 +1,5 @@
 ---
-layout: tufte
+layout: post
 title: GNU Make Cheatsheet
 ---
 

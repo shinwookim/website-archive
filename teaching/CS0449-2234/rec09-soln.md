@@ -1,6 +1,7 @@
 ---
 title: "Solutions to Practice Problems from week 9"
-layout: tufte
+layout: post
+tufte: true 
 ---
 
 <style>

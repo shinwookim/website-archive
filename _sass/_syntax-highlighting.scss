@@ -1,0 +1,6 @@
+body{
+    @import "_style_github";
+}
+body.dark{
+    @import "_style_base16.monokai.dark";
+}

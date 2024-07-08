@@ -1,11 +1,9 @@
 ---
-layout: tufte
+layout: post
+tufte: true
 date: 2022-10-07
 title: "More Practice on Proofs"
-notes: "Select problems from the text (&copy; McGraw Hill)"
-backlink: "../"
-navi_title: CS0441
-navi_links: "cs0441_2231_nav"
+subtitle: "Select problems from the text (&copy; McGraw Hill)"
 ---
 {%marginnote "copyright" "The questions presented here have been adapted from Kenneth Rosen's [Discrete Mathematics and Its Applications](https://www.amazon.com/Discrete-Mathematics-Applications-Kenneth-author/dp/1260091996/ref=pd_lpo_1?pd_rd_i=1260091996&psc=1), 8th Edition and Oscar Levin's Discrete Mathematics:An Open Introduction."%}
 

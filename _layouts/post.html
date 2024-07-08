@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<section>
+  <p class="mb-0">
+    {% if page.backlink %}
+    <a href="{{ page.backlink }}"><em>← Back to Home</em></a>
+    {% else %}
+    <a href=".."><em>← Back to Home</em></a>
+    {% endif %}
+  </p>
+</section>
+<article style="box-sizing: inherit;">
+  <h1 class="title">{{ page.title }}</h1>
+  {%- if page.subtitle %}
+  <p class="subtitle">{{ page.subtitle }}</p>
+  {% endif -%}
+  <p class="byline">
+    {% if site.show_author %}{{ page.author | default: site.author }} — {% endif
+    %} {{ page.date | date: "%B %-d, %Y" }}
+  </p>
+  {% include anchor_headings.html html=content anchorBody="¶" anchorClass="anchor-link"%}
+</article>

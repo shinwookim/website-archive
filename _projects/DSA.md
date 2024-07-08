@@ -29,9 +29,14 @@ As the second in a two-course sequence on algorithms and data structures, this c
 3. Implement the **LZW compression algorithm** using two approaches (Array and DLB) and compare the performance in its implementation in a formal approach.
 4. Create a simulation for an Airline Routing System by using various **graph algorithms**.<span class="endmark"></span>
 
-<center class="mb-3"><strong>Code Available Upon Request</strong><br/>(Hidden for Academic Integrity)</center>
+
+**Code Available Upon Request**
+{: .text-center}
 
 
 ---
 
-The header image is courtesy of the **Jernej Furman** who has distributed it under `CC BY 2.0`. See [here](https://flic.kr/p/2nw6gqf) for the original source.
+<div class="footnotes" role="dic-endnotes">
+   <ol>
+   <li role="doc-endnote"><p markdown="1">The header image is courtesy of the **Jernej Furman** who has distributed it under CC BY 2.0. See [here](https://flic.kr/p/2nw6gqf) for the original source.</p></li></ol>
+</div>

@@ -1,0 +1,47 @@
+.dark {
+    --background-color: #151515;
+    --font-color: #ddd;
+    --shadow-color: 0.03em 0 #151515, -0.03em 0 #151515, 0 0.03em #151515,
+        0 -0.03em #151515, 0.06em 0 #151515, -0.06em 0 #151515, 0.09em 0 #151515,
+        -0.09em 0 #151515, 0.12em 0 #151515, -0.12em 0 #151515, 0.15em 0 #151515,
+        -0.15em 0 #151515;
+    --my-color: #e19a87;
+}
+
+.light {
+    --background-color: #fffff8;
+    --font-color: #111;
+    --shadow-color: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8,
+        0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8,
+        -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8,
+        -0.15em 0 #fffff8;
+    --my-color: #a00000;
+}
+
+.dark .toggle-theme::after {
+    content: "☽";
+    color: #f1f1f1;
+}
+
+.light .toggle-theme::after {
+    content: "☀";
+    color: #000;
+}
+
+.toggle-theme {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+    border: 0;
+    font-size: 2.2em;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+a:hover,
+.btn:hover {
+    color: var(--my-color);
+}

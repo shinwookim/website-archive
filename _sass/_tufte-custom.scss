@@ -1,0 +1,906 @@
+@charset "UTF-8";
+
+/* Tufte CSS styles */
+html {
+  font-size: 13.5px;
+}
+
+body {
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12.5%;
+  font-family: $body-font;
+  color: var(--font-color);
+  max-width: 100%;
+  counter-reset: sidenote-counter;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 2.8rem;
+  line-height: 1;
+  margin-top: 1rem;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-top: 1rem;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 1;
+  margin-top: 1rem;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1;
+  margin-top: 1rem;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1;
+  margin-top: 1rem;
+}
+
+h6 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1;
+  margin-top: 1rem;
+}
+
+hr {
+  width: 55%;
+  border: 0;
+  border-top: 1px solid var(--font-color);
+  height: 1px;
+  margin-bottom: 2.1rem;
+}
+
+p.subtitle {
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  display: block;
+  line-height: 1;
+}
+
+.numeral {
+  font-family: et-book-roman-old-style;
+}
+
+.danger {
+  color: red;
+}
+
+article {
+  padding: 5rem 0rem;
+}
+
+section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+p,
+dl,
+ol,
+ul {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+p {
+  margin-top: 1.4rem;
+  margin-bottom: 0;
+  padding-right: 0;
+  vertical-align: baseline;
+}
+
+.w-55>p,
+.w-55>ul>li,
+.w-55>ol>li {
+  width: 100%;
+}
+
+div.epigraph {
+  margin: 5em 0;
+}
+
+div.epigraph>blockquote {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+div.epigraph>blockquote,
+div.epigraph>blockquote>p {
+  font-style: italic;
+}
+
+div.epigraph>blockquote>footer {
+  font-style: normal;
+}
+
+div.epigraph>blockquote>footer>cite {
+  font-style: italic;
+}
+
+/* end chapter epigraphs styles */
+
+blockquote {
+  font-size: 1.4rem;
+}
+
+blockquote p {
+  width: 55%;
+  margin-right: 40px;
+}
+
+blockquote footer {
+  width: 55%;
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+section>p,
+section>footer,
+section>table,
+.w-55 {
+  width: 55%;
+}
+
+li>p {
+  width: 100% !important;
+}
+
+/* 50 + 5 == 55, to be the same width as paragraph */
+section>dl,
+section>ol,
+section>ul {
+  width: 50%;
+  -webkit-padding-start: 5%;
+}
+
+dt:not(:first-child),
+li:not(:first-child) {
+  margin-top: 0.25rem;
+}
+
+figure {
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  max-width: 55%;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  margin: 0 0 3em 0;
+}
+
+figcaption {
+  float: right;
+  clear: right;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  vertical-align: baseline;
+  position: relative;
+  max-width: 40%;
+}
+
+figure.fullwidth figcaption {
+  margin-right: 24%;
+}
+
+/* Links: replicate underline that clears descenders */
+
+
+
+/* Sidenotes, margin notes, figures, captions */
+img {
+  max-width: 100%;
+}
+
+.sidenote,
+.marginnote {
+  float: right;
+  clear: right;
+  margin-right: -60%;
+  width: 50%;
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  vertical-align: baseline;
+  position: relative;
+}
+
+.sidenote-number {
+  color: #a00000;
+  font-weight: bolder;
+  counter-increment: sidenote-counter;
+}
+
+.sidenote-number:after,
+.sidenote:before {
+  font-family: et-book-roman-old-style;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.sidenote-number:after {
+  content: counter(sidenote-counter);
+  font-size: 1rem;
+  top: -0.5rem;
+  left: 0.1rem;
+}
+
+.sidenote:before {
+  color: #a00000;
+  font-weight: bolder;
+  content: counter(sidenote-counter) " ";
+  font-size: 1rem;
+  top: -0.5rem;
+}
+
+blockquote .sidenote,
+blockquote .marginnote {
+  margin-right: -82%;
+  min-width: 59%;
+  text-align: left;
+}
+
+div.fullwidth,
+table.fullwidth {
+  width: 100%;
+}
+
+div.table-wrapper {
+  overflow-x: auto;
+  font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif;
+}
+
+.sans {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+code,
+pre>code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 1rem;
+  line-height: 1.42;
+  -webkit-text-size-adjust: 100%;
+}
+
+.sans>code {
+  font-size: 1.2rem;
+}
+
+h1>code,
+h2>code,
+h3>code,
+h4>code,
+h5>code,
+h6>code {
+  font-size: 0.8em;
+}
+
+.marginnote>code,
+.sidenote>code {
+  font-size: 1rem;
+}
+
+pre>code {
+  font-size: 0.9rem;
+  width: 52.5%;
+  margin-left: 2.5%;
+  overflow-x: auto;
+  display: block;
+}
+
+pre.fullwidth>code {
+  width: 90%;
+}
+
+.fullwidth {
+  max-width: 90%;
+  clear: both;
+}
+
+span.newthought {
+  font-variant: small-caps;
+  font-size: 1.2em;
+}
+
+input.margin-toggle {
+  display: none;
+}
+
+label.sidenote-number {
+  display: inline-block;
+  max-height: 2rem;
+  /* should be less than or equal to paragraph line-height */
+}
+
+label.margin-toggle:not(.sidenote-number) {
+  display: none;
+}
+
+.iframe-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 992px) {
+  body {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+@media (max-width: 760px) {
+  body {
+    width: 84%;
+  }
+
+  hr,
+  section>p,
+  section>footer,
+  section>table,
+  .w-55 {
+    width: 100%;
+  }
+
+  pre>code {
+    width: 97%;
+  }
+
+  section>dl,
+  section>ol,
+  section>ul {
+    width: 90%;
+  }
+
+  figure {
+    max-width: 90%;
+  }
+
+  figcaption,
+  figure.fullwidth figcaption {
+    margin-right: 0%;
+    max-width: none;
+  }
+
+  blockquote {
+    margin-left: 1.5em;
+    margin-right: 0em;
+  }
+
+  blockquote p,
+  blockquote footer {
+    width: 100%;
+  }
+
+  label.margin-toggle:not(.sidenote-number) {
+    display: inline;
+  }
+
+  .sidenote,
+  .marginnote {
+    display: none;
+  }
+
+  .margin-toggle {
+    color: #a00000;
+    vertical-align: super;
+    font-size: 80%;
+    font-weight: bolder;
+  }
+
+  .margin-toggle:checked+.sidenote,
+  .margin-toggle:checked+.marginnote {
+    display: block;
+    float: left;
+    left: 1rem;
+    clear: both;
+    width: 95%;
+    margin: 1rem 2.5%;
+    vertical-align: baseline;
+    position: relative;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  div.table-wrapper,
+  table {
+    width: 85%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+
+  table {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 761px) {
+  table {
+    width: 55% !important;
+  }
+}
+
+ul {
+  list-style-type: " - ";
+}
+
+/* Overrides and additional CSS functionality */
+
+.contrast {
+  color: $contrast-color;
+}
+
+.smaller {
+  font-size: 80%;
+}
+
+.larger {
+  font-size: 2.8rem;
+}
+
+.faded {
+  color: rgba(17, 17, 17, 0.5);
+}
+
+body.dark {
+  .faded {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+/**
+ * Make it so that top-level <p> don't need to be wrapped in <section>
+ */
+article {
+
+  .div-55,
+  p,
+  li,
+  footer,
+  table {
+    width: 55%;
+  }
+}
+
+footer {
+  width: 55%;
+}
+
+// should still go wide on narrow screens
+@media (max-width: 760px) {
+  article {
+
+    p,
+    li,
+    footer,
+    table,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .div-55 {
+      width: 100%;
+    }
+  }
+
+  footer {
+    width: 100%;
+  }
+}
+
+/* Back home link */
+p.backarrow {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 3rem;
+}
+
+/* Styles for nav and headers */
+
+/* Style for active menu links: bold and with surrounding angle brackets */
+header>nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-family: Lato, "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+}
+
+header>nav a {
+  font-size: 1.3rem;
+  //letter-spacing: 0.15em;
+  //text-transform: uppercase;
+  color: $contrast-color;
+  text-decoration: none;
+  background: unset !important;
+  text-shadow: unset !important;
+  display: inline-block;
+  float: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 2rem;
+  margin-top: 1.5rem;
+  padding-right: 0;
+  vertical-align: baseline;
+}
+
+header>nav li:last-child a {
+  margin-right: inherit;
+}
+
+header>nav a img {
+  height: 5rem;
+  position: relative;
+  max-width: 100%;
+  top: -1.5rem;
+}
+
+header::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.clear::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+// article doesn't need top padding due to nav and h1 margins
+article {
+  padding-top: 0em;
+}
+
+/* Footers */
+
+ul.footer-links,
+.credits {
+  list-style: none;
+  text-align: center;
+  margin: 0 auto;
+}
+
+ul.footer-links li {
+  display: inline;
+  padding: 0.5rem 0.25rem;
+}
+
+.credits {
+  padding: 1rem 0rem;
+}
+
+/* End of styles for headers and footers */
+
+// Full width page styling stuff
+
+.full-width article {
+
+  p,
+  li,
+  footer,
+  table {
+    width: 100%;
+  }
+}
+
+.full-width footer {
+  width: 100%;
+}
+
+li.listing hr {
+  width: 100%;
+}
+
+.listing,
+.listing h3 {
+  display: inline-block;
+  margin: 0;
+}
+
+li.listing {
+  margin: 0;
+
+  & p {
+    width: 100%;
+  }
+}
+
+li.listing:last-of-type {
+  border-bottom: none;
+  margin-bottom: 1.4rem;
+}
+
+li.listing h3.new {
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+hr.slender {
+  border: 0;
+  height: 1px;
+  margin-top: 2.1rem;
+  margin-bottom: 2.1rem;
+  background-color: black;
+  //    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  //    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  //    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  //    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+// End of front listing page stuff
+
+// Printing ands screen media queries
+
+// Does not display a print-footer for screen display
+@media screen {
+  .print-footer {
+    display: none;
+  }
+}
+
+//printing stuff
+@media print {
+  * {
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  @page {
+    margin: 0.75in 0.5in 0.75in 0.5in;
+    orphans: 4;
+    widows: 2;
+  }
+
+  body {
+    font-size: 10pt;
+  }
+
+  html body span.print-footer {
+    font-size: 9pt;
+    margin-top: 22.4pt;
+    padding-top: 4pt;
+    border-top: 1px solid #000;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 4;
+    widows: 4;
+  }
+
+  article h2,
+  article h2 h3,
+  article h3,
+  article h3 h4,
+  article h4,
+  article h4 h5 {
+    page-break-after: avoid;
+  }
+
+  // Hide screen headers and footers
+  body header,
+  footer.page-footer,
+  p.backarrow {
+    display: none;
+  }
+}
+
+h1.header-title {
+  font-weight: 400;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-size: 6rem;
+  line-height: 1;
+
+  a {
+    background: unset;
+    text-shadow: unset;
+  }
+}
+
+h2.header-subtitle {
+  font-weight: 400;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  font-style: italic;
+  line-height: 1;
+}
+
+@media screen and (max-width: 500px) {
+  h1.header-title {
+    font-size: 4rem;
+  }
+
+  h2.header-subtitle {
+    font-size: 2.5rem;
+  }
+}
+
+h1.title {
+  width: 100%;
+}
+
+p.subtitle {
+  width: 100%;
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  display: block;
+  line-height: 1;
+}
+
+p.byline {
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  // font-size: 1.4rem;
+  display: block;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+@media (prefers-color-scheme: dark) {
+  p.byline {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+p.margin-maker {
+  margin-top: 1rem;
+  margin-bottom: 3.4rem;
+}
+
+p,
+ol,
+ul {
+  font-size: 1.4rem;
+}
+
+p,
+li {
+  line-height: 2rem;
+  //margin-top: 1.4rem;
+  padding-right: 2rem; //removed because,  why?
+  vertical-align: baseline;
+}
+
+.sans {
+  font-family: $sans-font;
+  letter-spacing: 0.03em;
+}
+
+pre,
+pre code,
+p code,
+p pre code {
+  font-family: $code-font;
+  font-size: 1rem;
+  line-height: 1.71428571;
+  // margin-top: 1.71428571rem;
+  // override tufte-css and make code blocks full width
+  width: inherit;
+}
+
+h1 code,
+h2 code,
+h3 code {
+  font-size: 0.8em;
+}
+
+//left in for no real reason
+
+/*
+ * Fancy Blockquotes
+ * Style the blockquotes with a fancy quote character at the beginning
+ */
+blockquote.fancy p:first-child {
+  position: relative;
+}
+
+blockquote.fancy p:first-child::before {
+  content: "“";
+  display: block;
+  position: absolute;
+  font-size: 5rem;
+  top: 0.9rem;
+  left: -3.4rem;
+}
+
+/* Make all elements in a blockquote except the last line of a blockquote non-italic so it looks like an attribution line.
+ * To avoid this, either add an empty <p></p> at the end, style the p with italic, or don't use the fancy blockquote.
+ */
+blockquote.fancy p {
+  font-style: italic;
+}
+
+.dark {
+  .code-box {
+    @extend .div-55;
+    border: 1px solid white;
+    background-color: black;
+  }
+}
+
+.light {
+  .code-box {
+    @extend .div-55;
+    border: 1px solid black;
+    background-color: white;
+  }
+}
+
+pre {
+  margin-bottom: 0;
+}
+
+ul li li,
+ol li li {
+  width: 100%;
+}

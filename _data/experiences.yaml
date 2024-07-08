@@ -1,20 +1,20 @@
 current:
   - id: 1c
-    title: Teaching Assitant
+    title: Teaching Assitant/Part-Time Instructor
     employer: University of Pittsburgh, Department of Computer Science
     duration: August 2022 — Present
     desc: "I am a Teaching Assistant for CS0441: Discrete Structures for Computer Science. I conduct weekly recitation to a section of 30 students where I taught discrete mathematics concepts by breaking them down and working though examples. I also provide comprehensive academic support in both one-to-one and in-class settings to maximize student participations and understanding of concepts. See [Teaching](teaching/) for more details"
-  - id: 2c
-    title: Chief Technology Officer, Software Developer
-    employer: "[Special Needs Assitance Program for Social Engagement](https://snapfse.com) — University of Pittsburgh Organization"
-    duration: July 2022 — Present
-    desc: "As the Chief Technology Officer, I overlooked and contributed to the development of the SNAPFSE app which aimed to connect the neurodiverse and neurotypical communities which utilized a matching algorithm, in-app chat, and cloud databases. I also created the [website](https://snapfse.com) for the Special Needs Assistance Program for Social Engagement."
   - id: 3c
     title: Lead Developer, Webmaster
     employer: "[Touch the Invisible](https://touchtheinvisible.com) — University of Pittsburgh Research Project"
     duration: March 2022 — Present
     desc: "I worked with Dr. Zuzana Swigonova(University of Pittsburgh, Department of Biology) and her team in creating a free, open-source library of macromolecular complexes which can be 3d-printed, or viewed online for classroom educational purposes. I created a [website](https://touchtheinvisible.com) which displays the 3D macromoleculear models and the accompanying information sheet using open source APIs. In addition, I created a content-management-system(CMS) to manage all the assets and to allow for non-technical staff members to edit the website without learning to code."
 past:
+  - id: 2c
+    title: Chief Technology Officer, Software Developer
+    employer: "[Special Needs Assitance Program for Social Engagement](https://snapfse.com) — University of Pittsburgh Organization"
+    duration: July 2022 — Present
+    desc: "As the Chief Technology Officer, I overlooked and contributed to the development of the SNAPFSE app which aimed to connect the neurodiverse and neurotypical communities which utilized a matching algorithm, in-app chat, and cloud databases. I also created the [website](https://snapfse.com) for the Special Needs Assistance Program for Social Engagement."
   - id: 1
     title: Diversity Recruitment Educator and Mentor (DREAM)
     employer: University of Pittsburgh — Office of Admissions and Financial Aid
@@ -30,13 +30,13 @@ past:
     employer: University of Pittsburgh — School of Computing & Information Community Engagement
     duration: August 2021 — January 2022
     desc: I developed the curriculum and course materials for CompTIA A+ certification class; and Taught CompTIA A+ certification class to Hills district high school students.
-  - id: 4
-    title: President & Academic Tutor
-    employer: Academic Discussion and Peer Tutoring at North Penn High School
-    duration: September 2019 - June 2021
-    desc: I created and implemented a virtual tutoring program; I utilized GSuite to manage over 50 volunteer academic tutors. I tutored 15 students in math and science, resulting in their improved grades. I also created the groundwork for a tutoring center partnership between the North Penn High School and its surrounding middle and elementary schools.
-  - id: 5
-    title: SAT Instructor
-    employer: ADAPT SAT Class at North Penn High School
-    duration: September 2019 - June 2021
-    desc: I co-founded a SAT Class run by the Academic Discussion and Peer Tutoring Program, creating course materials and teaching a class of over 60 students via Google Meet. I organized the curriculum and helped to improve scores by an average over 40 points increase, getting about a 90 percent approval rate from students.
+  # - id: 4
+  #   title: President & Academic Tutor
+  #   employer: Academic Discussion and Peer Tutoring at North Penn High School
+  #   duration: September 2019 - June 2021
+  #   desc: I created and implemented a virtual tutoring program; I utilized GSuite to manage over 50 volunteer academic tutors. I tutored 15 students in math and science, resulting in their improved grades. I also created the groundwork for a tutoring center partnership between the North Penn High School and its surrounding middle and elementary schools.
+  # - id: 5
+    # title: SAT Instructor
+    # employer: ADAPT SAT Class at North Penn High School
+    # duration: September 2019 - June 2021
+    # desc: I co-founded a SAT Class run by the Academic Discussion and Peer Tutoring Program, creating course materials and teaching a class of over 60 students via Google Meet. I organized the curriculum and helped to improve scores by an average over 40 points increase, getting about a 90 percent approval rate from students.

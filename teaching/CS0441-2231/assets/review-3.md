@@ -1,11 +1,8 @@
 ---
-layout: tufte
-date: 2022-11-10
+layout: post
+tufte: true
 title: "Counting (Chapter 6) Review"
-notes: "Select problems from the text (&copy; McGraw Hill)"
-backlink: "../"
-navi_title: CS0441
-navi_links: "cs0441_2231_nav"
+subtitle: "Select problems from the text (&copy; McGraw Hill)"
 ---
 <style>.red{color: red !important;}</style>
 

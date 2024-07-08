@@ -1,9 +1,20 @@
 ---
 layout: project
-title: Custom Shell
-img: assets/img/tti_screengrab.png
-imgtext: Screenshot of Touch The Invisible's Website
+title: Custom Linux Shell
+img: assets/img/projects/shell.png
+imgtext: Screenshot of custom shell program
 tags: HTML CSS JavaScript
 year: 2023
 ---
-Visualizing macromolecular systems cam help students better understand the basic principles governing cell function (from storage of genetic information, to production of cellular components). In this project, we combine the crystallography data with 3D-printing technology to build scientifically accurate models of molecular complexes and use them in undergraduate biology and biochemistry courses. Through classroom applications we engage students in multisensorial learning experience at deep cognitive and perceptual levels that other types of molecular visualizations do not provide. When holding a molecular complex in your hand, you can study the 3D-shape from different angles, find the functional groups enabling specific intra and inter molecular binding, or examine grooves and crevices allowing the structural domains to combine in a macromolecular structure.
+When we interact with a computer through the command line interface (CLI), we do so by using a program called a *Shell*. This program is a simple, yet extensible, shell program that can be used to run commands on a Linux machine.
+
+This shell supports the usual shell functionalities such as running commands like `ls` and `pwd`. However, it also supports plugins (in the form of `.so` files) which can be loaded using the `load` command. Plugins allow for improving existing functions and extending new ones to the shell.
+
+Since this program is meant to be highly portable, it relies only on the basic C standard library, provided by GNU.[^1] <span class="endmark"></span>
+
+
+**Code Available Upon Request**
+{: .text-center}
+
+---
+[^1]: [https://www.gnu.org/software/libc/](https://www.gnu.org/software/libc/)

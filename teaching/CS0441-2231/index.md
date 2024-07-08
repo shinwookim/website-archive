@@ -1,20 +1,8 @@
 ---
-layout: tufte
+layout: post
 title: "Discrete Structures for Computer Science"
 subtitle: "CS 0441. Fall 2022, Term 2231"
-nav: true
-nav-links:
-  - title: CS0441
-    url: /teaching/CS0441-2231/
-  - title: Syllabus
-    url: /teaching/CS0441-2231/syllabus.html
-  - title: Schedule
-    url: /teaching/CS0441-2231/#schedule
-  - title: Student Feedback
-    url: /teaching/CS0441-2231/#student-feedback
-  - title: Getting Help
-    url: /teaching/CS0441-2231/#getting-help
-
+tufte: true
 ---
 
 <center><p class="highlight"><strong>This webpage is no longer maintained, and serves only archival purposes</strong></p></center>

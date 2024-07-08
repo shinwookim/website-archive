@@ -1,20 +1,9 @@
 ---
-layout: tufte
-date: 2023-01-31
-title: "Section 1.1 & 1.2 Review"
+layout: post
+tufte: true
+date: 2022-09-17
+title: "Section 1.1 & 1.2 Review Solutions"
 subtitle: "Select problems from the text (&copy; McGraw Hill)"
-nav: true
-nav-links:
-  - title: CS0441
-    url: /teaching/CS0441-2234/
-  - title: Syllabus
-    url: /teaching/CS0441-2234/syllabus.html
-  - title: Schedule
-    url: /teaching/CS0441-2234/#schedule--handout
-  - title: Student Feedback
-    url: /teaching/CS0441-2234/#student-feedback
-  - title: Getting Help
-    url: /teaching/CS0441-2234/#getting-help
 ---
 
 {%marginnote "copyright" "The questions presented here have been adapted from Kenneth Rosen's [Discrete Mathematics and Its Applications](https://www.amazon.com/Discrete-Mathematics-Applications-Kenneth-author/dp/1260091996/ref=pd_lpo_1?pd_rd_i=1260091996&psc=1), 8th Edition."%}
@@ -39,8 +28,7 @@ You cannot edit a protected Wikipedia entry unless you are an administrator.
 # Problem 3
 
 Express your answer in terms of $g$: “_You can graduate_,” $m$: _“You owe money to the university_,” $r$: “_You have completed the requirements of your major_,” and $b$: “_You have an overdue library book_”.
-
-> "You can graduate only if you have completed the requirements of your major and you do not owe money to the university and you do not have an overdue library book."
+"You can graduate only if you have completed the requirements of your major and you do not owe money to the university and you do not have an overdue library book."
 
 # Problem 4
 
@@ -54,4 +42,3 @@ Show that these statements are inconsistent:
 “Miranda does not take a course in discrete mathematics but she reads this book.”
 
 $$ $$
-
